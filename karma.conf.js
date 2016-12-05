@@ -9,6 +9,7 @@ module.exports = function (config) {
 		frameworks: ['jasmine'],
 		// list of files / patterns to load in the browser
 		files: [
+			'node_modules/jquery.min.js',
 			'www/lib/ionic/js/ionic.bundle.js',
 			'www/lib/angular-translate/angular-translate.min.js',
 			'www/lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js',

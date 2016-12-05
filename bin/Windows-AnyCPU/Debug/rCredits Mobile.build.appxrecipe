@@ -1,0 +1,2087 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>VIRTUALBOX</Machine>
+    <WindowsUser>aaron</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>debug|anycpu</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>com.ionicframework.rcreditsmobile621273</PackageIdentityName>
+    <PackageIdentityPublisher>CN=Apache Cordova Team</PackageIdentityPublisher>
+    <IntermediateOutputPath>C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\build\windows\bld\</IntermediateOutputPath>
+    <RemoteDeploymentType></RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>true</RemoveNonLayoutFiles>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\build\windows\debug\anycpu\win8.1\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\SplashScreen.scale-100.png">
+      <PackagePath>images\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square150x150Logo.scale-100.png">
+      <PackagePath>images\Square150x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square30x30Logo.scale-100.png">
+      <PackagePath>images\Square30x30Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square310x310Logo.scale-100.png">
+      <PackagePath>images\Square310x310Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square44x44Logo.scale-100.png">
+      <PackagePath>images\Square44x44Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square70x70Logo.scale-100.png">
+      <PackagePath>images\Square70x70Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Square71x71Logo.scale-100.png">
+      <PackagePath>images\Square71x71Logo.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\StoreLogo.scale-100.png">
+      <PackagePath>images\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\images\Wide310x150Logo.scale-100.png">
+      <PackagePath>images\Wide310x150Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\New-rCredits-Customer.png">
+      <PackagePath>www\img\New-rCredits-Customer.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\rlogo - Copy.png">
+      <PackagePath>www\img\rlogo - Copy.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\rlogo.png">
+      <PackagePath>www\img\rlogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\rlogoOLD.png">
+      <PackagePath>www\img\rlogoOLD.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\sample-customer.png">
+      <PackagePath>www\img\sample-customer.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova-js-src\confighelper.js">
+      <PackagePath>www\cordova-js-src\confighelper.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova-js-src\exec.js">
+      <PackagePath>www\cordova-js-src\exec.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova-js-src\platform.js">
+      <PackagePath>www\cordova-js-src\platform.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova-js-src\splashscreen.js">
+      <PackagePath>www\cordova-js-src\splashscreen.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova.js">
+      <PackagePath>www\cordova.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\cordova_plugins.js">
+      <PackagePath>www\cordova_plugins.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\app.js">
+      <PackagePath>www\js\app.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\config.js">
+      <PackagePath>www\js\config.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\company_home_controller.js">
+      <PackagePath>www\js\controllers\company_home_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\customer_menu_controller.js">
+      <PackagePath>www\js\controllers\customer_menu_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\exchange_controller.js">
+      <PackagePath>www\js\controllers\exchange_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\keypad_controller.js">
+      <PackagePath>www\js\controllers\keypad_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\login_controller.js">
+      <PackagePath>www\js\controllers\login_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\menu_controller.js">
+      <PackagePath>www\js\controllers\menu_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\preferences_controller.js">
+      <PackagePath>www\js\controllers\preferences_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\qr_controller.js">
+      <PackagePath>www\js\controllers\qr_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\selectDemoCustomer.js">
+      <PackagePath>www\js\controllers\selectDemoCustomer.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\select_exchange_controller.js">
+      <PackagePath>www\js\controllers\select_exchange_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\selfservice_mode_controller.js">
+      <PackagePath>www\js\controllers\selfservice_mode_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\transaction_controller.js">
+      <PackagePath>www\js\controllers\transaction_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\controllers\transaction_result_controller.js">
+      <PackagePath>www\js\controllers\transaction_result_controller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\directives\offline_header.js">
+      <PackagePath>www\js\directives\offline_header.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\directives\sf_load.js">
+      <PackagePath>www\js\directives\sf_load.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\directives\sf_resize.js">
+      <PackagePath>www\js\directives\sf_resize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\languages\language.js">
+      <PackagePath>www\js\languages\language.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\account_info.js">
+      <PackagePath>www\js\models\account_info.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\cashier_mode_pref.js">
+      <PackagePath>www\js\models\cashier_mode_pref.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\currencies_definitions.js">
+      <PackagePath>www\js\models\currencies_definitions.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\currency.js">
+      <PackagePath>www\js\models\currency.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\customer.js">
+      <PackagePath>www\js\models\customer.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\exchange.js">
+      <PackagePath>www\js\models\exchange.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\fee.js">
+      <PackagePath>www\js\models\fee.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\payment_type.js">
+      <PackagePath>www\js\models\payment_type.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\payment_types_definitions.js">
+      <PackagePath>www\js\models\payment_types_definitions.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\preference.js">
+      <PackagePath>www\js\models\preference.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\seller.js">
+      <PackagePath>www\js\models\seller.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\sql_query.js">
+      <PackagePath>www\js\models\sql_query.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\transaction.js">
+      <PackagePath>www\js\models\transaction.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\url_configurator.js">
+      <PackagePath>www\js\models\url_configurator.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\models\user.js">
+      <PackagePath>www\js\models\user.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\pica.min.js">
+      <PackagePath>www\js\pica.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\routes.js">
+      <PackagePath>www\js\routes.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\back_button_service.js">
+      <PackagePath>www\js\services\back_button_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\barcode_result.js">
+      <PackagePath>www\js\services\barcode_result.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\barcode_service.js">
+      <PackagePath>www\js\services\barcode_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\cashier_mode_service.js">
+      <PackagePath>www\js\services\cashier_mode_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\exchange_service.js">
+      <PackagePath>www\js\services\exchange_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\hash_service.js">
+      <PackagePath>www\js\services\hash_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\member_sql_service.js">
+      <PackagePath>www\js\services\member_sql_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\network_service.js">
+      <PackagePath>www\js\services\network_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\notification_service.js">
+      <PackagePath>www\js\services\notification_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\permission_service.js">
+      <PackagePath>www\js\services\permission_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\preference_service.js">
+      <PackagePath>www\js\services\preference_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\qrcode.min.js">
+      <PackagePath>www\js\services\qrcode.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\qrcode_parser.js">
+      <PackagePath>www\js\services\qrcode_parser.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\request_parameter_builder.js">
+      <PackagePath>www\js\services\request_parameter_builder.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\selfservice_mode_service.js">
+      <PackagePath>www\js\services\selfservice_mode_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\sqlite_service.js">
+      <PackagePath>www\js\services\sqlite_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\transaction_service.js">
+      <PackagePath>www\js\services\transaction_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\transaction_sql.js">
+      <PackagePath>www\js\services\transaction_sql.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\transaction_sync_service.js">
+      <PackagePath>www\js\services\transaction_sync_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\services\user_service.js">
+      <PackagePath>www\js\services\user_service.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\winstore-jscompat.js">
+      <PackagePath>www\js\winstore-jscompat.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\angular-animate.js">
+      <PackagePath>www\lib\angular-animate\angular-animate.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\angular-animate.min.js">
+      <PackagePath>www\lib\angular-animate\angular-animate.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\index.js">
+      <PackagePath>www\lib\angular-animate\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\demo\demo-app.js">
+      <PackagePath>www\lib\angular-local-storage\demo\demo-app.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\dist\angular-local-storage.js">
+      <PackagePath>www\lib\angular-local-storage\dist\angular-local-storage.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\dist\angular-local-storage.min.js">
+      <PackagePath>www\lib\angular-local-storage\dist\angular-local-storage.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\index.js">
+      <PackagePath>www\lib\angular-local-storage\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\angular-sanitize.js">
+      <PackagePath>www\lib\angular-sanitize\angular-sanitize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\angular-sanitize.min.js">
+      <PackagePath>www\lib\angular-sanitize\angular-sanitize.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\index.js">
+      <PackagePath>www\lib\angular-sanitize\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\angular-translate-handler-log.js">
+      <PackagePath>www\lib\angular-translate-handler-log\angular-translate-handler-log.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\angular-translate-handler-log.min.js">
+      <PackagePath>www\lib\angular-translate-handler-log\angular-translate-handler-log.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\angular-translate-loader-static-files.js">
+      <PackagePath>www\lib\angular-translate-loader-static-files\angular-translate-loader-static-files.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\angular-translate-loader-static-files.min.js">
+      <PackagePath>www\lib\angular-translate-loader-static-files\angular-translate-loader-static-files.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate\angular-translate.js">
+      <PackagePath>www\lib\angular-translate\angular-translate.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate\angular-translate.min.js">
+      <PackagePath>www\lib\angular-translate\angular-translate.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\release\angular-ui-router.js">
+      <PackagePath>www\lib\angular-ui-router\release\angular-ui-router.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\release\angular-ui-router.min.js">
+      <PackagePath>www\lib\angular-ui-router\release\angular-ui-router.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\common.js">
+      <PackagePath>www\lib\angular-ui-router\src\common.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\resolve.js">
+      <PackagePath>www\lib\angular-ui-router\src\resolve.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\state.js">
+      <PackagePath>www\lib\angular-ui-router\src\state.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\stateDirectives.js">
+      <PackagePath>www\lib\angular-ui-router\src\stateDirectives.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\stateFilters.js">
+      <PackagePath>www\lib\angular-ui-router\src\stateFilters.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\templateFactory.js">
+      <PackagePath>www\lib\angular-ui-router\src\templateFactory.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\urlMatcherFactory.js">
+      <PackagePath>www\lib\angular-ui-router\src\urlMatcherFactory.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\urlRouter.js">
+      <PackagePath>www\lib\angular-ui-router\src\urlRouter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\view.js">
+      <PackagePath>www\lib\angular-ui-router\src\view.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\viewDirective.js">
+      <PackagePath>www\lib\angular-ui-router\src\viewDirective.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\src\viewScroll.js">
+      <PackagePath>www\lib\angular-ui-router\src\viewScroll.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\angular.js">
+      <PackagePath>www\lib\angular\angular.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\angular.min.js">
+      <PackagePath>www\lib\angular\angular.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\index.js">
+      <PackagePath>www\lib\angular\index.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic-angular.js">
+      <PackagePath>www\lib\ionic\js\ionic-angular.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic-angular.min.js">
+      <PackagePath>www\lib\ionic\js\ionic-angular.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic.bundle.js">
+      <PackagePath>www\lib\ionic\js\ionic.bundle.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic.bundle.min.js">
+      <PackagePath>www\lib\ionic\js\ionic.bundle.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic.js">
+      <PackagePath>www\lib\ionic\js\ionic.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\js\ionic.min.js">
+      <PackagePath>www\lib\ionic\js\ionic.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\dist\jquery.js">
+      <PackagePath>www\lib\jquery\dist\jquery.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\dist\jquery.min.js">
+      <PackagePath>www\lib\jquery\dist\jquery.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\external\sizzle\dist\sizzle.js">
+      <PackagePath>www\lib\jquery\external\sizzle\dist\sizzle.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\external\sizzle\dist\sizzle.min.js">
+      <PackagePath>www\lib\jquery\external\sizzle\dist\sizzle.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax.js">
+      <PackagePath>www\lib\jquery\src\ajax.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\jsonp.js">
+      <PackagePath>www\lib\jquery\src\ajax\jsonp.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\load.js">
+      <PackagePath>www\lib\jquery\src\ajax\load.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\parseJSON.js">
+      <PackagePath>www\lib\jquery\src\ajax\parseJSON.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\parseXML.js">
+      <PackagePath>www\lib\jquery\src\ajax\parseXML.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\script.js">
+      <PackagePath>www\lib\jquery\src\ajax\script.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\var\location.js">
+      <PackagePath>www\lib\jquery\src\ajax\var\location.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\var\nonce.js">
+      <PackagePath>www\lib\jquery\src\ajax\var\nonce.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\var\rquery.js">
+      <PackagePath>www\lib\jquery\src\ajax\var\rquery.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\ajax\xhr.js">
+      <PackagePath>www\lib\jquery\src\ajax\xhr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes.js">
+      <PackagePath>www\lib\jquery\src\attributes.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes\attr.js">
+      <PackagePath>www\lib\jquery\src\attributes\attr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes\classes.js">
+      <PackagePath>www\lib\jquery\src\attributes\classes.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes\prop.js">
+      <PackagePath>www\lib\jquery\src\attributes\prop.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes\support.js">
+      <PackagePath>www\lib\jquery\src\attributes\support.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\attributes\val.js">
+      <PackagePath>www\lib\jquery\src\attributes\val.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\callbacks.js">
+      <PackagePath>www\lib\jquery\src\callbacks.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core.js">
+      <PackagePath>www\lib\jquery\src\core.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core\access.js">
+      <PackagePath>www\lib\jquery\src\core\access.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core\init.js">
+      <PackagePath>www\lib\jquery\src\core\init.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core\parseHTML.js">
+      <PackagePath>www\lib\jquery\src\core\parseHTML.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core\ready.js">
+      <PackagePath>www\lib\jquery\src\core\ready.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\core\var\rsingleTag.js">
+      <PackagePath>www\lib\jquery\src\core\var\rsingleTag.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css.js">
+      <PackagePath>www\lib\jquery\src\css.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\addGetHookIf.js">
+      <PackagePath>www\lib\jquery\src\css\addGetHookIf.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\adjustCSS.js">
+      <PackagePath>www\lib\jquery\src\css\adjustCSS.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\curCSS.js">
+      <PackagePath>www\lib\jquery\src\css\curCSS.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\defaultDisplay.js">
+      <PackagePath>www\lib\jquery\src\css\defaultDisplay.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\hiddenVisibleSelectors.js">
+      <PackagePath>www\lib\jquery\src\css\hiddenVisibleSelectors.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\showHide.js">
+      <PackagePath>www\lib\jquery\src\css\showHide.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\support.js">
+      <PackagePath>www\lib\jquery\src\css\support.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\cssExpand.js">
+      <PackagePath>www\lib\jquery\src\css\var\cssExpand.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\getStyles.js">
+      <PackagePath>www\lib\jquery\src\css\var\getStyles.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\isHidden.js">
+      <PackagePath>www\lib\jquery\src\css\var\isHidden.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\rmargin.js">
+      <PackagePath>www\lib\jquery\src\css\var\rmargin.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\rnumnonpx.js">
+      <PackagePath>www\lib\jquery\src\css\var\rnumnonpx.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\css\var\swap.js">
+      <PackagePath>www\lib\jquery\src\css\var\swap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\data.js">
+      <PackagePath>www\lib\jquery\src\data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\data\Data.js">
+      <PackagePath>www\lib\jquery\src\data\Data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\data\var\acceptData.js">
+      <PackagePath>www\lib\jquery\src\data\var\acceptData.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\data\var\dataPriv.js">
+      <PackagePath>www\lib\jquery\src\data\var\dataPriv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\data\var\dataUser.js">
+      <PackagePath>www\lib\jquery\src\data\var\dataUser.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\deferred.js">
+      <PackagePath>www\lib\jquery\src\deferred.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\deprecated.js">
+      <PackagePath>www\lib\jquery\src\deprecated.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\dimensions.js">
+      <PackagePath>www\lib\jquery\src\dimensions.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\effects.js">
+      <PackagePath>www\lib\jquery\src\effects.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\effects\animatedSelector.js">
+      <PackagePath>www\lib\jquery\src\effects\animatedSelector.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\effects\Tween.js">
+      <PackagePath>www\lib\jquery\src\effects\Tween.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event.js">
+      <PackagePath>www\lib\jquery\src\event.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event\ajax.js">
+      <PackagePath>www\lib\jquery\src\event\ajax.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event\alias.js">
+      <PackagePath>www\lib\jquery\src\event\alias.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event\focusin.js">
+      <PackagePath>www\lib\jquery\src\event\focusin.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event\support.js">
+      <PackagePath>www\lib\jquery\src\event\support.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\event\trigger.js">
+      <PackagePath>www\lib\jquery\src\event\trigger.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\exports\amd.js">
+      <PackagePath>www\lib\jquery\src\exports\amd.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\exports\global.js">
+      <PackagePath>www\lib\jquery\src\exports\global.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\intro.js">
+      <PackagePath>www\lib\jquery\src\intro.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\jquery.js">
+      <PackagePath>www\lib\jquery\src\jquery.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation.js">
+      <PackagePath>www\lib\jquery\src\manipulation.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\buildFragment.js">
+      <PackagePath>www\lib\jquery\src\manipulation\buildFragment.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\getAll.js">
+      <PackagePath>www\lib\jquery\src\manipulation\getAll.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\setGlobalEval.js">
+      <PackagePath>www\lib\jquery\src\manipulation\setGlobalEval.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\support.js">
+      <PackagePath>www\lib\jquery\src\manipulation\support.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\var\rcheckableType.js">
+      <PackagePath>www\lib\jquery\src\manipulation\var\rcheckableType.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\var\rscriptType.js">
+      <PackagePath>www\lib\jquery\src\manipulation\var\rscriptType.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\var\rtagName.js">
+      <PackagePath>www\lib\jquery\src\manipulation\var\rtagName.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\wrapMap.js">
+      <PackagePath>www\lib\jquery\src\manipulation\wrapMap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\manipulation\_evalUrl.js">
+      <PackagePath>www\lib\jquery\src\manipulation\_evalUrl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\offset.js">
+      <PackagePath>www\lib\jquery\src\offset.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\outro.js">
+      <PackagePath>www\lib\jquery\src\outro.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\queue.js">
+      <PackagePath>www\lib\jquery\src\queue.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\queue\delay.js">
+      <PackagePath>www\lib\jquery\src\queue\delay.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\selector-native.js">
+      <PackagePath>www\lib\jquery\src\selector-native.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\selector-sizzle.js">
+      <PackagePath>www\lib\jquery\src\selector-sizzle.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\selector.js">
+      <PackagePath>www\lib\jquery\src\selector.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\serialize.js">
+      <PackagePath>www\lib\jquery\src\serialize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\traversing.js">
+      <PackagePath>www\lib\jquery\src\traversing.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\traversing\findFilter.js">
+      <PackagePath>www\lib\jquery\src\traversing\findFilter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\traversing\var\dir.js">
+      <PackagePath>www\lib\jquery\src\traversing\var\dir.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\traversing\var\rneedsContext.js">
+      <PackagePath>www\lib\jquery\src\traversing\var\rneedsContext.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\traversing\var\siblings.js">
+      <PackagePath>www\lib\jquery\src\traversing\var\siblings.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\arr.js">
+      <PackagePath>www\lib\jquery\src\var\arr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\class2type.js">
+      <PackagePath>www\lib\jquery\src\var\class2type.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\concat.js">
+      <PackagePath>www\lib\jquery\src\var\concat.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\document.js">
+      <PackagePath>www\lib\jquery\src\var\document.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\documentElement.js">
+      <PackagePath>www\lib\jquery\src\var\documentElement.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\hasOwn.js">
+      <PackagePath>www\lib\jquery\src\var\hasOwn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\indexOf.js">
+      <PackagePath>www\lib\jquery\src\var\indexOf.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\pnum.js">
+      <PackagePath>www\lib\jquery\src\var\pnum.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\push.js">
+      <PackagePath>www\lib\jquery\src\var\push.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\rcssNum.js">
+      <PackagePath>www\lib\jquery\src\var\rcssNum.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\rnotwhite.js">
+      <PackagePath>www\lib\jquery\src\var\rnotwhite.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\slice.js">
+      <PackagePath>www\lib\jquery\src\var\slice.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\support.js">
+      <PackagePath>www\lib\jquery\src\var\support.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\var\toString.js">
+      <PackagePath>www\lib\jquery\src\var\toString.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\wrap.js">
+      <PackagePath>www\lib\jquery\src\wrap.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\af.js">
+      <PackagePath>www\lib\moment\locale\af.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ar-ma.js">
+      <PackagePath>www\lib\moment\locale\ar-ma.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ar-sa.js">
+      <PackagePath>www\lib\moment\locale\ar-sa.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ar-tn.js">
+      <PackagePath>www\lib\moment\locale\ar-tn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ar.js">
+      <PackagePath>www\lib\moment\locale\ar.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\az.js">
+      <PackagePath>www\lib\moment\locale\az.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\be.js">
+      <PackagePath>www\lib\moment\locale\be.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\bg.js">
+      <PackagePath>www\lib\moment\locale\bg.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\bn.js">
+      <PackagePath>www\lib\moment\locale\bn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\bo.js">
+      <PackagePath>www\lib\moment\locale\bo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\br.js">
+      <PackagePath>www\lib\moment\locale\br.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\bs.js">
+      <PackagePath>www\lib\moment\locale\bs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ca.js">
+      <PackagePath>www\lib\moment\locale\ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\cs.js">
+      <PackagePath>www\lib\moment\locale\cs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\cv.js">
+      <PackagePath>www\lib\moment\locale\cv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\cy.js">
+      <PackagePath>www\lib\moment\locale\cy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\da.js">
+      <PackagePath>www\lib\moment\locale\da.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\de-at.js">
+      <PackagePath>www\lib\moment\locale\de-at.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\de.js">
+      <PackagePath>www\lib\moment\locale\de.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\dv.js">
+      <PackagePath>www\lib\moment\locale\dv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\el.js">
+      <PackagePath>www\lib\moment\locale\el.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\en-au.js">
+      <PackagePath>www\lib\moment\locale\en-au.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\en-ca.js">
+      <PackagePath>www\lib\moment\locale\en-ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\en-gb.js">
+      <PackagePath>www\lib\moment\locale\en-gb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\en-ie.js">
+      <PackagePath>www\lib\moment\locale\en-ie.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\en-nz.js">
+      <PackagePath>www\lib\moment\locale\en-nz.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\eo.js">
+      <PackagePath>www\lib\moment\locale\eo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\es.js">
+      <PackagePath>www\lib\moment\locale\es.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\et.js">
+      <PackagePath>www\lib\moment\locale\et.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\eu.js">
+      <PackagePath>www\lib\moment\locale\eu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fa.js">
+      <PackagePath>www\lib\moment\locale\fa.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fi.js">
+      <PackagePath>www\lib\moment\locale\fi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fo.js">
+      <PackagePath>www\lib\moment\locale\fo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fr-ca.js">
+      <PackagePath>www\lib\moment\locale\fr-ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fr-ch.js">
+      <PackagePath>www\lib\moment\locale\fr-ch.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fr.js">
+      <PackagePath>www\lib\moment\locale\fr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\fy.js">
+      <PackagePath>www\lib\moment\locale\fy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\gd.js">
+      <PackagePath>www\lib\moment\locale\gd.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\gl.js">
+      <PackagePath>www\lib\moment\locale\gl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\he.js">
+      <PackagePath>www\lib\moment\locale\he.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\hi.js">
+      <PackagePath>www\lib\moment\locale\hi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\hr.js">
+      <PackagePath>www\lib\moment\locale\hr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\hu.js">
+      <PackagePath>www\lib\moment\locale\hu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\hy-am.js">
+      <PackagePath>www\lib\moment\locale\hy-am.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\id.js">
+      <PackagePath>www\lib\moment\locale\id.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\is.js">
+      <PackagePath>www\lib\moment\locale\is.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\it.js">
+      <PackagePath>www\lib\moment\locale\it.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ja.js">
+      <PackagePath>www\lib\moment\locale\ja.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\jv.js">
+      <PackagePath>www\lib\moment\locale\jv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ka.js">
+      <PackagePath>www\lib\moment\locale\ka.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\kk.js">
+      <PackagePath>www\lib\moment\locale\kk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\km.js">
+      <PackagePath>www\lib\moment\locale\km.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ko.js">
+      <PackagePath>www\lib\moment\locale\ko.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\lb.js">
+      <PackagePath>www\lib\moment\locale\lb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\lo.js">
+      <PackagePath>www\lib\moment\locale\lo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\lt.js">
+      <PackagePath>www\lib\moment\locale\lt.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\lv.js">
+      <PackagePath>www\lib\moment\locale\lv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\me.js">
+      <PackagePath>www\lib\moment\locale\me.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\mk.js">
+      <PackagePath>www\lib\moment\locale\mk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ml.js">
+      <PackagePath>www\lib\moment\locale\ml.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\mr.js">
+      <PackagePath>www\lib\moment\locale\mr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ms-my.js">
+      <PackagePath>www\lib\moment\locale\ms-my.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ms.js">
+      <PackagePath>www\lib\moment\locale\ms.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\my.js">
+      <PackagePath>www\lib\moment\locale\my.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\nb.js">
+      <PackagePath>www\lib\moment\locale\nb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ne.js">
+      <PackagePath>www\lib\moment\locale\ne.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\nl.js">
+      <PackagePath>www\lib\moment\locale\nl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\nn.js">
+      <PackagePath>www\lib\moment\locale\nn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\pl.js">
+      <PackagePath>www\lib\moment\locale\pl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\pt-br.js">
+      <PackagePath>www\lib\moment\locale\pt-br.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\pt.js">
+      <PackagePath>www\lib\moment\locale\pt.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ro.js">
+      <PackagePath>www\lib\moment\locale\ro.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ru.js">
+      <PackagePath>www\lib\moment\locale\ru.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\se.js">
+      <PackagePath>www\lib\moment\locale\se.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\si.js">
+      <PackagePath>www\lib\moment\locale\si.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sk.js">
+      <PackagePath>www\lib\moment\locale\sk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sl.js">
+      <PackagePath>www\lib\moment\locale\sl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sq.js">
+      <PackagePath>www\lib\moment\locale\sq.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sr-cyrl.js">
+      <PackagePath>www\lib\moment\locale\sr-cyrl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sr.js">
+      <PackagePath>www\lib\moment\locale\sr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sv.js">
+      <PackagePath>www\lib\moment\locale\sv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\sw.js">
+      <PackagePath>www\lib\moment\locale\sw.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\ta.js">
+      <PackagePath>www\lib\moment\locale\ta.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\te.js">
+      <PackagePath>www\lib\moment\locale\te.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\th.js">
+      <PackagePath>www\lib\moment\locale\th.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tl-ph.js">
+      <PackagePath>www\lib\moment\locale\tl-ph.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tlh.js">
+      <PackagePath>www\lib\moment\locale\tlh.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tr.js">
+      <PackagePath>www\lib\moment\locale\tr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tzl.js">
+      <PackagePath>www\lib\moment\locale\tzl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tzm-latn.js">
+      <PackagePath>www\lib\moment\locale\tzm-latn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\tzm.js">
+      <PackagePath>www\lib\moment\locale\tzm.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\uk.js">
+      <PackagePath>www\lib\moment\locale\uk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\uz.js">
+      <PackagePath>www\lib\moment\locale\uz.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\vi.js">
+      <PackagePath>www\lib\moment\locale\vi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\zh-cn.js">
+      <PackagePath>www\lib\moment\locale\zh-cn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\locale\zh-tw.js">
+      <PackagePath>www\lib\moment\locale\zh-tw.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\locales.js">
+      <PackagePath>www\lib\moment\min\locales.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\locales.min.js">
+      <PackagePath>www\lib\moment\min\locales.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\moment-with-locales.js">
+      <PackagePath>www\lib\moment\min\moment-with-locales.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\moment-with-locales.min.js">
+      <PackagePath>www\lib\moment\min\moment-with-locales.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\moment.min.js">
+      <PackagePath>www\lib\moment\min\moment.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\min\tests.js">
+      <PackagePath>www\lib\moment\min\tests.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\moment.js">
+      <PackagePath>www\lib\moment\moment.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\check-overflow.js">
+      <PackagePath>www\lib\moment\src\lib\create\check-overflow.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\date-from-array.js">
+      <PackagePath>www\lib\moment\src\lib\create\date-from-array.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-anything.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-anything.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-array.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-array.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-object.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-object.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-string-and-array.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-string-and-array.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-string-and-format.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-string-and-format.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\from-string.js">
+      <PackagePath>www\lib\moment\src\lib\create\from-string.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\local.js">
+      <PackagePath>www\lib\moment\src\lib\create\local.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\parsing-flags.js">
+      <PackagePath>www\lib\moment\src\lib\create\parsing-flags.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\utc.js">
+      <PackagePath>www\lib\moment\src\lib\create\utc.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\create\valid.js">
+      <PackagePath>www\lib\moment\src\lib\create\valid.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\abs.js">
+      <PackagePath>www\lib\moment\src\lib\duration\abs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\add-subtract.js">
+      <PackagePath>www\lib\moment\src\lib\duration\add-subtract.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\as.js">
+      <PackagePath>www\lib\moment\src\lib\duration\as.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\bubble.js">
+      <PackagePath>www\lib\moment\src\lib\duration\bubble.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\constructor.js">
+      <PackagePath>www\lib\moment\src\lib\duration\constructor.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\create.js">
+      <PackagePath>www\lib\moment\src\lib\duration\create.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\duration.js">
+      <PackagePath>www\lib\moment\src\lib\duration\duration.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\get.js">
+      <PackagePath>www\lib\moment\src\lib\duration\get.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\humanize.js">
+      <PackagePath>www\lib\moment\src\lib\duration\humanize.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\iso-string.js">
+      <PackagePath>www\lib\moment\src\lib\duration\iso-string.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\duration\prototype.js">
+      <PackagePath>www\lib\moment\src\lib\duration\prototype.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\format\format.js">
+      <PackagePath>www\lib\moment\src\lib\format\format.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\calendar.js">
+      <PackagePath>www\lib\moment\src\lib\locale\calendar.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\constructor.js">
+      <PackagePath>www\lib\moment\src\lib\locale\constructor.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\en.js">
+      <PackagePath>www\lib\moment\src\lib\locale\en.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\formats.js">
+      <PackagePath>www\lib\moment\src\lib\locale\formats.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\invalid.js">
+      <PackagePath>www\lib\moment\src\lib\locale\invalid.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\lists.js">
+      <PackagePath>www\lib\moment\src\lib\locale\lists.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\locale.js">
+      <PackagePath>www\lib\moment\src\lib\locale\locale.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\locales.js">
+      <PackagePath>www\lib\moment\src\lib\locale\locales.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\ordinal.js">
+      <PackagePath>www\lib\moment\src\lib\locale\ordinal.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\pre-post-format.js">
+      <PackagePath>www\lib\moment\src\lib\locale\pre-post-format.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\prototype.js">
+      <PackagePath>www\lib\moment\src\lib\locale\prototype.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\relative.js">
+      <PackagePath>www\lib\moment\src\lib\locale\relative.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\locale\set.js">
+      <PackagePath>www\lib\moment\src\lib\locale\set.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\add-subtract.js">
+      <PackagePath>www\lib\moment\src\lib\moment\add-subtract.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\calendar.js">
+      <PackagePath>www\lib\moment\src\lib\moment\calendar.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\clone.js">
+      <PackagePath>www\lib\moment\src\lib\moment\clone.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\compare.js">
+      <PackagePath>www\lib\moment\src\lib\moment\compare.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\constructor.js">
+      <PackagePath>www\lib\moment\src\lib\moment\constructor.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\creation-data.js">
+      <PackagePath>www\lib\moment\src\lib\moment\creation-data.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\diff.js">
+      <PackagePath>www\lib\moment\src\lib\moment\diff.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\format.js">
+      <PackagePath>www\lib\moment\src\lib\moment\format.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\from.js">
+      <PackagePath>www\lib\moment\src\lib\moment\from.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\get-set.js">
+      <PackagePath>www\lib\moment\src\lib\moment\get-set.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\locale.js">
+      <PackagePath>www\lib\moment\src\lib\moment\locale.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\min-max.js">
+      <PackagePath>www\lib\moment\src\lib\moment\min-max.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\moment.js">
+      <PackagePath>www\lib\moment\src\lib\moment\moment.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\now.js">
+      <PackagePath>www\lib\moment\src\lib\moment\now.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\prototype.js">
+      <PackagePath>www\lib\moment\src\lib\moment\prototype.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\start-end-of.js">
+      <PackagePath>www\lib\moment\src\lib\moment\start-end-of.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\to-type.js">
+      <PackagePath>www\lib\moment\src\lib\moment\to-type.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\to.js">
+      <PackagePath>www\lib\moment\src\lib\moment\to.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\moment\valid.js">
+      <PackagePath>www\lib\moment\src\lib\moment\valid.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\parse\regex.js">
+      <PackagePath>www\lib\moment\src\lib\parse\regex.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\parse\token.js">
+      <PackagePath>www\lib\moment\src\lib\parse\token.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\aliases.js">
+      <PackagePath>www\lib\moment\src\lib\units\aliases.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\constants.js">
+      <PackagePath>www\lib\moment\src\lib\units\constants.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\day-of-month.js">
+      <PackagePath>www\lib\moment\src\lib\units\day-of-month.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\day-of-week.js">
+      <PackagePath>www\lib\moment\src\lib\units\day-of-week.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\day-of-year.js">
+      <PackagePath>www\lib\moment\src\lib\units\day-of-year.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\hour.js">
+      <PackagePath>www\lib\moment\src\lib\units\hour.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\millisecond.js">
+      <PackagePath>www\lib\moment\src\lib\units\millisecond.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\minute.js">
+      <PackagePath>www\lib\moment\src\lib\units\minute.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\month.js">
+      <PackagePath>www\lib\moment\src\lib\units\month.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\offset.js">
+      <PackagePath>www\lib\moment\src\lib\units\offset.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\quarter.js">
+      <PackagePath>www\lib\moment\src\lib\units\quarter.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\second.js">
+      <PackagePath>www\lib\moment\src\lib\units\second.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\timestamp.js">
+      <PackagePath>www\lib\moment\src\lib\units\timestamp.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\timezone.js">
+      <PackagePath>www\lib\moment\src\lib\units\timezone.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\units.js">
+      <PackagePath>www\lib\moment\src\lib\units\units.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\week-calendar-utils.js">
+      <PackagePath>www\lib\moment\src\lib\units\week-calendar-utils.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\week-year.js">
+      <PackagePath>www\lib\moment\src\lib\units\week-year.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\week.js">
+      <PackagePath>www\lib\moment\src\lib\units\week.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\units\year.js">
+      <PackagePath>www\lib\moment\src\lib\units\year.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\abs-ceil.js">
+      <PackagePath>www\lib\moment\src\lib\utils\abs-ceil.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\abs-floor.js">
+      <PackagePath>www\lib\moment\src\lib\utils\abs-floor.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\compare-arrays.js">
+      <PackagePath>www\lib\moment\src\lib\utils\compare-arrays.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\defaults.js">
+      <PackagePath>www\lib\moment\src\lib\utils\defaults.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\deprecate.js">
+      <PackagePath>www\lib\moment\src\lib\utils\deprecate.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\extend.js">
+      <PackagePath>www\lib\moment\src\lib\utils\extend.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\has-own-prop.js">
+      <PackagePath>www\lib\moment\src\lib\utils\has-own-prop.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\hooks.js">
+      <PackagePath>www\lib\moment\src\lib\utils\hooks.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\is-array.js">
+      <PackagePath>www\lib\moment\src\lib\utils\is-array.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\is-date.js">
+      <PackagePath>www\lib\moment\src\lib\utils\is-date.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\is-function.js">
+      <PackagePath>www\lib\moment\src\lib\utils\is-function.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\is-undefined.js">
+      <PackagePath>www\lib\moment\src\lib\utils\is-undefined.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\map.js">
+      <PackagePath>www\lib\moment\src\lib\utils\map.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\to-int.js">
+      <PackagePath>www\lib\moment\src\lib\utils\to-int.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\lib\utils\zero-fill.js">
+      <PackagePath>www\lib\moment\src\lib\utils\zero-fill.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\af.js">
+      <PackagePath>www\lib\moment\src\locale\af.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ar-ma.js">
+      <PackagePath>www\lib\moment\src\locale\ar-ma.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ar-sa.js">
+      <PackagePath>www\lib\moment\src\locale\ar-sa.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ar-tn.js">
+      <PackagePath>www\lib\moment\src\locale\ar-tn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ar.js">
+      <PackagePath>www\lib\moment\src\locale\ar.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\az.js">
+      <PackagePath>www\lib\moment\src\locale\az.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\be.js">
+      <PackagePath>www\lib\moment\src\locale\be.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\bg.js">
+      <PackagePath>www\lib\moment\src\locale\bg.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\bn.js">
+      <PackagePath>www\lib\moment\src\locale\bn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\bo.js">
+      <PackagePath>www\lib\moment\src\locale\bo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\br.js">
+      <PackagePath>www\lib\moment\src\locale\br.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\bs.js">
+      <PackagePath>www\lib\moment\src\locale\bs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ca.js">
+      <PackagePath>www\lib\moment\src\locale\ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\cs.js">
+      <PackagePath>www\lib\moment\src\locale\cs.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\cv.js">
+      <PackagePath>www\lib\moment\src\locale\cv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\cy.js">
+      <PackagePath>www\lib\moment\src\locale\cy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\da.js">
+      <PackagePath>www\lib\moment\src\locale\da.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\de-at.js">
+      <PackagePath>www\lib\moment\src\locale\de-at.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\de.js">
+      <PackagePath>www\lib\moment\src\locale\de.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\dv.js">
+      <PackagePath>www\lib\moment\src\locale\dv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\el.js">
+      <PackagePath>www\lib\moment\src\locale\el.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\en-au.js">
+      <PackagePath>www\lib\moment\src\locale\en-au.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\en-ca.js">
+      <PackagePath>www\lib\moment\src\locale\en-ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\en-gb.js">
+      <PackagePath>www\lib\moment\src\locale\en-gb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\en-ie.js">
+      <PackagePath>www\lib\moment\src\locale\en-ie.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\en-nz.js">
+      <PackagePath>www\lib\moment\src\locale\en-nz.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\eo.js">
+      <PackagePath>www\lib\moment\src\locale\eo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\es.js">
+      <PackagePath>www\lib\moment\src\locale\es.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\et.js">
+      <PackagePath>www\lib\moment\src\locale\et.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\eu.js">
+      <PackagePath>www\lib\moment\src\locale\eu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fa.js">
+      <PackagePath>www\lib\moment\src\locale\fa.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fi.js">
+      <PackagePath>www\lib\moment\src\locale\fi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fo.js">
+      <PackagePath>www\lib\moment\src\locale\fo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fr-ca.js">
+      <PackagePath>www\lib\moment\src\locale\fr-ca.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fr-ch.js">
+      <PackagePath>www\lib\moment\src\locale\fr-ch.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fr.js">
+      <PackagePath>www\lib\moment\src\locale\fr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\fy.js">
+      <PackagePath>www\lib\moment\src\locale\fy.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\gd.js">
+      <PackagePath>www\lib\moment\src\locale\gd.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\gl.js">
+      <PackagePath>www\lib\moment\src\locale\gl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\he.js">
+      <PackagePath>www\lib\moment\src\locale\he.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\hi.js">
+      <PackagePath>www\lib\moment\src\locale\hi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\hr.js">
+      <PackagePath>www\lib\moment\src\locale\hr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\hu.js">
+      <PackagePath>www\lib\moment\src\locale\hu.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\hy-am.js">
+      <PackagePath>www\lib\moment\src\locale\hy-am.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\id.js">
+      <PackagePath>www\lib\moment\src\locale\id.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\is.js">
+      <PackagePath>www\lib\moment\src\locale\is.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\it.js">
+      <PackagePath>www\lib\moment\src\locale\it.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ja.js">
+      <PackagePath>www\lib\moment\src\locale\ja.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\jv.js">
+      <PackagePath>www\lib\moment\src\locale\jv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ka.js">
+      <PackagePath>www\lib\moment\src\locale\ka.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\kk.js">
+      <PackagePath>www\lib\moment\src\locale\kk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\km.js">
+      <PackagePath>www\lib\moment\src\locale\km.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ko.js">
+      <PackagePath>www\lib\moment\src\locale\ko.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\lb.js">
+      <PackagePath>www\lib\moment\src\locale\lb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\lo.js">
+      <PackagePath>www\lib\moment\src\locale\lo.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\lt.js">
+      <PackagePath>www\lib\moment\src\locale\lt.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\lv.js">
+      <PackagePath>www\lib\moment\src\locale\lv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\me.js">
+      <PackagePath>www\lib\moment\src\locale\me.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\mk.js">
+      <PackagePath>www\lib\moment\src\locale\mk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ml.js">
+      <PackagePath>www\lib\moment\src\locale\ml.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\mr.js">
+      <PackagePath>www\lib\moment\src\locale\mr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ms-my.js">
+      <PackagePath>www\lib\moment\src\locale\ms-my.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ms.js">
+      <PackagePath>www\lib\moment\src\locale\ms.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\my.js">
+      <PackagePath>www\lib\moment\src\locale\my.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\nb.js">
+      <PackagePath>www\lib\moment\src\locale\nb.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ne.js">
+      <PackagePath>www\lib\moment\src\locale\ne.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\nl.js">
+      <PackagePath>www\lib\moment\src\locale\nl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\nn.js">
+      <PackagePath>www\lib\moment\src\locale\nn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\pl.js">
+      <PackagePath>www\lib\moment\src\locale\pl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\pt-br.js">
+      <PackagePath>www\lib\moment\src\locale\pt-br.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\pt.js">
+      <PackagePath>www\lib\moment\src\locale\pt.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ro.js">
+      <PackagePath>www\lib\moment\src\locale\ro.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ru.js">
+      <PackagePath>www\lib\moment\src\locale\ru.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\se.js">
+      <PackagePath>www\lib\moment\src\locale\se.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\si.js">
+      <PackagePath>www\lib\moment\src\locale\si.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sk.js">
+      <PackagePath>www\lib\moment\src\locale\sk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sl.js">
+      <PackagePath>www\lib\moment\src\locale\sl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sq.js">
+      <PackagePath>www\lib\moment\src\locale\sq.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sr-cyrl.js">
+      <PackagePath>www\lib\moment\src\locale\sr-cyrl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sr.js">
+      <PackagePath>www\lib\moment\src\locale\sr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sv.js">
+      <PackagePath>www\lib\moment\src\locale\sv.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\sw.js">
+      <PackagePath>www\lib\moment\src\locale\sw.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\ta.js">
+      <PackagePath>www\lib\moment\src\locale\ta.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\te.js">
+      <PackagePath>www\lib\moment\src\locale\te.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\th.js">
+      <PackagePath>www\lib\moment\src\locale\th.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tl-ph.js">
+      <PackagePath>www\lib\moment\src\locale\tl-ph.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tlh.js">
+      <PackagePath>www\lib\moment\src\locale\tlh.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tr.js">
+      <PackagePath>www\lib\moment\src\locale\tr.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tzl.js">
+      <PackagePath>www\lib\moment\src\locale\tzl.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tzm-latn.js">
+      <PackagePath>www\lib\moment\src\locale\tzm-latn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\tzm.js">
+      <PackagePath>www\lib\moment\src\locale\tzm.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\uk.js">
+      <PackagePath>www\lib\moment\src\locale\uk.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\uz.js">
+      <PackagePath>www\lib\moment\src\locale\uz.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\vi.js">
+      <PackagePath>www\lib\moment\src\locale\vi.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\zh-cn.js">
+      <PackagePath>www\lib\moment\src\locale\zh-cn.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\locale\zh-tw.js">
+      <PackagePath>www\lib\moment\src\locale\zh-tw.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\src\moment.js">
+      <PackagePath>www\lib\moment\src\moment.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\amd-named.js">
+      <PackagePath>www\lib\moment\templates\amd-named.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\amd.js">
+      <PackagePath>www\lib\moment\templates\amd.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\default.js">
+      <PackagePath>www\lib\moment\templates\default.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\globals.js">
+      <PackagePath>www\lib\moment\templates\globals.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\locale-header.js">
+      <PackagePath>www\lib\moment\templates\locale-header.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\templates\test-header.js">
+      <PackagePath>www\lib\moment\templates\test-header.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\dist\pica.js">
+      <PackagePath>www\lib\pica\dist\pica.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\dist\pica.min.js">
+      <PackagePath>www\lib\pica\dist\pica.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\prototypejs\dist\prototype.js">
+      <PackagePath>www\lib\prototypejs\dist\prototype.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\prototypejs\dist\prototype.min.js">
+      <PackagePath>www\lib\prototypejs\dist\prototype.min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\underscore-min.js">
+      <PackagePath>www\lib\underscore\underscore-min.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\underscore.js">
+      <PackagePath>www\lib\underscore\underscore.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\WinJS\js\base.js">
+      <PackagePath>www\WinJS\js\base.js</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\css\splashscreen.css">
+      <PackagePath>www\css\splashscreen.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\demo\demo-style.css">
+      <PackagePath>www\lib\angular-local-storage\demo\demo-style.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\angular-csp.css">
+      <PackagePath>www\lib\angular\angular-csp.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\css\ionic.css">
+      <PackagePath>www\lib\ionic\css\ionic.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\css\ionic.min.css">
+      <PackagePath>www\lib\ionic\css\ionic.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\BobBossman.jpg">
+      <PackagePath>www\img\BobBossman.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CathyCashier.jpg">
+      <PackagePath>www\img\CathyCashier.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CurtCustomerAgent.jpg">
+      <PackagePath>www\img\CurtCustomerAgent.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CurtCustomerMember.jpg">
+      <PackagePath>www\img\CurtCustomerMember.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\SusanShopper.jpg">
+      <PackagePath>www\img\SusanShopper.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\BobBossman.xcf">
+      <PackagePath>www\img\BobBossman.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CathyCashier.xcf">
+      <PackagePath>www\img\CathyCashier.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CurtCustomerAgent.xcf">
+      <PackagePath>www\img\CurtCustomerAgent.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\CurtCustomerMember.xcf">
+      <PackagePath>www\img\CurtCustomerMember.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\rlogo.xcf">
+      <PackagePath>www\img\rlogo.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\img\SusanShopper.xcf">
+      <PackagePath>www\img\SusanShopper.xcf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\index.html">
+      <PackagePath>www\index.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\index2.html">
+      <PackagePath>www\index2.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\demo\demo.html">
+      <PackagePath>www\lib\angular-local-storage\demo\demo.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\customer-balance.html">
+      <PackagePath>www\templates\customer-balance.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\customer-menu.html">
+      <PackagePath>www\templates\customer-menu.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\customer-qr.html">
+      <PackagePath>www\templates\customer-qr.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\demo-people.html">
+      <PackagePath>www\templates\demo-people.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\exchange.html">
+      <PackagePath>www\templates\exchange.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\first-purchase.html">
+      <PackagePath>www\templates\first-purchase.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\home.html">
+      <PackagePath>www\templates\home.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\keypad.html">
+      <PackagePath>www\templates\keypad.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\login.html">
+      <PackagePath>www\templates\login.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\logo.html">
+      <PackagePath>www\templates\logo.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\menu.html">
+      <PackagePath>www\templates\menu.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\preferences.html">
+      <PackagePath>www\templates\preferences.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\select_exchange.html">
+      <PackagePath>www\templates\select_exchange.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\self_service_mode_login.html">
+      <PackagePath>www\templates\self_service_mode_login.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\subheader.html">
+      <PackagePath>www\templates\subheader.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\template.html">
+      <PackagePath>www\templates\template.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\transaction-result.html">
+      <PackagePath>www\templates\transaction-result.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\templates\transaction.html">
+      <PackagePath>www\templates\transaction.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\js\languages\definitions\en.json">
+      <PackagePath>www\js\languages\definitions\en.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\.bower.json">
+      <PackagePath>www\lib\angular-animate\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\bower.json">
+      <PackagePath>www\lib\angular-animate\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\package.json">
+      <PackagePath>www\lib\angular-animate\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.bower.json">
+      <PackagePath>www\lib\angular-local-storage\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\bower.json">
+      <PackagePath>www\lib\angular-local-storage\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\package.json">
+      <PackagePath>www\lib\angular-local-storage\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\.bower.json">
+      <PackagePath>www\lib\angular-sanitize\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\bower.json">
+      <PackagePath>www\lib\angular-sanitize\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\package.json">
+      <PackagePath>www\lib\angular-sanitize\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\.bower.json">
+      <PackagePath>www\lib\angular-translate-handler-log\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\bower.json">
+      <PackagePath>www\lib\angular-translate-handler-log\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\package.json">
+      <PackagePath>www\lib\angular-translate-handler-log\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\.bower.json">
+      <PackagePath>www\lib\angular-translate-loader-static-files\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\bower.json">
+      <PackagePath>www\lib\angular-translate-loader-static-files\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\package.json">
+      <PackagePath>www\lib\angular-translate-loader-static-files\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate\.bower.json">
+      <PackagePath>www\lib\angular-translate\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate\bower.json">
+      <PackagePath>www\lib\angular-translate\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\.bower.json">
+      <PackagePath>www\lib\angular-ui-router\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\bower.json">
+      <PackagePath>www\lib\angular-ui-router\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\.bower.json">
+      <PackagePath>www\lib\angular\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\bower.json">
+      <PackagePath>www\lib\angular\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\package.json">
+      <PackagePath>www\lib\angular\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\.bower.json">
+      <PackagePath>www\lib\ionic\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\bower.json">
+      <PackagePath>www\lib\ionic\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\tsconfig.json">
+      <PackagePath>www\lib\ionic\scss\tsconfig.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\.bower.json">
+      <PackagePath>www\lib\jquery\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\bower.json">
+      <PackagePath>www\lib\jquery\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\.bower.json">
+      <PackagePath>www\lib\moment\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\bower.json">
+      <PackagePath>www\lib\moment\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\.bower.json">
+      <PackagePath>www\lib\pica\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\bower.json">
+      <PackagePath>www\lib\pica\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\package.json">
+      <PackagePath>www\lib\pica\package.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\prototypejs\.bower.json">
+      <PackagePath>www\lib\prototypejs\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\prototypejs\bower.json">
+      <PackagePath>www\lib\prototypejs\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\.bower.json">
+      <PackagePath>www\lib\underscore\.bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\bower.json">
+      <PackagePath>www\lib\underscore\bower.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\angular-animate.min.js.map">
+      <PackagePath>www\lib\angular-animate\angular-animate.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\dist\angular-local-storage.min.js.map">
+      <PackagePath>www\lib\angular-local-storage\dist\angular-local-storage.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\angular-sanitize.min.js.map">
+      <PackagePath>www\lib\angular-sanitize\angular-sanitize.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\angular.min.js.map">
+      <PackagePath>www\lib\angular\angular.min.js.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\dist\jquery.min.map">
+      <PackagePath>www\lib\jquery\dist\jquery.min.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\external\sizzle\dist\sizzle.min.map">
+      <PackagePath>www\lib\jquery\external\sizzle\dist\sizzle.min.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\underscore-min.map">
+      <PackagePath>www\lib\underscore\underscore-min.map</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-animate\README.md">
+      <PackagePath>www\lib\angular-animate\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\CHANGELOG.md">
+      <PackagePath>www\lib\angular-local-storage\CHANGELOG.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\README.md">
+      <PackagePath>www\lib\angular-local-storage\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-sanitize\README.md">
+      <PackagePath>www\lib\angular-sanitize\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-handler-log\README.md">
+      <PackagePath>www\lib\angular-translate-handler-log\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate-loader-static-files\README.md">
+      <PackagePath>www\lib\angular-translate-loader-static-files\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-translate\README.md">
+      <PackagePath>www\lib\angular-translate\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\CHANGELOG.md">
+      <PackagePath>www\lib\angular-ui-router\CHANGELOG.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\CONTRIBUTING.md">
+      <PackagePath>www\lib\angular-ui-router\CONTRIBUTING.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\README.md">
+      <PackagePath>www\lib\angular-ui-router\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\README.md">
+      <PackagePath>www\lib\angular\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\README.md">
+      <PackagePath>www\lib\ionic\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\README.md">
+      <PackagePath>www\lib\jquery\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\CHANGELOG.md">
+      <PackagePath>www\lib\moment\CHANGELOG.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\README.md">
+      <PackagePath>www\lib\moment\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\CHANGELOG.md">
+      <PackagePath>www\lib\pica\CHANGELOG.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\README.md">
+      <PackagePath>www\lib\pica\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\README.md">
+      <PackagePath>www\lib\underscore\README.md</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.bowerrc">
+      <PackagePath>www\lib\angular-local-storage\.bowerrc</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.editorconfig">
+      <PackagePath>www\lib\angular-local-storage\.editorconfig</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.gitattributes">
+      <PackagePath>www\lib\angular-local-storage\.gitattributes</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.gitignore">
+      <PackagePath>www\lib\angular-local-storage\.gitignore</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\.travis.yml">
+      <PackagePath>www\lib\angular-local-storage\.travis.yml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-local-storage\LICENSE">
+      <PackagePath>www\lib\angular-local-storage\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular-ui-router\LICENSE">
+      <PackagePath>www\lib\angular-ui-router\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\moment\LICENSE">
+      <PackagePath>www\lib\moment\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\pica\LICENSE">
+      <PackagePath>www\lib\pica\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\prototypejs\LICENSE">
+      <PackagePath>www\lib\prototypejs\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\underscore\LICENSE">
+      <PackagePath>www\lib\underscore\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\angular\angular.min.js.gzip">
+      <PackagePath>www\lib\angular\angular.min.js.gzip</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\fonts\ionicons.eot">
+      <PackagePath>www\lib\ionic\fonts\ionicons.eot</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\fonts\ionicons.svg">
+      <PackagePath>www\lib\ionic\fonts\ionicons.svg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\fonts\ionicons.ttf">
+      <PackagePath>www\lib\ionic\fonts\ionicons.ttf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\fonts\ionicons.woff">
+      <PackagePath>www\lib\ionic\fonts\ionicons.woff</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\ionic.scss">
+      <PackagePath>www\lib\ionic\scss\ionic.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\ionicons\ionicons.scss">
+      <PackagePath>www\lib\ionic\scss\ionicons\ionicons.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\ionicons\_ionicons-font.scss">
+      <PackagePath>www\lib\ionic\scss\ionicons\_ionicons-font.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\ionicons\_ionicons-icons.scss">
+      <PackagePath>www\lib\ionic\scss\ionicons\_ionicons-icons.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\ionicons\_ionicons-variables.scss">
+      <PackagePath>www\lib\ionic\scss\ionicons\_ionicons-variables.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_action-sheet.scss">
+      <PackagePath>www\lib\ionic\scss\_action-sheet.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_animations.scss">
+      <PackagePath>www\lib\ionic\scss\_animations.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_backdrop.scss">
+      <PackagePath>www\lib\ionic\scss\_backdrop.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_badge.scss">
+      <PackagePath>www\lib\ionic\scss\_badge.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_bar.scss">
+      <PackagePath>www\lib\ionic\scss\_bar.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_button-bar.scss">
+      <PackagePath>www\lib\ionic\scss\_button-bar.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_button.scss">
+      <PackagePath>www\lib\ionic\scss\_button.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_checkbox.scss">
+      <PackagePath>www\lib\ionic\scss\_checkbox.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_form.scss">
+      <PackagePath>www\lib\ionic\scss\_form.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_grid.scss">
+      <PackagePath>www\lib\ionic\scss\_grid.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_items.scss">
+      <PackagePath>www\lib\ionic\scss\_items.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_list.scss">
+      <PackagePath>www\lib\ionic\scss\_list.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_loading.scss">
+      <PackagePath>www\lib\ionic\scss\_loading.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_menu.scss">
+      <PackagePath>www\lib\ionic\scss\_menu.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_mixins.scss">
+      <PackagePath>www\lib\ionic\scss\_mixins.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_modal.scss">
+      <PackagePath>www\lib\ionic\scss\_modal.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_platform.scss">
+      <PackagePath>www\lib\ionic\scss\_platform.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_popover.scss">
+      <PackagePath>www\lib\ionic\scss\_popover.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_popup.scss">
+      <PackagePath>www\lib\ionic\scss\_popup.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_progress.scss">
+      <PackagePath>www\lib\ionic\scss\_progress.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_radio.scss">
+      <PackagePath>www\lib\ionic\scss\_radio.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_range.scss">
+      <PackagePath>www\lib\ionic\scss\_range.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_refresher.scss">
+      <PackagePath>www\lib\ionic\scss\_refresher.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_reset.scss">
+      <PackagePath>www\lib\ionic\scss\_reset.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_scaffolding.scss">
+      <PackagePath>www\lib\ionic\scss\_scaffolding.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_select.scss">
+      <PackagePath>www\lib\ionic\scss\_select.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_slide-box.scss">
+      <PackagePath>www\lib\ionic\scss\_slide-box.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_slides.scss">
+      <PackagePath>www\lib\ionic\scss\_slides.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_spinner.scss">
+      <PackagePath>www\lib\ionic\scss\_spinner.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_tabs.scss">
+      <PackagePath>www\lib\ionic\scss\_tabs.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_toggle.scss">
+      <PackagePath>www\lib\ionic\scss\_toggle.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_transitions.scss">
+      <PackagePath>www\lib\ionic\scss\_transitions.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_type.scss">
+      <PackagePath>www\lib\ionic\scss\_type.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_util.scss">
+      <PackagePath>www\lib\ionic\scss\_util.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\ionic\scss\_variables.scss">
+      <PackagePath>www\lib\ionic\scss\_variables.scss</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\AUTHORS.txt">
+      <PackagePath>www\lib\jquery\AUTHORS.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\external\sizzle\LICENSE.txt">
+      <PackagePath>www\lib\jquery\external\sizzle\LICENSE.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\LICENSE.txt">
+      <PackagePath>www\lib\jquery\LICENSE.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\www\lib\jquery\src\.jshintrc">
+      <PackagePath>www\lib\jquery\src\.jshintrc</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\config.xml">
+      <PackagePath>config.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\aaron\Source\Repos\rcredits-mobile\platforms\windows\build\windows\debug\anycpu\win8.1\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\">
+      <Name>Microsoft.WinJS.2.0</Name>
+      <Version>1.0.9600.17018</Version>
+      <Architecture>Neutral</Architecture>
+      <FrameworkIdentity>Name=Microsoft.WinJS.2.0, MinVersion=1.0.9600.17018</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.WinJS.2.0\1.0\Microsoft.WinJS.2.0.appx</AppxLocation>
+      <MoreInfo>http://go.microsoft.com/fwlink/%3fLinkId=260891</MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

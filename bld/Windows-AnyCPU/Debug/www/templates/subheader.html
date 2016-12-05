@@ -1,0 +1,19 @@
+﻿<div ng-controller="SelectDemoCust"  class="bar bar-subheader" ng-if="offlCtrl.isOffline() || offlCtrl.isDemoMode()">
+	<!--	<div ng-if="offlCtrl.isDemoMode() && whereAmI().indexOf('app/home') === 1" class="list managerDemo">
+			<label class="item item-input item-select submenuText">
+				<select  ng-change="onSelectManager()" ng-model="selectedManager.selected" ng-options="m.name for m in manager" class="leftMenue">
+				</select>
+			</label>
+		</div>-->
+	<h2 class="title">
+		<span ng-if="offlCtrl.isOffline()">{{'you_are_offline'| translate}}</span>
+		<span ng-if="offlCtrl.isOffline() && offlCtrl.isDemoMode()"> - </span>
+		<span ng-if="offlCtrl.isDemoMode()" class="demo-title">{{'demo_mode'| translate}}</span>
+	</h2>
+	<div ng-if="offlCtrl.isDemoMode()" class="customerDemo">
+		<label class="rightMenu">
+			<ion-toggle ng-change="toggleWiFi()"  ng-model="wifi.checked" checked="false" id="wifi" class="rightMenuArrow">
+			</ion-toggle>
+		</label>
+	</div>
+</div>

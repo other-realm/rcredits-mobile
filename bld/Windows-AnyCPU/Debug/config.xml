@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ionicframework.rcreditsmobile621273" version="0.0.1" windows-packageVersion="0.0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>rCredits</name>
+    <description> 		Community-Created Credits for the Common Good 	</description>
+    <author email="info@rCredits.org" href="http://rcredits.org/"> 		rCredits Team 	</author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <allow-navigation href="https://*" />
+    <allow-navigation href="http://*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <vs:platformSpecificValues xmlns:vs="http://schemas.microsoft.com/appx/2014/htmlapps">
+        <vs:platformSpecificWidget id="rcreditsmobile" platformName="windows" version="0.0.1.0" />
+    </vs:platformSpecificValues>
+    <preference name="webviewbounce" value="false" />
+    <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="5000" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="FadeSplashScreen" value="false" />
+    <preference name="orientation" value="portrait" />
+    <preference name="xwalkVersion" value="15+" />
+    <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect" />
+    <preference name="xwalkMode" value="embedded" />
+    <preference name="xwalkMultipleApk" value="true" />
+    <preference name="AndroidPersistentFileLocation" value="Compatibility" />
+    <preference name="WindowsStoreDisplayName" value="rcreditsmodile" />
+</widget>
