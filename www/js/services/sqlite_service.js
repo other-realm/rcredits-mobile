@@ -1,15 +1,15 @@
-/* global app */
+/* global app, $cordovaSQLite */
 (function (app) {
-	app.service('SQLiteService', function ($q, $timeout, NotificationService) {
+	app.service('SQLiteService', function ($q, $timeout, NotificationService, localStorageService) {
 		var self;
 		var SQLiteService = function () {
 			self = this;
-			//this.sqlPlugin = window.sqlitePlugin || window;
+			this.sqlPlugin = window.sqlitePlugin || window;
 			this.sqlPlugin = window;
-			this.db = null;
+//			this.db = null;
 		};
 		SQLiteService.prototype.isDbEnable = function () {
-			console.log(!!this.sqlPlugin);
+			console.log(this.sqlPlugin);
 			return !!this.sqlPlugin;
 		};
 		SQLiteService.prototype.createDatabase = function () {
@@ -17,14 +17,26 @@
 //			if (window.cordova) {
 //				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
 //			} else {
-				this.db = this.sqlPlugin.openDatabase(
-					window.rCreditsConfig.SQLiteDatabase.name,
-					window.rCreditsConfig.SQLiteDatabase.version,
-					window.rCreditsConfig.SQLiteDatabase.description, 100000);
-				$timeout(function () {
-					openPromise.resolve();
-				}, 1000);
-//			}
+			try {
+				if (!window.openDatabase) {
+					console.log('the database does not work!');
+				} else {
+					console.log(true);
+					this.db = this.sqlPlugin.openDatabase(
+						window.rCreditsConfig.SQLiteDatabase.name,
+						window.rCreditsConfig.SQLiteDatabase.version,
+						window.rCreditsConfig.SQLiteDatabase.description, 100000);
+					$timeout(function () {
+						openPromise.resolve();
+					}, 1000);
+				}
+			} catch (e) {
+				if(e===2){
+					console.log('wrong version - ',e);
+				}else{
+					console.log(e);
+				}
+			}
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.ex = function () {
@@ -34,7 +46,7 @@
 		};
 		SQLiteService.prototype.executeQuery_ = function (query, params) {
 			var txPromise = $q.defer();
-			console.log(query, params);
+//			console.log(query, params);
 			this.db.transaction(function (tx) {
 				tx.executeSql(query, params, function (tx, res) {
 					txPromise.resolve(res);
@@ -88,7 +100,7 @@
 		};
 		SQLiteService.prototype.init = function () {
 			if (!this.isDbEnable()) {
-				console.warn("SQLite is not enable");
+				console.log("SQLite is not enable");
 			}
 			this.createDatabase().then(this.createSchema.bind(this));
 			console.log(this);

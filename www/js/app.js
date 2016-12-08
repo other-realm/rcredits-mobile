@@ -12,14 +12,14 @@ var app = angular.module('rcredits', ['ionic', 'routes', 'pascalprecht.translate
 				.preferredLanguage(Language.DEFAULT_LANGUAGE)
 				.fallbackLanguage(Language.DEFAULT_LANGUAGE)
 				.useSanitizeValueStrategy('sanitizeParameters');
-			localStorageServiceProvider.setPrefix('rcredits');
 			var storageQuota = false;
+			localStorageServiceProvider.setPrefix('rcredits');
 		}])
 	.run(function ($ionicPlatform, SQLiteService, NetworkService, $rootScope, TransactionSyncService, BackButtonService, UserService, NotificationService, $rootScope) {
 		$ionicPlatform.ready(function () {
+			$rootScope.whereWasI = location.hash;
+			$rootScope.amIOnline = NetworkService.isOffline();
 			// This only for web development to enable proxy
-			$rootScope.whereWasI=location.hash;
-			$rootScope.amIOnline=NetworkService.isOffline();
 			if (!ionic.Platform.isWebView()) {
 				rCreditsConfig.serverUrl = rCreditsConfig.serverproxyUrl;
 			}

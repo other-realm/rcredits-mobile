@@ -9,17 +9,18 @@
 			  content="script-src 'self' 'unsafe-inline' 'unsafe-eval' http://localhost:* http://192.168.2.3:* http://127.0.0.1:* https://*.rcredits.org/* ; default-src *; media-src *; img-src * blob: data:; style-src * 'unsafe-inline'; ">
 		<!-- compiled css output -->
 		<link href="css/ionic.app.css" rel="stylesheet">
-
+		<script src="lib/IndexedDBShim-master/dist/indexeddbshim.min.js"></script>
 		<script src="lib/ionic/js/ionic.bundle.js"></script>
 		<script src="lib/underscore/underscore-min.js"></script>
 		<script src="lib/angular-translate/angular-translate.min.js"></script>
 		<script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
 		<script src="lib/angular-translate-handler-log/angular-translate-handler-log.min.js"></script>
-		<script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
-		<script src="lib/prototypejs/dist/prototype.min.js"></script>
+		<script src="lib/angular-local-storage/dist/angular-local-storage.js"></script>
+		<script src="lib/prototypejs/dist/prototype.js"></script>
 		<script src="lib/moment/moment.js"></script>
 		<script src="js/services/qrcode.min.js"></script>
 		<script src="lib/jquery/dist/jquery.min.js"></script>
+		<script>jQuery.noConflict();</script>
 
 		<!-- cordova script (this will be a 404 during development) -->
 		<script src="cordova.js"></script>
@@ -60,11 +61,11 @@
 		<script src="js/services/qrcode_parser.js"></script>
 		<script src="js/services/transaction_service.js"></script>
 		<script src="js/services/transaction_sync_service.js"></script>
+		<script src="js/services/sqlite_service.js"></script>
 		<script src="js/services/transaction_sql.js"></script>
 		<script src="js/services/preference_service.js"></script>
 		<script src="js/services/cashier_mode_service.js"></script>
 		<script src="js/services/permission_service.js"></script>
-		<script src="js/services/sqlite_service.js"></script>
 		<script src="js/services/member_sql_service.js"></script>
 		<script src="js/services/exchange_service.js"></script>
 		<script src="js/services/network_service.js"></script>
