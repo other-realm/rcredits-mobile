@@ -4,9 +4,9 @@
 		var self;
 		var SQLiteService = function () {
 			self = this;
-			this.sqlPlugin = window.sqlitePlugin || window;
+//			this.sqlPlugin = window.sqlitePlugin || window;
 			this.sqlPlugin = window;
-//			this.db = null;
+			this.db = null;
 		};
 		SQLiteService.prototype.isDbEnable = function () {
 			console.log(this.sqlPlugin);
@@ -51,7 +51,7 @@
 				tx.executeSql(query, params, function (tx, res) {
 					txPromise.resolve(res);
 				}, function (tx, e) {
-					console.error(tx, e);
+					console.log(tx, e);
 //					var alertPopup = NotificationService.showAlert({
 //						title: "error",
 //						template: "There was an error: " + e.message
@@ -59,7 +59,8 @@
 					txPromise.reject(e.message);
 				});
 			}, function (error) {
-				console.error('transaction error: ' + error.message);
+				console.log('transaction error: ' + error.message);
+				console.log(error);
 			}, function () {
 			});
 			return txPromise.promise;
