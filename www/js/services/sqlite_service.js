@@ -2,39 +2,59 @@
 (function (app) {
 	app.service('SQLiteService', function ($q, $timeout, NotificationService, localStorageService) {
 		var self;
+		var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 		var SQLiteService = function () {
 			self = this;
 //			this.sqlPlugin = window.sqlitePlugin || window;
 			this.sqlPlugin = window;
-			this.db = null;
+			this.db = indexedDB.open(window.rCreditsConfig.SQLiteDatabase.name, 1);
 		};
-		SQLiteService.prototype.isDbEnable = function () {
-			console.log(this.sqlPlugin);
-			return !!this.sqlPlugin;
+		SQLiteService.prototype.open().onupgradeneeded = function () {
+			var ldb = this.db.result;
+			var store = ldb.createObjectStore('members', {
+				// record of customers (and managers)
+				keyPath: "qid"
+			});
+			var index = store.createIndex("NameIndex", ["name.last", "name.first"]);
 		};
+//		SQLiteService.prototype.isDbEnable = function () {
+//			console.log(this.sqlPlugin);
+//			return !!this.sqlPlugin;
+//		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
-//			if (window.cordova) {
-//				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
-//			} else {
-			try {
-				if (!window.openDatabase) {
-					console.log('the database does not work!');
-				} else {
-					console.log(true);
-					this.db = this.sqlPlugin.openDatabase(
-						window.rCreditsConfig.SQLiteDatabase.name,
-						window.rCreditsConfig.SQLiteDatabase.version,
-						window.rCreditsConfig.SQLiteDatabase.description, 100000);
-					$timeout(function () {
-						openPromise.resolve();
-					}, 1000);
-				}
-			} catch (e) {
-				if(e===2){
-					console.log('wrong version - ',e);
-				}else{
-					console.log(e);
+			if (window.cordova) {
+				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
+			} else {
+				try {
+//					if (!window.openDatabase) {
+//						console.log('the database does not work!');
+//					} else {
+						console.log(true);
+						this.sqlPlugin.openDatabase(
+							window.rCreditsConfig.SQLiteDatabase.name,
+							window.rCreditsConfig.SQLiteDatabase.version,
+							window.rCreditsConfig.SQLiteDatabase.description, 100000);
+					this.db = 
+				"qid TEXT," + // customer or manager account code (like NEW.AAA or NEW:AAA)
+				"name TEXT," + // full name (of customer or manager)
+				"company TEXT," + // company name, if any (for customer or manager)
+				"place TEXT," + // customer location / manager's company account code
+				"balance REAL," + // current balance (as of lastTx) / manager's rCard security code
+				"rewards REAL," + // rewards to date (as of lastTx) / manager's permissions / photo ID (!rewards.matches(NUMERIC))
+				"lastTx INTEGER," + // unixtime of last reconciled transaction / -1 for managers
+				"proof TEXT," +
+				"photo TEXT);" // lo-res B&W photo of customer (normally under 4k) / full res photo for manager
+						$timeout(function () {
+							openPromise.resolve();
+						}, 1000);
+//					}
+				} catch (e) {
+					if (e === 2) {
+						console.log('wrong version - ', e);
+					} else {
+						console.log(e);
+					}
 				}
 			}
 			return openPromise.promise;
