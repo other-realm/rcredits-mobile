@@ -1,4 +1,4 @@
-/* global Transaction, app */
+/* global Transaction, app, moment */
 (function (app) {
 	app.service('TransactionSql', function ($q, SqlQuery, SQLiteService,NotificationService) {
 		var self;
@@ -10,8 +10,7 @@
 			if (exludeTxs) {
 				filter = ' and created not in (' + exludeTxs.join(',') + ' ) ';
 			}
-			var sqlQuery = new SqlQuery();
-			sqlQuery.setQueryString("SELECT * FROM txs where STATUS = " + Transaction.Status.OFFLINE + filter + " order by rowid asc limit 1");
+			var sqlQuery = "SELECT * FROM txs where STATUS = " + Transaction.Status.OFFLINE + filter + " order by rowid asc limit 1";
 			console.log(exludeTxs,sqlQuery);
 			return SQLiteService.executeQuery(sqlQuery).then(function (SQLResultSet) {
 				if (SQLResultSet.rows.length > 0) {
@@ -24,8 +23,7 @@
 			});
 		};
 		TransactionSql.prototype.setTransactionSynced = function (sqlTransaction) {
-			var sqlQuery = new SqlQuery();
-			sqlQuery.setQueryString("UPDATE txs SET status = '" + Transaction.Status.DONE + "' where created = " + sqlTransaction.created);
+			var sqlQuery = "UPDATE txs SET status = '" + Transaction.Status.DONE + "' where created = " + sqlTransaction.created;
 			return SQLiteService.executeQuery(sqlQuery);
 		};
 		TransactionSql.prototype.exist24HsTransactions = function () {
