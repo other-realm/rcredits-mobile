@@ -1,4 +1,4 @@
-/* global app, $cordovaSQLite, SQL */
+/* global app, $cordovaSQLite, SQL, WebSQLShim */
 (function (app) {
 	app.service('SQLiteService', function ($q, $timeout, NotificationService, localStorageService) {
 		var self;
@@ -29,6 +29,7 @@
 					console.log(e);
 				}
 			}
+			console.log(this.db);
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.ex = function () {
@@ -37,7 +38,11 @@
 			return txPromise.promise;
 		};
 		SQLiteService.prototype.executeQuery = function (query) {
-			return this.db.exec(query);
+			var openPromise = $q.defer();
+			var res = this.db.exec(query);
+			openPromise.resolve(res);
+			console.log(query, res);
+			return openPromise.promise;
 		};
 //		SQLiteService.prototype.executeQuery = function (sqlQuery) {
 //			return this.executeQuery_(sqlQuery.getQueryString(), sqlQuery.getQueryData());
@@ -52,8 +57,10 @@
 				"rewards REAL," + // rewards to date (as of lastTx) / manager's permissions / photo ID (!rewards.matches(NUMERIC))
 				"lastTx INTEGER," + // unixtime of last reconciled transaction / -1 for managers
 				"proof TEXT," +
-				"photo TEXT);" + // lo-res B&W photo of customer (normally under 4k) / full res photo for manager
-				"CREATE TABLE IF NOT EXISTS txs (" +
+				"photo TEXT);"; // lo-res B&W photo of customer (normally under 4k) / full res photo for manager
+			this.executeQuery(sqlQuery);
+			console.log(sqlQuery, this.db);
+			sqlQuery = "CREATE TABLE IF NOT EXISTS txs (" +
 				"me TEXT," + // company (or device-owner) account code (qid)
 				"txid INTEGER DEFAULT 0," + // transaction id (xid) on the server (for offline backup only -- not used by the app) / temporary storage of customer cardCode pending tx upload
 				"status INTEGER," + // see A.TX_... constants
@@ -66,11 +73,14 @@
 				"account TEXT," + //account particulars
 				"description TEXT);" + // always "reverses..", if this tx undoes a previous one (previous by date)
 				"CREATE INDEX IF NOT EXISTS custQid ON members(qid)";
-			console.log(sqlQuery,this.db);
 			this.executeQuery(sqlQuery);
+			console.log(sqlQuery, this.db);
 		};
 		SQLiteService.prototype.init = function () {
 			if (!this.db) {
+				if (typeof openDatabase === 'undefined'){
+					openDatabase = WebSQLShim.openDatabase;
+				}
 				this.createDatabase().then(this.createSchema.bind(this));
 			}
 			console.log(this.db);
