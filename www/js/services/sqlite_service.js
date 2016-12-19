@@ -17,18 +17,18 @@
 //			if (window.cordova) {
 //				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
 //			} else {
-			try {
-				this.db = new SQL.Database();
-				$timeout(function () {
-					openPromise.resolve();
-				}, 1000);
-			} catch (e) {
-				if (e === 2) {
-					console.log('wrong version - ', e);
-				} else {
-					console.log(e);
-				}
-			}
+			alasql();
+			alasql('Create Table ' + window.rCreditsConfig.SQLiteDatabase.name + ' (id INT);');
+//			$timeout(function () {
+				openPromise.resolve();
+//			}, 1000);
+//			} catch (e) {
+//				if (e === 2) {
+//					console.log('wrong version - ', e);
+//				} else {
+//					console.log(e);
+//				}
+//			}
 			console.log(this.db);
 			return openPromise.promise;
 		};
@@ -78,9 +78,6 @@
 		};
 		SQLiteService.prototype.init = function () {
 			if (!this.db) {
-				if (typeof openDatabase === 'undefined'){
-					openDatabase = WebSQLShim.openDatabase;
-				}
 				this.createDatabase().then(this.createSchema.bind(this));
 			}
 			console.log(this.db);
