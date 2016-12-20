@@ -1,4 +1,4 @@
-/* global app, $cordovaSQLite, SQL, WebSQLShim */
+/* global app, $cordovaSQLite, SQL, WebSQLShim, rCreditsConfig, alasql */
 (function (app) {
 	app.service('SQLiteService', function ($q, $timeout, NotificationService, localStorageService) {
 		var self;
@@ -14,14 +14,17 @@
 //		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
+			this.db = alasql;
+			this.db('CREATE INDEXEDDB DATABASE IF NOT EXISTS ' + rCreditsConfig.SQLiteDatabase.name);
 //			if (window.cordova) {
 //				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
 //			} else {
-			alasql();
-			alasql('Create Table ' + window.rCreditsConfig.SQLiteDatabase.name + ' (id INT);');
-//			$timeout(function () {
+//			this.db=new alasql('CREATE DATABASE '+rCreditsConfig.SQLiteDatabase.name);
+//			this.db('Create Table ' + rCreditsConfig.SQLiteDatabase.name + ' (id INT);');
+			console.log(this.db());
+			$timeout(function () {
 				openPromise.resolve();
-//			}, 1000);
+			}, 1000);
 //			} catch (e) {
 //				if (e === 2) {
 //					console.log('wrong version - ', e);
@@ -29,7 +32,6 @@
 //					console.log(e);
 //				}
 //			}
-			console.log(this.db);
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.ex = function () {
@@ -80,7 +82,7 @@
 			if (!this.db) {
 				this.createDatabase().then(this.createSchema.bind(this));
 			}
-			console.log(this.db);
+			console.log(this.db,alasql);
 		};
 		return new SQLiteService();
 	});
