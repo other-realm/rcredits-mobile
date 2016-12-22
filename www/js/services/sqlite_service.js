@@ -4,36 +4,21 @@
 		var self;
 		var SQLiteService = function () {
 			self = this;
-//			this.sqlPlugin = window.sqlitePlugin || window;
-//			this.sqlPlugin = window;
-//			this.db = this.db;
+			this.db;
 		};
 //		SQLiteService.prototype.isDbEnable = function () {
 //			console.log(!!this.sqlPlugin);
 //			return !!this.sqlPlugin;
 //		};
+		SQLiteService.prototype.createDbObj = function () {
+
+		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
 			this.db = alasql;
-			this.db('CREATE INDEXEDDB DATABASE IF NOT EXISTS ' + rCreditsConfig.SQLiteDatabase.name+';'+
-				'ATTACH INDEXEDDB DATABASE rcredits;'+
-				'USE rcredits;');
-//			if (window.cordova) {
-//				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
-//			} else {
-//			this.db=new alasql('CREATE DATABASE '+rCreditsConfig.SQLiteDatabase.name);
-//			this.db('Create Table ' + rCreditsConfig.SQLiteDatabase.name + ' (id INT);');
-			console.log(this.db());
 			$timeout(function () {
 				openPromise.resolve();
 			}, 1000);
-//			} catch (e) {
-//				if (e === 2) {
-//					console.log('wrong version - ', e);
-//				} else {
-//					console.log(e);
-//				}
-//			}
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.ex = function () {
@@ -53,7 +38,11 @@
 			return this.executeQuery_(sqlQuery.getQueryString, sqlQuery.getQueryData);
 		};
 		SQLiteService.prototype.createSchema = function () {
-				this.db("CREATE TABLE IF NOT EXISTS members (" + // record of customers (and managers)
+			console.log(this.db);
+			this.db.promise(['CREATE INDEXEDDB DATABASE IF NOT EXISTS ' + rCreditsConfig.SQLiteDatabase.name + ';',
+				'ATTACH INDEXEDDB DATABASE rcredits;',
+				'USE rcredits;',
+				"CREATE TABLE IF NOT EXISTS members (" + // record of customers (and managers)
 					"qid TEXT," + // customer or manager account code (like NEW.AAA or NEW:AAA)
 					"name TEXT," + // full name (of customer or manager)
 					"company TEXT," + // company name, if any (for customer or manager)
@@ -62,7 +51,7 @@
 					"rewards REAL," + // rewards to date (as of lastTx) / manager's permissions / photo ID (!rewards.matches(NUMERIC))
 					"lastTx INTEGER," + // unixtime of last reconciled transaction / -1 for managers
 					"proof TEXT," +
-					"photo TEXT);"+ // lo-res B&W photo of customer (normally under 4k) / full res photo for manager
+					"photo TEXT);", // lo-res B&W photo of customer (normally under 4k) / full res photo for manager
 				"CREATE TABLE IF NOT EXISTS txs (" +
 					"me TEXT," + // company (or device-owner) account code (qid)
 					"txid INTEGER DEFAULT 0," + // transaction id (xid) on the server (for offline backup only -- not used by the app) / temporary storage of customer cardCode pending tx upload
@@ -75,13 +64,16 @@
 					"data TEXT," + // hash of cardCode, amount, created, and me (as proof of agreement)
 					"account TEXT," + //account particulars
 					"description TEXT);" // always "reverses..", if this tx undoes a previous one (previous by date)
-				);
+			]).then(function () {
+				self.executeQuery_("CREATE INDEX IF NOT EXISTS custQid ON members(qid)");
+			});
 		};
 		SQLiteService.prototype.init = function () {
 			if (!this.db) {
-				this.createDatabase().then(this.createSchema.bind(this));
+				this.db = alasql;
 			}
-			console.log(this.db,alasql);
+			this.createDatabase().then(this.createSchema.bind(this));
+			console.log(this.db);
 		};
 		return new SQLiteService();
 	});
