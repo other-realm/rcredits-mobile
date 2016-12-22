@@ -2,6 +2,7 @@
 (function (app) {
 	app.service('SQLiteService', function ($q, $timeout, NotificationService, localStorageService) {
 		var self;
+//		var alasql = require('alasql');
 		var SQLiteService = function () {
 			self = this;
 			this.db;
@@ -15,7 +16,7 @@
 		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
-			this.db = new alasql;
+			this.db = alasql.Database(rCreditsConfig.SQLiteDatabase.name);
 			$timeout(function () {
 				openPromise.resolve();
 			}, 1000);
@@ -70,7 +71,7 @@
 		};
 		SQLiteService.prototype.init = function () {
 			if (!this.db) {
-				this.db = alasql;
+//				this.db = alasql;
 			}
 			this.createDatabase().then(this.createSchema.bind(this));
 			console.log(this.db);
