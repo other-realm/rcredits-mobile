@@ -15,7 +15,7 @@
 		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
-			this.db = alasql;
+			this.db = new alasql;
 			$timeout(function () {
 				openPromise.resolve();
 			}, 1000);
