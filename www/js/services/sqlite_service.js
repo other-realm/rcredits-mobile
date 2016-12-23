@@ -30,18 +30,17 @@
 		SQLiteService.prototype.executeQuery_ = function (query) {
 			var openPromise = $q.defer();
 			var res = this.db.exec(query);
+			console.log('executeQuery_',alasql.databases.rcredits,query, res);
 			openPromise.resolve(res);
-			console.log(query, res);
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.executeQuery = function (sqlQuery) {
-			console.log(sqlQuery);
+			console.log('executeQuery',alasql.databases.rcredits,sqlQuery.getQueryString, sqlQuery.getQueryData);
 			return this.executeQuery_(sqlQuery.getQueryString, sqlQuery.getQueryData);
 		};
 		SQLiteService.prototype.createSchema = function () {
-			console.log(self.db);
 //			self.db=new alasql.Database(rCreditsConfig.SQLiteDatabase.name);
-			self.db.exec(
+			this.executeQuery_(
 					"CREATE INDEXEDDB DATABASE IF NOT EXISTS rcredits;"+
 					"ATTACH INDEXEDDB DATABASE rcredits;"+
 					"USE rcredits;"+
@@ -54,8 +53,10 @@
 					"rewards REAL,"+// rewards to date (as of lastTx) / manager's permissions / photo ID (!rewards.matches(NUMERIC))
 					"lastTx INTEGER,"+// unixtime of last reconciled transaction / -1 for managers
 					"proof TEXT,"+
-					"photo TEXT);"+// lo-res B&W photo of customer (normally under 4k) / full res photo for manager
-					"CREATE TABLE IF NOT EXISTS txs ("+
+					"photo TEXT);"// lo-res B&W photo of customer (normally under 4k) / full res photo for manager
+			).then(function () {
+				return self.executeQuery_(		
+			"CREATE TABLE IF NOT EXISTS txs ("+
 					"me TEXT,"+// company (or device-owner) account code (qid)
 					"txid INTEGER DEFAULT 0,"+// transaction id (xid) on the server (for offline backup only -- not used by the app) / temporary storage of customer cardCode pending tx upload
 					"status INTEGER,"+// see A.TX_... constants
@@ -67,8 +68,11 @@
 					"data TEXT,"+// hash of cardCode, amount, created, and me (as proof of agreement)
 					"account TEXT,"+//account particulars
 					"description TEXT);"// always "reverses..", if this tx undoes a previous one (previous by date)
-			);
-			console.log(alasql.databases);
+			);});
+//			.then(function () {
+//				self.executeQuery_("CREATE INDEX IF NOT EXISTS custQid ON members(qid)");
+//			});
+			console.log(alasql.databases.rcredits);
 		};
 		SQLiteService.prototype.init = function () {
 			if (!self.db) {
