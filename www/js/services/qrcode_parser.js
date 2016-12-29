@@ -26,7 +26,11 @@
 			console.log(region, url, (regionLens.indexOf(alphaB.indexOf(fmt)) + 1), regionLen);
 		}
 		this.plainUrl = url;
-		this.url = new URL(url);
+		try {
+			this.url = new URL(url);
+		} catch (e) {
+			this.url = window.URL(url);
+		}
 	};
 	QRCodeParser.prototype.parse = function () {
 		console.log(this.plainUrl);
@@ -127,7 +131,7 @@
 			separator = COMPANY_INDICATOR_URL;
 		}
 		this.accountInfo.memberId = memberId;
-		this.accountInfo.accountId = memberId +yyy;
+		this.accountInfo.accountId = memberId + yyy;
 	};
 	QRCodeParser.prototype.parseServerType_ = function () {
 		var lastPoint = this.url.host.lastIndexOf('.');
