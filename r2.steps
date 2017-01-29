@@ -76,4 +76,114 @@ this.accountIDIs = function (id) {return (this.v.parser.getAccountInfo().account
  */
 this.securityCodeIs = function (id) {return (this.v.parser.getAccountInfo().securityCode == id);}
 
+
+/**
+ * show page (ARG)
+ *
+ * in: MAKE Transact Setup
+ *     TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showPage = function (arg1) {
+  todo;
+}
+
+/**
+ * show button (ARG)
+ *
+ * in: TEST Transact Setup
+ *     TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showButton = function (arg1) {
+  todo;
+}
+
+/**
+ * button (ARG) pressed
+ *
+ * in: MAKE Transact WeIdentifyAndChargeACustomer
+ */
+this.buttonPressed = function (arg1) {
+  todo;
+}
+
+/**
+ * show scanner
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showScanner = function () {
+  todo;
+}
+
+/**
+ * scanner sees QR (ARG)
+ *
+ * in: MAKE Transact WeIdentifyAndChargeACustomer
+ */
+this.scannerSeesQR = function (arg1) {
+  todo;
+}
+
+/**
+ * show photo of member (ARG)
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showPhotoOfMember = function (arg1) {
+  todo;
+}
+
+/**
+ * show text (ARG)
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showText = function (arg1) {
+  todo;
+}
+
+/**
+ * show number keypad
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showNumberKeypad = function () {
+  todo;
+}
+
+/**
+ * show amount (ARG)
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showAmount = function (arg1) {
+  todo;
+}
+
+/**
+ * show dropdown with (ARG) selected
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showDropdownWithSelected = function (arg1) {
+  todo;
+}
+
+/**
+ * show (ARG) message (ARG) titled (ARG)
+ *
+ * in: TEST Transact WeIdentifyAndChargeACustomer
+ */
+this.showMessageTitled = function (arg1, arg2, arg3) {
+  todo;
+}
+
+/**
+ * message button (ARG) pressed
+ *
+ * in: MAKE Transact WeIdentifyAndChargeACustomer
+ */
+this.messageButtonPressed = function (arg1) {
+  todo;
+}
 }
