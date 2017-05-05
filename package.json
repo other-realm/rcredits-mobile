@@ -58,7 +58,7 @@
 			"id": "cordova-sqlite-storage"
 		},
 		"cordova-plugin-network-information@1.2.1",
-		"cordova-plugin-crosswalk-webview@1.6.1"
+		"cordova-plugin-crosswalk-webview@2.2.0"
 	],
 	"cordovaPlatforms": [
 		"ios",

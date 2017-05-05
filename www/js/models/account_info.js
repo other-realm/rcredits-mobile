@@ -10,7 +10,7 @@
 		this.signin = '';
 		this.counter='';
 	};
-	AccountInfo.IS_DEMO = 'rc4';
+	AccountInfo.IS_DEMO = true;
 	AccountInfo.prototype.isPersonalAccount = function () {
 		return this.isPersonal;
 	};

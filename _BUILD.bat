@@ -1,1 +1,1 @@
-ionic build android
+ionic run android -- --minSdkVersion=16

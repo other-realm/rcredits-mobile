@@ -62,16 +62,18 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			return;
 		}
 		if (this.currentUser().isDemo() && !accountInfo.isDemo()) {
-			console.log(this.currentUser(), accountInfo.isDemo());
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo().isDemo());
 			throw "can_not_use_real_card";
-		} else if (this.currentUser() !== null && !this.currentUser().isDemo() && accountInfo.isDemo()) {
-			console.log(this.currentUser(), accountInfo.isDemo());
+		} else if (!this.currentUser().isDemo() && accountInfo.isDemo()) {
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo());
 			throw "can_not_use_demo_card";
 		}
 		if (this.currentUser().isDemo()) {
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo().isDemo());
 			offlCtrl.isDemoMode();
 		}
-		console.log(this.currentUser().isDemo(), accountInfo.isDemo());
+		console.log(this.currentUser().isDemo().toString());
+		console.log(accountInfo.isDemo().toString());
 	};
 	UserService.prototype.loginWithRCard_ = function (params, accountInfo) {
 		return this.makeRequest_(params, accountInfo).then(function (res) {
