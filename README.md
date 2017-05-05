@@ -34,7 +34,7 @@ ionic serve
 
 ```
 ionic state restore # Only if plugins or platforms may have changed
-ionic run <android|ios> -- --minSdkVersion=16  #the first "--" is not a typo
+ionic run android -- --minSdkVersion=16  #the first "--" is not a typo
 ```
 
 ## Adding a Plugin
