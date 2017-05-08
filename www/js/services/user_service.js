@@ -44,6 +44,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			return null;
 		}
 	};
+	
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
 		console.log($httpParamSerializer(params));
