@@ -2,7 +2,7 @@
 
 ## Initial Setup
 
-- Use a version of node.js that works, including a compatible version of npm (node.js 5.11 worked but the latest beta6 did not)
+- Use a version of node.js that works, including a compatible version of npm (node.js:v6.9.5/npm:4.5.0)
 
 - If developing on Windows, use cygwin (because you need it for the Linux-style set-variable console command (the BUILD_TARGET line below)
 
