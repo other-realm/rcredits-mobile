@@ -1,0 +1,32 @@
+******************************************************
+ Dependency warning - for the CLI to run correctly,      
+ it is highly recommended to install/upgrade the following:     
+
+ Please install your Cordova CLI to version  >=4.2.0 `npm install -g cordova`
+
+******************************************************
+
+Running 'serve:before' gulp task before serve
+[14:56:39] Starting 'sass'...
+[14:56:40] Finished 'sass' after 701 ms
+[14:56:40] Starting 'default'...
+[14:56:40] Finished 'default' after 15 μs
+[14:56:40] Starting 'serve:before'...
+[14:56:40] Finished 'serve:before' after 26 μs
+
+Proxy added: /pos => https://stage-new.rcredits.org/pos
+Watching: www/**/*, !www/lib/**/*
+√ Running dev server:  http://localhost:8100
+Ionic server commands, enter:
+  restart or r to restart the client app from the root
+  goto or g and a url to have the app navigate to the given url
+  consolelogs or c to enable/disable console log output
+  serverlogs or s to enable/disable server log output
+  quit or q to shutdown the server and exit
+
+ionic $ Caught exception:
+ Error: EPERM: operation not permitted, read
+    at Error (native) 
+
+Mind letting us know? https://github.com/driftyco/ionic-cli/issues
+
