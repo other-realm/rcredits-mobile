@@ -14,15 +14,10 @@ In your project folder:
 
 1. npm install -g bower
 2. npm install
-3. npm install karma --save-dev
-4. In karma.conf.js, add this line as the first element in the list of files:
-	'node_modules/jquery.min.js',
-5. Download and copy jquery.min.js to node_modules
-6. ionic state restore
-7. bower install
-8. ionic setup sass
-9. BUILD_TARGET=development gulp config
-  "development" might instead be "staging", or "production". This command copies config from the `/config.js` and `/local_config.js` files. Only config matching the given build target (or lying outside an @if block) is copied.
+5. ionic state restore
+6. bower install
+7. ionic setup sass
+8. ionic serve
 
 
 ## To run the app in your default browser:
