@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-indexeddb-async": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        }
+    }
+}
