@@ -2,9 +2,9 @@
 // whether the app is in dev mode, staging mode, etc.
 rCreditsConfig = {
 	SQLiteDatabase: {
-		name: 'rcredits',
+		name: 'cg',
 		version: '1.0',
-		description: 'rCredits DB',
+		description: 'Common Good DB',
 		estimatedSize: 20 * 1024 * 1024 // kb
 	},
 	// For Demo Cards
