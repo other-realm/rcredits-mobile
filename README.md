@@ -9,7 +9,7 @@
 - add this line to the test server's .htaccess file: Header set Access-Control-Allow-Origin *
 
 
-In your project folder:
+In your project directory:
 
 
 1. npm install -g bower
