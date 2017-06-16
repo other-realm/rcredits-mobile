@@ -9,6 +9,6 @@ node_modules/
 www/css/ionic.app.*
 www/lib/
 npm-debug.log
-/nbproject/private/
-/platforms/android/build/outputs/apk/androidAPKs.zip
+nbproject/private/
+platforms/android/build/outputs/apk/androidAPKs.zip
 .zip
