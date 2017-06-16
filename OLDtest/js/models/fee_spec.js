@@ -1,7 +1,7 @@
 /* global expect */
 describe('Fee', function () {
 	'use strict';
-	beforeEach(module('rcredits'));
+	beforeEach(module('CommonGood'));
 	beforeEach(function () {
 		module(function ($exceptionHandlerProvider) {
 			$exceptionHandlerProvider.mode('log');

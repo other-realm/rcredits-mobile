@@ -1,6 +1,6 @@
-/* global Language, rCreditsConfig, StatusBar */
-// rCredits Register
-var app = angular.module('rcredits', ['ionic', 'routes', 'pascalprecht.translate', 'LocalStorageModule', 'ui.router'])
+/* global Language, CommonGoodConfig, StatusBar */
+// CommonGood Register
+var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.translate', 'LocalStorageModule', 'ui.router'])
 	.config(['$translateProvider', 'localStorageServiceProvider', '$ionicConfigProvider',
 		function ($translateProvider, localStorageServiceProvider, $ionicConfigProvider) {
 			$ionicConfigProvider.views.maxCache(0);
@@ -12,7 +12,7 @@ var app = angular.module('rcredits', ['ionic', 'routes', 'pascalprecht.translate
 				.preferredLanguage(Language.DEFAULT_LANGUAGE)
 				.fallbackLanguage(Language.DEFAULT_LANGUAGE)
 				.useSanitizeValueStrategy('sanitizeParameters');
-			localStorageServiceProvider.setPrefix('rcredits');
+			localStorageServiceProvider.setPrefix('CommonGood');
 			var storageQuota = false;
 		}])
 	.run(function ($ionicPlatform,$state, SQLiteService, NetworkService, $rootScope, TransactionSyncService, BackButtonService, UserService, NotificationService, $rootScope) {
@@ -21,7 +21,7 @@ var app = angular.module('rcredits', ['ionic', 'routes', 'pascalprecht.translate
 			$rootScope.whereWasI=location.hash;
 			$rootScope.amIOnline=NetworkService.isOffline();
 			if (!ionic.Platform.isWebView()) {
-				rCreditsConfig.serverUrl = rCreditsConfig.serverproxyUrl;
+				CommonGoodConfig.serverUrl = CommonGoodConfig.serverproxyUrl;
 			}
 			// Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
 			// for form inputs)

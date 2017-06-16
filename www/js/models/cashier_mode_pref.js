@@ -13,7 +13,7 @@
 			return this.isOptionEnabled('refund');
 		},
 		isExchangeEnabled: function () {
-			return this.isOptionEnabled('trade_rcredits_for_usd') && this.isOptionEnabled('trade_usd_for_rcredtis');
+			return this.isOptionEnabled('trade_CommonGood_for_usd') && this.isOptionEnabled('trade_usd_for_rcredtis');
 		},
 		getPref_: function (id) {
 			return _.find(this.options, function (o) {
@@ -29,10 +29,10 @@
 		setCanRefund: function (boolCan) {
 			this.setPropertyValue('refund', boolCan);
 		},
-		setCanTradeRcreditsForUSD: function (boolCan) {
-			this.setPropertyValue('trade_rcredits_for_usd', boolCan);
+		setCanTradeCommonGoodForUSD: function (boolCan) {
+			this.setPropertyValue('trade_CommonGood_for_usd', boolCan);
 		},
-		setCanTradeUSDforRcredits: function (boolCan) {
+		setCanTradeUSDforCommonGood: function (boolCan) {
 			this.setPropertyValue('trade_usd_for_rcredtis', boolCan);
 		},
 		enableAll: function () {

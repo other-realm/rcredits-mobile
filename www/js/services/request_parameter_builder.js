@@ -7,7 +7,7 @@
 				op: '',
 				device: this.getDeviceId() || '',
 				agent: null,
-				version: rCreditsConfig.build,
+				version: CommonGoodConfig.build,
 				signin: ''
 			};
 		};

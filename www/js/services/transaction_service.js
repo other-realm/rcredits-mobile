@@ -1,4 +1,4 @@
-/* global rCreditsConfig, Transaction, _, app, Sha256, parseFloat, moment */
+/* global CommonGoodConfig, Transaction, _, app, Sha256, parseFloat, moment */
 app.service('TransactionService',
 	function ($q, UserService, RequestParameterBuilder, $http, $httpParamSerializer, SQLiteService,
 		SqlQuery, NetworkService, MemberSqlService, NotificationService, $ionicLoading, TransactionSql, $rootScope) {
@@ -194,8 +194,8 @@ app.service('TransactionService',
 			if (customer.isPersonal === false) {
 				return q.reject();
 			}
-			if (params.amount > rCreditsConfig.transaction_max_amount_offline) {
-				transactionResponseError.message = "Limit $" + rCreditsConfig.transaction_max_amount_offline + " exceeded";
+			if (params.amount > CommonGoodConfig.transaction_max_amount_offline) {
+				transactionResponseError.message = "Limit $" + CommonGoodConfig.transaction_max_amount_offline + " exceeded";
 				q.reject(transactionResponseError);
 				return q.promise;
 			}

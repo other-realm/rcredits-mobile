@@ -1,7 +1,7 @@
 /* global expect */
 describe('Transaction Service', function () {
 	'use strict';
-	beforeEach(module('rcredits'));
+	beforeEach(module('CommonGood'));
 	beforeEach(function () {
 		module(function ($exceptionHandlerProvider) {
 			$exceptionHandlerProvider.mode('log');
@@ -74,7 +74,7 @@ describe('Transaction Service', function () {
 	});
 	// Logs in the Seller and the Customer
 	beforeEach(function () {
-		request = httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+		request = httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
 		userService.loginWithRCard(SELLER_SCAN_RESULT.text).then(function (sellerResponse) {
 			seller = sellerResponse;
 			request.respond(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);

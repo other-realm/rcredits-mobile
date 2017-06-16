@@ -6,7 +6,7 @@
 			type: 'usd'
 		},
 		{
-			name: 'rCredits',
+			name: 'CommonGood',
 			sign: '',
 			type: 'rcredit'
 		}

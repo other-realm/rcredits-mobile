@@ -4,9 +4,9 @@
 //   I WANT the customer's QR code to be interpreted correctly
 //   SO we know who we're dealing with.
 
-describe('rcredits-mobile% -- FEATURE_NAME', function () {
+describe('CommonGood-mobile% -- FEATURE_NAME', function () {
 	'use strict';
-  var steps = new Rcredits-mobile_steps();
+  var steps = new CommonGood-mobile_steps();
 
   beforeEach(function () { // Setup
     steps.extraSetup();

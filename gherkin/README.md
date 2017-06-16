@@ -5,4 +5,4 @@ Gherkin language compiler for PHP (compiles into PHP) originally for use with Dr
 
 Also works with Javascript (compiles into Jasmine / Karma)
 
-This set of programs is part of the rCredits system and is covered by that system's copyright.
+This set of programs is part of the CommonGood system and is covered by that system's copyright.

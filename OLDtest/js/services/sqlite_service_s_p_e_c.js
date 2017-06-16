@@ -2,7 +2,7 @@
 describe('Transaction Service', function () {
 	'use strict';
 	jasmine.DEFAULT_TIMEOUT_INTERVAL = 5000;
-	beforeEach(module('rcredits'));
+	beforeEach(module('CommonGood'));
 	beforeEach(function () {
 		module(function ($exceptionHandlerProvider) {
 			$exceptionHandlerProvider.mode('log');

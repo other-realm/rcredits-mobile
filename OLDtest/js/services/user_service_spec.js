@@ -2,7 +2,7 @@ describe ('User Service', function() {
 
   'use strict';
 
-  beforeEach (module ('rcredits'));
+  beforeEach (module ('CommonGood'));
   beforeEach (function() {
     module (function($exceptionHandlerProvider) {
       $exceptionHandlerProvider.mode('log');
@@ -62,7 +62,7 @@ describe ('User Service', function() {
 
 
     it ('Should send correct member and code values based on input URL', function() {
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
 
       userService.loginWithRCard(SELLER_SCAN_RESULT.text).then(function(seller) {
         expect (seller.name).toBe(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE.name);
@@ -75,7 +75,7 @@ describe ('User Service', function() {
     });
 
     it ('Should handle error (i.e. ok = 0)', function() {
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(LOGIN_WITH_RCARD_ERROR_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(LOGIN_WITH_RCARD_ERROR_RESPONSE);
       userService.loginWithRCard(SELLER_SCAN_RESULT.text)
         .catch(function(err) {
           expect (err).toBe(LOGIN_WITH_RCARD_ERROR_RESPONSE.message);
@@ -86,7 +86,7 @@ describe ('User Service', function() {
 
     it ("Should also set firstLogin: FALSE on seller object if deviceId was not sent", function() {
       localStorageService.remove('deviceID');
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
 
       userService.loginWithRCard(SELLER_SCAN_RESULT.text).then(function(seller) {
         expect (seller.firstLogin).toBe(false);
@@ -98,7 +98,7 @@ describe ('User Service', function() {
     it ("Should also set firstLogin: TRUE on seller object if deviceId was sent and it's not on localStorage", function() {
       localStorageService.remove('deviceID');
       SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE.device = "xyz";
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
 
       userService.loginWithRCard(SELLER_SCAN_RESULT.text).then(function(seller) {
         expect (seller.firstLogin).toBe(true);
@@ -109,7 +109,7 @@ describe ('User Service', function() {
 
     it ("Seller login error", function() {
       SELLER_SCAN_RESULT.logon = 0;
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
 
       userService.loginWithRCard(SELLER_SCAN_RESULT.text)
         .catch(function(err) {
@@ -125,7 +125,7 @@ describe ('User Service', function() {
 
     it ('Customer login', function() {
       userService.seller = userService.createSeller(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
       userService.identifyCustomer(CUSTOMER_SCAN_RESULT.text).then(function(customer) {
         expect (customer.name).toBe(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE.name);
         expect (customer.company).toBe(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE.company);
@@ -138,7 +138,7 @@ describe ('User Service', function() {
     it ('Customer login with FIRST PURCHASE', function() {
       userService.seller = userService.createSeller(SELLER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
       CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE.logon = '-1';
-      httpBackend.whenPOST(rCreditsConfig.serverUrl).respond(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
+      httpBackend.whenPOST(CommonGoodConfig.serverUrl).respond(CUSTOMER_LOGIN_WITH_RCARD_SUCESS_RESPONSE);
       userService.identifyCustomer(CUSTOMER_SCAN_RESULT.text).then(function(customer) {
         expect (customer.firstPurchase).toBe(true);
       });

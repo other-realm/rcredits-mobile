@@ -2,4 +2,4 @@
 // into the repository.
 
 // Uncomment this line to override the default serverUrl.
-// rCreditsConfig.serverUrl = 'https://foo.rcredits.org/pos';
+// CommonGoodConfig.serverUrl = 'https://foo.commongood.earth/pos';

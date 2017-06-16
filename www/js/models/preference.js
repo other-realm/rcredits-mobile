@@ -30,12 +30,12 @@
 						name: 'refund'
 					},
 					{
-						id: 'trade_rcredits_for_usd',
-						name: 'tradeRCreditsUSD'
+						id: 'trade_CommonGood_for_usd',
+						name: 'tradeCommonGoodUSD'
 					},
 					{
 						id: 'trade_usd_for_rcredtis',
-						name: 'tradeUSDRCredits'
+						name: 'tradeUSDCommonGood'
 					}
 				]
 			}

@@ -181,7 +181,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	// Returns a promise that resolves with the following arguments:
 	// 1. user - The User object
 	// 2. flags - A hash with the following elements:
-	//      firstPurchase - Whether this is the user's first rCredits purchase. If so, the
+	//      firstPurchase - Whether this is the user's first CommonGood purchase. If so, the
 	//        app should notify the seller to request photo ID.
 	UserService.prototype.identifyCustomer = function (str, pin) {
 		var qrcodeParser = new QRCodeParser();

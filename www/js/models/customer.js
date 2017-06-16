@@ -45,7 +45,7 @@
 //				console.log(customerJson.photo);
 				customer.photo = customerJson.photo;
 			} else {
-				customer.photo = '/img/New-rCredits-Customer.png';
+				customer.photo = '/img/New-CommonGood-Customer.png';
 			}
 			return customer;
 		};

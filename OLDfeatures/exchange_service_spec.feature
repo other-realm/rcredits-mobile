@@ -1,5 +1,5 @@
 Feature: Exchange Service
-	Handle transfer of one currency to another (ex. USD -> rCredits)
+	Handle transfer of one currency to another (ex. USD -> CommonGood)
 
 
 	Scenario: Create Money Types

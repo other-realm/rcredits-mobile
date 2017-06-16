@@ -1,7 +1,7 @@
 /* global _ */
 describe('Barcode Scanner Service', function () {
 	'use strict';
-	beforeEach(module('rcredits'));
+	beforeEach(module('CommonGood'));
 	var barcodeScannerService, rootScope, $httpBackend;
 	var SCAN_RESULT = {text: "HTTP://NEW.RC4.ME/AAK.NyCBBlUF1qWNZ2k", format: "QR_CODE", cancelled: false};
 	beforeEach(inject(function (BarcodeService, $rootScope, _$httpBackend_) {

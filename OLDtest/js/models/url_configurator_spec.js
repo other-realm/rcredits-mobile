@@ -1,7 +1,7 @@
 describe('Url Configurator', function () {
 	'use strict';
 	var urlConf;
-	beforeEach(module('rcredits'));
+	beforeEach(module('CommonGood'));
 	beforeEach(function () {
 		module(function ($exceptionHandlerProvider) {
 			$exceptionHandlerProvider.mode('log');

@@ -1,5 +1,5 @@
 Feature: Url Configurator
-	This model configures the URL used to call the rCredits server side POS service
+	This model configures the URL used to call the CommonGood server side POS service
 
 
 	Scenario: Should create a the complete URL based on a member ID
