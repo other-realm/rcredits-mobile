@@ -26,12 +26,17 @@ ionic serve #this is the command to run to emulate the mobile app in the browser
 ionic serve
 
 ## To Run on Device
-
+Android
 ```
 ionic state restore # Only if plugins or platforms may have changed
 ionic run android -- --minSdkVersion=16  #the first "--" is not a typo
 ```
 
+iOS
+```
+ionic state restore # Only if plugins or platforms may have changed
+ionic run ios
+```
 ## Adding a Plugin
 
 
