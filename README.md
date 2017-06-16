@@ -1,24 +1,25 @@
 # Common Good App
 
-## Initial Setup
-
-- Use a version of node.js that works, including a compatible version of npm (node.js:v6.9.5/npm:4.5.0)
-
-- If developing on Windows, use cygwin (because you need it for the Linux-style set-variable console command (the BUILD_TARGET line below)
-
-- add this line to the test server's .htaccess file: Header set Access-Control-Allow-Origin *
-
-
-In your project directory:
+## Prerequisites:
+1.	If you do not already have git installed (I.E. you are not a programmer/you're not on Linux), install git for your OS at: https://git-scm.com/downloads 
+2.	If you don't have the Chrome browser on your computer, download that at: https://www.google.com/chrome/browser/desktop/index.html
+3.	Next, you'll want to set up NodeJS, a server-side JavaScript language that the app runs on: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
+4.	If you're using a windows operating system, you'll probably need to install Cygwin, a Linux emulator; the default settings in the installation process /should/ work (Windows now has its own Linux emulator, but if you know how to use that, you probably don't need these detailed prerequisites): https://cygwin.com/setup-x86_64.exe .  Mac is can usually run Linux natively
+5.	Download the zip: file https://github.com/other-realm/rcredits-mobile/archive/Stable.zip
 
 
-1. npm install -g bower
-2. npm install
-5. ionic state restore
-6. bower install
-7. ionic setup sass
-8. ionic serve
+Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/ rcredits-mobile/` ).  If you are not, type cd the/directory/where/your/file/is (note, use '/' and not '\', even if you are in windows)
+Then run the following commands, one after the other:
 
+
+```
+npm install -g bower
+npm install
+ionic state restore
+bower install
+ionic setup sass
+ionic serve #this is the command to run to emulate the mobile app in the browser.
+```
 
 ## To run the app in your default browser:
 
