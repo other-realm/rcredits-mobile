@@ -3,7 +3,9 @@
 ## Prerequisites:
 1.	If you do not already have git installed (I.E. you are not a programmer/you're not on Linux), install git for your OS at: https://git-scm.com/downloads 
 2.	If you don't have the Chrome browser on your computer, download that at: https://www.google.com/chrome/browser/desktop/index.html
-3.	Next, you'll want to set up NodeJS, a server-side JavaScript language that the app runs on: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
+3.	Next, you'll want to set up NodeJS, a server-side JavaScript language that the app runs on:
+Windows: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
+Mac: https://nodejs.org/dist/v6.11.0/node-v6.11.0.pkg
 4.	If you're using a windows operating system, you'll probably need to install Cygwin, a Linux emulator; the default settings in the installation process /should/ work (Windows now has its own Linux emulator, but if you know how to use that, you probably don't need these detailed prerequisites): https://cygwin.com/setup-x86_64.exe .  Mac is can usually run Linux natively
 5.	Download the zip: file https://github.com/other-realm/rcredits-mobile/archive/Stable.zip
 
@@ -22,9 +24,9 @@ ionic serve #this is the command to run to emulate the mobile app in the browser
 ```
 
 ## To run the app in your default browser:
-
+```
 ionic serve
-
+```
 ## To Run on Device
 Android
 ```
