@@ -52,11 +52,11 @@ ionic run ios
 
 ### If Packages Get Screwed Up
 
-npm rebuild
+'npm rebuild'
 
 ### If SCSS/CSS Gets Screwed Up
 
-gulp sass
+'gulp sass'
 
 ### To Run Unit Tests
 
