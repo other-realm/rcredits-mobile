@@ -7,7 +7,7 @@
 Windows: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
 Mac: https://nodejs.org/dist/v6.11.0/node-v6.11.0.pkg
 4.	If you're using a windows operating system, you'll probably need to install Cygwin, a Linux emulator; the default settings in the installation process /should/ work (Windows now has its own Linux emulator, but if you know how to use that, you probably don't need these detailed prerequisites): https://cygwin.com/setup-x86_64.exe .  Mac is can usually run Linux natively
-5.	Download the zip: file https://github.com/other-realm/rcredits-mobile/archive/Stable.zip
+5.	Download the zip: file https://github.com/other-realm/rcredits-mobile/archive/Stable.zip and unzip it to a directory probably somewhere without any spaces in it (so not "My Documents" or "Program Files") - it will probably still work if you put it there, but there may be some issues.
 
 
 Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/rcredits-mobile/` ).  If you are not, type cd the/directory/where/your/file/is (note, use '/' and not '\\', even if you are in windows)
