@@ -1,4 +1,7 @@
-/* global Class */
+/* global Class, app */
+/*
+ * This is the model that gets populated with customer data where it is stored on the phone and synchronized with the server if there is a network connection 
+ */
 (function (window, app) {
 	app.service('Customer', function (User) {
 		var Customer = Class.create(User, {
@@ -42,7 +45,6 @@
 			customer.accountInfo.accountId = customerJson.qid;
 			customer.accountInfo.securityCode = proof.sc;
 			if (customerJson.photo) {
-//				console.log(customerJson.photo);
 				customer.photo = customerJson.photo;
 			} else {
 				customer.photo = '/img/New-CommonGood-Customer.png';

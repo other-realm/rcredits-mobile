@@ -8,9 +8,8 @@ app.service('TransactionService',
 			self = this;
 			this.lastTransaction = null;
 		};
+		
 		TransactionService.prototype.makeRequest_ = function (params, account) {
-			console.log(params, account);
-//			params.amount=parseFloat(params.amount.toFixed(2).toString());
 			var urlConf = new UrlConfigurator();
 			return $http({
 				method: 'POST',

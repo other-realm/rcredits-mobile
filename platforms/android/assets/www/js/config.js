@@ -1,6 +1,6 @@
 // Most app config should go here. Use the BUILD_TARGET directives below to set config that depends on
 // whether the app is in dev mode, staging mode, etc.
-Common-GoodConfig = {
+CommonGoodConfig = {
 	SQLiteDatabase: {
 		name: 'cg',
 		version: '1.0',

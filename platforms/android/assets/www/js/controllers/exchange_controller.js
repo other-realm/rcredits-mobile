@@ -7,7 +7,7 @@
 		this.init = function () {
 			this.exchange = ExchangeService.getExchange();
 			this.paymentMethod = this.exchange.getPaymentMethod();
-			self.Common-GoodIsCurrencyFrom = self.exchange.getCurrencyFrom().getType() === 'rcredit';
+			self.CommonGoodIsCurrencyFrom = self.exchange.getCurrencyFrom().getType() === 'rcredit';
 			$translate('exchange_includes_fee', {
 				feeValue: this.paymentMethod.getFee().getTitle(),
 				paymentName: this.paymentMethod.getName()

@@ -1,10 +1,11 @@
 app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, CashierModeService, PermissionService, SelfServiceMode) {
+	//create a varable for the current customer
 	$scope.customer = UserService.currentCustomer();
+	//show the customer's balance in a popup
 	$scope.showBalance = function () {
 		if ($scope.customer.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {
-			console.log($scope.customer);
 			NotificationService.showAlert({
 				scope: $scope,
 				title: 'customerBalance',
@@ -12,19 +13,25 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 			});
 		}
 	};
+	//a function that is triggered when something is finished loading
 	$scope.hideLoading = function () {
 		$ionicLoading.hide();
 	};
+	//navigate to a page that will show the customer's QR and other information
 	$scope.showQR=function (){
 		$state.go('app.qr');
 	};
+	//get rid of the customer var when the transaction is complete
 	$scope.$on('$destroy', function () {
 		$scope.customer = null;
 	});
+	//navigate to the the screen that has the keypad so that the total can be entered
 	$scope.openCharge = function () {
+		//Charge the customer
 		var chargeFn = function () {
 			$state.go('app.transaction', {'transactionType': 'charge'});
 		};
+		//If the cashier has the permissions necessary to carry out a transaction, have the transaction carried out, if not, send an alert
 		if (CashierModeService.canCharge()) {
 			chargeFn();
 		} else {

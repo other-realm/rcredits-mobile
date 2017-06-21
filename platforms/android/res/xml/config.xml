@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.rcreditsmobile621273" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ionicframework.CommonGoodmobile621273" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
@@ -32,15 +32,15 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
-    <name>rCredits</name>
+    <name>CommonGood</name>
     <description>
 
 		Community-Created Credits for the Common Good
 
 	</description>
-    <author email="info@rCredits.org" href="http://rcredits.org/">
+    <author email="info@CommonGood.earth" href="http://commongood.earth/">
 
-		rCredits Team
+		CommonGood Team
 
 	</author>
     <content src="index.html" />

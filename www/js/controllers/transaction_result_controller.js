@@ -9,7 +9,6 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 		$state.go('app.qr');
 	};
 	BackButtonService.disable();
-
 	var statusKey;
 	$scope.success = false;
 	$scope.timeCan = true;
@@ -19,7 +18,6 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	}, 60 * 1000);
 	function onoroff() {
 		var onOff=$interval(function () {
-//			console.log(NetworkService.isOnline());
 			if (NetworkService.isOnline() !== oldOnline) {
 				$scope.timeCan = false;
 				$interval.cancel(onOff);
@@ -30,7 +28,6 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	onoroff();
 	$scope.setMessages = function (transactionResult) {
 		if (NetworkService.isOnline()) {
-			console.log(transactionResult);
 			$scope.note = transactionResult.data.message;
 			if (transactionResult.data.txid) {
 				if ($scope.note.indexOf("ransaction has been canceled") > -1) {
@@ -45,7 +42,6 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 				$scope.success = false;
 			}
 		} else {
-			console.log(transactionResult);
 			$scope.note = transactionResult.message;
 			if (transactionResult.txid) {
 				if ($scope.note.indexOf("ransaction has been canceled") > -1) {

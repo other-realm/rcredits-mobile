@@ -119,6 +119,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 					NotificationService.showAlert({title: "Error", template: "You are already signed in as: " + person.name});
 				} else if (errorMsg === 'TypeError: this.db is null') {
 				} else {
+					console.log(errorMsg);
 					NotificationService.showAlert({title: "Error", template: errorMsg});
 				}
 				$ionicLoading.hide();

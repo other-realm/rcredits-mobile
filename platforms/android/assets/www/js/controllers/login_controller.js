@@ -1,3 +1,5 @@
+/* global app */
+//Handles login if the user has the appropriate permissions
 app.controller('LoginCtrl', function ($scope, $ionicLoading, $state, $ionicPlatform, BarcodeService, BackButtonService, UserService, $ionicHistory, NotificationService, CashierModeService, $stateParams, $rootScope) {
 	$scope.$on('$ionicView.loaded', function () {
 		ionic.Platform.ready(function () {
@@ -5,10 +7,11 @@ app.controller('LoginCtrl', function ($scope, $ionicLoading, $state, $ionicPlatf
 				navigator.splashscreen.hide();
 		});
 	});
-	// Scanner Login
+	// Scanner Login, use the demo mode if the app is running on the desktop, otherwise, open the scanner
 	$ionicHistory.clearHistory();
 	$scope.openScanner = function () {
-		if (ionic.Platform.platform() === 'win64' || ionic.Platform.platform() === 'win32') {
+		var platform = ionic.Platform.platform();
+		if (platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 			$rootScope.whereWasI = location.hash;
 			$state.go("app.demo");
 			$ionicLoading.hide();
@@ -17,7 +20,6 @@ app.controller('LoginCtrl', function ($scope, $ionicLoading, $state, $ionicPlatf
 			$ionicPlatform.ready(function () {
 				BarcodeService.scan('app.login')
 					.then(function (str) {
-						console.log(str);
 						UserService.loginWithRCard(str)
 							.then(function () {
 								$ionicHistory.nextViewOptions({
