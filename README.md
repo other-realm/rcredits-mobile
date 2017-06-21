@@ -1,6 +1,6 @@
 # Common Good App
 
-If you have an Android phone and you just want to test it out there, go to: https://github.com/other-realm/rcredits-mobile/tree/Stable/platforms/android/build/outputs/apk and download the two files and then copy them into your phone via USB.  Then open the files on your phone and they should install themselves
+If you have an Android phone and you just want to test it out there, go to: https://github.com/other-realm/rcredits-mobile/tree/Stable/platforms/android/build/outputs/apk and download the two files and then copy them into your phone via USB.  Then open the files on your phone and one of the two should install itself (and only one will work, the one that will is dependent on the architecture of your phone)
 
 ## Prerequisites:
 1.	If you do not already have git installed (I.E. you are not a programmer/you're not on Linux), install git for your OS at: https://git-scm.com/downloads 
