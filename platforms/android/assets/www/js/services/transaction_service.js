@@ -129,6 +129,7 @@ app.service('TransactionService',
 		};
 		TransactionService.prototype.undoTransaction = function (transaction) {
 			console.log(transaction);
+			$rootScope.undo=true;
 			return this.charge(parseFloat(transaction.amount * -1), transaction.description, transaction.goods, 0);
 		};
 		TransactionService.prototype.saveTransaction = function (transaction) {

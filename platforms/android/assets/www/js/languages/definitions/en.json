@@ -84,5 +84,6 @@
 	"forget_company": "Forget Company",
 	"advanced": "Advanced Settings",
 	"action_not_enabled": "This feature is disabled. A manager can enable it online at commongood.earth.",
-	"qr": "Show My Card"
+	"qr": "Show My Card",
+	"went_wrong":"There was an error in communication, please try again..."
 }

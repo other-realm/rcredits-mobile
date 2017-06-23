@@ -29,6 +29,7 @@ app.controller('SelfServiceModeController', function ($scope, $state, $ionicLoad
 			.catch(function (err) {
 				console.error(err);
 				NotificationService.showAlert({title: "error", template: err});
+				$state.go("app.home");
 			})
 			.finally(function () {
 				$ionicLoading.hide();

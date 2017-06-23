@@ -20,6 +20,7 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 			// This only for web development to enable proxy
 			$rootScope.whereWasI=location.hash;
 			$rootScope.amIOnline=NetworkService.isOffline();
+			$rootScope.undo=true;
 			if (!ionic.Platform.isWebView()) {
 				CommonGoodConfig.serverUrl = CommonGoodConfig.serverproxyUrl;
 			}

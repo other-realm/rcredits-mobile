@@ -1,11 +1,11 @@
 app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService,
-	$stateParams, $ionicLoading, $filter, NotificationService, UserService,
-	TransactionService, BackButtonService, $timeout,$interval, SelfServiceMode) {
+	$stateParams, $ionicLoading, $filter, NotificationService, UserService, $rootScope,
+	TransactionService, BackButtonService, $timeout, $interval, SelfServiceMode) {
 	var oldOnline = NetworkService.isOnline();
 	$scope.transactionStatus = $stateParams.transactionStatus;
 	$scope.transactionAmount = $stateParams.transactionAmount;
 	$scope.networkStatus = NetworkService.isOnline();
-	$scope.showQR=function (){
+	$scope.showQR = function () {
 		$state.go('app.qr');
 	};
 	BackButtonService.disable();
@@ -13,15 +13,16 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	$scope.success = false;
 	$scope.timeCan = true;
 	// Enable UNDO btn for 1 min
+	console.log($rootScope.undo);
 	$timeout(function () {
 		$scope.timeCan = false;
 	}, 60 * 1000);
 	function onoroff() {
-		var onOff=$interval(function () {
+		var onOff = $interval(function () {
 			if (NetworkService.isOnline() !== oldOnline) {
 				$scope.timeCan = false;
 				$interval.cancel(onOff);
-			} 
+			}
 			oldOnline = NetworkService.isOnline();
 		}, 100);
 	}
@@ -96,10 +97,10 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 				$ionicLoading.show();
 				TransactionService.undoTransaction(TransactionService.lastTransaction)
 					.then(function (transactionResult) {
-						console.log(transactionResult, res);
+						console.log(transactionResult, res, TransactionService.lastTransaction);
 						transactionResult.message = "Charge was canceled";
 						$scope.setMessages(transactionResult);
-						$scope.undo = true;
+						$rootScope.undo = true;
 					})
 					.finally(function () {
 						$ionicLoading.hide();

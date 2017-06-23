@@ -1,4 +1,7 @@
-app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, CashierModeService, PermissionService, SelfServiceMode) {
+/*
+ * #app/customer - Handles customer transactions and customer information
+ */
+app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, CashierModeService, PermissionService, SelfServiceMode,$rootScope) {
 	//create a varable for the current customer
 	$scope.customer = UserService.currentCustomer();
 	//show the customer's balance in a popup
@@ -13,6 +16,8 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 			});
 		}
 	};
+	//
+	$rootScope.undo=false;
 	//a function that is triggered when something is finished loading
 	$scope.hideLoading = function () {
 		$ionicLoading.hide();

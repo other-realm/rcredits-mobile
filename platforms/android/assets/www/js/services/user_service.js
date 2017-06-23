@@ -176,6 +176,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	//      firstPurchase - Whether this is the user's first CommonGood purchase. If so, the
 	//        app should notify the seller to request photo ID.
 	UserService.prototype.identifyCustomer = function (str, pin) {
+		if(str){
 		var qrcodeParser = new QRCodeParser();
 		qrcodeParser.setUrl(str);
 		var accountInfo = qrcodeParser.parse();
@@ -229,6 +230,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				//self.customer.photo = blobPhotoUrl;
 				return self.customer;
 			});
+		}else{
+			NotificationService.showAlert({title:'error',template:'went_wrong'});
+		}
 	};
 	UserService.prototype.identifyOfflineCustomer = function () {
 		var customerLoginResponse = {
