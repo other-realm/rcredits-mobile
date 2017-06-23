@@ -1,7 +1,7 @@
 <ion-view hide-back-button="success">
 	<subheader></subheader>
 	<ion-nav-buttons side="primary">
-		<button id="undoButton" class="undoButton button button-stable" ng-show="!online && success && timeCan && !undo && !isSelfServiceEnabled()" ng-click="undoTransaction()">
+		<button id="undoButton" class="undoButton button button-stable" ng-show="!online && success && timeCan && undo===true && !isSelfServiceEnabled()" ng-click="undoTransaction()">
 			{{ 'undo' | translate }}
 		</button>
 	</ion-nav-buttons>

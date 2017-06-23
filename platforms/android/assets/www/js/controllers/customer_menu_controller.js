@@ -1,7 +1,7 @@
 /*
  * #app/customer - Handles customer transactions and customer information
  */
-app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, CashierModeService, PermissionService, SelfServiceMode,$rootScope) {
+app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, CashierModeService, PermissionService, SelfServiceMode, $rootScope) {
 	//create a varable for the current customer
 	$scope.customer = UserService.currentCustomer();
 	//show the customer's balance in a popup
@@ -17,21 +17,23 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 		}
 	};
 	//
-	$rootScope.undo=false;
 	//a function that is triggered when something is finished loading
 	$scope.hideLoading = function () {
 		$ionicLoading.hide();
 	};
 	//navigate to a page that will show the customer's QR and other information
-	$scope.showQR=function (){
+	$scope.showQR = function () {
 		$state.go('app.qr');
 	};
 	//get rid of the customer var when the transaction is complete
 	$scope.$on('$destroy', function () {
 		$scope.customer = null;
+//		$rootScope.undo=false;
 	});
 	//navigate to the the screen that has the keypad so that the total can be entered
 	$scope.openCharge = function () {
+		$rootScope.undo = true;
+		console.log($rootScope.undo);
 		//Charge the customer
 		var chargeFn = function () {
 			$state.go('app.transaction', {'transactionType': 'charge'});
@@ -44,6 +46,8 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 		}
 	};
 	$scope.openRefund = function () {
+		$rootScope.undo = true;
+		console.log($rootScope.undo);
 		var refundFn = function () {
 			$state.go('app.transaction', {'transactionType': 'refund'});
 		};
@@ -54,6 +58,8 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 		}
 	};
 	$scope.openExchange = function () {
+		$rootScope.undo = true;
+		console.log($rootScope.undo);
 		var exchangeFn = function () {
 			$state.go('app.transaction_select_exchange');
 		};

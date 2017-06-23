@@ -13,7 +13,6 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	$scope.success = false;
 	$scope.timeCan = true;
 	// Enable UNDO btn for 1 min
-	console.log($rootScope.undo);
 	$timeout(function () {
 		$scope.timeCan = false;
 	}, 60 * 1000);
@@ -100,7 +99,8 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 						console.log(transactionResult, res, TransactionService.lastTransaction);
 						transactionResult.message = "Charge was canceled";
 						$scope.setMessages(transactionResult);
-						$rootScope.undo = true;
+						$rootScope.undo = false;
+						console.log($rootScope.undo);
 					})
 					.finally(function () {
 						$ionicLoading.hide();
