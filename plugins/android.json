@@ -22,9 +22,6 @@
         "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
         },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
         },
@@ -47,6 +44,9 @@
             "XWALK_MODE": "embedded",
             "XWALK_MULTIPLEAPK": "true",
             "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         }
     },
     "dependent_plugins": {

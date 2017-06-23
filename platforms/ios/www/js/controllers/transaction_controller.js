@@ -10,11 +10,8 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 	var fillCategories = function () {
 		if (isTransactionTypeCharge()) {
 			// You can put in other and none for the future here
-			//return _.union(seller.descriptions, ['other', 'none']);
-			console.log(seller.descriptions);
 			return seller.descriptions;
 		}
-		console.log(seller.descriptions);
 		return seller.descriptions;
 	};
 	$scope.moreThan1Category = function () {
@@ -59,7 +56,6 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 		});
 	};
 	$scope.onSelectCategory = function () {
-		console.log(seller.descriptions);
 		if (!isTransactionTypeCharge() || $scope.selectedCategory.selected !== 'other') {
 			return;
 		}

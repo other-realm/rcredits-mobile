@@ -1,4 +1,7 @@
-/* global _, app */
+/* global _, app, offlCtrl */
+/*
+ * This function handles all actual transactions from the server related to getting user information, both for cashiers and customers.
+ */
 app.service('UserService', function ($q, $http, $httpParamSerializer, RequestParameterBuilder, User, Seller, Customer, $rootScope, $timeout,
 	PreferenceService, CashierModeService, $state, NetworkService, MemberSqlService, NotificationService, SelfServiceMode) {
 	'use strict';
@@ -12,7 +15,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		this.seller = null;
 		this.LOGIN_SELLER_ERROR_MESSAGE = 'login_your_self';
 	};
-	// Gets the current user. Returns the user object,
+	// Gets the current seller. Returns the user object,
 	// or null if there is no current user.
 	UserService.prototype.currentUser = function () {
 		return this.seller;
@@ -20,9 +23,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	// Gets the current customer. Returns an object
 	// or null if there is no current customer.
 	UserService.prototype.currentCustomer = function () {
-//		console.log(this.customer.accountInfo);
 		return this.customer;
 	};
+	//
 	UserService.prototype.loadSeller = function (sellerId) {
 		try {
 			var seller = new Seller();
@@ -44,10 +47,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			return null;
 		}
 	};
+	//This is the function that actually sends and recives the requests from the server 
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
-		console.log($httpParamSerializer(params));
-		//"https://otherrealm.org/cgf/test.php",
 		return $http({
 			method: 'POST',
 			url: urlConf.getServerUrl(accountInfo),
@@ -57,37 +59,34 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			data: $httpParamSerializer(params)
 		});
 	};
+	//
 	UserService.prototype.validateDemoMode = function (accountInfo) {
 		if (!this.currentUser()) {
 			return;
 		}
 		if (this.currentUser().isDemo() && !accountInfo.isDemo()) {
-			console.log(this.currentUser(), accountInfo.isDemo());
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo().isDemo());
 			throw "can_not_use_real_card";
-		} else if (this.currentUser() !== null && !this.currentUser().isDemo() && accountInfo.isDemo()) {
-			console.log(this.currentUser(), accountInfo.isDemo());
+		} else if (!this.currentUser().isDemo() && accountInfo.isDemo()) {
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo());
 			throw "can_not_use_demo_card";
 		}
 		if (this.currentUser().isDemo()) {
+			console.log(this.currentUser().isDemo(), accountInfo.isDemo().isDemo());
 			offlCtrl.isDemoMode();
 		}
-		console.log(this.currentUser().isDemo(), accountInfo.isDemo());
 	};
 	UserService.prototype.loginWithRCard_ = function (params, accountInfo) {
 		return this.makeRequest_(params, accountInfo).then(function (res) {
 			var responseData = res.data;
-			console.log(params, accountInfo, res);
 			if (params.agent && params.agent.substr(-3) === accountInfo.accountId.substr(-3)) {
 				throw 'You cannot use yourself as a customer while you are an agent';
 			}
 			if (responseData.ok === LOGIN_FAILED) {
-				console.log(responseData.message);
 				throw responseData.message;
 			}
 			return responseData;
 		}).catch(function (err) {
-			console.log(params, accountInfo, err);
-			console.log(err.statusText);
 			if (_.isString(err) && err !== '') {
 				console.error(err);
 				throw err;
@@ -111,7 +110,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	UserService.prototype.loginWithRCardOffline = function (accountInfo) {
 		var loadSellerPromise = $q.defer();
 		var seller = this.loadSeller(accountInfo.accountId);
-		console.log(seller);
 		if (seller) {
 			loadSellerPromise.resolve(seller);
 		} else {
@@ -119,7 +117,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return loadSellerPromise.promise;
 	};
-	// Logs user in given the scanned info from an rCard.
+	// Logs user in given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name)  
 	// Returns a promise that resolves when login is complete.
 	// If this is the first login, the promise will resolve with {firstLogin: true}
 	// The app should then give notice to the user that the device is associated with the
@@ -129,6 +127,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		qrcodeParser.setUrl(str);
 		var accountInfo = qrcodeParser.parse();
 		this.validateDemoMode(accountInfo);
+		//these are the parameters that become the 'Customer' object
 		var params = new RequestParameterBuilder()
 			.setOperationId('identify')
 			.setSecurityCode(accountInfo.securityCode)
@@ -136,7 +135,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			.setSignin(accountInfo.signin)
 			.getParams();
 		params.counter = accountInfo.counter;
-		console.log(accountInfo, params);
 		if (NetworkService.isOffline()) {
 			return this.loginWithRCardOffline(accountInfo).then(function () {
 				PreferenceService.parsePreferencesNumber(self.currentUser().getCan());
@@ -144,11 +142,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
-				console.log(responseData);
 				if (responseData.can) {
 					self.seller = self.createSeller(responseData);
 					self.seller.accountInfo = accountInfo;
-					console.log(self.seller);
 					self.seller.save();
 					return self.seller;
 				} else if (responseData.ok === 1) {
@@ -162,7 +158,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	UserService.prototype.createSeller = function (sellerInfo) {
 		var props = ['can', 'descriptions', 'company', 'default', 'time'];
 		var seller = new Seller(sellerInfo.name);
-		console.log(sellerInfo);
 		_.each(props, function (p) {
 			seller[p] = sellerInfo[p];
 		});
@@ -178,9 +173,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	// Returns a promise that resolves with the following arguments:
 	// 1. user - The User object
 	// 2. flags - A hash with the following elements:
-	//      firstPurchase - Whether this is the user's first rCredits purchase. If so, the
+	//      firstPurchase - Whether this is the user's first CommonGood purchase. If so, the
 	//        app should notify the seller to request photo ID.
 	UserService.prototype.identifyCustomer = function (str, pin) {
+		if(str){
 		var qrcodeParser = new QRCodeParser();
 		qrcodeParser.setUrl(str);
 		var accountInfo = qrcodeParser.parse();
@@ -189,7 +185,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 			throw 'must_be_customer';
 		}
-		console.log(accountInfo);
 		var params = new RequestParameterBuilder()
 			.setOperationId('identify')
 			.setAgent(this.seller.default)
@@ -201,12 +196,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		params = params.getParams();
 		params.counter = accountInfo.counter;
-		console.log(accountInfo);
 		if (NetworkService.isOffline()) {
 			return MemberSqlService.existMember(accountInfo.accountId)
 				.then(function (member) {
 					self.customer = Customer.parseFromDb(member);
-					console.log(self.customer);
 					return self.customer;
 				})
 				.catch(function (err) {
@@ -216,7 +209,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 						self.customer = self.createCustomer(customerResponse);
 						self.customer.unregistered = true;
 						self.customer.accountInfo = accountInfo;
-						console.log(self.customer);
 						return self.customer;
 					});
 				});
@@ -224,14 +216,12 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		//is Online
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
-				console.log(responseData);
 				self.customer = self.createCustomer(responseData);
 				if (responseData.logon === FIRST_PURCHASE) {
 					self.customer.firstPurchase = true;
 				}
 				self.customer.accountInfo = accountInfo;
 				return self.customer;
-				console.log(self);
 			})
 			.then(function (customer) {
 				return self.getProfilePicture(accountInfo, accountInfo);
@@ -240,6 +230,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				//self.customer.photo = blobPhotoUrl;
 				return self.customer;
 			});
+		}else{
+			NotificationService.showAlert({title:'error',template:'went_wrong'});
+		}
 	};
 	UserService.prototype.identifyOfflineCustomer = function () {
 		var customerLoginResponse = {
@@ -263,9 +256,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		_.each(props, function (p) {
 			customer[p] = customerInfo[p];
 		});
-		console.log(customer);
 		return customer;
 	};
+	//converts the jpeg binary blob coming from the server to a canvas
 	function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		var img = new Image();
 		img.crossOrigin = 'Anonymous';
@@ -283,7 +276,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		img.src = url;
 	}
 	UserService.prototype.getProfilePicture = function (accountInfo) {
-		console.log(self);
 		var params = new RequestParameterBuilder()
 			.setOperationId('photo')
 			.setAgent(this.seller.default)
@@ -300,11 +292,8 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			data: $httpParamSerializer(params),
 			responseType: "arraybuffer"
 		}).then(function (res) {
-//			console.log(res.data.toString());
 			var arrayBufferView = new Uint8Array(res.data);
-//			console.log(arrayBufferView.toString());
 			var blob = new Blob([arrayBufferView], {type: "image/jpeg"});
-//			console.log(blob.toString());
 			var urlCreator = window.URL || window.webkitURL;
 			var imgUrl = urlCreator.createObjectURL(blob);
 			var imageConvert = $q.defer();
@@ -315,7 +304,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			return imageConvert.promise;
 		})
 			.catch(function (err) {
-				console.error(err);
+				console.log(err);
 				throw err;
 			});
 	};

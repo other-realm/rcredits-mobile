@@ -1,4 +1,4 @@
-/* global Sha256, parseInt, rCreditsConfig, AccountInfo */
+/* global Sha256, parseInt, CommonGoodConfig, AccountInfo */
 (function (window) {
 	var COMPANY_INDICATOR = '-';
 	var COMPANY_INDICATOR_URL = ':';

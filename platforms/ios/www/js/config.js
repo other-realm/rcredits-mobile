@@ -1,10 +1,10 @@
 // Most app config should go here. Use the BUILD_TARGET directives below to set config that depends on
 // whether the app is in dev mode, staging mode, etc.
-rCreditsConfig = {
+CommonGoodConfig = {
 	SQLiteDatabase: {
-		name: 'rcredits',
+		name: 'cg',
 		version: '1.0',
-		description: 'rCredits DB',
+		description: 'Common Good DB',
 		estimatedSize: 20 * 1024 * 1024 // kb
 	},
 	// For Demo Cards

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ionicframework.rcreditsmobile621273" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.ionicframework.CommonGoodmobile621273" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -20,10 +20,6 @@
     </feature>
     <feature name="Console">
         <param name="ios-package" value="CDVLogger" />
-    </feature>
-    <feature name="SplashScreen">
-        <param name="ios-package" value="CDVSplashScreen" />
-        <param name="onload" value="true" />
     </feature>
     <feature name="StatusBar">
         <param name="ios-package" value="CDVStatusBar" />
@@ -49,8 +45,20 @@
     <description>
 		Community-Created Credits for the Common Good
 	</description>
-    <author email="info@rCredits.org" href="http://rcredits.org/">
-		rCredits Team
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>CommonGood</name>
+    <description>
+
+		Community-Created Credits for the Common Good
+
+	</description>
+    <author email="info@CommonGood.earth" href="http://commongood.earth/">
+
+		Common Good Team
+
 	</author>
     <content src="index.html" />
     <access origin="*" />
@@ -84,8 +92,6 @@
     <splash height="960" src="resources\ios\splash\Default@2x~iphone.png" width="640" />
     <splash height="480" src="resources\ios\splash\Default~iphone.png" width="320" />
     <preference name="AllowInlineMediaPlayback" value="false" />
-    <preference name="BackupWebStorage" value="none" />
-    <preference name="DisallowOverscroll" value="true" />
     <preference name="EnableViewportScale" value="false" />
     <preference name="KeyboardDisplayRequiresUserAction" value="true" />
     <preference name="MediaPlaybackRequiresUserAction" value="false" />
@@ -100,7 +106,9 @@
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="webviewbounce" value="false" />
     <preference name="UIWebViewBounce" value="false" />
+    <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="16" />
+    <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="5000" />
     <preference name="AutoHideSplashScreen" value="true" />

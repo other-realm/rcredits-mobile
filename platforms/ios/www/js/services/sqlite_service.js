@@ -15,12 +15,12 @@
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
 //			if (window.cordova) {
-//				this.db = $cordovaSQLite.openDB({name: "rcredits.db"}); //device
+//				this.db = $cordovaSQLite.openDB({name: "CommonGood.db"}); //device
 //			} else {
 				this.db = this.sqlPlugin.openDatabase(
-					window.rCreditsConfig.SQLiteDatabase.name,
-					window.rCreditsConfig.SQLiteDatabase.version,
-					window.rCreditsConfig.SQLiteDatabase.description, 100000);
+					window.CommonGoodConfig.SQLiteDatabase.name,
+					window.CommonGoodConfig.SQLiteDatabase.version,
+					window.CommonGoodConfig.SQLiteDatabase.description, 100000);
 				$timeout(function () {
 					openPromise.resolve();
 				}, 1000);

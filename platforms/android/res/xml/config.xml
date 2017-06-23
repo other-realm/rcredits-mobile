@@ -10,10 +10,6 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
@@ -32,6 +28,10 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>CommonGood</name>
     <description>
 
@@ -40,23 +40,23 @@
 	</description>
     <author email="info@CommonGood.earth" href="http://commongood.earth/">
 
-		CommonGood Team
+		Common Good Team
 
 	</author>
     <content src="index.html" />
     <access origin="*" />
-    <icon src="resources/android/icon/drawable-xhdpi-icon.png" />
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <allow-navigation href="https://*" />
     <allow-navigation href="http://*" />
     <allow-navigation href="http://10.0.0.7:8100" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <icon density="ldpi" src="resources/android/icon/drawable-ldpi-icon.png" />
-    <icon density="mdpi" src="resources/android/icon/drawable-mdpi-icon.png" />
-    <icon density="hdpi" src="resources/android/icon/drawable-hdpi-icon.png" />
-    <icon density="xhdpi" src="resources/android/icon/drawable-xhdpi-icon.png" />
-    <icon density="xxhdpi" src="resources/android/icon/drawable-xxhdpi-icon.png" />
-    <icon density="xxxhdpi" src="resources/android/icon/drawable-xxxhdpi-icon.png" />
+    <icon density="ldpi" src="resources\android\icon\drawable-ldpi-icon.png" />
+    <icon density="mdpi" src="resources\android\icon\drawable-mdpi-icon.png" />
+    <icon density="hdpi" src="resources\android\icon\drawable-hdpi-icon.png" />
+    <icon density="xhdpi" src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <icon density="xxhdpi" src="resources\android\icon\drawable-xxhdpi-icon.png" />
+    <icon density="xxxhdpi" src="resources\android\icon\drawable-xxxhdpi-icon.png" />
     <splash density="port-ldpi" src="resources\android\splash\drawable-port-ldpi-screen.png" />
     <splash density="port-mdpi" src="resources\android\splash\drawable-port-mdpi-screen.png" />
     <splash density="port-hdpi" src="resources\android\splash\drawable-port-hdpi-screen.png" />

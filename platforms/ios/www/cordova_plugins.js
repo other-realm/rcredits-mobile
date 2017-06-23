@@ -25,14 +25,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-        "id": "cordova-plugin-splashscreen.SplashScreen",
-        "pluginId": "cordova-plugin-splashscreen",
-        "clobbers": [
-            "navigator.splashscreen"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
         "id": "cordova-plugin-statusbar.statusbar",
         "pluginId": "cordova-plugin-statusbar",
@@ -260,6 +252,14 @@ module.exports = [
         "id": "cordova-plugin-indexeddb-async.IndexedDBShim",
         "pluginId": "cordova-plugin-indexeddb-async",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+        "id": "cordova-plugin-splashscreen.SplashScreen",
+        "pluginId": "cordova-plugin-splashscreen",
+        "clobbers": [
+            "navigator.splashscreen"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -268,7 +268,6 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.2",
     "cordova-plugin-console": "1.0.3",
     "cordova-plugin-whitelist": "1.2.2",
-    "cordova-plugin-splashscreen": "3.2.2",
     "cordova-plugin-statusbar": "2.1.3",
     "ionic-plugin-keyboard": "2.1.0",
     "phonegap-plugin-barcodescanner": "5.0.0",
@@ -277,7 +276,8 @@ module.exports.metadata =
     "cordova-plugin-compat": "1.0.0",
     "cordova-plugin-file": "4.2.0",
     "cordova-plugin-indexeddb-async": "0.0.1",
-    "cordova-plugin-crosswalk-webview": "2.2.0"
+    "cordova-plugin-crosswalk-webview": "2.2.0",
+    "cordova-plugin-splashscreen": "4.0.3"
 }
 // BOTTOM OF METADATA
 });

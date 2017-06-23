@@ -1,7 +1,7 @@
 (function (window) {
 	var UrlConfigurator = function () {
-		this.baseUrl = rCreditsConfig.serverUrl;
-		this.demoUrl = rCreditsConfig.stagingServerUrl;
+		this.baseUrl = CommonGoodConfig.serverUrl;
+		this.demoUrl = CommonGoodConfig.stagingServerUrl;
 	};
 	UrlConfigurator.prototype.getServerUrl = function (account) {
 		if (account.isDemo()) {
