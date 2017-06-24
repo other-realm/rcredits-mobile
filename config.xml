@@ -1,18 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <widget id="com.ionicframework.CommonGoodmobile621273" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>CommonGood</name>
-  <description>&#xD;
-&#xD;
-		Community-Created Credits for the Common Good&#xD;
-&#xD;
-	</description>
-  <author email="info@CommonGood.earth" href="http://commongood.earth/">&#xD;
-&#xD;
-		Common Good Team&#xD;
-&#xD;
-	</author>
+  <description>Community-Created Credits for the Common Good</description>
+  <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>
   <content src="index.html"/>
-  <access origin="*"/>
+  <access origin='*' allows-arbitrary-loads-in-media='true' allows- arbitrary-loads-in-web-content='true' allows-local-networking='true' />
+  <allow-navigation href="*"/>
+  <allow-navigation href="http://*/*"/>
+  <allow-navigation href="https://*/*"/>
+  <allow-navigation href="data:*"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
