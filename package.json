@@ -5,6 +5,12 @@
 	"app_id": "",
 	"v2": false,
 	"typescript": false,
+	"proxies":[
+		{
+			"path":"/pos",
+			"proxyUrl":"https://stage-new.rcredits.org/pos"
+		}
+	],
 	"watch": {
 		"sass": [
 			"scss/**/*.scss"
