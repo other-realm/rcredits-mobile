@@ -1,10 +1,15 @@
-/* global Transaction, app */
+/* global Transaction, app, moment */
 (function (app) {
 	app.service('TransactionSql', function ($q, SqlQuery, SQLiteService,NotificationService) {
 		var self;
 		var TransactionSql = function () {
 			self = this;
 		};
+		/**
+		 * 
+		 * @param {type} exludeTxs
+		 * @returns {unresolved}
+		 */
 		TransactionSql.prototype.getOfflineTransaction = function (exludeTxs) {
 			var filter = '';
 			if (exludeTxs) {
@@ -12,11 +17,9 @@
 			}
 			var sqlQuery = new SqlQuery();
 			sqlQuery.setQueryString("SELECT * FROM txs where STATUS = " + Transaction.Status.OFFLINE + filter + " order by rowid asc limit 1");
-			console.log(exludeTxs,sqlQuery);
 			return SQLiteService.executeQuery(sqlQuery).then(function (SQLResultSet) {
 				if (SQLResultSet.rows.length > 0) {
 					var sqlT = SQLResultSet.rows[0];
-					console.log(sqlT.proof);
 					return sqlT;
 				} else {
 					throw "No offline transactions";

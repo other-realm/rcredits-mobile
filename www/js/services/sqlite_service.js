@@ -9,22 +9,17 @@
 			this.db = null;
 		};
 		SQLiteService.prototype.isDbEnable = function () {
-			console.log(!!this.sqlPlugin);
 			return !!this.sqlPlugin;
 		};
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
-//			if (window.cordova) {
-//				this.db = $cordovaSQLite.openDB({name: "CommonGood.db"}); //device
-//			} else {
-				this.db = this.sqlPlugin.openDatabase(
-					window.CommonGoodConfig.SQLiteDatabase.name,
-					window.CommonGoodConfig.SQLiteDatabase.version,
-					window.CommonGoodConfig.SQLiteDatabase.description, 100000);
-				$timeout(function () {
-					openPromise.resolve();
-				}, 1000);
-//			}
+			this.db = this.sqlPlugin.openDatabase(
+				window.CommonGoodConfig.SQLiteDatabase.name,
+				window.CommonGoodConfig.SQLiteDatabase.version,
+				window.CommonGoodConfig.SQLiteDatabase.description, 100000);
+			$timeout(function () {
+				openPromise.resolve();
+			}, 1000);
 			return openPromise.promise;
 		};
 		SQLiteService.prototype.ex = function () {
@@ -40,10 +35,6 @@
 					txPromise.resolve(res);
 				}, function (tx, e) {
 					console.error(tx, e);
-//					var alertPopup = NotificationService.showAlert({
-//						title: "error",
-//						template: "There was an error: " + e.message
-//					});
 					txPromise.reject(e.message);
 				});
 			}, function (error) {
@@ -91,7 +82,6 @@
 				console.warn("SQLite is not enable");
 			}
 			this.createDatabase().then(this.createSchema.bind(this));
-			console.log(this);
 		};
 		return new SQLiteService();
 	});

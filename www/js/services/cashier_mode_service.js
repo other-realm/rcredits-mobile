@@ -8,6 +8,9 @@
 			self = this;
 			this.isActivated = false;
 		};
+		/**
+		 * if the 
+		 */
 		CashierModeService.prototype.init = function () {
 			if (PreferenceService.isCashierModeEnabled()) {
 				var cashierMode = localStorageService.get(CASHIER_MODE_KEY);
@@ -17,8 +20,7 @@
 			}
 		};
 		/**
-		 * Checks if the Preference 'Cashier Mode' is on and
-		 * if the user is on this Mode
+		 * Checks if the Preference 'Cashier Mode' is on and if the user is on this Mode
 		 * @returns boolean
 		 */
 		CashierModeService.prototype.isEnabled = function () {
