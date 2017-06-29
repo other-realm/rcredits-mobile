@@ -179,6 +179,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				PreferenceService.parsePreferencesNumber(self.currentUser().getCan());
 			});
 	};
+	/**
+	 * Creates a seller object that has the relevant information that the seller may need and verifies whether there is a valid device that is getting used and sends this back to loginWithRCard
+	 * @param {type} sellerInfo
+	 * @returns {user_serviceL#5.Seller|user_serviceL#5.UserService.prototype.createSeller.seller}
+	 */
 	UserService.prototype.createSeller = function (sellerInfo) {
 		var props = ['can', 'descriptions', 'company', 'default', 'time'];
 		var seller = new Seller(sellerInfo.name);
@@ -273,6 +278,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		identifyPromise.resolve(customerLoginResponse);
 		return identifyPromise.promise;
 	};
+	/**
+	 * Creates a customer object that has the relevant information that the seller may need and sends this back to identifyCustomer
+	 * @param {type} customerInfo
+	 * @returns {user_serviceL#5.Customer}
+	 */
 	UserService.prototype.createCustomer = function (customerInfo) {
 		var props = ['balance', 'can', 'company', 'place'];
 		var customer = new Customer(customerInfo.name);
@@ -282,7 +292,13 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		});
 		return customer;
 	};
-	//converts the jpeg binary blob coming from the server to a canvas
+	/**
+	 * Converts the jpeg binary blob coming from the server to a canvas
+	 * @param {type} url
+	 * @param {type} callback
+	 * @param {type} outputFormat
+	 * @returns {undefined}
+	 */
 	function convertImgToDataURLviaCanvas(url, callback, outputFormat) {
 		var img = new Image();
 		img.crossOrigin = 'Anonymous';
@@ -299,6 +315,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		};
 		img.src = url;
 	}
+	/**
+	 * Gets a user image from the server and converts the incoming image blog into a base64 html image to show up on the customer screen
+	 * @param {type} accountInfo
+	 * @returns {a base64 image}
+	 */
 	UserService.prototype.getProfilePicture = function (accountInfo) {
 		var params = new RequestParameterBuilder()
 			.setOperationId('photo')
@@ -332,12 +353,13 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				throw err;
 			});
 	};
-	UserService.prototype.authorize = function () {
-		var SUCCEED = true;
-		return $q(function (resolve, reject) {
-			resolve(SUCCEED);
-		});
-	};
+//	probably unnecessary 
+//	UserService.prototype.authorize = function () {
+//		var SUCCEED = true;
+//		return $q(function (resolve, reject) {
+//			resolve(SUCCEED);
+//		});
+//	};
 	UserService.prototype.enterCashierMode = function () {
 		CashierModeService.activateCashierMode();
 		$state.go('app.home');
