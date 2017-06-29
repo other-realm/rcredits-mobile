@@ -15,17 +15,25 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		this.seller = null;
 		this.LOGIN_SELLER_ERROR_MESSAGE = 'login_your_self';
 	};
-	// Gets the current seller. Returns the user object,
-	// or null if there is no current user.
+	/**
+	 * Gets the current seller.
+	 * @returns {user_serviceL#5.seller} the user object,or null if there is no current user.
+	 */
 	UserService.prototype.currentUser = function () {
 		return this.seller;
 	};
-	// Gets the current customer. Returns an object
-	// or null if there is no current customer.
+	/**
+	 * Gets the current customer
+	 * @returns {user_serviceL#5.UserService.customer} a customer object or null if there is no current customer.
+	 */
 	UserService.prototype.currentCustomer = function () {
 		return this.customer;
 	};
-	//
+	/**
+	 * Loads the current manger/cashier/seller from storage if a returning user and information from the company_home_controller sellerLogin event
+	 * @param {type} - sellerId The seller's Id
+	 * @returns {seller object|null}
+	 */
 	UserService.prototype.loadSeller = function (sellerId) {
 		try {
 			var seller = new Seller();
@@ -47,7 +55,12 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			return null;
 		}
 	};
-	//This is the function that actually sends and recives the requests from the server 
+	/**
+	 * This is the function that actually sends and recives the requests from the server for login info 
+	 * @param {type} params - the user login params
+	 * @param {type} accountInfo - the seller's information
+	 * @returns {json} the requested user information from the server or an error message
+	 */
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
 		return $http({
@@ -59,7 +72,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			data: $httpParamSerializer(params)
 		});
 	};
-	//
+	/**
+	 * Validates that this is a demo customer and that the the current user exists in the system
+	 * @param {type} accountInfo
+	 * @returns {undefined}
+	 */
 	UserService.prototype.validateDemoMode = function (accountInfo) {
 		if (!this.currentUser()) {
 			return;
@@ -71,11 +88,13 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			console.log(this.currentUser().isDemo(), accountInfo.isDemo());
 			throw "can_not_use_demo_card";
 		}
-		if (this.currentUser().isDemo()) {
-			console.log(this.currentUser().isDemo(), accountInfo.isDemo().isDemo());
-			offlCtrl.isDemoMode();
-		}
 	};
+	/**
+	 * Sends the login request to the makeRequest function and processes the returned results
+	 * @param {type} params
+	 * @param {type} accountInfo
+	 * @returns {user_serviceL#5.UserService.prototype@call;makeRequest_@call;then@call;catch}
+	 */
 	UserService.prototype.loginWithRCard_ = function (params, accountInfo) {
 		return this.makeRequest_(params, accountInfo).then(function (res) {
 			var responseData = res.data;
@@ -107,6 +126,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			throw err.statusText;
 		});
 	};
+	/**
+	 * If the user is oflind when trying to do 
+	 * @param {type} accountInfo
+	 * @returns {.$q@call;defer.promise}
+	 */
 	UserService.prototype.loginWithRCardOffline = function (accountInfo) {
 		var loadSellerPromise = $q.defer();
 		var seller = this.loadSeller(accountInfo.accountId);
@@ -117,11 +141,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return loadSellerPromise.promise;
 	};
-	// Logs user in given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name)  
-	// Returns a promise that resolves when login is complete.
-	// If this is the first login, the promise will resolve with {firstLogin: true}
-	// The app should then give notice to the user that the device is associated with the
-	// user.
+	/**
+	 * Logs cashier user in given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name).  Returns a promise that resolves when login is complete.  If this is the first login, the promise will resolve with {firstLogin: true}.  The app should then give notice to the user that the device is associated with the user.
+	 * @param {type} str - the information from the card
+	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then|user_serviceL#5.UserService.prototype@call;loginWithRCardOffline@call;then}
+	 */
 	UserService.prototype.loginWithRCard = function (str) {
 		var qrcodeParser = new QRCodeParser();
 		qrcodeParser.setUrl(str);
@@ -169,69 +193,69 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return seller;
 	};
-	// Gets customer info and photo given the scanned info from an rCard.
+	// Gets customer info and photo given the scanned info from a Common Good card.
 	// Returns a promise that resolves with the following arguments:
 	// 1. user - The User object
 	// 2. flags - A hash with the following elements:
 	//      firstPurchase - Whether this is the user's first CommonGood purchase. If so, the
 	//        app should notify the seller to request photo ID.
 	UserService.prototype.identifyCustomer = function (str, pin) {
-		if(str){
-		var qrcodeParser = new QRCodeParser();
-		qrcodeParser.setUrl(str);
-		var accountInfo = qrcodeParser.parse();
-		this.validateDemoMode(accountInfo);
-		if (accountInfo.isPersonal === false) {
-			NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
-			throw 'must_be_customer';
-		}
-		var params = new RequestParameterBuilder()
-			.setOperationId('identify')
-			.setAgent(this.seller.default)
-			.setMember(accountInfo.accountId)
-			.setSecurityCode(accountInfo.securityCode)
-			.setSignin(accountInfo.signin);
-		if (pin) {
-			params.setPIN(pin);
-		}
-		params = params.getParams();
-		params.counter = accountInfo.counter;
-		if (NetworkService.isOffline()) {
-			return MemberSqlService.existMember(accountInfo.accountId)
-				.then(function (member) {
-					self.customer = Customer.parseFromDb(member);
+		if (str) {
+			var qrcodeParser = new QRCodeParser();
+			qrcodeParser.setUrl(str);
+			var accountInfo = qrcodeParser.parse();
+			this.validateDemoMode(accountInfo);
+			if (accountInfo.isPersonal === false) {
+				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
+				throw 'must_be_customer';
+			}
+			var params = new RequestParameterBuilder()
+				.setOperationId('identify')
+				.setAgent(this.seller.default)
+				.setMember(accountInfo.accountId)
+				.setSecurityCode(accountInfo.securityCode)
+				.setSignin(accountInfo.signin);
+			if (pin) {
+				params.setPIN(pin);
+			}
+			params = params.getParams();
+			params.counter = accountInfo.counter;
+			if (NetworkService.isOffline()) {
+				return MemberSqlService.existMember(accountInfo.accountId)
+					.then(function (member) {
+						self.customer = Customer.parseFromDb(member);
+						return self.customer;
+					})
+					.catch(function (err) {
+						console.log("Err", err);
+						console.log("Customer accountInfo => ", accountInfo);
+						return self.identifyOfflineCustomer().then(function (customerResponse) {
+							self.customer = self.createCustomer(customerResponse);
+							self.customer.unregistered = true;
+							self.customer.accountInfo = accountInfo;
+							return self.customer;
+						});
+					});
+			}
+			//is Online
+			return this.loginWithRCard_(params, accountInfo)
+				.then(function (responseData) {
+					self.customer = self.createCustomer(responseData);
+					if (responseData.logon === FIRST_PURCHASE) {
+						self.customer.firstPurchase = true;
+					}
+					self.customer.accountInfo = accountInfo;
 					return self.customer;
 				})
-				.catch(function (err) {
-					console.log("Err", err);
-					console.log("Customer accountInfo => ", accountInfo);
-					return self.identifyOfflineCustomer().then(function (customerResponse) {
-						self.customer = self.createCustomer(customerResponse);
-						self.customer.unregistered = true;
-						self.customer.accountInfo = accountInfo;
-						return self.customer;
-					});
+				.then(function (customer) {
+					return self.getProfilePicture(accountInfo, accountInfo);
+				})
+				.then(function (blobPhotoUrl) {
+					//self.customer.photo = blobPhotoUrl;
+					return self.customer;
 				});
-		}
-		//is Online
-		return this.loginWithRCard_(params, accountInfo)
-			.then(function (responseData) {
-				self.customer = self.createCustomer(responseData);
-				if (responseData.logon === FIRST_PURCHASE) {
-					self.customer.firstPurchase = true;
-				}
-				self.customer.accountInfo = accountInfo;
-				return self.customer;
-			})
-			.then(function (customer) {
-				return self.getProfilePicture(accountInfo, accountInfo);
-			})
-			.then(function (blobPhotoUrl) {
-				//self.customer.photo = blobPhotoUrl;
-				return self.customer;
-			});
-		}else{
-			NotificationService.showAlert({title:'error',template:'went_wrong'});
+		} else {
+			NotificationService.showAlert({title: 'error', template: 'went_wrong'});
 		}
 	};
 	UserService.prototype.identifyOfflineCustomer = function () {

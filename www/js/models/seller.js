@@ -55,7 +55,6 @@
 					_.extendOwn(this, JSON.parse(sellerData));
 					this.accountInfo = _.extendOwn(new AccountInfo(), this.accountInfo);
 					this.configureDeviceId_();
-					console.log(this.getCan());
 					PreferenceService.parsePreferencesNumber(this.getCan());
 					return this;
 				}

@@ -26,7 +26,6 @@
 						} else {
 							$timeout(function () {
 								TransactionSyncService.syncOfflineTransactions();
-								console.log(newValue);
 								ionContent.removeClassName('has-subheader');
 							});
 						}
@@ -42,6 +41,7 @@
 				};
 				this.isDemoMode = function () {
 					var user = UserService.currentUser();
+					
 					return user && user.isDemo();
 				};
 				$scope.$on('$destroy', function () {

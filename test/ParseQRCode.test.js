@@ -23,50 +23,50 @@ describe('r2% -- FEATURE_NAME', function () {
 	});
 	it('Scenario: We scan a valid old personal card.', function () {
 		steps.testOnly = 0;
-		expect(steps.weScanPersonalQR('HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw'));
+		steps.weScanPersonalQR('HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw');
 		steps.testOnly = 1;
-		expect(steps.accountIsPersonal());
+		steps.accountIsPersonal();
 		steps.testOnly = 1;
-		expect(steps.accountIDIs('NEWABB'));
+		steps.accountIDIs('NEWABB');
 		steps.testOnly = 1;
-		expect(steps.securityCodeIs('ZzhWMCq0zcBowqw'));
+		steps.securityCodeIs('ZzhWMCq0zcBowqw');
 	});
 
 	it('Scenario: We scan a valid old company card.', function () {
 		steps.testOnly = 0;
-		expect(steps.weScanCompanyQR('HTTP://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G'));
+		steps.weScanCompanyQR('HTTP://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G');
 		steps.testOnly = 1;
-		expect(steps.accountIsCompany());
+		steps.accountIsCompany();
 		steps.testOnly = 1;
-		expect(steps.accountIDIs('NEWAAB'));
+		steps.accountIDIs('NEWAAB');
 		steps.testOnly = 1;
-		expect(steps.securityCodeIs('WeHlioM5JZv1O9G'));
+		steps.securityCodeIs('WeHlioM5JZv1O9G');
 	});
 
 	it('Scenario: We scan a valid personal card.', function () {
 		steps.testOnly = 0;
-		expect(steps.weScanPersonalQR('HTTP://6VM.RC4.ME/G0RZzhWMCq0zcBowqw'));
-		//console.log(steps.weScanQR('HTTP://6VM.RC4.ME/G0RZzhWMCq0zcBowqw'));
+		steps.weScanPersonalQR('HTTP://6VM.RC4.ME/G0RZzhWMCq0zcBowqw');
+		//console.log(steps.weScanQR('HTTP://6VM.RC4.ME/G0RZzhWMCq0zcBowqw');
 		steps.testOnly = 1;
-		expect(steps.accountIsPersonal());
-		//console.log(steps.accountIsPersonal());
+		steps.accountIsPersonal();
+		//console.log(steps.accountIsPersonal();
 		steps.testOnly = 1;
-		expect(steps.accountIDIs('NEWABB'));
-		//console.log(steps.accountIDIs('NEWABB'));
+		steps.accountIDIs('NEWABB');
+		//console.log(steps.accountIDIs('NEWABB');
 		steps.testOnly = 1;
-		expect(steps.securityCodeIs('ZzhWMCq0zcBowqw'));
-		//console.log(steps.securityCodeIs('ZzhWMCq0zcBowqw'));
+		steps.securityCodeIs('ZzhWMCq0zcBowqw');
+		//console.log(steps.securityCodeIs('ZzhWMCq0zcBowqw');
 	});
 
 	it('Scenario: We scan a valid company card.', function () {
 		steps.testOnly = 0;
-		expect(steps.weScanCompanyQR('HTTP://6VM.RC4.ME/H010WeHlioM5JZv1O9G'));
+		steps.weScanCompanyQR('HTTP://6VM.RC4.ME/H010WeHlioM5JZv1O9G');
 		steps.testOnly = 1;
-		expect(steps.accountIsCompany());
+		steps.accountIsCompany();
 		steps.testOnly = 1;
-		expect(steps.accountIDIs('NEWAAB-A'));
+		steps.accountIDIs('NEWAAB-A');
 		steps.testOnly = 1;
-		expect(steps.securityCodeIs('WeHlioM5JZv1O9G'));
+		steps.securityCodeIs('WeHlioM5JZv1O9G');
 	});
 });
   

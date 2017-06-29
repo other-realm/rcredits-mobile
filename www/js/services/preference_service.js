@@ -15,7 +15,6 @@
 			var savedPreferences = this.loadSavedPreferences_();
 			var preferences = Preference.getDefinitions();
 			_.each(savedPreferences, _.partial(this.updatePref_, preferences).bind(this));
-			console.log(preferences);
 			return preferences;
 		};
 		/**
@@ -87,12 +86,10 @@
 			cashierPref.setCanRefund(parseBool(prefs[l - 2]));
 			cashierPref.setCanTradeCommonGoodForUSD(parseBool(prefs[l - 3]));
 			cashierPref.setCanTradeUSDforCommonGood(parseBool(prefs[l - 4]));
-			console.log(prefs.length,prefs[l - 1],prefs,cashierPref);
 		};
 		function pad0s(prefBool) {
 			for(var i=0;prefBool.length <=15;i++){
 				prefBool='0'+prefBool;
-				console.log(prefBool.length);
 			}
 			return prefBool.toString();
 		}

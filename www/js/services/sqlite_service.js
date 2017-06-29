@@ -29,7 +29,6 @@
 		};
 		SQLiteService.prototype.executeQuery_ = function (query, params) {
 			var txPromise = $q.defer();
-			console.log(query, params);
 			this.db.transaction(function (tx) {
 				tx.executeSql(query, params, function (tx, res) {
 					txPromise.resolve(res);
