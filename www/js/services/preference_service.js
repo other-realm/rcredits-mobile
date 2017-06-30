@@ -1,4 +1,9 @@
 /* global app, _, Preference */
+/**
+ * Handles storing and retrieving the account preferences pulled from the server locally 
+ * @param {type} app
+ * @returns {undefined}
+ */
 (function (app) {
 	'use strict';
 	app.service('PreferenceService', function (localStorageService, $injector) {
@@ -75,7 +80,6 @@
 		};
 		PreferenceService.prototype.parsePreferencesNumber = function (number) {
 			var bitsStr = Number(number).toString(2);
-//			console.log(bitStr);
 			this.setCashierModePrefs(bitsStr);
 		};
 		PreferenceService.prototype.setCashierModePrefs = function (strBits) {

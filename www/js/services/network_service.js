@@ -1,4 +1,9 @@
 /* global app */
+/**
+ * Figure out whether there is internet access and create a global object stating the findings
+ * @param {type} app
+ * @returns {undefined}
+ */
 (function (app) {
 	'use strict';
 	app.service('NetworkService', function ($rootScope, $timeout) {
@@ -44,6 +49,11 @@
 			this.connectionStateChange=true;
 			return this.connectionOnline;
 		};
+		/**
+		 * Fake their not being internet access for demo customers
+		 * @param {type} areYou
+		 * @returns {Boolean}
+		 */
 		NetworkService.prototype.fakingIt = function (areYou) {
 			this.connectionStateChange=false;
 			 this.fakeIt=areYou;

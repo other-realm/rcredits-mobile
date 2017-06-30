@@ -353,19 +353,18 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				throw err;
 			});
 	};
-//	probably unnecessary 
-//	UserService.prototype.authorize = function () {
-//		var SUCCEED = true;
-//		return $q(function (resolve, reject) {
-//			resolve(SUCCEED);
-//		});
-//	};
+	/**
+	 * Activates cashier mode, then redirects to the home screen
+	 * @returns {undefined}
+	 */
 	UserService.prototype.enterCashierMode = function () {
 		CashierModeService.activateCashierMode();
 		$state.go('app.home');
 	};
-	// Logs the user out on the remote server.
-	// Returns a promise that resolves when logout is complete, or rejects with error of fail.
+	/**
+	 * Logs the user out on the remote server.
+	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
+	 */
 	UserService.prototype.logout = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();

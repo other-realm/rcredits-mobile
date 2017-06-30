@@ -1,4 +1,9 @@
 /* global app, _ */
+/**
+ * A popup notifacation factory
+ * @param {type} app
+ * @returns {undefined}
+ */
 (function (app) {
 	'use strict';
 	app.factory('NotificationService', ['$translate', '$ionicPopup', function ($translate, $ionicPopup) {

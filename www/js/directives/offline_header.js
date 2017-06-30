@@ -1,6 +1,6 @@
 /* global app */
 /*
- * Shows a header when the phone does not have internet access
+ * Shows a header when the phone does not have internet access, also handles showing the demo mode header when using the app on the PC
  */
 (function (app) {
 	'use strict';

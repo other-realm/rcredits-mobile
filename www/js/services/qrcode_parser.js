@@ -10,8 +10,12 @@
 	var QRCodeParser = function () {
 	};
 	var realOrFake;
+	/**
+	 * Figures out what the kind of url that was scanned is and converts it into the proper format
+	 * @param {type} url
+	 * @returns {undefined}
+	 */
 	QRCodeParser.prototype.setUrl = function (url) {
-		//console.log(url);
 		if (url.indexOf('HTTP://') === -1) {
 			var fmt = url.substring(0, 1);
 			var i = parseInt(fmt, 36) / 4;
@@ -23,9 +27,7 @@
 			} else {
 				realOrFake = 'RC4.ME';
 			}
-			console.log(url.indexOf('-'));
 			url = 'HTTP://' + region + '.' + realOrFake + '/' + transformedURL;
-			//console.log(region, url, (regionLens.indexOf(alphaB.indexOf(fmt)) + 1), regionLen);
 		} else if ((url.indexOf('RC2.ME') !== -1) || (url.indexOf('rc2.me') !== -1)) {
 			realOrFake = 'RC2.ME';
 		} else {
@@ -34,8 +36,11 @@
 		this.plainUrl = url;
 		this.url = new URL(url);
 	};
+	/**
+	 * Parses the encoded url and uses the decoded information to populate the AccountInfo object
+	 * @returns {AccountInfo}
+	 */
 	QRCodeParser.prototype.parse = function () {
-		//console.log(this.plainUrl);
 		this.accountInfo = new AccountInfo();
 		this.accountInfo.url = this.plainUrl;
 		this.parts = this.accountInfo.url.split(/[/\\.-]/);
@@ -45,7 +50,6 @@
 			oldCode = false;
 		}
 		this.count = this.parts.length;
-		//console.log(this.count, this.parts, this.parts[5].length);
 //isCompany:true
 //isPersonal:false
 //memberId:"NEW"
@@ -60,36 +64,30 @@
 			if (this.parts[6]) {
 				this.accountInfo.counter = this.parts[6];
 				var tail = this.parts[5];
-				//console.log(this.accountInfo.counter, tail);
 			} else if (this.parts[5].indexOf(':') > -1) {
 				var tail = this.parts[5].split(':');
 				this.accountInfo.counter = tail[1];
 				tail = tail[0];
-				//console.log(this.accountInfo.counter, tail);
 			} else {
 				var tail = this.parts[5];
-				//console.log(this.accountInfo.counter, tail);
 			}
 			var fmt = tail.substring(0, 1);
 			var acctLen = '';
 			var i = parseInt(fmt, 36);
 			var agentLen = i % 4;
 			i = Math.floor(i / 4);
-			//console.log(i);
 			var regionLen = parseInt(regionLens.charAt(i));
 			acctLen = parseInt(acctLens.charAt(i));
 			var account = r36ToR26(tail.substring(1, 1 + acctLen), acctLen);
 			var memberId = '';
-			//console.log(tail, i, fmt, acctLen, agentLen, account, acctLens.charAt(i), regionLen);
 			if (acctLen >= 6 || tail.length < 1 + acctLen + agentLen) {
-				console.log(this.url);
-				throw 'That is not a valid rCard.';
+				console.log('That is not a valid Common Good Card: ',this.url);
+				throw 'That is not a valid  Common Good Card.';
 			}
 			this.accountInfo.unencryptedCode = tail.substring(1 + acctLen + agentLen);
 			this.accountInfo.securityCode = Sha256.hash(this.accountInfo.unencryptedCode);
 			this.accountInfo.isCompany = (agentLen > 0);
 			this.accountInfo.isPersonal = !this.accountInfo.isCompany;
-//			console.log(this.accountInfo.isPersonal);
 			region = r36ToR26(region, regionLen);
 			if (this.accountInfo.isCompany) {
 				this.accountInfo.signin = 1;
@@ -100,72 +98,78 @@
 			}
 			memberId = region;
 			this.accountInfo.memberId = memberId;
-			//console.log(this.accountInfo, agentLen, region, account, fmt);
 		} else {
 			this.parseAccountType_();
 			this.parseAccountCode_();
 			this.parseSecurityCode_();
 		}
 		this.parseServerType_();
-		//console.log(this.accountInfo.accountId);
 		return this.accountInfo;
 	};
 	QRCodeParser.prototype.getAccountInfo = function () {
-		//console.log(this.accountInfo.accountId);
 		return this.accountInfo;
 	};
 	QRCodeParser.prototype.parseAccountType_ = function () {
 		if (this.url.pathname.indexOf(COMPANY_INDICATOR) !== -1) {
-			console.log(this.accountInfo.accountId);
 			this.accountInfo.isCompany = true;
 			this.accountInfo.signin = 1;
 		} else if (this.url.pathname.indexOf(PERSONAL_INDICATOR) !== -1) {
 			this.accountInfo.isPersonal = true;
 			this.accountInfo.signin = 0;
 		} else {
-			console.log(this.url);
-			throw 'That is not a valid rCard.';
+			console.log('That is not a valid Common Good Card: ',this.url);
+			throw 'That is not a valid  Common Good Card.';
 		}
 	};
+	/**
+	 * Figure out what kind of account it is (personal or manager)
+	 * @returns {undefined}
+	 */
 	QRCodeParser.prototype.parseAccountCode_ = function () {
 		var memberId = this.url.hostname.toUpperCase().split('.')[0];
 		var yyy = this.url.pathname.substring(1, 4);
-		var separator;
 		this.accountInfo.memberId = memberId;
 		if (this.accountInfo.isPersonalAccount()) {
 			this.accountInfo.accountId = memberId + yyy;
 		} else {
 			this.accountInfo.accountId = memberId + yyy + '-A';
 		}
-		console.log(this.accountInfo.accountId);
 	};
+	/**
+	 * Record whether this is being done on the developer server or real server
+	 * @returns {undefined}
+	 */
 	QRCodeParser.prototype.parseServerType_ = function () {
-		var lastPoint = this.url.host.lastIndexOf('.');
 		this.accountInfo.serverType = realOrFake;
 	};
+	/**
+	 * Create an unencrypted var to be used locally and an encrypted var to be sent to the server
+	 * @returns {undefined}
+	 */
 	QRCodeParser.prototype.parseSecurityCode_ = function () {
-		//console.log(this.url.pathname.substr(5, this.url.pathname.length - 1));
 		this.accountInfo.securityCode = Sha256.hash(this.url.pathname.substr(5, this.url.pathname.length - 1));//
 		this.accountInfo.unencryptedCode = this.url.pathname.substr(5, this.url.pathname.length - 1);
-		//console.log(this.accountInfo.securityCode);
 	};
+	/**
+	 * Convert the base 32 encoding that comes from the QR to the alphabetical 26 base format that the account id uses
+	 * @param {type} part
+	 * @param {type} s2Len
+	 * @param {type} isAgent
+	 * @returns {String}
+	 */
 	function r36ToR26(part, s2Len, isAgent) {
-		//console.log(part);
 		var std = '0123456789abcdefghijklmnop';
 		var ours = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 		var s = parseInt(part, 36).toString(26); // d4m
 		var s2 = '';
 		for (var i = 0; i < s.length; i++) {
 			s2 += ours.charAt(std.indexOf(s.charAt(i)));
-			//console.log(s, s.charAt(i), std.indexOf(s.charAt(i)));
 		}
-		//console.log(s2.length, s2Len, s.charAt(i), s2, s, part, s2Len);
 		if (!isAgent) {
 			while ((s2.length < s2Len) || (s2.length < 3)) {
 				s2 = 'A' + s2;
 			}
 		}
-		//console.log(s2);
 		return s2;
 	}
 	window.QRCodeParser = QRCodeParser;

@@ -8,9 +8,17 @@
 			this.sqlPlugin = window;
 			this.db = null;
 		};
+		/**
+		 * Does the browser in use support the local database
+		 * @returns {Boolean}
+		 */
 		SQLiteService.prototype.isDbEnable = function () {
 			return !!this.sqlPlugin;
 		};
+		/**
+		 * Trys to create a WebSQL database and when the database has been been created, resolves 
+		 * @returns {.$q@call;defer.promise}
+		 */
 		SQLiteService.prototype.createDatabase = function () {
 			var openPromise = $q.defer();
 			this.db = this.sqlPlugin.openDatabase(
@@ -22,6 +30,10 @@
 			}, 1000);
 			return openPromise.promise;
 		};
+		/**
+		 * These two functions actually execute the database transaction
+		 * @returns {.$q@call;defer.promise}
+		 */
 		SQLiteService.prototype.ex = function () {
 			var txPromise = $q.defer();
 			txPromise.resolve(true);
@@ -42,9 +54,18 @@
 			});
 			return txPromise.promise;
 		};
+		/**
+		 * splits a string into the necessary format to be sent to the WebSQL database
+		 * @param {type} sqlQuery
+		 * @returns {.$q@call;defer.promise}
+		 */
 		SQLiteService.prototype.executeQuery = function (sqlQuery) {
 			return this.executeQuery_(sqlQuery.getQueryString(), sqlQuery.getQueryData());
 		};
+		/**
+		 * Create a customer database table
+		 * @returns {a promise to create the table}
+		 */
 		SQLiteService.prototype.createSchema = function () {
 			this.executeQuery_(
 				"CREATE TABLE IF NOT EXISTS members (" + // record of customers (and managers)
@@ -76,6 +97,10 @@
 				self.executeQuery_("CREATE INDEX IF NOT EXISTS custQid ON members(qid)");
 			});
 		};
+		/**
+		 * Initiate the database, if it doesn't yet exist, create it and show a console error if WebSQL doesn't work 
+		 * @returns {undefined}
+		 */
 		SQLiteService.prototype.init = function () {
 			if (!this.isDbEnable()) {
 				console.warn("SQLite is not enable");

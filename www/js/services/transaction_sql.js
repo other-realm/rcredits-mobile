@@ -6,9 +6,9 @@
 			self = this;
 		};
 		/**
-		 * 
+		 * Get whatever transactions were done while offline and return them, excluding those in the exludeTxs parameter 
 		 * @param {type} exludeTxs
-		 * @returns {unresolved}
+		 * @returns {The transactions that were done while offline, or a message stating that none were found}
 		 */
 		TransactionSql.prototype.getOfflineTransaction = function (exludeTxs) {
 			var filter = '';
@@ -26,11 +26,20 @@
 				}
 			});
 		};
+		/**
+		 * Record that an offline transaction was just synced
+		 * @param {type} sqlTransaction
+		 * @returns {a WebSQL query}
+		 */
 		TransactionSql.prototype.setTransactionSynced = function (sqlTransaction) {
 			var sqlQuery = new SqlQuery();
 			sqlQuery.setQueryString("UPDATE txs SET status = '" + Transaction.Status.DONE + "' where created = " + sqlTransaction.created);
 			return SQLiteService.executeQuery(sqlQuery);
 		};
+		/**
+		 * See if their are any transactions that have not been synced in the past day
+		 * @returns {whether there were any old transactions still unsynced}
+		 */
 		TransactionSql.prototype.exist24HsTransactions = function () {
 			var yesterday = moment().subtract(1, 'day').unix();
 			var sqlQuery = new SqlQuery();

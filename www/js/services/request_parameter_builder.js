@@ -1,4 +1,9 @@
 /* global app */
+/**
+ * A utility that builds objects
+ * @param {type} app
+ * @returns {a new RequestParameterBuilder object}
+ */
 (function (app) {
 	'use strict';
 	app.service('RequestParameterBuilder', function (localStorageService) {
