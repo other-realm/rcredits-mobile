@@ -4,7 +4,7 @@
   <description>Community-Created Credits for the Common Good</description>
   <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>
   <content src="index.html"/>
-  <access origin='*' allows-arbitrary-loads-in-media='true' allows- arbitrary-loads-in-web-content='true' allows-local-networking='true' />
+  <access origin='*' allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true' />
   <allow-navigation href="*"/>
   <allow-navigation href="http://*/*"/>
   <allow-navigation href="https://*/*"/>
