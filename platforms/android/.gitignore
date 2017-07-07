@@ -12,8 +12,3 @@ gen
 out
 # Gradle builds
 /build
-!/build/
-/build/generated/
-/build/intermediates/
-/build/outputs/logs/
-/build/tmp/

@@ -1,3 +1,8 @@
+/**
+ * Deals with storing member information locally
+ * @param {type} app
+ * @returns {undefined}
+ */
 (function (app) {
 	app.service('MemberSqlService', function ($q, SqlQuery, SQLiteService) {
 		var self;

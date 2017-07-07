@@ -4,11 +4,15 @@
   <description>Community-Created Credits for the Common Good</description>
   <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>
   <content src="index.html"/>
-  <access origin='*' allows-arbitrary-loads-in-media='true' allows-arbitrary-loads-in-web-content='true' allows-local-networking='true' />
+  <access origin="*" allows-arbitrary-loads-in-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true"/>
   <allow-navigation href="*"/>
   <allow-navigation href="http://*/*"/>
   <allow-navigation href="https://*/*"/>
   <allow-navigation href="data:*"/>
+  <allow-navigation href="https://*"/>
+  <allow-navigation href="http://*"/>
+  <allow-navigation href="http://10.0.0.7:8100"/>
+  <allow-navigation href="http://10.0.0.6:8100"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
   <preference name="DisallowOverscroll" value="true"/>
@@ -67,9 +71,6 @@
   </platform>
   <icon src="resources\android\icon\drawable-xhdpi-icon.png"/>
   <plugin name="cordova-plugin-crosswalk-webview" spec="~2.2.0"/>
-  <allow-navigation href="https://*"/>
-  <allow-navigation href="http://*"/>
-  <allow-navigation href="http://10.0.0.7:8100"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
 </widget>

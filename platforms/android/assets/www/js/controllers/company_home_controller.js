@@ -10,6 +10,9 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, Barco
 	if (!$scope.currentUser) {
 		$state.go("app.login");
 	}
+	/**
+	 * Alerts the user that this is the first time this customer has used the service
+	 */
 	if ($scope.currentUser && $scope.currentUser.isFirstLogin()) {
 		$scope.currentUser.setFirstLoginNotified();
 	}
@@ -19,10 +22,10 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, Barco
 	$scope.isSelfServiceEnabled = function () {
 		return SelfServiceMode.isActive();
 	};
-	$scope.testPopup = function () {
-		NotificationService.showAlert({title: "Error", template: "test"});
-	};
-	//This function decides what happens when the user clicks on the "Scan Common Good Card"
+	/**
+	 * This function decides what happens when the user clicks on the "Scan Common Good Card"
+	 * @returns {undefined}
+	 */
 	$scope.scanCustomer = function () {
 		if ($scope.isSelfServiceEnabled()) {
 			$state.go('app.self_service_mode');

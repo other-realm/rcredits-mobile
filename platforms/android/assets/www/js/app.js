@@ -21,7 +21,6 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 			$rootScope.whereWasI = location.hash;
 			$rootScope.amIOnline = NetworkService.isOffline();
 			$rootScope.undo = false;
-			console.log($rootScope.undo);
 			if (!ionic.Platform.isWebView()) {
 				CommonGoodConfig.serverUrl = CommonGoodConfig.serverproxyUrl;
 			}

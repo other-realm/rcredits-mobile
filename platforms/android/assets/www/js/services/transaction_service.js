@@ -8,7 +8,12 @@ app.service('TransactionService',
 			self = this;
 			this.lastTransaction = null;
 		};
-		
+		/**
+		 * Actually sends the transaction request to the server
+		 * @param {array} params - the details about the transaction
+		 * @param {object} account - information about the manager's account
+		 * @returns {json} information from the server about the transaction or error information if the transaction did not go through
+		 */
 		TransactionService.prototype.makeRequest_ = function (params, account) {
 			var urlConf = new UrlConfigurator();
 			return $http({
@@ -20,6 +25,11 @@ app.service('TransactionService',
 				data: $httpParamSerializer(params)
 			});
 		};
+		/**
+		 * Gets the returned transaction information and uses this to populate a Transaction model object
+		 * @param {type} transactionInfo - information from the server about the transaction
+		 * @returns {Transaction|transaction_serviceL#3.TransactionService.prototype.parseTransaction_.transaction} a populated Transaction model opbject
+		 */
 		TransactionService.prototype.parseTransaction_ = function (transactionInfo) {
 			var transaction = new Transaction();
 			_.keys(transaction).forEach(function (k) {
@@ -30,6 +40,17 @@ app.service('TransactionService',
 			transaction.status = transactionInfo.transaction_status || Transaction.Status.DONE;
 			return transaction;
 		};
+		/**
+		 * Gathers information about the transaction and loads it into an array to be sent to the makeRequest function that actually sends the transaction request
+		 * @param {type} amount - the price change to be recorded on the server if the transaction is successful
+		 * @param {type} description - description of transaction. For exchanges of Common Good Funds for USD, the description is “USD in” or “USD out”, followed by the method, in parenthesis: “ (cash)”, “ (check)”, or “ (card)”.
+		 * @param {type} goods - “1” for real goods and services, “0” means an exchange of Common Good Funds for US Dollars. “2” means for real goods and services with the app in “self-service” mode. “3” means non-goods (like a loan or reimbursement).
+		 * @param {type} force - (optional):
+		 *		“0” normal (transaction will fail if there is insufficient balance or permission)
+		 *		“1” if transaction should go through regardless of customer balance
+		 *		“-1” to force reversal of the transaction if it exists, regardless of customer balance (return new transaction’s txid and creation date, if any, otherwise txid=0 and created=””)
+		 * @returns {json} the results of the transaction, or if offline, the intended results of the transaction, if not too much
+		 */
 		TransactionService.prototype.makeTransactionRequest = function (amount, description, goods, force) {
 			if (UserService.currentUser().accountInfo) {
 				var sellerAccountInfo = UserService.currentUser().accountInfo,
@@ -57,20 +78,16 @@ app.service('TransactionService',
 					params['proof'] = proof;
 					params['seller'] = sellerAccountInfo;
 				} catch (e) {
-					console.log('catch');
+					console.log('catch: ', e);
 					NotificationService.showAlert({title: 'error', template: e});
 				}
 				if (NetworkService.isOnline()) {
-					console.log(params, customerAccountInfo, sellerAccountInfo);
 					return this.makeRequest_(params, sellerAccountInfo).then(function (res) {
-						console.log(res);
 						return res;
 					});
 				} else {
 					// Offline
-					console.log(params.proof, customerAccountInfo, sellerAccountInfo);
 					return this.doOfflineTransaction(params, customerAccountInfo).then(function (result) {
-						console.log(result);
 						self.warnOfflineTransactions();
 						return result;
 					});
@@ -79,10 +96,20 @@ app.service('TransactionService',
 				NotificationService.showAlert({title: 'error', template: 'We were unable to find your account'});
 			}
 		};
+		/**
+		 * Initial and resulting handling of charges and storing of local customer information
+		 * @param {type} amount - the price change to be recorded on the server if the transaction is successful
+		 * @param {type} description - description of transaction. For exchanges of Common Good Funds for USD, the description is “USD in” or “USD out”, followed by the method, in parenthesis: “ (cash)”, “ (check)”, or “ (card)”.
+		 * @param {type} goods - “1” for real goods and services, “0” means an exchange of Common Good Funds for US Dollars. “2” means for real goods and services with the app in “self-service” mode. “3” means non-goods (like a loan or reimbursement).
+		 * @param {type} force - (optional):
+		 *		“0” normal (transaction will fail if there is insufficient balance or permission)
+		 *		“1” if transaction should go through regardless of customer balance
+		 *		“-1” to force reversal of the transaction if it exists, regardless of customer balance (return new transaction’s txid and creation date, if any, otherwise txid=0 and created=””)
+		 * @returns {json} the results of the transaction, or if offline, the intended results of the transaction, if not too much
+		 */
 		TransactionService.prototype.charge = function (amount, description, goods, force) {
 			return this.makeTransactionRequest(amount, description, goods, force)
 				.then(function (transactionResult) {
-					console.log(transactionResult.data.ok, transactionResult);
 					if (transactionResult.data.ok === TRANSACTION_OK) {
 						var transaction = self.parseTransaction_(transactionResult);
 						transaction.configureType(amount);
@@ -94,16 +121,12 @@ app.service('TransactionService',
 						transaction.goods = 1;
 						transaction.data = transactionResult.data;
 						customer.setLastTx(transaction);
-						console.log(customer.balance);
 						customer.saveInSQLite().then(function () {
 							self.saveTransaction(transaction);
 						});
 						self.lastTransaction = transaction;
-						console.log(transaction);
 						return transaction;
 					} else {
-						for (var v in transactionResult) {
-						}
 						console.log(transactionResult.data.ok, transactionResult);
 					}
 					self.lastTransaction = transactionResult;
@@ -113,9 +136,22 @@ app.service('TransactionService',
 					$rootScope.$emit("TransactionDone");
 				});
 		};
+		/**
+		 * Negates an amount
+		 * @param {float} amount - the amount to be negated
+		 * @param {string} description - the description of the transaction to be refunded
+		 * @returns {json|transaction_serviceL#3.TransactionService.prototype@call;makeTransactionRequest@call;then@call;finally} - the negated amount plus the description
+		 */
 		TransactionService.prototype.refund = function (amount, description) {
 			return this.charge(((parseFloat(amount * -1)).toFixed(2)), description);
 		};
+		/**
+		 * Processes the information required to do an exchange of USD to Common Good Currency or vice versa
+		 * @param {float} amount - the amount to be exchanged
+		 * @param {type} currency - either USD or Common Good Currency
+		 * @param {type} paymentMethod - Credit Card, Cash, Check
+		 * @returns {json|transaction_serviceL#3.TransactionService.prototype@call;makeTransactionRequest@call;then@call;finally} - the results of the transaction
+		 */
 		TransactionService.prototype.exchange = function (amount, currency, paymentMethod) {
 			var exchangeType = 'USD in';
 			var amountToSend = amount;
@@ -127,11 +163,20 @@ app.service('TransactionService',
 			var description = exchangeType + '(' + paymentMethod.getId() + ')';
 			return this.charge(amountToSend, description, 0);
 		};
+		/**
+		 * Undoes a recent transaction 
+		 * @param {object} transaction – a transaction object
+		 * @returns {json|transaction_serviceL#3.TransactionService.prototype@call;makeTransactionRequest@call;then@call;finally} – the results of a negated transaction
+		 */
 		TransactionService.prototype.undoTransaction = function (transaction) {
-			console.log(transaction);
-			$rootScope.undo=false;
+			$rootScope.undo = false;
 			return this.charge(parseFloat(transaction.amount * -1), transaction.description, transaction.goods, 0);
 		};
+		/**
+		 * Saves information about a transaction to the local database
+		 * @param {type} transaction - information about a transaction
+		 * @returns {unresolved} - an object to be stored in the local database
+		 */
 		TransactionService.prototype.saveTransaction = function (transaction) {
 			//"me TEXT," + // company (or device-owner) account code (qid)
 			//"txid INTEGER DEFAULT 0," + // transaction id (xid) on the server (for offline backup only -- not used by the app) / temporary storage of customer cardCode pending tx upload
@@ -143,7 +188,6 @@ app.service('TransactionService',
 			//"goods INTEGER," + // <transaction is for real goods and services>
 			//"proof TEXT," + // hash of cardCode, amount, created, and me (as proof of agreement)
 			//"description TEXT);" // always "reverses..", if this tx undoes a previous one (previous by date)
-			console.log(transaction);
 			var seller = UserService.currentUser(),
 				customer = UserService.currentCustomer();
 			var sqlQuery = new SqlQuery();
@@ -171,6 +215,12 @@ app.service('TransactionService',
 			]);
 			return SQLiteService.executeQuery(sqlQuery);
 		};
+		/**
+		 * Handles the storage of customer information until the device goes back online
+		 * @param {type} params - the params to be sent to the server when the divice goes back online
+		 * @param {type} customer - customer information
+		 * @returns {.$q@call;defer.promise} - a defered promise of the Transaction
+		 */
 		TransactionService.prototype.doOfflineTransaction = function (params, customer) {
 			var q = $q.defer();
 			var transactionResponseOk = {
@@ -183,9 +233,9 @@ app.service('TransactionService',
 				"undo": "",
 				"transaction_status": Transaction.Status.OFFLINE,
 				"data": params,
-				"ok":"1"
+				"ok": "1"
 			};
-			transactionResponseOk.data.ok="1";
+			transactionResponseOk.data.ok = "1";
 			var transactionResponseError = {
 				"ok": "0",
 				"message": "There has been an error"
@@ -222,6 +272,14 @@ app.service('TransactionService',
 				});
 			return q.promise;
 		};
+		/**
+		 * An alert to the cashier to ask for confirmation
+		 * @param {type} title
+		 * @param {type} subTitle
+		 * @param {type} okText
+		 * @param {type} cancelText
+		 * @returns {bool}
+		 */
 		var askConfirmation = function (title, subTitle, okText, cancelText) {
 			$ionicLoading.hide();
 			return NotificationService.showConfirm({
@@ -232,7 +290,6 @@ app.service('TransactionService',
 			})
 				.then(function (confirmed) {
 					$ionicLoading.show();
-					console.log(title, subTitle, okText, cancelText);
 					if (confirmed) {
 						return true;
 					} else {
@@ -240,6 +297,10 @@ app.service('TransactionService',
 					}
 				});
 		};
+		/**
+		 * Notify the casheer that the transaction has not gone through for 24 hours
+		 * @returns {undefined}
+		 */
 		TransactionService.prototype.warnOfflineTransactions = function () {
 			TransactionSql.exist24HsTransactions().then(function (exists) {
 				if (exists) {

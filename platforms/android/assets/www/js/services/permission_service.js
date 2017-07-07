@@ -1,3 +1,7 @@
+/**
+ * If the app is not running in the browser, open the barcode scanner
+ * @type PermissionService
+ */
 app.service('PermissionService', function ($q, UserService, BarcodeService, UserService) {
 	var self;
 	var PermissionService = function () {

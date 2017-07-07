@@ -63,6 +63,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 */
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
+//		console.log($httpParamSerializer(params),accountInfo);
 		return $http({
 			method: 'POST',
 			url: urlConf.getServerUrl(accountInfo),
@@ -102,6 +103,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				throw 'You cannot use yourself as a customer while you are an agent';
 			}
 			if (responseData.ok === LOGIN_FAILED) {
+				console.log(responseData.message);
 				throw responseData.message;
 			}
 			return responseData;
@@ -110,7 +112,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				console.error(err);
 				throw err;
 			} else if (err.statusText === '') {
-				err.statusText = 'That is not a valid rCard.';
+				err.statusText = 'That is not a valid Common Good Card.';
 			} else {
 				for (var er in err) {
 					if (_.isString(err)) {
@@ -127,7 +129,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		});
 	};
 	/**
-	 * If the user is oflind when trying to do 
+	 * If the user is oflind when trying to do a transaction...
 	 * @param {type} accountInfo
 	 * @returns {.$q@call;defer.promise}
 	 */

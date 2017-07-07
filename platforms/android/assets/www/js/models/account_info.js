@@ -10,7 +10,7 @@
 		this.signin = '';
 		this.counter='';
 	};
-	AccountInfo.IS_DEMO = true;
+	AccountInfo.IS_DEMO = 'RC4.ME';
 	AccountInfo.prototype.isPersonalAccount = function () {
 		return this.isPersonal;
 	};
@@ -21,7 +21,7 @@
 		return this.memberId;
 	};
 	AccountInfo.prototype.isDemo = function () {
-		return this.serverType === AccountInfo.IS_DEMO;
+		return this.serverType == AccountInfo.IS_DEMO;
 	};
 	window.AccountInfo = AccountInfo;
 })(window);

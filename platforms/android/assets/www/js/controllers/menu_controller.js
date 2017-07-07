@@ -2,7 +2,10 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 	NotificationService, CashierModeService, PreferenceService, NetworkService,
 	SelfServiceMode, $ionicSideMenuDelegate, $timeout) {
 		var backCount=0;
-	// Logout
+	/**
+	 * Change store and erase user data stored on phone
+	 * @returns {undefined}
+	 */
 	$scope.logout = function () {
 		$ionicLoading.show();
 		UserService.logout()
@@ -17,16 +20,24 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 			});
 	};
 	$scope.trackGoBack = 'Back';
-//	$scope.goBack = function () {
-//		$ionicHistory.goBack();
-//	};
+	/**
+	 * Logout of cashier or self-service mode
+	 * @returns {A logout object}
+	 */
 	$scope.softLogout = function () {
 		return UserService.softLogout();
 	};
-	// Redirects
+	/**
+	 * Redirects to login
+	 * @returns {undefined}
+	 */
 	$scope.redirectToLogin = function () {
 		$state.go("app.login");
 	};
+	/**
+	 * Redirects the user to the main cashier screen and clears the navigation history so that you can't go back to the most recent transaction
+	 * @returns {undefined}
+	 */
 	$scope.redirectHome = function () {
 		$ionicHistory.clearHistory();
 		$ionicHistory.nextViewOptions({

@@ -10,11 +10,11 @@ CommonGoodConfig = {
   },
 
   // For Demo Cards
-  stagingServerUrl: 'https://stage-xxx.rcredits.org/pos',
+  stagingServerUrl: 'https://xxx.commongood.earth/pos',
 
   // @if BUILD_TARGET='development'
-  serverproxyUrl: 'https://stage-xxx.rcredits.org/pos',
-  serverUrl: 'https://stage-xxx.rcredits.org/pos',
+  serverproxyUrl: 'https://xxx.commongood.earth/pos',
+  serverUrl: 'https://xxx.commongood.earth/pos',
   version: '3.0',
   build: 301,
   transaction_max_amount_offline: 300
@@ -22,16 +22,16 @@ CommonGoodConfig = {
   // @endif
 
   // @if BUILD_TARGET='staging'
-  serverproxyUrl: 'https://stage-xxx.rcredits.org/pos',
-  serverUrl: 'https://stage-xxx.rcredits.org/pos',
+  serverproxyUrl: 'https://xxx.commongood.earth/pos',
+  serverUrl: 'https://xxx.commongood.earth/pos',
   version: '3.0',
   build: 301,
   transaction_max_amount_offline: 300
   // @endif
 
   // @if BUILD_TARGET='production'
-  serverproxyUrl: 'https://stage-xxx.rcredits.org/pos',
-  serverUrl: 'https://xxx.rcredits.org/pos',
+  serverproxyUrl: 'https://xxx.commongood.earth/pos',
+  serverUrl: 'https://xxx.commongood.earth/pos',
   version: '3.0',
   build: 301,
   transaction_max_amount_offline: 300

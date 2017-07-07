@@ -10,6 +10,10 @@
     <feature name="NetworkStatus">
         <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="StatusBar">
         <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
         <param name="onload" value="true" />
@@ -28,27 +32,20 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
-    <feature name="SplashScreen">
-        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
-        <param name="onload" value="true" />
-    </feature>
     <name>CommonGood</name>
-    <description>
-
-		Community-Created Credits for the Common Good
-
-	</description>
-    <author email="info@CommonGood.earth" href="http://commongood.earth/">
-
-		Common Good Team
-
-	</author>
+    <description>Community-Created Credits for the Common Good</description>
+    <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>
     <content src="index.html" />
-    <access origin="*" />
-    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
+    <access allows-arbitrary-loads-in-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" origin="*" />
+    <allow-navigation href="*" />
+    <allow-navigation href="http://*/*" />
+    <allow-navigation href="https://*/*" />
+    <allow-navigation href="data:*" />
     <allow-navigation href="https://*" />
     <allow-navigation href="http://*" />
     <allow-navigation href="http://10.0.0.7:8100" />
+    <allow-navigation href="http://10.0.0.6:8100" />
+    <icon src="resources\android\icon\drawable-xhdpi-icon.png" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <icon density="ldpi" src="resources\android\icon\drawable-ldpi-icon.png" />

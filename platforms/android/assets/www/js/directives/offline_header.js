@@ -1,6 +1,6 @@
 /* global app */
 /*
- * Shows a header when the phone does not have internet access
+ * Shows a header when the phone does not have internet access, also handles showing the demo mode header when using the app on the PC
  */
 (function (app) {
 	'use strict';
@@ -26,7 +26,6 @@
 						} else {
 							$timeout(function () {
 								TransactionSyncService.syncOfflineTransactions();
-								console.log(newValue);
 								ionContent.removeClassName('has-subheader');
 							});
 						}
@@ -42,6 +41,7 @@
 				};
 				this.isDemoMode = function () {
 					var user = UserService.currentUser();
+					
 					return user && user.isDemo();
 				};
 				$scope.$on('$destroy', function () {

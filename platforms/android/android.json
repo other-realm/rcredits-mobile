@@ -9,38 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
-                            "count": 1
-                        },
-                        {
                             "xml": "<preference name=\"webView\" value=\"org.crosswalk.engine.XWalkWebViewEngine\" />",
                             "count": 1
                         },
@@ -69,7 +37,39 @@
                             "count": 1
                         },
                         {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
+                            "count": 1
+                        },
+                        {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"StatusBar\"><param name=\"android-package\" value=\"org.apache.cordova.statusbar.StatusBar\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -83,11 +83,11 @@
                             "count": 2
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
                             "count": 1
                         },
                         {
-                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
                             "count": 1
                         }
                     ],
@@ -121,37 +121,10 @@
     },
     "installed_plugins": {
         "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
         "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-indexeddb-async": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
-        },
-        "phonegap-plugin-barcodescanner": {
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
         "cordova-plugin-crosswalk-webview": {
             "XWALK_VERSION": "22+",
@@ -159,9 +132,36 @@
             "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
             "XWALK_MODE": "embedded",
             "XWALK_MULTIPLEAPK": "true",
-            "PACKAGE_NAME": "com.ionicframework.rcreditsmobile621273"
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-indexeddb-async": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-network-information": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
         "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "phonegap-plugin-barcodescanner": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         }
     },
@@ -372,6 +372,14 @@
             ]
         },
         {
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
+            ]
+        },
+        {
             "id": "cordova-plugin-statusbar.statusbar",
             "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
             "pluginId": "cordova-plugin-statusbar",
@@ -403,29 +411,21 @@
             "clobbers": [
                 "cordova.plugins.barcodeScanner"
             ]
-        },
-        {
-            "id": "cordova-plugin-splashscreen.SplashScreen",
-            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
-            "pluginId": "cordova-plugin-splashscreen",
-            "clobbers": [
-                "navigator.splashscreen"
-            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-compat": "1.0.0",
         "cordova-plugin-console": "1.0.3",
+        "cordova-plugin-crosswalk-webview": "2.2.0",
         "cordova-plugin-device": "1.1.4",
         "cordova-plugin-file": "4.2.0",
         "cordova-plugin-indexeddb-async": "0.0.1",
         "cordova-plugin-network-information": "1.2.1",
+        "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-whitelist": "1.2.2",
         "cordova-sqlite-storage": "1.4.1",
         "ionic-plugin-keyboard": "2.1.0",
-        "phonegap-plugin-barcodescanner": "6.0.5",
-        "cordova-plugin-crosswalk-webview": "2.2.0",
-        "cordova-plugin-splashscreen": "4.0.3"
+        "phonegap-plugin-barcodescanner": "6.0.5"
     }
 }

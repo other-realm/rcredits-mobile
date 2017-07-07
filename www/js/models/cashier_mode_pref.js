@@ -1,8 +1,9 @@
+/* global _, Class, app */
 (function (window, app) {
 	var CashierMode = Class.create(window.Preference, {
 		isOptionEnabled: function (optionId) {
 			var chargeOption = _.find(this.options, function (o) {
-				return o.id == optionId
+				return o.id === optionId;
 			});
 			return chargeOption && chargeOption.value;
 		},
@@ -17,7 +18,7 @@
 		},
 		getPref_: function (id) {
 			return _.find(this.options, function (o) {
-				return o.id == id;
+				return o.id === id;
 			});
 		},
 		setPropertyValue: function (id, boolCan) {

@@ -10,13 +10,15 @@ app.service('TransactionSyncService',
 				self.syncOfflineTransactions();
 			});
 		};
+		/**
+		 * Try to send the stored transaction now that you're back online
+		 * @param {type} sqlTransaction - the stored transaction information
+		 * @returns {json|err} either the results of the transaction or an error message
+		 */
 		var send = function (sqlTransaction) {
-			console.log("TRANSACTION TO SEND: ", sqlTransaction);
-			console.log(sqlTransaction.data);
 			try {
 				var account = _.extendOwn(new AccountInfo(), JSON.parse(sqlTransaction.account).account);
 				return TransactionService.makeRequest_(JSON.parse(sqlTransaction.data), account).then(function (res) {
-					console.log(res);
 					return res.data;
 				});
 			} catch (err) {
@@ -24,6 +26,10 @@ app.service('TransactionSyncService',
 				return err;
 			}
 		};
+		/**
+		 * Test if the device is offline, if not, send the information saved in the local database
+		 * @returns {undefined}
+		 */
 		TransactionSyncService.prototype.syncOfflineTransactions = function () {
 			if (NetworkService.isOffline()) {
 				console.log('Thinks it\'s offline');
@@ -45,7 +51,6 @@ app.service('TransactionSyncService',
 					return TransactionSql.setTransactionSynced(sqlTransaction);
 				})
 				.then(function () {
-					console.log(self);
 					$timeout(self.syncOfflineTransactions.bind(self), 500);
 				})
 				.catch(function (err) {

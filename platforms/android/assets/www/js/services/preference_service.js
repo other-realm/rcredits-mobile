@@ -1,4 +1,9 @@
 /* global app, _, Preference */
+/**
+ * Handles storing and retrieving the account preferences pulled from the server locally 
+ * @param {type} app
+ * @returns {undefined}
+ */
 (function (app) {
 	'use strict';
 	app.service('PreferenceService', function (localStorageService, $injector) {
@@ -15,7 +20,6 @@
 			var savedPreferences = this.loadSavedPreferences_();
 			var preferences = Preference.getDefinitions();
 			_.each(savedPreferences, _.partial(this.updatePref_, preferences).bind(this));
-			console.log(preferences);
 			return preferences;
 		};
 		/**
@@ -76,7 +80,6 @@
 		};
 		PreferenceService.prototype.parsePreferencesNumber = function (number) {
 			var bitsStr = Number(number).toString(2);
-//			console.log(bitStr);
 			this.setCashierModePrefs(bitsStr);
 		};
 		PreferenceService.prototype.setCashierModePrefs = function (strBits) {
@@ -87,12 +90,10 @@
 			cashierPref.setCanRefund(parseBool(prefs[l - 2]));
 			cashierPref.setCanTradeCommonGoodForUSD(parseBool(prefs[l - 3]));
 			cashierPref.setCanTradeUSDforCommonGood(parseBool(prefs[l - 4]));
-			console.log(prefs.length,prefs[l - 1],prefs,cashierPref);
 		};
 		function pad0s(prefBool) {
 			for(var i=0;prefBool.length <=15;i++){
 				prefBool='0'+prefBool;
-				console.log(prefBool.length);
 			}
 			return prefBool.toString();
 		}

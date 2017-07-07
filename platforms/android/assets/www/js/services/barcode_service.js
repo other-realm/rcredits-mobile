@@ -1,4 +1,9 @@
 /* global _, app */
+/**
+ * Deals with scanning the barcode
+ * @param {type} app
+ * @returns {a new barcode service}
+ */
 (function (app) {
 	'use strict';
 	var WebScanner = function () {
@@ -8,10 +13,10 @@
 		};
 	};
 	// This is the read from Bob Bossman: NEW:AAB, WeHlioM5JZv1O9G
-//	{text: "HTTP://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G", format: "QR_CODE", cancelled: false}, // Seller Bob Bossman
-//		{text: "HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw", format: "QR_CODE", cancelled: false}  // Customer Susan Shopper
+	//{text: "HTTP://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G", format: "QR_CODE", cancelled: false}, // Seller Bob Bossman
+	//{text: "HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw", format: "QR_CODE", cancelled: false}  // Customer Susan Shopper
 	WebScanner.SCANS = [
-		
+
 	];
 	app.service('BarcodeService', function ($q, $ionicPlatform, $rootScope) {
 		var self;
@@ -46,8 +51,10 @@
 				});
 			}
 		};
-		// Fetches a barcode.
-		// Returns a promise that resolves with the scanned data when scanning is complete.
+		/**
+		 * Fetches a barcode.
+		 * @returns {promise} a promise that resolves with the scanned data when scanning is complete.
+		 */
 		BarcodeService.prototype.scan = function () {
 			return $q(function (resolve, reject) {
 				self.scanner.scan(function (scanResult) {
