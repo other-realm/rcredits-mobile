@@ -17,6 +17,7 @@ Then run the following commands, one after the other:
 
 
 ```
+npm install -g cordova ionic
 npm install -g bower
 npm install
 ionic state restore
