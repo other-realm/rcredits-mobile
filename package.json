@@ -1,62 +1,72 @@
 {
-	"name": "CommonGoodMobile",
-	"version": "1.1.1",
-	"description": "Common Good: more than just a mobile app",
-	"app_id": "",
-	"v2": false,
-	"typescript": false,
-	"proxies":[
-		{
-			"path":"/pos",
-			"proxyUrl":"https://new.commongood.earth/pos"
-		}
-	],
-	"watch": {
-		"sass": [
-			"scss/**/*.scss"
-		],
-		"html": [
-			"www/**/*.html"
-		],
-		"livereload": [
-			"www/**/*.html",
-			"www/**/*.js",
-			"www/**/*.css"
-		]
-	},
-	"dependencies": {
-		"gulp-preprocess":"2.0.0",
-		"shelljs": "0.7.7",
-		"bower": "1.8.0",
-		"angular": "1.6.4",
-		"chai": "^3.5.0",
-		"gulp": "^3.9.1",
-		"gulp-concat": "^2.2.0",
-		"gulp-clean-css": "3.3.1",
-		"gulp-rename": "^1.2.2",
-		"gulp-sass": "^3.1.0",
-		"should": "^11.2.1"
-	},
-	"cordovaPlugins": [
-		"cordova-plugin-device",
-		"cordova-plugin-console@1.0.3",
-		"cordova-plugin-whitelist@1.2.2",
-		"cordova-plugin-splashscreen@3.2.2",
-		"cordova-plugin-statusbar@2.1.3",
-		"ionic-plugin-keyboard@2.1.0",
-		"phonegap-plugin-barcodescanner",
-		{
-			"locator": "https://github.com/brodysoft/Cordova-SQLitePlugin.git",
-			"id": "cordova-sqlite-storage"
-		},
-		"cordova-plugin-network-information@1.2.1",
-		"cordova-plugin-crosswalk-webview@2.2.0"
-	],
-	"cordovaPlatforms": [
-		"ios",
-		"android"
-	],
-	"devDependencies": {
-		"karma": "^1.7.0"
-	}
+    "name": "CommonGoodMobile",
+    "version": "1.1.1",
+    "description": "Common Good: more than just a mobile app",
+    "app_id": "",
+    "v2": false,
+    "typescript": false,
+    "proxies": [
+        {
+            "path": "/pos",
+            "proxyUrl": "https://new.commongood.earth/pos"
+        }
+    ],
+    "watch": {
+        "sass": [
+            "scss/**/*.scss"
+        ],
+        "html": [
+            "www/**/*.html"
+        ],
+        "livereload": [
+            "www/**/*.html",
+            "www/**/*.js",
+            "www/**/*.css"
+        ]
+    },
+    "dependencies": {
+        "angular": "1.6.4",
+        "bower": "1.8.0",
+        "chai": "^3.5.0",
+        "cordova-android": "^6.2.1",
+        "cordova-plugin-crosswalk-webview": "~2.2.0",
+        "gulp": "^3.9.1",
+        "gulp-clean-css": "3.3.1",
+        "gulp-concat": "^2.2.0",
+        "gulp-preprocess": "2.0.0",
+        "gulp-rename": "^1.2.2",
+        "gulp-sass": "^3.1.0",
+        "shelljs": "0.7.7",
+        "should": "^11.2.1"
+    },
+    "cordovaPlugins": [
+        "cordova-plugin-device",
+        "cordova-plugin-console@1.0.3",
+        "cordova-plugin-whitelist@1.2.2",
+        "cordova-plugin-splashscreen@3.2.2",
+        "cordova-plugin-statusbar@2.1.3",
+        "ionic-plugin-keyboard@2.1.0",
+        "phonegap-plugin-barcodescanner",
+        {
+            "locator": "https://github.com/brodysoft/Cordova-SQLitePlugin.git",
+            "id": "cordova-sqlite-storage"
+        },
+        "cordova-plugin-network-information@1.2.1",
+        "cordova-plugin-crosswalk-webview@2.2.0"
+    ],
+    "cordovaPlatforms": [
+        "ios",
+        "android"
+    ],
+    "devDependencies": {
+        "karma": "^1.7.0"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-crosswalk-webview": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
 }
