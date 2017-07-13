@@ -23,6 +23,7 @@ Then run the following commands, one after the other:
 
 
 ```
+sudo su
 git clone https://github.com/other-realm/rcredits-mobile.git
 cd rcredits-mobile
 npm install -g cordova ionic@2.1.18
