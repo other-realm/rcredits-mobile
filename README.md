@@ -3,11 +3,17 @@
 If you have an Android phone and you just want to test it out there, download these two files: https://otherrealm.org/cgf/android-x86-debug.apk / https://otherrealm.org/cgf/android-armv7-debug.apk and then copy them into your phone via USB.  Then open the files on your phone and one of the two should install itself (and only one will work, the one that will is dependent on the architecture of your phone)
 
 ## Prerequisites:
-1.	If you do not already have git installed (I.E. you are not a programmer/you're not on Linux), install git for your OS at: https://git-scm.com/downloads 
+1.	If you do not already have git installed (I.E. you are not a programmer), install git for your OS at: https://git-scm.com/downloads 
 2.	If you don't have the Chrome browser on your computer, download that at: https://www.google.com/chrome/browser/desktop/index.html
 3.	Next, you'll want to set up NodeJS, a server-side JavaScript language that the app runs on:
 Windows: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
 Mac: https://nodejs.org/dist/v6.11.0/node-v6.11.0.pkg
+Ubuntu/Debian Linux: 
+curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+sudo apt-get install nodejs
+sudo apt-get install build-essential
+sudo apt-get update && apt-get upgrade
+
 4.	If you're using a windows operating system, you'll probably need to install Cygwin, a Linux emulator; the default settings in the installation process /should/ work (Windows now has its own Linux emulator, but if you know how to use that, you probably don't need these detailed prerequisites): https://cygwin.com/setup-x86_64.exe .  Mac is can usually run Linux natively
 
 
@@ -17,6 +23,7 @@ Then run the following commands, one after the other:
 
 
 ```
+sudo su
 git clone https://github.com/other-realm/rcredits-mobile.git
 cd rcredits-mobile
 npm install -g cordova ionic@2.1.18
