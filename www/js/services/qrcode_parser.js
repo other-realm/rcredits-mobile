@@ -16,7 +16,7 @@
 	 * @returns {undefined}
 	 */
 	QRCodeParser.prototype.setUrl = function (url) {
-		if (url.indexOf('HTTP://') === -1) {
+		if (url.indexOf('HTTP://') === -1 || url.indexOf('HTTPS://') === -1) {
 			var fmt = url.substring(0, 1);
 			var i = parseInt(fmt, 36) / 4;
 			var regionLen = parseInt(regionLens.charAt(i));
@@ -27,7 +27,7 @@
 			} else {
 				realOrFake = 'RC4.ME';
 			}
-			url = 'HTTP://' + region + '.' + realOrFake + '/' + transformedURL;
+			url = 'HTTPS://' + region + '.' + realOrFake + '/' + transformedURL;
 		} else if ((url.indexOf('RC2.ME') !== -1) || (url.indexOf('rc2.me') !== -1)) {
 			realOrFake = 'RC2.ME';
 		} else {

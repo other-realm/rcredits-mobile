@@ -4,7 +4,7 @@
 		<label class="thirds"><input name="formattype" id="newURL" type="radio" ng-model="format.type" value="1">New</label>
 		<label class="thirds"><input name="formattype" id="shortURL" type="radio" ng-model="format.type" value="2">Short</label>
 		<div ng-switch='whereWasI'>
-			<input type="text" id="customQR" style="width:100%" value="HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw"  text="HTTP://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw" ng-model="customPerson.url">
+			<input type="text" id="customQR" style="width:100%" value="HTTPS://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw"  text="HTTPS://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw" ng-model="customPerson.url">
 			<a class='button' ng-switch-when="#/app/login" href="javascript:void(0)" ng-click="onSelectManager(customPerson.url, false)" ng-model="customPerson.url" id="accountInfoButton">Load Company Info</a>
 			<a class='button' ng-switch-when="#/app/home" href="javascript:void(0)" ng-click="onSelectCustomer(customPerson.url, false)" ng-model="customPerson.url" id="accountInfoButton">Load Customer Info</a>
 			 - 
