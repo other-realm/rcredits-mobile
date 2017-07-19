@@ -7,6 +7,10 @@
 	var regionLens = '112233344';
 	var acctLens = '232323445';
 	var oldCode = false;
+	/**
+	 * The prototype for the function that parses the QR code
+	 * @returns {qrcode_parserL#2.QRCodeParser}
+	 */
 	var QRCodeParser = function () {
 	};
 	var realOrFake;

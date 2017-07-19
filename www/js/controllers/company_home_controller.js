@@ -33,7 +33,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, Barco
 		}
 		$ionicLoading.show();
 		$ionicPlatform.ready(function () {
-			//is the app running on the pc or on a phone?
+			//is the app running on the pc or on a phone?  If it's the PC, show the demo, if it's the phone, show the barcode scanner
 			var platform = ionic.Platform.platform();
 			if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 				$rootScope.whereWasI = location.hash;

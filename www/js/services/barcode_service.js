@@ -24,9 +24,13 @@
 			self = this;
 			this.configure_();
 		};
-		BarcodeService.WebScanner = WebScanner;
 		/**
 		 * Only used on web app. not on mobile
+		 */
+		BarcodeService.WebScanner = WebScanner;
+		/**
+		 * Sets the scanner id to 0 when the seller logs out
+		 * @returns {undefined}
 		 */
 		BarcodeService.prototype.setScanForCustomer = function () {
 			self.scanner.id = 0;
@@ -63,6 +67,13 @@
 					_.partial(self.scanFail_, reject).bind(self));
 			});
 		};
+		/**
+		 * A function that fires when the scan is carried out to see what the results are
+		 * @param {type} sucessFn - emit a message that the scan returned a result
+		 * @param {type} rejectFn - emit message that either the scan was canceled or that the result was not a QR code
+		 * @param {type} barCodeResult - the result of a barcode scan
+		 * @returns {undefined}
+		 */
 		BarcodeService.prototype.scanSuccess_ = function (sucessFn, rejectFn, barCodeResult) {
 			if (barCodeResult.wasCancelled()) {
 				rejectFn('scanCancelled');
@@ -73,6 +84,12 @@
 				sucessFn(barCodeResult.text);
 			}
 		};
+		/**
+		 * What happens when the scan returns an error (as opposed to simply a bad QR code)
+		 * @param {type} rejectFn
+		 * @param {type} scanError
+		 * @returns {undefined}
+		 */
 		BarcodeService.prototype.scanFail_ = function (rejectFn, scanError) {
 			console.error("Scan failed: ", scanError);
 			rejectFn(scanError);

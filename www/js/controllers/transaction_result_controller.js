@@ -59,20 +59,10 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	};
 	$scope.customer = UserService.currentCustomer();
 	$scope.user = UserService.currentUser();
-
-
 	if ($scope.transactionStatus === 'failure') {
-//		for (var t in TransactionService) {
-//			console.log(t);
 		console.log(TransactionService);
-//		}
-//		console.log($stateParams.transactionMessage);
-//		console.log($stateParams.transactionMessage);
-//		console.log($stateParams.transactionMessage);
-//		$scope.setMessages($scope.transactionMessage);
 		$scope.setMessages(TransactionService);
 	} else {
-//		console.log(TransactionService);
 		$scope.setMessages(TransactionService.lastTransaction);
 		$scope.transactionInfo = {
 			amount: $filter('currency')($scope.transactionAmount),
@@ -80,12 +70,7 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 			customerName: $scope.customer.name
 		};
 	}
-//	if (TransactionService.connectionOnline) {
-//
-//		console.log($scope.online);
-//	}
 	$scope.undoTransaction = function () {
-		console.log(TransactionService.connectionOnline);
 		NotificationService.showConfirm({
 			title: 'confirm_undo_transaction',
 			subTitle: "",
@@ -96,11 +81,9 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 				$ionicLoading.show();
 				TransactionService.undoTransaction(TransactionService.lastTransaction)
 					.then(function (transactionResult) {
-						console.log(transactionResult, res, TransactionService.lastTransaction);
 						transactionResult.message = "Charge was canceled";
 						$scope.setMessages(transactionResult);
 						$rootScope.undo = false;
-						console.log($rootScope.undo);
 					})
 					.finally(function () {
 						$ionicLoading.hide();
@@ -108,11 +91,9 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 			}
 		});
 	};
-
 	$scope.$on('$destroy', function () {
 		BackButtonService.enable();
 	});
-
 	$scope.isSelfServiceEnabled = function () {
 		return SelfServiceMode.isActive();
 	};
