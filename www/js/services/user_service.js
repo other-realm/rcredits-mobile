@@ -148,6 +148,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then|user_serviceL#5.UserService.prototype@call;loginWithRCardOffline@call;then}
 	 */
 	UserService.prototype.loginWithRCard = function (str) {
+		console.log(str);
 		var qrcodeParser = new QRCodeParser();
 		qrcodeParser.setUrl(str);
 		var accountInfo = qrcodeParser.parse();

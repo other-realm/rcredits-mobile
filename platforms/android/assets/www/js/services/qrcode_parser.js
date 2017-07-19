@@ -7,6 +7,10 @@
 	var regionLens = '112233344';
 	var acctLens = '232323445';
 	var oldCode = false;
+	/**
+	 * The prototype for the function that parses the QR code
+	 * @returns {qrcode_parserL#2.QRCodeParser}
+	 */
 	var QRCodeParser = function () {
 	};
 	var realOrFake;
@@ -16,7 +20,9 @@
 	 * @returns {undefined}
 	 */
 	QRCodeParser.prototype.setUrl = function (url) {
-		if (url.indexOf('HTTP://') === -1) {
+		if (url.indexOf('HTTP://') === 1) {
+			url='HTTPS://'+url.substring(7, url.length);
+		} else if (url.indexOf('HTTP://') === -1 && url.indexOf('HTTPS://') === -1) {
 			var fmt = url.substring(0, 1);
 			var i = parseInt(fmt, 36) / 4;
 			var regionLen = parseInt(regionLens.charAt(i));
@@ -27,13 +33,14 @@
 			} else {
 				realOrFake = 'RC4.ME';
 			}
-			url = 'HTTP://' + region + '.' + realOrFake + '/' + transformedURL;
+			url = 'HTTPS://' + region + '.' + realOrFake + '/' + transformedURL;
 		} else if ((url.indexOf('RC2.ME') !== -1) || (url.indexOf('rc2.me') !== -1)) {
 			realOrFake = 'RC2.ME';
 		} else {
 			realOrFake = 'RC4.ME';
 		}
 		this.plainUrl = url;
+		console.log(url);
 		this.url = new URL(url);
 	};
 	/**
@@ -81,8 +88,8 @@
 			var account = r36ToR26(tail.substring(1, 1 + acctLen), acctLen);
 			var memberId = '';
 			if (acctLen >= 6 || tail.length < 1 + acctLen + agentLen) {
-				console.log('That is not a valid Common Good Card: ',this.url);
-				throw 'That is not a valid  Common Good Card.';
+				console.log('That is not a valid Card: ', this.url);
+				throw 'not_valid_card';
 			}
 			this.accountInfo.unencryptedCode = tail.substring(1 + acctLen + agentLen);
 			this.accountInfo.securityCode = Sha256.hash(this.accountInfo.unencryptedCode);
@@ -117,8 +124,8 @@
 			this.accountInfo.isPersonal = true;
 			this.accountInfo.signin = 0;
 		} else {
-			console.log('That is not a valid Common Good Card: ',this.url);
-			throw 'That is not a valid  Common Good Card.';
+			console.log('That is not a valid Card: ', this.url);
+			throw 'not_valid_card';
 		}
 	};
 	/**

@@ -20,7 +20,9 @@
 	 * @returns {undefined}
 	 */
 	QRCodeParser.prototype.setUrl = function (url) {
-		if (url.indexOf('HTTP://') === -1 || url.indexOf('HTTPS://') === -1) {
+		if (url.indexOf('HTTP://') === 1) {
+			url='HTTPS://'+url.substring(7, url.length);
+		} else if (url.indexOf('HTTP://') === -1 && url.indexOf('HTTPS://') === -1) {
 			var fmt = url.substring(0, 1);
 			var i = parseInt(fmt, 36) / 4;
 			var regionLen = parseInt(regionLens.charAt(i));
@@ -38,6 +40,7 @@
 			realOrFake = 'RC4.ME';
 		}
 		this.plainUrl = url;
+		console.log(url);
 		this.url = new URL(url);
 	};
 	/**
