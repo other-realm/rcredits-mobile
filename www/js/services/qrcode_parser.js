@@ -85,8 +85,8 @@
 			var account = r36ToR26(tail.substring(1, 1 + acctLen), acctLen);
 			var memberId = '';
 			if (acctLen >= 6 || tail.length < 1 + acctLen + agentLen) {
-				console.log('That is not a valid Common Good Card: ',this.url);
-				throw 'That is not a valid  Common Good Card.';
+				console.log('That is not a valid Card: ', this.url);
+				throw 'not_valid_card';
 			}
 			this.accountInfo.unencryptedCode = tail.substring(1 + acctLen + agentLen);
 			this.accountInfo.securityCode = Sha256.hash(this.accountInfo.unencryptedCode);
@@ -121,8 +121,8 @@
 			this.accountInfo.isPersonal = true;
 			this.accountInfo.signin = 0;
 		} else {
-			console.log('That is not a valid Common Good Card: ',this.url);
-			throw 'That is not a valid  Common Good Card.';
+			console.log('That is not a valid Card: ', this.url);
+			throw 'not_valid_card';
 		}
 	};
 	/**

@@ -63,7 +63,6 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 */
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
-//		console.log($httpParamSerializer(params),accountInfo);
 		return $http({
 			method: 'POST',
 			url: urlConf.getServerUrl(accountInfo),
@@ -112,7 +111,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				console.error(err);
 				throw err;
 			} else if (err.statusText === '') {
-				err.statusText = 'That is not a valid Common Good Card.';
+				err.statusText = 'not_valid_card';
 			} else {
 				for (var er in err) {
 					if (_.isString(err)) {
@@ -200,12 +199,16 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return seller;
 	};
-	// Gets customer info and photo given the scanned info from a Common Good card.
-	// Returns a promise that resolves with the following arguments:
-	// 1. user - The User object
-	// 2. flags - A hash with the following elements:
-	//      firstPurchase - Whether this is the user's first CommonGood purchase. If so, the
-	//        app should notify the seller to request photo ID.
+	/**
+	 * Gets customer info and photo given the scanned info from a card.
+	 * Returns a promise that resolves with the following arguments:
+	 *	1. user - The User object
+	 *	2. flags - A hash with the following elements:
+	 *			firstPurchase - Whether this is the user's first purchase. If so, the app should notify the seller to request photo ID.
+	 * @param {type} str - the URL that came from the barcode
+	 * @param {type} pin - if offline, the pin of the user (1234 if it is a demo user)
+	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then@call;then}
+	 */
 	UserService.prototype.identifyCustomer = function (str, pin) {
 		if (str) {
 			var qrcodeParser = new QRCodeParser();
