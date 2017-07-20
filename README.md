@@ -9,16 +9,17 @@ If you have an Android phone and you just want to test it out there, download th
 Windows: https://nodejs.org/dist/v6.11.0/node-v6.11.0-x64.msi
 Mac: https://nodejs.org/dist/v6.11.0/node-v6.11.0.pkg
 Ubuntu/Debian Linux: 
+```
 curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install nodejs
 sudo apt-get install build-essential
 sudo apt-get update && apt-get upgrade
-
+```
 4.	If you're using a windows operating system, you'll probably need to install Cygwin, a Linux emulator; the default settings in the installation process /should/ work (Windows now has its own Linux emulator, but if you know how to use that, you probably don't need these detailed prerequisites): https://cygwin.com/setup-x86_64.exe .  Mac is can usually run Linux natively
 
 
 
-Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/rcredits-mobile/` ).  If you are not, type cd the/directory/where/your/file/is (note, use '/' and not '\\', even if you are in windows)
+Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/rcredits-mobile/` ).  If you are not, type 'cd the/directory/where/your/file/is` (note, use `/` and not `\\`, even if you are in windows)
 Then run the following commands, one after the other:
 
 
