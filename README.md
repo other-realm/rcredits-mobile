@@ -19,7 +19,7 @@ sudo apt-get update && apt-get upgrade
 
 
 
-Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/rcredits-mobile/` ).  If you are not, type `cd the/directory/where/your/file/is` (note, use `/` and not `\\`, even if you are in windows)
+Once you have everything installed, run Cygwin or other shell terminal and enter the following commands, one after another, assuming you are in the directory you want to install the app at (ex. the prompt to the left of $ says `Someone@your-Laptop /cygdrive/e/xampp/htdocs/cg/rcredits-mobile/` ).  If you are not, type `cd the/directory/where/your/file/is` (note, use `/` and not `\`, even if you are in windows)
 Then run the following commands, one after the other:
 
 
