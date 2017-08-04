@@ -15,7 +15,7 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 			localStorageServiceProvider.setPrefix('CommonGood');
 			var storageQuota = false;
 		}])
-	.run(function ($ionicPlatform, $state, SQLiteService, NetworkService, $rootScope, TransactionSyncService, BackButtonService, UserService, NotificationService, $rootScope) {
+	.run(function ($ionicPlatform, $state, SQLiteService, NetworkService, $rootScope, TransactionSyncService, BackButtonService, UserService, NotificationService) {
 		$ionicPlatform.ready(function () {
 			// This is only for web development to enable proxy
 			$rootScope.whereWasI = location.hash;
