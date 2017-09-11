@@ -70,6 +70,7 @@
 @property (nonatomic)         BOOL                        isShowTorchButton;
 @property (nonatomic)         BOOL                        isFlipped;
 @property (nonatomic)         BOOL                        isTransitionAnimated;
+@property (nonatomic)         BOOL                        isSuccessBeepEnabled;
 
 
 - (id)initWithPlugin:(CDVBarcodeScanner*)plugin callback:(NSString*)callback parentViewController:(UIViewController*)parentViewController alterateOverlayXib:(NSString *)alternateXib;
@@ -165,6 +166,7 @@
     BOOL showFlipCameraButton = [options[@"showFlipCameraButton"] boolValue];
     BOOL showTorchButton = [options[@"showTorchButton"] boolValue];
     BOOL disableAnimations = [options[@"disableAnimations"] boolValue];
+    BOOL disableSuccessBeep = [options[@"disableSuccessBeep"] boolValue];
 
     // We allow the user to define an alternate xib file for loading the overlay.
     NSString *overlayXib = options[@"overlayXib"];
@@ -198,6 +200,8 @@
     if (showTorchButton) {
       processor.isShowTorchButton = true;
     }
+
+    processor.isSuccessBeepEnabled = !disableSuccessBeep;
 
     processor.isTransitionAnimated = !disableAnimations;
 
@@ -403,18 +407,22 @@ parentViewController:(UIViewController*)parentViewController
 //--------------------------------------------------------------------------
 - (void)barcodeScanSucceeded:(NSString*)text format:(NSString*)format {
     dispatch_sync(dispatch_get_main_queue(), ^{
+        if (self.isSuccessBeepEnabled) {
+            AudioServicesPlaySystemSound(_soundFileObject);
+        }
         [self barcodeScanDone:^{
             [self.plugin returnSuccess:text format:format cancelled:FALSE flipped:FALSE callback:self.callback];
         }];
-        AudioServicesPlaySystemSound(_soundFileObject);
     });
 }
 
 //--------------------------------------------------------------------------
 - (void)barcodeScanFailed:(NSString*)message {
-    [self barcodeScanDone:^{
-        [self.plugin returnError:message callback:self.callback];
-    }];
+    dispatch_sync(dispatch_get_main_queue(), ^{
+        [self barcodeScanDone:^{
+            [self.plugin returnError:message callback:self.callback];
+        }];
+    });
 }
 
 //--------------------------------------------------------------------------
@@ -514,18 +522,8 @@ parentViewController:(UIViewController*)parentViewController
     else {
         return @"unable to add video capture output to session";
     }
-
-    [output setMetadataObjectTypes:@[AVMetadataObjectTypeQRCode,
-                                     AVMetadataObjectTypeAztecCode,
-                                     AVMetadataObjectTypeDataMatrixCode,
-                                     AVMetadataObjectTypeUPCECode,
-                                     AVMetadataObjectTypeEAN8Code,
-                                     AVMetadataObjectTypeEAN13Code,
-                                     AVMetadataObjectTypeCode128Code,
-                                     AVMetadataObjectTypeCode93Code,
-                                     AVMetadataObjectTypeCode39Code,
-                                     AVMetadataObjectTypeITF14Code,
-                                     AVMetadataObjectTypePDF417Code]];
+    
+    [output setMetadataObjectTypes:[self formatObjectTypes]];
 
     // setup capture preview layer
     self.previewLayer = [AVCaptureVideoPreviewLayer layerWithSession:captureSession];
@@ -620,6 +618,32 @@ parentViewController:(UIViewController*)parentViewController
     if (format.type == AVMetadataObjectTypeITF14Code)          return @"ITF";
     if (format.type == AVMetadataObjectTypePDF417Code)      return @"PDF_417";
     return @"???";
+}
+
+//--------------------------------------------------------------------------
+// convert string formats to metadata objects
+//--------------------------------------------------------------------------
+- (NSArray*) formatObjectTypes {
+    NSArray *supportedFormats = nil;
+    if (self.formats != nil) {
+        supportedFormats = [self.formats componentsSeparatedByString:@","];
+    }
+    
+    NSMutableArray * formatObjectTypes = [NSMutableArray array];
+    
+    if (self.formats == nil || [supportedFormats containsObject:@"QR_CODE"]) [formatObjectTypes addObject:AVMetadataObjectTypeQRCode];
+    if (self.formats == nil || [supportedFormats containsObject:@"AZTEC"]) [formatObjectTypes addObject:AVMetadataObjectTypeAztecCode];
+    if (self.formats == nil || [supportedFormats containsObject:@"DATA_MATRIX"]) [formatObjectTypes addObject:AVMetadataObjectTypeDataMatrixCode];
+    if (self.formats == nil || [supportedFormats containsObject:@"UPC_E"]) [formatObjectTypes addObject:AVMetadataObjectTypeUPCECode];
+    if (self.formats == nil || [supportedFormats containsObject:@"EAN_8"]) [formatObjectTypes addObject:AVMetadataObjectTypeEAN8Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"EAN_13"]) [formatObjectTypes addObject:AVMetadataObjectTypeEAN13Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"CODE_128"]) [formatObjectTypes addObject:AVMetadataObjectTypeCode128Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"CODE_93"]) [formatObjectTypes addObject:AVMetadataObjectTypeCode93Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"CODE_39"]) [formatObjectTypes addObject:AVMetadataObjectTypeCode39Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"ITF"]) [formatObjectTypes addObject:AVMetadataObjectTypeITF14Code];
+    if (self.formats == nil || [supportedFormats containsObject:@"PDF_417"]) [formatObjectTypes addObject:AVMetadataObjectTypePDF417Code];
+    
+    return formatObjectTypes;
 }
 
 //--------------------------------------------------------------------------
@@ -832,7 +856,8 @@ parentViewController:(UIViewController*)parentViewController
     CGImageRelease(cgImage);
 
     /* save image to file */
-    NSString* filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:@"tmpqrcode.jpeg"];
+    NSString* fileName = [[[NSProcessInfo processInfo] globallyUniqueString] stringByAppendingString:@".jpg"];
+    NSString* filePath = [NSTemporaryDirectory() stringByAppendingPathComponent:fileName];
     [UIImageJPEGRepresentation(qrImage, 1.0) writeToFile:filePath atomically:YES];
 
     /* return file path back to cordova */
@@ -1006,20 +1031,23 @@ parentViewController:(UIViewController*)parentViewController
 #endif
 
     if (_processor.isShowTorchButton && !_processor.isFrontCamera) {
-      NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"CDVBarcodeScanner" withExtension:@"bundle"];
-      NSBundle *bundle = [NSBundle bundleWithURL:bundleURL];
-      NSString *imagePath = [bundle pathForResource:@"torch" ofType:@"png"];
-      UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
+      AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+      if ([device hasTorch] && [device hasFlash]) {
+        NSURL *bundleURL = [[NSBundle mainBundle] URLForResource:@"CDVBarcodeScanner" withExtension:@"bundle"];
+        NSBundle *bundle = [NSBundle bundleWithURL:bundleURL];
+        NSString *imagePath = [bundle pathForResource:@"torch" ofType:@"png"];
+        UIImage *image = [UIImage imageWithContentsOfFile:imagePath];
 
-      id torchButton = [[[UIBarButtonItem alloc]
-                         initWithImage:image
-                         style:UIBarButtonItemStylePlain
-                         target:(id)self
-                         action:@selector(torchButtonPressed:)
-                         ] autorelease];
+        id torchButton = [[[UIBarButtonItem alloc]
+                           initWithImage:image
+                                   style:UIBarButtonItemStylePlain
+                                  target:(id)self
+                                  action:@selector(torchButtonPressed:)
+                           ] autorelease];
 
       [items insertObject:torchButton atIndex:0];
     }
+  }
 
     toolbar.items = items;
 

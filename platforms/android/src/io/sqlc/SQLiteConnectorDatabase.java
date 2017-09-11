@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2012-2016: Christopher J. Brody (aka Chris Brody)
+ * Copyright (c) 2012-2017: Christopher J. Brody (aka Chris Brody)
  * Copyright (c) 2005-2010, Nitobi Software Inc.
  * Copyright (c) 2010, IBM Corporation
  */
@@ -11,8 +11,12 @@ import android.annotation.SuppressLint;
 import android.util.Log;
 
 import java.io.File;
+
 import java.lang.IllegalArgumentException;
 import java.lang.Number;
+
+import java.sql.SQLException;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -22,6 +26,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import io.liteglue.SQLCode;
 import io.liteglue.SQLColumnType;
 import io.liteglue.SQLiteConnector;
 import io.liteglue.SQLiteConnection;
@@ -78,12 +83,10 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
      * @param dbname     The name of the database.
      * @param queryarr   Array of query strings
      * @param jsonparams Array of JSON query parameters
-     * @param queryIDs   Array of query ids
      * @param cbc        Callback context from Cordova API
      */
     @Override
-    void executeSqlBatch( String[] queryarr, JSONArray[] jsonparams,
-                          String[] queryIDs, CallbackContext cbc) {
+    void executeSqlBatch( String[] queryarr, JSONArray[] jsonparams, CallbackContext cbc) {
 
         if (mydb == null) {
             // not allowed - can only happen if someone has closed (and possibly deleted) a database and then re-used the database
@@ -97,16 +100,18 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
         for (int i = 0; i < len; i++) {
             int rowsAffectedCompat = 0;
             boolean needRowsAffectedCompat = false;
-            String query_id = queryIDs[i];
 
             JSONObject queryResult = null;
+
             String errorMessage = "unknown";
+            int sqliteErrorCode = -1;
+            int code = 0; // SQLException.UNKNOWN_ERR
 
             try {
                 String query = queryarr[i];
 
                 long lastTotal = mydb.getTotalChanges();
-                queryResult = this.executeSqlStatementNDK(query, jsonparams[i], cbc);
+                queryResult = this.executeSQLiteStatement(query, jsonparams[i], cbc);
                 long newTotal = mydb.getTotalChanges();
                 long rowsAffected = newTotal - lastTotal;
 
@@ -117,16 +122,36 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
                         queryResult.put("insertId", insertId);
                     }
                 }
-            } catch (Exception ex) {
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+                sqliteErrorCode = ex.getErrorCode();
+                errorMessage = ex.getMessage();
+                Log.v("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): SQL Error code = " + sqliteErrorCode + " message = " + errorMessage);
+
+                switch(sqliteErrorCode) {
+                case SQLCode.ERROR:
+                    code = 5; // SQLException.SYNTAX_ERR
+                    break;
+                case 13: // SQLITE_FULL
+                    code = 4; // SQLException.QUOTA_ERR
+                    break;
+                case SQLCode.CONSTRAINT:
+                    code = 6; // SQLException.CONSTRAINT_ERR
+                    break;
+                default:
+                    /* do nothing */
+                }
+            } catch (JSONException ex) {
+                // NOT expected:
                 ex.printStackTrace();
                 errorMessage = ex.getMessage();
-                Log.v("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): Error=" + errorMessage);
+                code = 0; // SQLException.UNKNOWN_ERR
+                Log.e("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): UNEXPECTED JSON Error=" + errorMessage);
             }
 
             try {
                 if (queryResult != null) {
                     JSONObject r = new JSONObject();
-                    r.put("qid", query_id);
 
                     r.put("type", "success");
                     r.put("result", queryResult);
@@ -134,18 +159,18 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
                     batchResults.put(r);
                 } else {
                     JSONObject r = new JSONObject();
-                    r.put("qid", query_id);
                     r.put("type", "error");
 
                     JSONObject er = new JSONObject();
                     er.put("message", errorMessage);
+                    er.put("code", code);
                     r.put("result", er);
 
                     batchResults.put(r);
                 }
             } catch (JSONException ex) {
                 ex.printStackTrace();
-                Log.v("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): Error=" + ex.getMessage());
+                Log.e("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): Error=" + ex.getMessage());
                 // TODO what to do?
             }
         }
@@ -159,8 +184,8 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
      * @param cur Cursor into query results
      * @return results in string form
      */
-    private JSONObject executeSqlStatementNDK(String query, JSONArray paramsAsJson,
-                                              CallbackContext cbc) throws Exception {
+    private JSONObject executeSQLiteStatement(String query, JSONArray paramsAsJson,
+                                              CallbackContext cbc) throws JSONException, SQLException {
         JSONObject rowsResult = new JSONObject();
 
         boolean hasRows = false;
@@ -187,7 +212,15 @@ class SQLiteConnectorDatabase extends SQLiteAndroidDatabase
             }
 
             hasRows = myStatement.step();
-        } catch (Exception ex) {
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            String errorMessage = ex.getMessage();
+            Log.v("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): Error=" + errorMessage);
+
+            // cleanup statement and throw the exception:
+            myStatement.dispose();
+            throw ex;
+        } catch (JSONException ex) {
             ex.printStackTrace();
             String errorMessage = ex.getMessage();
             Log.v("executeSqlBatch", "SQLitePlugin.executeSql[Batch](): Error=" + errorMessage);

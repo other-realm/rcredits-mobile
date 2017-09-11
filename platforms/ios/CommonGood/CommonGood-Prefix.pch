@@ -17,7 +17,7 @@
  under the License.
  */
 //
-// Prefix header for all source files of the 'rCredits' target in the 'rCredits' project
+// Prefix header for all source files of the 'CommonGood' target in the 'CommonGood' project
 //
 
 #ifdef __OBJC__

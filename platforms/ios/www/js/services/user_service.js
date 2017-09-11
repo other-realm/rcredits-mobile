@@ -97,6 +97,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 */
 	UserService.prototype.loginWithRCard_ = function (params, accountInfo) {
 		return this.makeRequest_(params, accountInfo).then(function (res) {
+			console.log(res);
 			var responseData = res.data;
 			if (params.agent && params.agent.substr(-3) === accountInfo.accountId.substr(-3)) {
 				throw 'You cannot use yourself as a customer while you are an agent';

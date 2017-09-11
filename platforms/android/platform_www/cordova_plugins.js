@@ -253,15 +253,15 @@ module.exports.metadata =
     "cordova-plugin-console": "1.0.3",
     "cordova-plugin-crosswalk-webview": "2.2.0",
     "cordova-plugin-device": "1.1.4",
-    "cordova-plugin-file": "4.2.0",
+    "cordova-plugin-file": "4.3.3",
     "cordova-plugin-indexeddb-async": "0.0.1",
-    "cordova-plugin-network-information": "1.2.1",
+    "cordova-plugin-network-information": "1.3.3",
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.1.3",
     "cordova-plugin-whitelist": "1.2.2",
-    "cordova-sqlite-storage": "1.4.1",
+    "cordova-sqlite-storage": "2.0.4",
     "ionic-plugin-keyboard": "2.1.0",
-    "phonegap-plugin-barcodescanner": "6.0.5"
+    "phonegap-plugin-barcodescanner": "6.0.8"
 };
 // BOTTOM OF METADATA
 });

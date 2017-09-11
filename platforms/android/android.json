@@ -42,11 +42,11 @@
                         },
                         {
                             "xml": "<feature name=\"File\"><param name=\"android-package\" value=\"org.apache.cordova.file.FileUtils\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<feature name=\"NetworkStatus\"><param name=\"android-package\" value=\"org.apache.cordova.networkinformation.NetworkManager\" /></feature>",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
@@ -58,11 +58,11 @@
                         },
                         {
                             "xml": "<feature name=\"Whitelist\"><param name=\"android-package\" value=\"org.apache.cordova.whitelist.WhitelistPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<feature name=\"SQLitePlugin\"><param name=\"android-package\" value=\"io.sqlc.SQLitePlugin\" /></feature>",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<feature name=\"Keyboard\"><param name=\"android-package\" value=\"io.ionic.keyboard.IonicKeyboard\" /><param name=\"onload\" value=\"true\" /></feature>",
@@ -70,6 +70,10 @@
                         },
                         {
                             "xml": "<feature name=\"BarcodeScanner\"><param name=\"android-package\" value=\"com.phonegap.plugins.barcodescanner.BarcodeScanner\" /></feature>",
+                            "count": 2
+                        },
+                        {
+                            "xml": "<allow-navigation href=\"cdvfile:*\" />",
                             "count": 1
                         }
                     ]
@@ -80,7 +84,7 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
-                            "count": 2
+                            "count": 3
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\" />",
@@ -88,31 +92,31 @@
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "/manifest/application": [
                         {
                             "xml": "<activity android:clearTaskOnLaunch=\"true\" android:configChanges=\"orientation|keyboardHidden|screenSize\" android:exported=\"false\" android:name=\"com.google.zxing.client.android.CaptureActivity\" android:theme=\"@android:style/Theme.NoTitleBar.Fullscreen\" android:windowSoftInputMode=\"stateAlwaysHidden\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<activity android:label=\"Share\" android:name=\"com.google.zxing.client.android.encode.EncodeActivity\" />",
-                            "count": 1
+                            "count": 2
                         }
                     ],
                     "/manifest": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.CAMERA\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-permission android:name=\"android.permission.FLASHLIGHT\" />",
-                            "count": 1
+                            "count": 2
                         },
                         {
                             "xml": "<uses-feature android:name=\"android.hardware.camera\" android:required=\"true\" />",
-                            "count": 1
+                            "count": 2
                         }
                     ]
                 }
@@ -418,14 +422,14 @@
         "cordova-plugin-console": "1.0.3",
         "cordova-plugin-crosswalk-webview": "2.2.0",
         "cordova-plugin-device": "1.1.4",
-        "cordova-plugin-file": "4.2.0",
+        "cordova-plugin-file": "4.3.3",
         "cordova-plugin-indexeddb-async": "0.0.1",
-        "cordova-plugin-network-information": "1.2.1",
+        "cordova-plugin-network-information": "1.3.3",
         "cordova-plugin-splashscreen": "4.0.3",
         "cordova-plugin-statusbar": "2.1.3",
         "cordova-plugin-whitelist": "1.2.2",
-        "cordova-sqlite-storage": "1.4.1",
+        "cordova-sqlite-storage": "2.0.4",
         "ionic-plugin-keyboard": "2.1.0",
-        "phonegap-plugin-barcodescanner": "6.0.5"
+        "phonegap-plugin-barcodescanner": "6.0.8"
     }
 }

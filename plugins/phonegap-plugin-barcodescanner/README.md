@@ -53,11 +53,18 @@ To add this entry you can pass the following variable on plugin install.
 cordova plugin add phonegap-plugin-barcodescanner --variable CAMERA_USAGE_DESCRIPTION="To scan barcodes"
 ```
 
+If you are using Phonegap Build you can add this to your config.xml
+```
+<gap:config-file platform="ios" parent="NSCameraUsageDescription" overwrite="true">
+   <string>We are using the Camera for something..</string>
+</gap:config-file>
+```
+
 ### PhoneGap Build
 If you're using [PhoneGap Build](https://build.phonegap.com/) please make sure you specify `gradle` as your Android build tool in `config.xml`: `<preference name="android-build-tool" value="gradle" />`.
 
 ## Using the plugin ##
-The plugin creates the object `cordova/plugin/BarcodeScanner` with the method `scan(success, fail)`.
+The plugin creates the object `cordova.plugins.barcodeScanner` with the method `scan(success, fail)`.
 
 The following barcode types are currently supported:
 ### Android
@@ -77,7 +84,7 @@ The following barcode types are currently supported:
 * RSS_EXPANDED
 
 Not by default, but supported if you pass in the "formats" option:
-* PDF417
+* PDF_417
 * AZTEC
 
 ### iOS
@@ -108,7 +115,7 @@ Not by default, but supported if you pass in the "formats" option:
 * QR_CODE
 * DATA_MATRIX
 * AZTEC
-* PDF417
+* PDF_417
 
 ### Windows Phone 8
 
@@ -126,7 +133,7 @@ Not by default, but supported if you pass in the "formats" option:
 * QR_CODE
 * DATA_MATRIX
 * AZTEC
-* PDF417
+* PDF_417
 
 ### BlackBerry 10
 * UPC_A
@@ -158,11 +165,13 @@ A full example could be:
           showFlipCameraButton : true, // iOS and Android
           showTorchButton : true, // iOS and Android
           torchOn: true, // Android, launch with the torch switched on (if available)
+          saveHistory: true // Android, save scan history (default false)
           prompt : "Place a barcode inside the scan area", // Android
           resultDisplayDuration: 500, // Android, display scanned text for X ms. 0 suppresses it entirely, default 1500
           formats : "QR_CODE,PDF_417", // default: all but PDF_417 and RSS_EXPANDED
           orientation : "landscape", // Android only (portrait|landscape), default unset so it rotates with the device
-          disableAnimations : true // iOS
+          disableAnimations : true, // iOS
+          disableSuccessBeep: false // iOS
       }
    );
 ```

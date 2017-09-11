@@ -1,26 +1,69 @@
 {
-  "name": "cordova-plugin-crosswalk-webview",
-  "version": "2.2.0",
-  "description": "Changes the default WebView to CrossWalk",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-crosswalk-webview@~2.2.0",
+        "scope": null,
+        "escapedName": "cordova-plugin-crosswalk-webview",
+        "name": "cordova-plugin-crosswalk-webview",
+        "rawSpec": "~2.2.0",
+        "spec": ">=2.2.0 <2.3.0",
+        "type": "range"
+      },
+      "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-crosswalk-webview@>=2.2.0 <2.3.0",
+  "_id": "cordova-plugin-crosswalk-webview@2.2.0",
+  "_inCache": true,
+  "_location": "/cordova-plugin-crosswalk-webview",
+  "_nodeVersion": "4.6.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/cordova-plugin-crosswalk-webview-2.2.0.tgz_1478657440377_0.23507992643862963"
+  },
+  "_npmUser": {
+    "name": "fujunwei",
+    "email": "junwei.fu@intel.com"
+  },
+  "_npmVersion": "2.15.9",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-crosswalk-webview@~2.2.0",
+    "scope": null,
+    "escapedName": "cordova-plugin-crosswalk-webview",
+    "name": "cordova-plugin-crosswalk-webview",
+    "rawSpec": "~2.2.0",
+    "spec": ">=2.2.0 <2.3.0",
+    "type": "range"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-crosswalk-webview/-/cordova-plugin-crosswalk-webview-2.2.0.tgz",
+  "_shasum": "b5b7781e3a913b018005657d347cdb726fd92e53",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-crosswalk-webview@~2.2.0",
+  "_where": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\node_modules",
+  "author": "",
+  "bugs": {
+    "url": "https://crosswalk-project.org/jira"
+  },
   "cordova": {
     "id": "cordova-plugin-crosswalk-webview",
     "platforms": [
       "android"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview.git"
+  "dependencies": {},
+  "description": "Changes the default WebView to CrossWalk",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "b5b7781e3a913b018005657d347cdb726fd92e53",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-crosswalk-webview/-/cordova-plugin-crosswalk-webview-2.2.0.tgz"
   },
-  "keywords": [
-    "cordova",
-    "chromium",
-    "crosswalk",
-    "webview",
-    "engine",
-    "ecosystem:cordova",
-    "cordova-android"
-  ],
   "engines": {
     "cordovaDependencies": {
       "2.0.0": {
@@ -40,10 +83,44 @@
       }
     }
   },
-  "author": "",
+  "gitHead": "f1981d5101a3339b3c69e43c181d338c15c60b6a",
+  "homepage": "https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview",
+  "keywords": [
+    "cordova",
+    "chromium",
+    "crosswalk",
+    "webview",
+    "engine",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
   "license": "Apache 2.0",
-  "bugs": {
-    "url": "https://crosswalk-project.org/jira"
+  "maintainers": [
+    {
+      "name": "agrieve",
+      "email": "agrieve@chromium.org"
+    },
+    {
+      "name": "clelland",
+      "email": "iclelland@google.com"
+    },
+    {
+      "name": "huningxin",
+      "email": "ningxin.hu@intel.com"
+    },
+    {
+      "name": "fujunwei",
+      "email": "junwei.fu@intel.com"
+    }
+  ],
+  "name": "cordova-plugin-crosswalk-webview",
+  "optionalDependencies": {},
+  "readme": "# cordova-plugin-crosswalk-webview\n\nMakes your Cordova application use the [Crosswalk WebView](https://crosswalk-project.org/)\ninstead of the System WebView. Requires cordova-android 4.0 or greater.\n\n### Benefits\n\n* WebView doesn't change depending on Android version\n* Capabilities: such as WebRTC, WebAudio, Web Components\n* Performance improvements (compared to older system webviews)\n\n\n### Drawbacks\n\n* Increased memory footprint\n  * An overhead of ~30MB (as reported by the RSS column of ps)\n* Increased APK size (about 17MB)\n* Increased size on disk when installed (about 50MB)\n* Crosswalk WebView stores data (IndexedDB, LocalStorage, etc) separately from System WebView\n  * You'll need to manually migrate local data when switching between the two (note: this is fixed in Crosswalk 15)\n\n### Install\n\nThe following directions are for cordova-cli (most people).  Alternatively you can use the [Android platform scripts workflow](PlatformScriptsWorkflow.md).\n\n* Open an existing cordova project, with cordova-android 4.0.0+, and using the latest CLI. Crosswalk variables can be configured as an option when installing the plugin\n* Add this plugin\n\n```\n$ cordova plugin add cordova-plugin-crosswalk-webview\n```\n\n* Build\n```\n$ cordova build android\n```\nThe build script will automatically fetch the Crosswalk WebView libraries from Crosswalk project download site (https://download.01.org/crosswalk/releases/crosswalk/android/maven2/) and build for both X86 and ARM architectures.\n\nFor example, building android with Crosswalk generates:\n\n```\n/path/to/hello/platforms/android/build/outputs/apk/hello-x86-debug.apk\n/path/to/hello/platforms/android/build/outputs/apk/hello-armv7-debug.apk\n```\n\nNote that you might have to run `cordova clean` before building, if you previously built the app without cordova-plugin-crosswalk-webview. Also, manually uninstall the app from the device/emulator before attempting to install the crosswalk-enabled version.\n\nAlso note that it is also possible to publish a multi-APK application on the Play Store that uses Crosswalk for Pre-L devices, and the (updatable) system webview for L+:\n\nTo build Crosswalk-enabled apks, add this plugin and run:\n\n    $ cordova build --release\n\nTo build System-webview apk, remove this plugin and run:\n\n    $ cordova build --release -- --minSdkVersion=21\n\n### Configure\n\nYou can try out a different Crosswalk version by specifying certain variables while installing the plugin, or by changing the value of `xwalkVersion` in your `config.xml` after installing the plugin. Some examples:\n\n    <!-- These are all equivalent -->\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"org.xwalk:xwalk_core_library:14+\"\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"xwalk_core_library:14+\"\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"14+\"\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"14\"\n    <preference name=\"xwalkVersion\" value=\"org.xwalk:xwalk_core_library:14+\" />\n    <preference name=\"xwalkVersion\" value=\"xwalk_core_library:14+\" />\n    <preference name=\"xwalkVersion\" value=\"14+\" />\n    <preference name=\"xwalkVersion\" value=\"14\" />\n\nYou can also use a Crosswalk beta version. Some examples:\n\n    <!-- These are all equivalent -->\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"org.xwalk:xwalk_core_library_beta:14+\"\n    <preference name=\"xwalkVersion\" value=\"org.xwalk:xwalk_core_library_beta:14+\" />\n\nYou can set [command-line flags](http://peter.sh/experiments/chromium-command-line-switches/) as well:\n\n    <!-- This is the default -->\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_COMMANDLINE=\"--disable-pull-to-refresh-effect\"\n    <preference name=\"xwalkCommandLine\" value=\"--disable-pull-to-refresh-effect\" />\n\nYou can use the Crosswalk [shared mode](https://crosswalk-project.org/documentation/shared_mode.html) which allows multiple Crosswalk applications to share one Crosswalk runtime downloaded from the Play Store.\n\n    <!-- These are all equivalent -->\n    cordova plugin add cordova-plugin-crosswalk-webview  --variable XWALK_MODE=\"shared\"\n    <preference name=\"xwalkMode\" value=\"shared\" />\n\nYou can also use a Crosswalk beta version on shared mode, e.g.:\n\n    <!-- Using a Crosswalk shared mode beta version -->\n    cordova plugin add cordova-plugin-crosswalk-webview --variable XWALK_VERSION=\"org.xwalk:xwalk_shared_library_beta:14+\"\n\nYou can use the Crosswalk [lite mode](https://crosswalk-project.org/documentation/crosswalk_lite.html) which is the Crosswalk runtime designed to be as small as possible by removing less common libraries and features and compressing the APK.\n\n    <!-- These are all equivalent -->\n    cordova plugin add cordova-plugin-crosswalk-webview  --variable XWALK_MODE=\"lite\"\n    <preference name=\"xwalkMode\" value=\"lite\" />\n\nYou can set background color with the preference of BackgroundColor.\n\n    <!-- Set red background color -->\n    <preference name=\"BackgroundColor\" value=\"0xFFFF0000\" />\n\nYou can also set user agent with the preference of xwalkUserAgent.\n\n    <preference name=\"xwalkUserAgent\" value=\"customer UA\" />\n\n### Release Notes\n\n#### 2.2.0 (November 4, 2016)\n* Uses the latest Crosswalk 22 stable version by default\n* Keep compatible for Cordova-android 6.0 with evaluating Javascript bridge\n\n#### 2.1.0 (September 9, 2016)\n* Uses the latest Crosswalk 21 stable version by default\n\n#### 2.0.0 (August 17, 2016)\n* Uses the latest Crosswalk 20 stable version by default\n* Discontinue support for Android 4.0 (ICS) in Crosswalk starting with version 20\n\n#### 1.8.0 (June 30, 2016)\n* Uses the latest Crosswalk 19 stable version by default\n\n#### 1.7.0 (May 4, 2016)\n* Uses the latest Crosswalk 18 stable version by default\n* Support to use [Crosswalk Lite](https://crosswalk-project.org/documentation/crosswalk_lite.html), It's possible to specify lite value with the variable of XWALK_MODE at install plugin time.\n* [Cordova screenshot plugin](https://github.com/gitawego/cordova-screenshot.git) can capture the visible content of web page with Crosswalk library.\n* Doesn't work with Crosswalk 17 and earlier\n\n#### 1.6.0 (March 11, 2016)\n* Uses the latest Crosswalk 17 stable version by default\n* Support to [package apps for 64-bit devices](https://crosswalk-project.org/documentation/android/android_64bit.html), it's possible to specify 64-bit targets using the `--xwalk64bit` option in the build command:\n\n        cordova build android --xwalk64bit\n\n#### 1.5.0 (January 18, 2016)\n* Uses the latest Crosswalk 16 stable version by default\n* The message of xwalk's ready can be listened\n\n#### 1.4.0 (November 5, 2015)\n* Uses the latest Crosswalk 15 stable version by default\n* Support User Agent and Background Color configuration preferences\n* Compatible with the newest Cordova version 5.3.4\n\n#### 1.3.0 (August 28, 2015)\n* Crosswalk variables can be configured as an option via CLI\n* Support for [Crosswalk's shared mode](https://crosswalk-project.org/documentation/shared_mode.html) via the XWALK_MODE install variable or xwalkMode preference\n* Uses the latest Crosswalk 14 stable version by default\n* The ANIMATABLE_XWALK_VIEW preference is false by default\n* Doesn't work with Crosswalk 14.43.343.17 and earlier\n\n#### 1.2.0 (April 22, 2015)\n* Made Crosswalk command-line configurable via `<preference name=\"xwalkCommandLine\" value=\"...\" />`\n* Disabled pull-down-to-refresh by default\n\n#### 1.1.0 (April 21, 2015)\n* Based on Crosswalk v13\n* Made Crosswalk version configurable via `<preference name=\"xwalkVersion\" value=\"...\" />`\n\n#### 1.0.0 (Mar 25, 2015)\n* Initial release\n* Based on Crosswalk v11\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview.git"
   },
-  "homepage": "https://github.com/crosswalk-project/cordova-plugin-crosswalk-webview"
+  "scripts": {},
+  "version": "2.2.0"
 }

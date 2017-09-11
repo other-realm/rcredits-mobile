@@ -1,7 +1,54 @@
 {
-  "name": "cordova-plugin-indexeddb-async",
-  "version": "2.2.1",
-  "description": "An asynchronous IndexedDB plug-in for Cordova apps",
+  "_args": [
+    [
+      {
+        "raw": "cordova-plugin-indexeddb-async",
+        "scope": null,
+        "escapedName": "cordova-plugin-indexeddb-async",
+        "name": "cordova-plugin-indexeddb-async",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\node_modules"
+    ]
+  ],
+  "_from": "cordova-plugin-indexeddb-async@latest",
+  "_id": "cordova-plugin-indexeddb-async@2.2.1",
+  "_inCache": true,
+  "_location": "/cordova-plugin-indexeddb-async",
+  "_nodeVersion": "0.12.4",
+  "_npmUser": {
+    "name": "bigstickcarpet",
+    "email": "BigstickCarpet@gmail.com"
+  },
+  "_npmVersion": "2.11.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "cordova-plugin-indexeddb-async",
+    "scope": null,
+    "escapedName": "cordova-plugin-indexeddb-async",
+    "name": "cordova-plugin-indexeddb-async",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-indexeddb-async/-/cordova-plugin-indexeddb-async-2.2.1.tgz",
+  "_shasum": "bfd91ef038a7f544225eec33951d271b50aeec39",
+  "_shrinkwrap": null,
+  "_spec": "cordova-plugin-indexeddb-async",
+  "_where": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\node_modules",
+  "author": {
+    "name": "ABB Austin",
+    "url": "http://abb.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ABB-Austin/cordova-plugin-indexeddb-async/issues"
+  },
   "cordova": {
     "id": "cordova-plugin-indexeddb-async",
     "platforms": [
@@ -11,14 +58,21 @@
       "browser"
     ]
   },
-  "scripts": {
-    "upgrade": "ncu --upgradeAll && npm update && cp node_modules/indexeddbshim/dist/indexeddbshim.min.js www/indexeddbshim.min.js",
-    "release": "npm run upgrade && bump --prompt --tag --push --all && npm publish"
+  "dependencies": {
+    "indexeddbshim": "^2.2.1"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ABB-Austin/cordova-plugin-indexeddb-async.git"
+  "description": "An asynchronous IndexedDB plug-in for Cordova apps",
+  "devDependencies": {
+    "npm-check-updates": "^2.2.0",
+    "version-bump-prompt": "^1.5.1"
   },
+  "directories": {},
+  "dist": {
+    "shasum": "bfd91ef038a7f544225eec33951d271b50aeec39",
+    "tarball": "https://registry.npmjs.org/cordova-plugin-indexeddb-async/-/cordova-plugin-indexeddb-async-2.2.1.tgz"
+  },
+  "gitHead": "03e5199c868548c7e4977dd7056a2be8c7100719",
+  "homepage": "https://github.com/ABB-Austin/cordova-plugin-indexeddb-async#readme",
   "keywords": [
     "cordova",
     "indexeddb",
@@ -29,16 +83,32 @@
     "cordova-windows",
     "cordova-browser"
   ],
-  "author": {
-    "name": "ABB Austin",
-    "url": "http://abb.com"
-  },
   "license": "Apache-2.0",
-  "dependencies": {
-    "indexeddbshim": "^2.2.1"
+  "maintainers": [
+    {
+      "name": "abb-austin",
+      "email": "james.messinger@us.abb.com"
+    },
+    {
+      "name": "bigstickcarpet",
+      "email": "james.messinger@yahoo.com"
+    },
+    {
+      "name": "abb",
+      "email": "james.messinger@us.abb.com"
+    }
+  ],
+  "name": "cordova-plugin-indexeddb-async",
+  "optionalDependencies": {},
+  "readme": "Asynchronous IndexedDB plugin for Cordova\n================================\n\n[![Dependencies](https://img.shields.io/david/ABB-Austin/cordova-plugin-indexeddb-async.svg)](https://david-dm.org/ABB-Austin/cordova-plugin-indexeddb-async)\n[![npm](http://img.shields.io/npm/v/cordova-plugin-indexeddb-async.svg)](https://www.npmjs.com/package/cordova-plugin-indexeddb-async)\n[![License](https://img.shields.io/npm/l/cordova-plugin-indexeddb-async.svg)](LICENSE)\n\n\nFeatures\n--------------------------\n* Uses [IndexedDBShim](https://github.com/axemclion/IndexedDBShim) to polyfill devices that don't support IndexedDB\n* Uses the [__asynchronous__ WebSql plugin](https://github.com/Thinkwise/cordova-plugin-websql) on Windows devices\n* Can _optionally replace_ native IndexedDB on devices with [buggy implementations](http://www.raymondcamden.com/2014/9/25/IndexedDB-on-iOS-8--Broken-Bad)\n* Can _optionally enhance_ native IndexedDB on devices that are [missing certain features](http://codepen.io/cemerick/pen/Itymi)\n* This plugin is basically an IndexedDB-to-WebSql adapter\n\n\nInstallation\n--------------------------\nInstall via the [Cordova CLI](https://cordova.apache.org/docs/en/edge/guide_cli_index.md.html).\n\nFor __Cordova CLI 4.x__, use the GIT URL syntax:\n\n````bash\ncordova plugin add https://github.com/ABB-Austin/cordova-plugin-indexeddb-async.git\n````\n\nFor __Cordova CLI 5.x__, use the [new npm syntax](https://github.com/cordova/apache-blog-posts/blob/master/2015-04-15-plugins-release-and-move-to-npm.md):\n\n````bash\ncordova plugin add cordova-plugin-indexeddb-async\n````\n\n\nUsing the Plugin\n--------------------------\nCordova will automatically load the plugin and run it.  So all you need to do is use IndexedDB just like normal.\n\n[Here's an example](https://gist.github.com/BigstickCarpet/a0d6389a5d0e3a24814b)\n\n\n\nSupported Platforms\n--------------------------\nThis plugin supports `ios`, `android`, and `windows` (phone and desktop), as well as the new `browser` platform.\n\n### Android\nAndroid 4.3 and earlier do not support IndexedDB, so this plugin will automatically add IndexedDB support.  On Android 4.4 and later, the plugin does nothing, since IndexedDB is already natively supported.\n\n\n### Browser\nAll modern browsers [natively support IndexedDB](http://caniuse.com/#search=indexeddb), so the plugin won't do anything.  But for older browsers that [support WebSQL](http://caniuse.com/#search=websql), this plugin will automatically add IndexedDB support.\n\n\n### iOS\niOS 7 and earlier do not support IndexedDB, so this plugin will automatically add IndexedDB support.  On iOS 8 and later, the plugin does nothing, since IndexedDB is already natively supported.\n\niOS 8's implementation of IndexedDB is [very buggy](http://www.raymondcamden.com/2014/9/25/IndexedDB-on-iOS-8--Broken-Bad).  So, you may want to use this plugin rather than the native implementation.  To do that, add the following line of code to your app:\n\n````javascript\nwindow.shimIndexedDB.__useShim()\n````\n\n##### Known Issue on iOS\nDue to a [bug in WebKit](https://bugs.webkit.org/show_bug.cgi?id=137034), the `window.indexedDB` property is read-only and cannot be overridden by IndexedDBShim.  Until the bug is fixed, the only workaround is to create an `indexedDB` variable in your closure.  That way, all code within that closure will use the variable instead of the `window.indexedDB` property.  For example:\n\n````javascript\n(function() {\n    // This works on all devices/browsers, and only uses IndexedDBShim as a final fallback \n    var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;\n\n    // This code will use the native IndexedDB if it exists, or the shim otherwise\n    indexedDB.open(\"MyDatabase\", 1);\n})();\n````\n\n\n### Windows\nWindows 8 and 8.1 support IndexedDB natively, so the plugin won't do anything by default.  \n\nWindows 8.x's implementation of IndexedDB is [mising some features](http://codepen.io/cemerick/pen/Itymi), such as compound keys and compound indexes. If you need those features in your app, then you may want to use this plugin rather than the native implementation.  To do that, add the following line of cose to your app:\n\n````javascript\nwindow.shimIndexedDB.__useShim()\n````\n\n\n### Windows Phone\nWindows Phone does not support IndexedDB or WebSQL, so this plugin will automatically load the [asynchronous WebSQL plugin](https://github.com/Thinkwise/cordova-plugin-websql) to add WebSQL support, and then use [IndexedDBShim](https://github.com/axemclion/IndexedDBShim) to expose WebSQL to your app via the IndexedDB API.  It's complicated, but it works.  :)\n\nThe WebSQL plugin is specifically written for Windows Phone, so it only supports the two processor architectures that Windows Phone supports (`x86` and `arm`).  This means that you need to specify an extra flag when building your Windows Phone app via Cordova:\n\n````bash\ncordova build windows --archs=\"x86 arm\" -- --phone\n````\n",
+  "readmeFilename": "Readme.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ABB-Austin/cordova-plugin-indexeddb-async.git"
   },
-  "devDependencies": {
-    "npm-check-updates": "^2.2.0",
-    "version-bump-prompt": "^1.5.1"
-  }
+  "scripts": {
+    "release": "npm run upgrade && bump --prompt --tag --push --all && npm publish",
+    "upgrade": "ncu --upgradeAll && npm update && cp node_modules/indexeddbshim/dist/indexeddbshim.min.js www/indexeddbshim.min.js"
+  },
+  "version": "2.2.1"
 }

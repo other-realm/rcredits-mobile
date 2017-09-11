@@ -32,6 +32,7 @@
     <feature name="BarcodeScanner">
         <param name="android-package" value="com.phonegap.plugins.barcodescanner.BarcodeScanner" />
     </feature>
+    <allow-navigation href="cdvfile:*" />
     <name>CommonGood</name>
     <description>Community-Created Credits for the Common Good</description>
     <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>

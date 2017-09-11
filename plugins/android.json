@@ -21,31 +21,31 @@
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-indexeddb-async": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
         "cordova-plugin-statusbar": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
         "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+        },
+        "cordova-plugin-indexeddb-async": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "phonegap-plugin-barcodescanner": {
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
         }
     },

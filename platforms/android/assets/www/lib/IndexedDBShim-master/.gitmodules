@@ -1,3 +1,0 @@
-[submodule "web-platform-tests"]
-	path = web-platform-tests
-	url = https://github.com/w3c/web-platform-tests

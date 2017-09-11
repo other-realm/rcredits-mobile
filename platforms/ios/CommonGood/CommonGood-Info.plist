@@ -48,6 +48,12 @@
     <dict>
       <key>NSAllowsArbitraryLoads</key>
       <true/>
+      <key>NSAllowsArbitraryLoadsInWebContent</key>
+      <true/>
+      <key>NSAllowsArbitraryLoadsInMedia</key>
+      <true/>
+      <key>NSAllowsLocalNetworking</key>
+      <true/>
       <key>NSExceptionDomains</key>
       <dict>
         <key>10.0.0.7</key>
@@ -66,5 +72,7 @@
     <array>
       <string>UIInterfaceOrientationPortrait</string>
     </array>
+    <key>NSCameraUsageDescription</key>
+    <string/>
   </dict>
 </plist>
