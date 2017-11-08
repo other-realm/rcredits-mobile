@@ -20,7 +20,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 * @returns {user_serviceL#5.seller} the user object,or null if there is no current user.
 	 */
 	UserService.prototype.currentUser = function () {
-		$rootScope.user=this.seller;
+		$rootScope.user = this.seller;
 		return this.seller;
 	};
 	/**
@@ -113,8 +113,8 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}).catch(function (err) {
 			if (_.isString(err) && err !== '') {
 				console.error(err);
-				if('That Common Good Card is for a different company.'){
-					
+				if ('That Common Good Card is for a different company.') {
+
 				}
 				throw err;
 			} else if (err.statusText === '') {
@@ -251,6 +251,14 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			qrcodeParser.setUrl(str);
 			var accountInfo = qrcodeParser.parse();
 			this.validateDemoMode(accountInfo);
+			if (accountInfo.accountId === this.seller.accountInfo.accountId) {
+				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+				throw 'must_not_be_yourself';
+			}
+			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
+				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+				throw 'cant_trade_as_biz_when_cust';
+			}
 			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
 				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 				throw 'must_be_customer';
@@ -420,7 +428,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			self.customer = null;
 			self.seller.removeFromStorage();
 			self.seller = null;
-			$rootScope.user='';
+			$rootScope.user = '';
 			localStorageService.remove('company');
 			CashierModeService.disable();
 			resolve();
@@ -432,8 +440,8 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			CashierModeService.disable();
 			self.customer = null;
 			self.seller = null;
-			$rootScope.user=1;
-			$rootScope.whereWasI='#/app/login';
+			$rootScope.user = 1;
+			$rootScope.whereWasI = '#/app/login';
 			$state.go('app.login', {disableLoadSeller: true, openScanner: true});
 			$rootScope.$emit('sellerLogout');
 			resolve();
@@ -445,7 +453,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			$rootScope.$emit('sellerLogout');
 			self.customer = null;
 			self.seller = null;
-			$rootScope.user='';
+			$rootScope.user = '';
 			CashierModeService.disable();
 			resolve();
 		});
