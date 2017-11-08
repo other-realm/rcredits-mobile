@@ -2,6 +2,7 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	$stateParams, $ionicLoading, $filter, NotificationService, UserService, $rootScope,
 	TransactionService, BackButtonService, $timeout, $interval, SelfServiceMode) {
 	var oldOnline = NetworkService.isOnline();
+	console.log($stateParams.transactionType);
 	$scope.transactionStatus = $stateParams.transactionStatus;
 	$scope.transactionAmount = $stateParams.transactionAmount;
 	$scope.networkStatus = NetworkService.isOnline();

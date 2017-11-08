@@ -1,14 +1,14 @@
 {
-    "name": "CommonGoodMobile",
+    "name": "CGPay",
     "version": "1.1.1",
-    "description": "Common Good: more than just a mobile app",
+    "description": "The payment card for community power",
     "app_id": "",
     "v2": false,
     "typescript": false,
     "proxies": [
         {
             "path": "/pos",
-            "proxyUrl": "https://192.168.1.4:8000/cgMembers/pos"
+            "proxyUrl": "https://10.0.0.6:8000/cgMembers/pos"
         }
     ],
     "watch": {
@@ -74,6 +74,7 @@
     "devDependencies": {
         "@ionic/cli-plugin-gulp": "1.0.2",
         "@ionic/cli-plugin-ionic1": "2.0.1",
+        "ionic": "3.16.0",
         "karma": "^1.7.0"
     },
     "cordova": {

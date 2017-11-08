@@ -1,0 +1,19 @@
+<ion-view view-title="{{('exchange'| translate)}}">
+    <subheader></subheader>
+	<ion-content class="has-subheader">
+		{{hide_currency}}
+		<div class="list">
+			<label class="item item-input item-select">
+				<div class="exchangeText2 input-label" ng-bind="pm.selectedPayment.getName()">
+				</div>
+				<select class="exchangeText2 payment-type-select" ng-options="item as item.name for item in ::pm.paymentTypes"
+						ng-model="pm.selectedPayment" ng-change="pm.onPaymentChange()"></select>
+			</label>
+			<div class="exchangeText2 item payment-fee-advice" ng-bind="pm.paymentAdvice">
+			</div>
+		</div>
+	</ion-content>
+	<button class="button primary button-full button-positive next-btn" ng-click="pm.goNextPage()">
+		{{::('next'| translate)}}
+	</button>
+</ion-view>

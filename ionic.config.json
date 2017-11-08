@@ -1,10 +1,10 @@
 {
-  "name": "CommonGoodMobile",
+  "name": "CGPay",
   "app_id": "",
   "proxies": [
     {
       "path": "/pos",
-      "proxyUrl": "https://new.commongood.earth/pos"
+      "proxyUrl": "https://192.168.1.4:8000/cgMembers/pos"
     }
   ],
   "gulpStartupTasks": [

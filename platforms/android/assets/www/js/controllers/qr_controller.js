@@ -3,23 +3,31 @@ app.controller('QRCtrl', function ($scope, $state, $ionicLoading, BarcodeService
 	NotificationService, CashierModeService, PreferenceService, NetworkService,
 	SelfServiceMode, $ionicSideMenuDelegate, $timeout) {
 	// Create a QR code
-	$scope.customer = UserService.currentCustomer();
+	$scope.user = UserService.currentUser();
+	
+	$scope.company=function (){
+		if($scope.user.name!==$scope.user.company){
+			return $scope.user.company;
+		}
+	};
+	
+	console.log($scope.user, $scope.company());
 //	var qrcode = new QRCode(document.getElementById("qrcode"), {
-//		text:$scope.customer.accountInfo.url,
+//		text:$scope.user.accountInfo.url,
 //		width: 200,
 //		height: 200
 //	});
 //	var makeCode = 
 	$scope.qrcode=new QRCode(document.getElementById("qrcode"), {
-		text:$scope.customer.accountInfo.url,
+		text:$scope.user.accountInfo.url,
 		width: 200,
 		height: 200
 	});
 	$scope.showBalance = function () {
-		if ($scope.customer.balanceSecret) {
+		if ($scope.user.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {
-			console.log($scope.customer);
+			console.log($scope.user);
 			NotificationService.showAlert({
 				scope: $scope,
 				title: 'customerBalance',
@@ -34,7 +42,7 @@ app.controller('QRCtrl', function ($scope, $state, $ionicLoading, BarcodeService
 		$state.go('app.qr');
 	};
 	$scope.$on('$destroy', function () {
-		$scope.customer = null;
+		$scope.user = null;
 	});
 	$scope.openCharge = function () {
 		var chargeFn = function () {

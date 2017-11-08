@@ -9864,9 +9864,6 @@ subheader {
   font-size: 1.5em; }
 
 .rc-logo {
-  border: 3px solid #194d74;
-  border-radius: 100px;
-  background: white;
   padding: 20px; }
   .rc-logo img {
     height: 100%; }
@@ -9920,12 +9917,37 @@ button.secondary {
   right: 0;
   float: right;
   position: absolute;
-  padding: .33em 1em .33em 0; }
+  padding: .33em 1em .33em .25em;
+  width: 75%;
+  font-weight: 900; }
+
+transaction-description-menu-label {
+  font: 400 13.3333px Arial;
+  color: red; }
 
 .chargeBtn {
   position: absolute !important;
   bottom: 0 !important;
   display: table-cell; }
+
+#_label-0 {
+  font-family: "-apple-system", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.42857;
+  color: black; }
+
+.item-select:after {
+  position: relative;
+  display: none; }
+
+.downSymbol {
+  font-weight: 900;
+  writing-mode: vertical-lr;
+  font-size: 2em; }
+
+#selectCategory:first-child {
+  content: '<span class="downSymbol">&#8227;</span>'; }
 
 .customer-menu .customer-img {
   height: 13em; }
@@ -10065,14 +10087,17 @@ button.secondary {
 .item-select::after {
   right: 7em; }
 
+.smallerText {
+  font-size: .7em; }
+
 #scan-to-login {
   height: 100px;
   font-size: 2em; }
 
 .rc.login .rc-logo {
-  margin: 33% auto 20% auto;
-  height: 200px;
-  width: 200px; }
+  margin: 33% auto 5% auto;
+  height: 300px;
+  width: 300px; }
 
 .rc.home .company {
   font-size: 300%; }
@@ -10081,9 +10106,9 @@ button.secondary {
   font-size: 1.8em; }
 
 .rc.home .rc-logo {
-  margin: 10% auto;
-  width: 150px;
-  height: 150px; }
+  margin: 3.5% auto;
+  width: 250px;
+  height: 250px; }
 
 .rc.home .scan-customer {
   font-size: 2em; }

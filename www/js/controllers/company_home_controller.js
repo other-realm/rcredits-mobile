@@ -2,28 +2,68 @@
 /*
  * Controls the visual interactions on the main screen that shows up when a company logs in
  */
-app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, BarcodeService, UserService, $ionicHistory, NotificationService, $rootScope, CashierModeService, SelfServiceMode, $translate, $ionicPlatform, $location) {
+app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, $rootScope, CashierModeService, SelfServiceMode, $translate, $ionicPlatform, $location) {
 	var onSellerLoginEvent = $rootScope.$on('sellerLogin', function () {
-		$scope.currentUser = UserService.currentUser();
+		$scope.currentUser = UserService.seller;
 	});
-	$scope.currentUser = UserService.currentUser();
+	$rootScope.isCustomerLoggedIn = false;
+	$scope.currentUser = UserService.seller;
 	if (!$scope.currentUser) {
+		console.log($scope.currentUser);
 		$state.go("app.login");
 	}
 	/**
 	 * Alerts the user that this is the first time this customer has used the service
 	 */
 	if ($scope.currentUser && $scope.currentUser.isFirstLogin()) {
-		$scope.currentUser.setFirstLoginNotified();
+//		NotificationService.showAlert({
+//			scope: $scope,
+//			title: 'deviceAssociated'
+//		},
+//			{
+//				company: $scope.currentUser.company
+//			})
+//			.then(function () {
+				$scope.currentUser.setFirstLoginNotified();
+//			});
 	}
+	/**
+	 * Is the app opperating in cashier mode?
+	 * @returns Whether it is
+	 */
 	$scope.isCashierMode = function () {
 		return CashierModeService.isEnabled();
 	};
+	/**
+	 * Is the app opperating in self service mode?
+	 * @returns {unresolved}
+	 */
 	$scope.isSelfServiceEnabled = function () {
 		return SelfServiceMode.isActive();
 	};
 	/**
-	 * This function decides what happens when the user clicks on the "Scan Common Good Card"
+	 * Navigate to a page that will show the customer's QR and other information
+	 */
+	$scope.showQR = function () {
+		$state.go('app.qr');
+	};
+	/**
+	 * show the customer's balance in a popup
+	 */
+	$scope.showBalance = function () {
+		console.log($scope.currentUser);
+		if ($scope.currentUser.balanceSecret) {
+			NotificationService.showAlert('balanceIsSecret');
+		} else {
+			NotificationService.showAlert({
+				scope: $scope,
+				title: 'customerBalance',
+				templateUrl: 'templates/customer-balance.html'
+			});
+		}
+	};
+	/**
+	 * This function decides what happens when the user clicks on the "Scan CGPay Card"
 	 * @returns {undefined}
 	 */
 	$scope.scanCustomer = function () {
@@ -31,7 +71,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, Barco
 			$state.go('app.self_service_mode');
 			return;
 		}
-		$ionicLoading.show();
+//		$ionicLoading.show();
 		$ionicPlatform.ready(function () {
 			//is the app running on the pc or on a phone?  If it's the PC, show the demo, if it's the phone, show the barcode scanner
 			var platform = ionic.Platform.platform();
@@ -40,53 +80,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, Barco
 				$state.go("app.demo");
 				$ionicLoading.hide();
 			} else {
-				//scan the barcode of a customer and navigate to 'app.customer' if successfull, show an error if not
-				BarcodeService.scan('app.home')
-					.then(function (id) {
-						UserService.identifyCustomer(id)
-							.then(function () {
-								$scope.customer = UserService.currentCustomer();
-								//alert that this is their first purchace
-								if ($scope.customer.firstPurchase) {
-									NotificationService.showConfirm({
-										title: 'firstPurchase',
-										templateUrl: "templates/first-purchase.html",
-										scope: $scope,
-										okText: "confirm"
-									})
-										.then(function (confirmed) {
-											if (confirmed) {
-												$ionicLoading.show();
-												$state.go("app.customer");
-											}
-										});
-									$ionicLoading.hide();
-								} else {
-									$ionicLoading.hide();
-									$state.go("app.customer");
-								}
-							})
-							//catch and alert if the scan was not successful
-							.catch(function (errorMsg) {
-								if (errorMsg === 'login_your_self') {
-									NotificationService.showAlert({title: "Error", template: "You are already signed in as: " + $scope.currentUser.name});
-								} else {
-									NotificationService.showAlert({title: "Error", template: errorMsg});
-								}
-								$ionicLoading.hide();
-							});
-					})
-					//catch and alert if the scan was not successful
-					.catch(function (errorMsg) {
-						NotificationService.showAlert({title: "error", template: errorMsg});
-						$ionicLoading.hide();
-					});
-				//On the off chance they decide to cancel the scan
-				$scope.$on('$destroy', function () {
-					if (onSellerLoginEvent) {
-						onSellerLoginEvent();
-					}
-				});
+				$state.go("app.customer");
 			}
 			;
 		});

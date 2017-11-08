@@ -59,6 +59,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.customPerson.url = '';// 'G6VM0RZzhWMCq0zcBowqw';//H6VM010WeHlioM5JZv1O9G
 	$scope.onSelectCustomer = function (person, goToNextPage) {
 		var selected = person;
+		console.log(selected);
 		UserService.identifyCustomer(selected)
 			.then(function () {
 				$scope.customPerson = UserService.currentCustomer();
@@ -74,18 +75,21 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 							.then(function (confirmed) {
 								if (confirmed) {
 									$ionicLoading.show();
+									$rootScope.isCustomerLoggedIn = true;
 									$state.go("app.customer");
 								}
 							});
 						$ionicLoading.hide();
 					} else {
 						$ionicLoading.hide();
+						$rootScope.isCustomerLoggedIn = true;
 						$state.go("app.customer");
 					}
 				}
 			})
 			.catch(function (errorMsg) {
 				console.log(errorMsg);
+				$rootScope.isCustomerLoggedIn = false;
 				if (errorMsg === 'login_your_self') {
 					NotificationService.showAlert({title: "Error", template: "You cannot use yourself as a customer while you are an agent"});
 				} else if (errorMsg === 'login_your_self') {
@@ -101,9 +105,12 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 		if (!selected) {
 			selected = person;
 		}
+		$rootScope.isCustomerLoggedIn = false;
+		person.signin = 1;
 		UserService.loginWithRCard(selected)
 			.then(function () {
 				$scope.customPerson = UserService.currentUser();
+				console.log($scope.customPerson);
 				if (goToNextPage) {
 					$ionicHistory.nextViewOptions({
 						disableBack: true
@@ -115,12 +122,17 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				if (errorMsg === 'login_your_self') {
 					NotificationService.showAlert({title: "Error", template: "You are already signed in as: " + person.name});
 				} else if (errorMsg === 'TypeError: this.db is null') {
+					NotificationService.showAlert({title: "Error", template: "You need to have WebSQL enabled"});
 				} else {
 					console.log(errorMsg);
-					NotificationService.showAlert({title: "Error", template: errorMsg});
 				}
 				$ionicLoading.hide();
-				$state.go("app.home");
+//				console.log($scope.customPerson.accountInfo.isPersonal, $scope.customPerson, goToNextPage);
+				if ($scope.customPerson.accountInfo) {
+					$state.go("app.home");
+				} else {
+					$state.go('app.login');
+				}
 			})
 			.finally(function () {
 				$ionicLoading.hide();

@@ -1,4 +1,13 @@
 <ion-view class="company-home" cache-view="false">
+		<ion-nav-buttons side="secondary">
+		<button class="button button-stable"  ng-if="!isSelfServiceEnabled() && !isCashierMode() && !isSelfServiceEnabled()" ng-click="showQR()">
+			{{ 'qr' | translate }}
+		</button>
+		&nbsp;&nbsp;
+		<button class="button button-stable" ng-if="isOnline() && !isSelfServiceEnabled()" ng-click="showBalance()">
+			{{ 'balance' | translate }}
+		</button>
+		</ion-nav-buttons>
 	<subheader></subheader>
 	<ion-content class="has-subheader">
 		<div class="rc home">

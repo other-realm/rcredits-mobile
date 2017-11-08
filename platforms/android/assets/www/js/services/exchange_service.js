@@ -1,6 +1,6 @@
 /* global _, app */
 /**
- * Deal with exchanging USD for Common Good Credit or v/v
+ * Deal with exchanging USD for CGPay Credit or v/v
  * @param {type} app
  * @returns {A new ExchangeService object}
  */
