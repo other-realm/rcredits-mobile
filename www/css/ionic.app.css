@@ -10106,12 +10106,17 @@ transaction-description-menu-label {
   font-size: 1.8em; }
 
 .rc.home .rc-logo {
-  margin: 3.5% auto;
-  width: 250px;
-  height: 250px; }
+  margin: 3.5% auto; }
 
 .rc.home .scan-customer {
   font-size: 2em; }
+
+.rc.home .homeLogo {
+  width: 50%;
+  height: 50%; }
+
+.rc.home .button:after {
+  bottom: 2px; }
 
 .aTable {
   height: 100%;

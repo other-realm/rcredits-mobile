@@ -7,10 +7,15 @@
   }
   .rc-logo {
     margin: 3.5% auto;
-    width: 250px;
-    height: 250px;
   }
   .scan-customer{
 	  font-size: 2em;
+  }
+  .homeLogo{
+	  width: 50%;
+	  height: 50%;
+  }
+  .button:after{
+	  bottom: 2px;
   }
 }
