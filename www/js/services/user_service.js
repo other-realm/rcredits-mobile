@@ -66,6 +66,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 */
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
+//		accountInfo.accountId=accountInfo.accountId.split('-')[0];
 		return $http({
 			method: 'POST',
 			url: urlConf.getServerUrl(accountInfo),

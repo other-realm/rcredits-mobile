@@ -97,7 +97,6 @@
 			this.accountInfo.isPersonal = !this.accountInfo.isCompany;
 			region = r36ToR26(region, regionLen);
 			if (this.accountInfo.isCompany||signin===1) {
-				console.log(signin);
 				this.accountInfo.signin = 1;
 				this.accountInfo.accountId = region + account + '-' + r36ToR26(tail.substring(1 + acctLen, 1 + acctLen + agentLen), agentLen, true);
 			} else {
