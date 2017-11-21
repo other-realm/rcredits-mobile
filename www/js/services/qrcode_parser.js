@@ -100,7 +100,6 @@
 				this.accountInfo.signin = 1;
 				this.accountInfo.accountId = region + account + '-' + r36ToR26(tail.substring(1 + acctLen, 1 + acctLen + agentLen), agentLen, true);
 			} else {
-				console.log(signin);
 				this.accountInfo.accountId = region + account;
 				this.accountInfo.signin = 0;
 			}

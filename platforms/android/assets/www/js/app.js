@@ -4,6 +4,7 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 	.config(['$translateProvider', 'localStorageServiceProvider', '$ionicConfigProvider',
 		function ($translateProvider, localStorageServiceProvider, $ionicConfigProvider) {
 			$ionicConfigProvider.views.maxCache(0);
+			var log=console.log;
 			$translateProvider
 				.useStaticFilesLoader({
 					prefix: 'js/languages/definitions/',

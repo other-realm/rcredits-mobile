@@ -93,5 +93,12 @@
 	"action_not_enabled": "This feature is disabled. A manager can enable it online at commongood.earth.",
 	"qr": "Show My Card",
 	"went_wrong":"There was an error in communication, please try again...",
-	"must_be_affiliated":"You must be affiliated with the company you are logging in with to do a transaction"
+	"must_be_affiliated":"You must be affiliated with the company you are logging in with to do a transaction",
+	"customer":"Customer Menu",
+	"login":"Login",
+	"preferences":"Preferences",
+	"pin":"Enter Pin",
+	"transResult":"Transaction Results",
+	"transaction":"Transaction",
+	"barcode":"Scan Barcode"
 }

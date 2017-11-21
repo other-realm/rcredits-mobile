@@ -1,4 +1,4 @@
-<ion-view class="user-menu">
+<ion-view view-title="{{('qr'| translate)}}" class="user-menu">
 	<ion-nav-buttons side="secondary">
 		<button class="button button-stable" ng-if="isOnline() && !isSelfServiceEnabled()" ng-click="showBalance()">
 			{{ 'balance' | translate }}

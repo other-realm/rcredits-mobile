@@ -1,4 +1,4 @@
-<ion-view hide-back-button="success">
+<ion-view view-title="{{('transResult'| translate)}}" hide-back-button="success">
 	<subheader></subheader>
 	<ion-nav-buttons side="primary">
 		<button id="undoButton" class="undoButton button button-stable" ng-show="!online && success && timeCan && undo===true && !isSelfServiceEnabled()" ng-click="undoTransaction()">

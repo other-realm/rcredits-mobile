@@ -6,6 +6,7 @@ app.controller('SelfServiceModeController', function ($scope, $state, $ionicLoad
 	$scope.init = function () {
 		BarcodeService.scan('app.home')
 			.then(function (scanUrl) {
+					console.log(scanUrl);
 				$scope.scanUrl = scanUrl;
 			})
 			.catch(function (errorMsg) {
@@ -16,7 +17,8 @@ app.controller('SelfServiceModeController', function ($scope, $state, $ionicLoad
 		if (!$scope.pin.value) {
 			NotificationService.showAlert({title: "error"});
 		}
-		$ionicLoading.show();
+		console.log($scope.pin.value, $scope.scanUrl);
+//		$ionicLoading.show();
 		UserService.identifyCustomer($scope.scanUrl, $scope.pin.value)
 			.then(function () {
 				$scope.customer = UserService.currentCustomer();
@@ -24,6 +26,8 @@ app.controller('SelfServiceModeController', function ($scope, $state, $ionicLoad
 				$ionicHistory.nextViewOptions({
 					disableBack: true
 				});
+				$rootScope.isCustomerLoggedIn=true;
+				console.log($scope.customer);
 				$state.go("app.customer");
 			})
 			.catch(function (err) {
