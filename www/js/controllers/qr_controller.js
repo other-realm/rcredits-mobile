@@ -4,30 +4,23 @@ app.controller('QRCtrl', function ($scope, $state, $ionicLoading, BarcodeService
 	SelfServiceMode, $ionicSideMenuDelegate, $timeout) {
 	// Create a QR code
 	$scope.user = UserService.currentUser();
-	
-	$scope.company=function (){
-		if($scope.user.name!==$scope.user.company){
+	$scope.company = function () {
+		if ($scope.user.name !== $scope.user.company) {
 			return $scope.user.company;
 		}
 	};
-	
+	$scope.currentUser = UserService.seller;
 	console.log($scope.user, $scope.company());
-//	var qrcode = new QRCode(document.getElementById("qrcode"), {
-//		text:$scope.user.accountInfo.url,
-//		width: 200,
-//		height: 200
-//	});
-//	var makeCode = 
-	$scope.qrcode=new QRCode(document.getElementById("qrcode"), {
-		text:$scope.user.accountInfo.url,
+	$scope.qrcode = new QRCode(document.getElementById("qrcode"), {
+		text: $scope.user.accountInfo.url,
 		width: 200,
 		height: 200
 	});
 	$scope.showBalance = function () {
-		if ($scope.user.balanceSecret) {
+		console.log($scope.currentUser);
+		if ($scope.currentUser.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {
-			console.log($scope.user);
 			NotificationService.showAlert({
 				scope: $scope,
 				title: 'customerBalance',

@@ -9,6 +9,17 @@ app.service('TransactionService',
 			this.lastTransaction = null;
 		};
 		/**
+		 * Gets ride of messed up html tags
+		 * @param {type} html
+		 * @returns {.document@call;createElement.value|txt.value}
+		 */
+		var decodeHtml = function (html) {
+			var txt = document.createElement("textarea");
+			txt.innerHTML = html;
+			txt.value=txt.value.replace('\'','');
+			return txt.value;
+		};
+		/**
 		 * Actually sends the transaction request to the server
 		 * @param {array} params - the details about the transaction
 		 * @param {object} account - information about the manager's account
@@ -133,6 +144,10 @@ app.service('TransactionService',
 							transaction.description = description;
 							transaction.goods = 1;
 							transaction.data = transactionResult.data;
+							transaction.data.message = decodeHtml(transaction.data.message);
+							transaction.data.undo = decodeHtml(transaction.data.undo);
+							customer.company=decodeHtml(customer.company);
+							console.log(transaction,customer);
 							customer.setLastTx(transaction);
 							customer.saveInSQLite().then(function () {
 								self.saveTransaction(transaction);
@@ -170,7 +185,7 @@ app.service('TransactionService',
 		TransactionService.prototype.exchange = function (amount, currency, paymentMethod) {
 			var exchangeType = 'USD in';
 			var amountToSend = amount;
-			console.log(currency.isUSD(),amount, currency, paymentMethod);
+			console.log(currency.isUSD(), amount, currency, paymentMethod);
 			if (!currency.isUSD()) {
 				exchangeType = 'USD out';
 				amountToSend = amount * (-1);

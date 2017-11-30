@@ -100,5 +100,6 @@
 	"pin":"Enter Pin",
 	"transResult":"Transaction Results",
 	"transaction":"Transaction",
-	"barcode":"Scan Barcode"
+	"barcode":"Scan Barcode",
+	"no_more_than_300":"Because there is currently no internet, your amount is limited to $300"
 }

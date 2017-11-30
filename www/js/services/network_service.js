@@ -50,7 +50,7 @@
 			return this.connectionOnline;
 		};
 		/**
-		 * Fake their not being internet access for demo customers
+		 * Fake there not being internet access for demo customers
 		 * @param {type} areYou
 		 * @returns {Boolean}
 		 */

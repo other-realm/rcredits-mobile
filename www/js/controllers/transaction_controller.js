@@ -1,5 +1,5 @@
 /* global app */
-app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionicLoading, $filter, NotificationService, UserService, TransactionService) {
+app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionicLoading, $rootScope, $filter, NotificationService, UserService, TransactionService) {
 	$scope.transactionType = $stateParams.transactionType;
 	$scope.amount = 0;
 	var seller = UserService.currentUser();
@@ -7,7 +7,7 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 	var isTransactionTypeCharge = function () {
 		return $scope.transactionType === 'charge';
 	};
-	$scope.sellOrCust=seller.accountInfo.isCompany;
+	$scope.sellOrCust = seller.accountInfo.isCompany;
 	var fillCategories = function () {
 		if ($scope.sellOrCust) {
 			if (isTransactionTypeCharge()) {
@@ -15,9 +15,9 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 				return seller.descriptions;
 			}
 			return seller.descriptions;
-		}else{
+		} else {
 			console.log(seller.descriptions);
-			seller.descriptions="Individual Payment";
+			seller.descriptions = "Individual Payment";
 			return seller.descriptions;
 		}
 	};
@@ -29,7 +29,7 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 		}
 	};
 	$scope.categories = fillCategories();
-	console.log($scope.categories,seller.accountInfo.isCompany);
+	console.log($scope.categories, seller.accountInfo.isCompany);
 	$scope.selectedCategory = {
 		selected: $scope.categories[0],
 		custom: null
@@ -55,25 +55,31 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 		return TransactionService.refund($scope.amount, $scope.selectedCategory.selected);
 	};
 	$scope.initiateTransaction = function () {
-		$ionicLoading.show();
 		var transactionAmount = $scope.amount;
-		var transactionPromise;
-		try {
-			if (isTransactionTypeCharge()) {
-				transactionPromise = $scope.charge();
-			} else {
-				transactionPromise = $scope.refund();
+		console.log($rootScope.onOnline);
+		if (transactionAmount > 300 && $rootScope.amIOnline) {
+			NotificationService.showAlert({title: 'error', template: 'no_more_than_300'});
+			return false;
+		} else {
+			var transactionPromise;
+			try {
+				if (isTransactionTypeCharge()) {
+					transactionPromise = $scope.charge();
+				} else {
+					transactionPromise = $scope.refund();
+				}
+				transactionPromise.then(function (transaction) {
+					$state.go('app.transaction_result', {'transactionStatus': 'success', 'transactionAmount': transactionAmount});
+					$ionicLoading.hide();
+				}, function (errorMsg) {
+					console.log(errorMsg);
+					TransactionService.lastTransaction = errorMsg;
+					$state.go('app.transaction_result', {'transactionStatus': 'failure', 'transactionAmount': transactionAmount, 'transactionMessage': errorMsg.message});
+					$ionicLoading.hide();
+				});
+			} catch (e) {
+				$ionicLoading.hide();
 			}
-			transactionPromise.then(function (transaction) {
-				$state.go('app.transaction_result', {'transactionStatus': 'success', 'transactionAmount': transactionAmount});
-				$ionicLoading.hide();
-			}, function (errorMsg) {
-				TransactionService.lastTransaction = errorMsg;
-				$state.go('app.transaction_result', {'transactionStatus': 'failure', 'transactionAmount': transactionAmount, 'transactionMessage': errorMsg.message});
-				$ionicLoading.hide();
-			});
-		} catch (e) {
-			$ionicLoading.hide();
 		}
 	};
 	$scope.onSelectCategory = function () {
