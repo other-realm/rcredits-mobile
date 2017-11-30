@@ -1,55 +1,6 @@
 <map version="docear 1.1" dcr_id="1511221192298_2aiu5jw3rkoxtehjq1e3mpmko" project="144CC68822F6UB67EX9CD56T527DDL7H8ZDN" project_last_home="file:/E:/Documents/Biz/mindmap/">
 <!--To view this file, download Docear - The Academic Literature Suite from http://www.docear.org -->
-<node TEXT="login" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1511222184900"><hook NAME="MapStyle" zoom="0.909">
-    <properties show_note_icons="true" show_icon_for_attributes="true"/>
-
-<map_styles>
-<stylenode LOCALIZED_TEXT="styles.root_node">
-<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
-<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600" COLOR="#000000" STYLE="as_parent">
-<font NAME="SansSerif" SIZE="10" BOLD="false" ITALIC="false"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
-<stylenode LOCALIZED_TEXT="defaultstyle.floating">
-<edge STYLE="hide_edge"/>
-<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
-</stylenode>
-</stylenode>
-<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right">
-<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
-<font NAME="Liberation Sans" SIZE="10" BOLD="true"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="styles.important">
-<icon BUILTIN="yes"/>
-</stylenode>
-</stylenode>
-<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right">
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
-<font SIZE="18"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
-<font SIZE="16"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#00b439">
-<font SIZE="14"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
-<font SIZE="12"/>
-</stylenode>
-<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
-<font SIZE="10"/>
-</stylenode>
-</stylenode>
-</stylenode>
-</map_styles>
-</hook>
+<node TEXT="login" FOLDED="false" ID="ID_1723255651" CREATED="1283093380553" MODIFIED="1511222184900">
 <hook NAME="AutomaticEdgeColor" COUNTER="6"/>
 <richcontent TYPE="DETAILS">
 
@@ -71,6 +22,60 @@
 </html>
 
 </richcontent>
+<hook NAME="MapStyle">
+    <properties show_icon_for_attributes="true" show_note_icons="true" show_notes_in_map="false"/>
+
+<map_styles>
+<stylenode LOCALIZED_TEXT="styles.root_node">
+<stylenode LOCALIZED_TEXT="styles.predefined" POSITION="right">
+<stylenode LOCALIZED_TEXT="default" MAX_WIDTH="600" COLOR="#000000" STYLE="as_parent">
+<font NAME="Times New Roman" SIZE="10" BOLD="false" ITALIC="false"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="defaultstyle.details"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.note"/>
+<stylenode LOCALIZED_TEXT="defaultstyle.floating">
+<edge STYLE="hide_edge"/>
+<cloud COLOR="#f0f0f0" SHAPE="ROUND_RECT"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.user-defined" POSITION="right">
+<stylenode LOCALIZED_TEXT="styles.topic" COLOR="#18898b" STYLE="fork">
+<font NAME="Times New Roman" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subtopic" COLOR="#cc3300" STYLE="fork">
+<font NAME="Times New Roman" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.subsubtopic" COLOR="#669900">
+<font NAME="Times New Roman" SIZE="10" BOLD="true"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.important">
+<icon BUILTIN="yes"/>
+</stylenode>
+<stylenode TEXT="Level 1" COLOR="#0033ff">
+<font NAME="Times New Roman" SIZE="16"/>
+<edge COLOR="#ff0000"/>
+</stylenode>
+</stylenode>
+<stylenode LOCALIZED_TEXT="styles.AutomaticLayout" POSITION="right">
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level.root" COLOR="#000000">
+<font SIZE="18"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,1" COLOR="#0033ff">
+<font SIZE="16"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,2" COLOR="#330033">
+<font SIZE="14"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,3" COLOR="#990000">
+<font SIZE="12"/>
+</stylenode>
+<stylenode LOCALIZED_TEXT="AutomaticLayout.level,4" COLOR="#111111">
+<font SIZE="10"/>
+</stylenode>
+</stylenode>
+</stylenode>
+</map_styles>
+</hook>
 <node TEXT="barcode" POSITION="right" ID="ID_33401906" CREATED="1511225440519" MODIFIED="1511225452285">
 <edge COLOR="#00ffff"/>
 <node TEXT="Susan" ID="ID_1058636427" CREATED="1511221203741" MODIFIED="1511225440534" MOVED="1511225440538">
@@ -545,16 +550,41 @@
 </node>
 <node TEXT="scan CGpay" ID="ID_1894810666" CREATED="1511221247359" MODIFIED="1511221263577">
 <node TEXT="susan" ID="ID_474534124" CREATED="1511225475675" MODIFIED="1511225511095" MOVED="1511225793734">
-<node TEXT="$0.05" ID="ID_426607425" CREATED="1512006820277" MODIFIED="1512006826779">
-<node TEXT="You charged Susan Shopper $0.05." ID="ID_259381502" CREATED="1512006827481" MODIFIED="1512006839031"/>
+<node TEXT="charge" ID="ID_1925069612" CREATED="1511225739365" MODIFIED="1511225895112">
+<node TEXT="$0.05" ID="ID_746451423" CREATED="1512006820277" MODIFIED="1512006826779">
+<node TEXT="You charged Susan Shopper $0.05." ID="ID_761892865" CREATED="1512006827481" MODIFIED="1512006839031"/>
+</node>
+</node>
+<node TEXT="refund" ID="ID_132013312" CREATED="1511226581550" MODIFIED="1512006637387">
+<node TEXT="$1.59" ID="ID_620344193" CREATED="1511226961062" MODIFIED="1512006687467">
+<node TEXT="You refunded Susan Shopper $0.54." ID="ID_7259767" CREATED="1512006688819" MODIFIED="1512007523227"/>
+</node>
+</node>
+<node TEXT="trade usd" ID="ID_738456302" CREATED="1511226638740" MODIFIED="1511226645944">
+<node TEXT="manger authorization" ID="ID_137501730" CREATED="1511227021833" MODIFIED="1511227043406">
+<node TEXT="usd in" ID="ID_1807767549" CREATED="1511227047496" MODIFIED="1511227060839">
+<node TEXT="cash" ID="ID_369287107" CREATED="1511227111714" MODIFIED="1511227115481" MOVED="1511227117656">
+<node TEXT="$1.23" ID="ID_418209166" CREATED="1511293598583" MODIFIED="1511293625013">
+<node TEXT="you charged curt $1.23" ID="ID_971115286" CREATED="1511293659196" MODIFIED="1511293732429">
+<arrowlink SHAPE="CUBIC_CURVE" COLOR="#000000" WIDTH="2" TRANSPARENCY="80" FONT_SIZE="14" FONT_FAMILY="Times New Roman" DESTINATION="ID_1058636427" STARTINCLINATION="830;0;" ENDINCLINATION="830;0;" STARTARROW="NONE" ENDARROW="DEFAULT"/>
+</node>
+</node>
+</node>
+<node TEXT="credit card" ID="ID_958557196" CREATED="1511227092797" MODIFIED="1511227111227"/>
+<node TEXT="check" ID="ID_1858151981" CREATED="1511227119481" MODIFIED="1511227126318"/>
+</node>
+<node TEXT="usd out" ID="ID_797866909" CREATED="1511227063272" MODIFIED="1511227078268"/>
+</node>
 </node>
 </node>
 <node TEXT="corner" ID="ID_1221670033" CREATED="1511225570767" MODIFIED="1511225595070" MOVED="1511225795701">
-<node TEXT="can&apos;t be seller paying customer" ID="ID_1657781437" CREATED="1511225598184" MODIFIED="1511225685756"/>
+<node TEXT="can&apos;t do biz with self" ID="ID_1657781437" CREATED="1511225598184" MODIFIED="1512007761900"/>
 </node>
 <node TEXT="curt" ID="ID_1238032150" CREATED="1511225702932" MODIFIED="1511225737388" MOVED="1511225767055">
 <node TEXT="charge" ID="ID_832267036" CREATED="1511225739365" MODIFIED="1511225895112">
-<node TEXT="message requiring manger permissions and giving a cancel button and a scan in button, if the scan in button clicks on susan, proceed to where you add the amount" ID="ID_543204634" CREATED="1511226664923" MODIFIED="1511226842396"/>
+<node TEXT="$0.05" ID="ID_426607425" CREATED="1512006820277" MODIFIED="1512006826779">
+<node TEXT="You charged Susan Shopper $0.05." ID="ID_259381502" CREATED="1512006827481" MODIFIED="1512006839031"/>
+</node>
 </node>
 <node TEXT="refund" ID="ID_550577000" CREATED="1511226581550" MODIFIED="1512006637387">
 <node TEXT="$1.59" ID="ID_61996185" CREATED="1511226961062" MODIFIED="1512006687467">
