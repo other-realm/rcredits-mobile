@@ -101,5 +101,6 @@
 	"transResult":"Transaction Results",
 	"transaction":"Transaction",
 	"barcode":"Scan Barcode",
-	"no_more_than_300":"Because there is currently no internet, your amount is limited to $300"
+	"no_more_than_300":"Because there is currently no internet, your amount is limited to 300",
+	"no_more_than_100000":"The POS transaction limit is 100,000"
 }
