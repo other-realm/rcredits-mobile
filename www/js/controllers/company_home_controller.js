@@ -51,7 +51,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	 * show the customer's balance in a popup
 	 */
 	$scope.showBalance = function () {
-		console.log($scope.currentUser);
+		UserService.balance($scope.currentUser.accountInfo);
 		if ($scope.currentUser.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {

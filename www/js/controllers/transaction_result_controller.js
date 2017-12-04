@@ -63,13 +63,17 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 			}
 		}
 	};
-	TransactionService.lastTransaction.data.message=decodeHtml(TransactionService.lastTransaction.data.message);
-	console.log(TransactionService.lastTransaction.data.message);
+//	console.log(TransactionService.lastTransaction);
+//	var message=TransactionService.lastTransaction.data;
+//	if(typeof(message)===undefined){
+//		TransactionService.lastTransaction.data.message=decodeHtml(TransactionService.lastTransaction.data.message);
+//	}
+//	TransactionService.lastTransaction.data.message=decodeHtml(TransactionService.lastTransaction.data.message);
 	$scope.customer = UserService.currentCustomer();
 	$scope.user = UserService.currentUser();
 	if ($scope.transactionStatus === 'failure') {
 		console.log(TransactionService);
-		$scope.setMessages(TransactionService);
+		$scope.setMessages(decodeHtml(TransactionService));
 	} else {
 		$scope.setMessages(TransactionService.lastTransaction);
 		$scope.transactionInfo = {

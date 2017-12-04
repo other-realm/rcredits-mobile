@@ -1,5 +1,5 @@
 /* global app */
-app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionicLoading, $rootScope, $filter, NotificationService, UserService, TransactionService) {
+app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionicLoading, $rootScope, $filter, NotificationService, UserService, TransactionService,NetworkService) {
 	$scope.transactionType = $stateParams.transactionType;
 	$scope.amount = 0;
 	var seller = UserService.currentUser();
@@ -58,8 +58,8 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 	};
 	$scope.initiateTransaction = function () {
 		var transactionAmount = $scope.amount;
-		console.log($rootScope.onOnline);
-		if (transactionAmount > 300 && $rootScope.amIOnline) {
+		console.log(NetworkService.isOffline());
+		if (transactionAmount > 300 && NetworkService.isOffline()) {
 			NotificationService.showAlert({title: 'error', template: 'no_more_than_300'});
 			return false;
 		} else {

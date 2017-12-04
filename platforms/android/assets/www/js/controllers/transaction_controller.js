@@ -16,24 +16,26 @@ app.controller('TransactionCtrl', function ($scope, $state, $stateParams, $ionic
 			}
 			return seller.descriptions;
 		} else {
-			console.log(seller.descriptions);
 			seller.descriptions = "Individual Payment";
+			console.log(seller.descriptions);
 			return seller.descriptions;
 		}
 	};
 	$scope.moreThan1Category = function () {
-		if (seller.accountInfo.isCompany && seller.descriptions.length > 1) {
+		if (jQuery.isArray(seller.descriptions)) {
 			return true;
 		} else {
 			return false;
 		}
 	};
 	$scope.categories = fillCategories();
-	console.log($scope.categories, seller.accountInfo.isCompany);
-	$scope.selectedCategory = {
-		selected: $scope.categories[0],
-		custom: null
-	};
+	if (jQuery.isArray(seller.descriptions)) {
+		console.log($scope.categories, seller.accountInfo.isCompany, jQuery.isArray(seller.descriptions));
+		$scope.selectedCategory = {selected: $scope.categories[0], custom: null};
+	} else {
+		console.log($scope.categories, seller.accountInfo.isCompany);
+		$scope.selectedCategory = {selected: $scope.categories, custom: null};
+	}
 	$scope.disableTransaction = function () {
 		if ($scope.amount === 0 || !$scope.selectedCategory.selected) {
 			return true;
