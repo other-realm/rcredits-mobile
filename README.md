@@ -5,6 +5,9 @@ If you have an Android phone and you just want to test it out there, download on
 - https://otherrealm.org/cgf/android-armv7-debug.apk
 - https://otherrealm.org/cgf/android-x86-debug.apk
 
+##Screenshots:
+https://drive.google.com/drive/folders/1Ap6Kr928QTGJZVdlNOJJe_mOSN7SLd1W
+
 ## Prerequisites:
 1.  If you do not already have git installed, install git for your OS at: https://git-scm.com/downloads
 
