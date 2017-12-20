@@ -440,7 +440,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		$state.go('app.home');
 	};
 	/**
-	 * Logs the user out on the remote server.
+	 * Logs the user out and un-affiliates the company.
 	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
 	 */
 	UserService.prototype.logout = function () {
@@ -456,6 +456,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			resolve();
 		});
 	};
+	/**
+	 * Logs the user out but keeps the company logged in.
+	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
+	 */
 	UserService.prototype.softLogout = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();
@@ -469,6 +473,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			resolve();
 		});
 	};
+	/**
+	 * Called when there is not enough storage
+	 * @returns {unresolved}
+	 */
 	UserService.prototype.storageOverQuota = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();

@@ -411,6 +411,27 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			});
 	};
 	/**
+	 * Update the current users' balance
+	 * @param {type} accountInfo
+	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then}
+	 */
+	UserService.prototype.balance = function (accountInfo) {
+		var params = new RequestParameterBuilder()
+			.setOperationId('identify')
+			.setAgent(this.seller.default)
+			.setMember(accountInfo.accountId)
+			.setSecurityCode(accountInfo.securityCode)
+			.setSignin(0);
+		params = params.getParams();
+		params.counter = accountInfo.counter;
+		return this.loginWithRCard_(params, accountInfo)
+			.then(function (responseData) {
+				self.seller.setBalance(responseData.balance);
+				console.log(self.seller.getBalance(),responseData.balance);
+				return responseData.balance;
+			});
+	};
+	/**
 	 * Activates cashier mode, then redirects to the home screen
 	 * @returns {undefined}
 	 */
@@ -419,7 +440,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		$state.go('app.home');
 	};
 	/**
-	 * Logs the user out on the remote server.
+	 * Logs the user out and un-affiliates the company.
 	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
 	 */
 	UserService.prototype.logout = function () {
@@ -435,6 +456,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			resolve();
 		});
 	};
+	/**
+	 * Logs the user out but keeps the company logged in.
+	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
+	 */
 	UserService.prototype.softLogout = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();
@@ -448,6 +473,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			resolve();
 		});
 	};
+	/**
+	 * Called when there is not enough storage
+	 * @returns {unresolved}
+	 */
 	UserService.prototype.storageOverQuota = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();

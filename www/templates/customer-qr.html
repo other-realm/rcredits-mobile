@@ -6,10 +6,10 @@
 	</ion-nav-buttons>
 	<subheader></subheader>
 	<ion-content class="has-subheader">
-		<div class="rc">
-			<p class="user-name">{{user.name}}</p>
-				<p>{{user.place}}</p>
-				<p>{{company()}}</p>
+		<div class="rc user-name">
+			{{user.name}}<br>
+				{{user.place}}
+				{{company()}}
 			<div class="rc">
 				<img id="ItemPreview" src="../img/nophoto.png" ng-src="{{user.photo}}" class="user-img" sf-load="hideLoading()"/>
 				<div id="qrcode"></div>

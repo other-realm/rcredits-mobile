@@ -9898,10 +9898,13 @@ button.secondary {
   font-size: 8em;
   color: #62b34d; }
 
-.cashier-pref i {
-  font-size: 26px;
-  margin-right: 10px;
-  color: #a0a0a0; }
+.cashier-pref {
+  margin: 0;
+  padding: .1em .2em; }
+  .cashier-pref i {
+    font-size: 26px;
+    margin-right: 10px;
+    color: #a0a0a0; }
 
 .cashier-pref-selected i {
   color: #2d8c14; }
@@ -9949,6 +9952,18 @@ transaction-description-menu-label {
 #selectCategory:first-child {
   content: '<span class="downSymbol">&#8227;</span>'; }
 
+.permissions {
+  word-wrap: normal;
+  width: 98%;
+  text-align: center; }
+
+.rc {
+  margin: 0;
+  padding: 0; }
+
+button.primary {
+  height: 2rem; }
+
 .customer-menu .customer-img {
   height: 13em; }
 
@@ -9971,6 +9986,9 @@ transaction-description-menu-label {
 
 .customer-menu button.exchange {
   margin-left: 5px; }
+
+.customer-menu p {
+  margin: 0; }
 
 .tabulator {
   background: white; }
@@ -10034,7 +10052,8 @@ transaction-description-menu-label {
   height: 40%; }
 
 .exchange-types {
-  font-size: 20px; }
+  font-size: 20px;
+  padding: .1em; }
   .exchange-types .operation {
     float: left;
     font-weight: 400; }
@@ -10068,7 +10087,7 @@ transaction-description-menu-label {
 
 .exchange-keypad {
   position: absolute;
-  bottom: -21px;
+  bottom: 0px;
   right: 0;
   left: 0; }
   .exchange-keypad .number-display {
@@ -10100,16 +10119,17 @@ transaction-description-menu-label {
   width: 300px; }
 
 .rc.home .company {
-  font-size: 300%; }
+  font-size: 200%; }
 
 .rc.home .user {
   font-size: 1.8em; }
 
 .rc.home .rc-logo {
-  margin: 3.5% auto; }
+  margin: 0%;
+  padding: 0; }
 
 .rc.home .scan-customer {
-  font-size: 2em; }
+  font-size: 150%; }
 
 .rc.home .homeLogo {
   width: 50%;

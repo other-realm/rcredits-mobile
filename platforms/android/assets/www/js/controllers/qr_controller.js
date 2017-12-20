@@ -17,7 +17,7 @@ app.controller('QRCtrl', function ($scope, $state, $ionicLoading, BarcodeService
 		height: 200
 	});
 	$scope.showBalance = function () {
-		console.log($scope.currentUser);
+		UserService.balance($scope.currentUser.accountInfo);
 		if ($scope.currentUser.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {

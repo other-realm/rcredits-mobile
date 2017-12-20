@@ -16,7 +16,7 @@ app.service('TransactionService',
 		var decodeHtml = function (html) {
 			var txt = document.createElement("textarea");
 			txt.innerHTML = html;
-			txt.value=txt.value.replace('\'','');
+			txt.value = txt.value.replace('\'', '');
 			return txt.value;
 		};
 		/**
@@ -146,8 +146,8 @@ app.service('TransactionService',
 							transaction.data = transactionResult.data;
 							transaction.data.message = decodeHtml(transaction.data.message);
 							transaction.data.undo = decodeHtml(transaction.data.undo);
-							customer.company=decodeHtml(customer.company);
-							console.log(transaction,customer);
+							customer.company = decodeHtml(customer.company);
+							console.log(transaction, customer);
 							customer.setLastTx(transaction);
 							customer.saveInSQLite().then(function () {
 								self.saveTransaction(transaction);
@@ -339,6 +339,27 @@ app.service('TransactionService',
 					NotificationService.showAlert('offline_old_transactions');
 				}
 			});
+		};
+		TransactionService.prototype.testThings = function (whattotest) {
+			var perams = {
+				"op": "test", 
+				"function": "Transact", 
+				"testOnly": 0, 
+				"args": [{
+						"id": ".ZZC", 
+						"fullName": "Corner Store", 
+						"city": "Ashfield", 
+						"state": "MA", 
+						"balance": "0", 
+						"flags": "ok`co"
+					}, {
+						"id": ".ZZS", 
+						"fullName": "Susan Shopper", 
+						"city": "Montague", 
+						"state": "MA", 
+						"balance": "100", 
+						"flags": "ok,co"
+					}]};
 		};
 		return new TransactionService();
 	});

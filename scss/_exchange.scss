@@ -1,5 +1,6 @@
 .exchange-types {
     font-size: 20px;
+	padding:.1em;
     .operation {
 		float: left;
 		font-weight: 400;
@@ -39,7 +40,7 @@
 		display: none;
     }
     position: absolute;
-    bottom: -21px;
+    bottom: 0px;
     right: 0;
     left: 0;
 }

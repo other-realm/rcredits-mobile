@@ -26,6 +26,15 @@
 				"object": {}
 			}
 		},
+		"ion-item": {
+			"attributes": {
+				"ng-model": {},
+				"ng-click": {},
+				"ng-class": {},
+				"ng-repeat": {},
+				"class": {}
+			}
+		},
 		"ion-nav-buttons": {
 			"attributes": {
 				"side": {}

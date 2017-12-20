@@ -19,6 +19,8 @@
 		margin-right: 10px;
 		color: $mediumgray;
 	}
+	margin: 0;
+	padding: .1em .2em;
 }
 .cashier-pref-selected {
 	i {
@@ -67,4 +69,16 @@ transaction-description-menu-label{
 }
 #selectCategory:first-child{
 	content: '<span class="downSymbol">&#8227;</span>';
+}
+.permissions{
+	word-wrap: normal;
+	width: 98%;
+	text-align: center;
+}
+.rc{
+	margin: 0;
+	padding: 0;
+}
+button.primary{
+	height: 2rem;
 }
