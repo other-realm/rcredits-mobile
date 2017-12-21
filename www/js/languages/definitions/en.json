@@ -95,7 +95,7 @@
 	"went_wrong":"There was an error in communication, please try again...",
 	"must_be_affiliated":"You must be affiliated with the company you are logging in with to do a transaction",
 	"customer":"Customer Menu",
-	"login":"Login",
+	"login":"Log In",
 	"preferences":"Preferences",
 	"pin":"Enter Pin",
 	"transResult":"Transaction Results",

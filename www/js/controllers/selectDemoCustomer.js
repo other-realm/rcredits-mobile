@@ -30,6 +30,9 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 			{name: "Curt's Hardware", url: 'H6VM0G0utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerHelgasHardware.jpg'}
 		]
 	];
+	/*
+	 
+	 */
 	var formats = document.getElementsByName('formattype');
 	$scope.iswebview = ionic.Platform.platform();
 	$scope.format = {
@@ -138,6 +141,26 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				$ionicLoading.hide();
 			});
 	};
+	$scope.testD = {members: [{"id":".ZZC",
+				"fullName":"Corner Store",
+				"city":"Ashfield",
+				"state":"MA",
+				"balance":"0",
+				"flags":"ok,co"
+			},{
+				"id":".ZZS",
+				"fullName":"Susan Shopper",
+				"city":"Montague",
+				"state":"MA",
+				"balance":"100",
+				"flags":"ok"
+			}]};
+	console.log($scope.testD.members[0]);
+	$scope.doTest = function (whattotest, testData) {
+		console.log(whattotest, testData,TransactionService.testThings(whattotest, testData));
+		 $scope.testResults=TransactionService.testThings(whattotest, testData);
+	};
+	$scope.testResults='';
 	$scope.wifi = {checked: !NetworkService.isOnline()};
 	$scope.toggleWiFi = function () {
 		if (!$scope.wifi.checked) {
