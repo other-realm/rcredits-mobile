@@ -43,5 +43,18 @@
 				</div>
 			</div>
 		</div>
+		Members Test:
+		<div ng-repeat="m in testD.members">
+			<div>
+			ID:<input type="text" id="whattotest" style="width:100%" ng-model="m.id"><br>
+			Full Name:<input type="text" id="testData" style="width:100%" ng-model="m.fullName">
+			City:<input type="text" id="testData" style="width:100%" ng-model="m.city">
+			State:<input type="text" id="testData" style="width:100%" ng-model="m.state">
+			Balence:<input type="text" id="testData" style="width:100%" ng-model="m.balence">
+			Flags:<input type="text" id="testData" style="width:100%" ng-model="m.flags">
+			</div>
+			<a class='button' href="javascript:void(0)" ng-click="doTest('members',m)" ng-model="testD.members" id="doTest">Do Test</a>
+			<textarea ng-bind="{{testResults}}" ng-model="testResults">Results</textarea>
+		</div>
 	</ion-content>
 </ion-view>

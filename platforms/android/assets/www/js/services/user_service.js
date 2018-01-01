@@ -253,15 +253,15 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			var accountInfo = qrcodeParser.parse();
 			this.validateDemoMode(accountInfo);
 			if (accountInfo.accountId === this.seller.accountInfo.accountId) {
-				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+//				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
 				throw 'must_not_be_yourself';
 			}
 			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
-				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+//				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
 				throw 'cant_trade_as_biz_when_cust';
 			}
 			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
-				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
+//				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 				throw 'must_be_customer';
 			}
 			var params = new RequestParameterBuilder()

@@ -44,7 +44,7 @@
 			</div>
 		</div>
 		Members Test:
-		<div ng-if="whereWasI==='#/app/home'" ng-repeat="m in testD.members">
+		<div ng-repeat="m in testD.members">
 			<div>
 			ID:<input type="text" id="whattotest" style="width:100%" ng-model="m.id"><br>
 			Full Name:<input type="text" id="testData" style="width:100%" ng-model="m.fullName">
@@ -54,7 +54,7 @@
 			Flags:<input type="text" id="testData" style="width:100%" ng-model="m.flags">
 			</div>
 			<a class='button' href="javascript:void(0)" ng-click="doTest('members',m)" ng-model="testD.members" id="doTest">Do Test</a>
-			<textarea ng-bind="testResults" ng-model="testD">Results</textarea>
+			<textarea ng-bind="{{testResults}}" ng-model="testResults">Results</textarea>
 		</div>
 	</ion-content>
 </ion-view>

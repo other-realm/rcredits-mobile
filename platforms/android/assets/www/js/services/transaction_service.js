@@ -340,26 +340,21 @@ app.service('TransactionService',
 				}
 			});
 		};
-		TransactionService.prototype.testThings = function (whattotest) {
-			var perams = {
+		TransactionService.prototype.testThings = function (whattotest,testData) {
+			var params = {
 				"op": "test", 
-				"function": "Transact", 
+				"function": whattotest, 
 				"testOnly": 0, 
-				"args": [{
-						"id": ".ZZC", 
-						"fullName": "Corner Store", 
-						"city": "Ashfield", 
-						"state": "MA", 
-						"balance": "0", 
-						"flags": "ok`co"
-					}, {
-						"id": ".ZZS", 
-						"fullName": "Susan Shopper", 
-						"city": "Montague", 
-						"state": "MA", 
-						"balance": "100", 
-						"flags": "ok,co"
-					}]};
+				"args": testData
+			};
+			return $http({
+				method: 'POST',
+				url: 'https://ws.rcredits.org/pos',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				data: $httpParamSerializer(params)
+			});			
 		};
 		return new TransactionService();
 	});

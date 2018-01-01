@@ -19,7 +19,6 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 	.run(function ($ionicPlatform, $state, SQLiteService, NetworkService, $rootScope, TransactionSyncService, BackButtonService, UserService, NotificationService) {
 		$ionicPlatform.ready(function () {
 			// This is only for web development to enable proxy
-
 			$rootScope.whereWasI = location.hash;
 			$rootScope.amIOnline = NetworkService.isOffline();
 			$rootScope.undo = false;

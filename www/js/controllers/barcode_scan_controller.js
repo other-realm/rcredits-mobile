@@ -39,6 +39,7 @@ app.controller('BarcodeScan', function ($scope, $state, $ionicLoading, BarcodeSe
 		})
 		//catch and alert if the scan was not successful
 		.catch(function (errorMsg) {
+			console.log(errorMsg);
 			NotificationService.showAlert({title: "error", template: errorMsg});
 			$ionicLoading.hide();
 		});
