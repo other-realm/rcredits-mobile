@@ -13,7 +13,7 @@ https://drive.google.com/drive/folders/1Ap6Kr928QTGJZVdlNOJJe_mOSN7SLd1W
 ## Prerequisites:
 1.  If you do not already have git installed, install git for your OS at: https://git-scm.com/downloads
 
-2.  If you don't have the Chrome browser on your computer, download that at: https://www.google.com/chrome/browser/desktop/index.html
+2.  If you don't have the Chrome browser on your computer, download that at: https://www.google.com/chrome/browser/desktop/index.html and install the Allow-Control-Allow-Origin: * plugin at: https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi .
 
 3.  Next, you'll want to set up NodeJS, a server-side JavaScript language that the app runs on:
 
@@ -89,20 +89,14 @@ npm rebuild
 gulp sass
 ```
 
-### To Run Unit Tests
-
+### To Run Tests
 Prerequisites:
-Go through the tutorial at: http://www.protractortest.org/#/tutorial
+Install the Katalon Recorder (Selenium IDE for Chrome) https://chrome.google.com/webstore/detail/katalon-recorder-selenium/ljdobmomdgdljniojadhoplhkpialdid
+CG Pay only works with the recorder extension because it lets you test things in the actual browser with the Allow-Control-Allow-Origin: * extension installed.  The stand alone Katalon Suite, although it provides a lot more features, doesn't allow extensions.
 
-Then:
-1. Start Webdriver:
-   ```
-   webdriver-manager start
-   ```
-
-2. Start Protractor:
-   ```
-   protractor protConf.js
-   ```
-
-Note, currently the test sometimes fails for two reasons, both related to protractor/webdriver and unrelated to the actual Common Good code: one is a timeout that happens when the server response takes too long and the other is that, for some reason, you can't get both tests to run at the same time (the second test fails, saying that the browser no longer has a valid session) and you need to comment out the one you're not testing.  I will try to find workarounds for these.
+To run the tests:
+1. Click the "K" icon in the toolbar area to launch the extension
+2. Click the "Folder" icon to the right of "Test Suites"
+3. Navigate to the test folder in the rcredits-mobile directory and choose one or more of the tests you want to perform
+4. Click the "Play" or "Play Suite" or "Play All" buttons to test the app (make sure you have the app running, a.k.a. you have run 'ionic serve')
+5. To record a new test, press the record button 
