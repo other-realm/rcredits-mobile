@@ -8,7 +8,7 @@
     "proxies": [
         {
             "path": "/pos",
-            "proxyUrl": "https://10.0.0.6:8000/cgMembers/pos"
+            "proxyUrl": "https://ws.rcredits.org/pos"
         }
     ],
     "watch": {
@@ -74,7 +74,7 @@
     "devDependencies": {
         "@ionic/cli-plugin-gulp": "1.0.2",
         "@ionic/cli-plugin-ionic1": "2.0.1",
-        "ionic": "3.19.0",
+        "ionic": "3.19.1",
         "karma": "^1.7.0"
     },
     "cordova": {

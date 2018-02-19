@@ -4,7 +4,7 @@
   "proxies": [
     {
       "path": "/pos",
-      "proxyUrl": "https://192.168.1.4:8000/cgMembers/pos"
+      "proxyUrl": "https://ws.rcredits.org/pos"
     }
   ],
   "gulpStartupTasks": [

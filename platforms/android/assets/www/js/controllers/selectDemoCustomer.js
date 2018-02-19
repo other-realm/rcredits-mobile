@@ -141,21 +141,26 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				$ionicLoading.hide();
 			});
 	};
-	$scope.testD = {members: [{"id": ".ZZC",
-				"fullName": "Corner Store",
-				"city": "Ashfield",
-				"state": "MA",
-				"balance": "0",
-				"flags": "ok,co"
-			}, {
-				"id": ".ZZS",
-				"fullName": "Susan Shopper",
-				"city": "Montague",
-				"state": "MA",
-				"balance": "100",
-				"flags": "ok"
+	$scope.testD = {"transactions":[{
+				"id":"C",
+				"fullName":"Corner Store",
+				"city":"Ashfield",
+				"state":"MA",
+				"balance":0,
+				"flags":"ok,co",
+				"cardCode":"WeHlioM5JZv1O9G",
+				"selling":"groceries"
+			},{
+				"id":"S",
+				"fullName":"Susan Shopper",
+				"city":"Montague",
+				"state":"MA",
+				"balance":100,
+				"flags":"ok",
+				"cardCode":"ZzhWMCq0zcBowqw",
+				"selling":""
 			}]};
-	console.log($scope.testD.members[0]);
+	console.log($scope.testD);
 	$scope.doTest = function (whattotest, testData) {
 		$scope.testResults = TransactionService.testThings(whattotest, testData);
 		var results=$scope.testResults.$$state;
