@@ -4,7 +4,7 @@
    <name>CG Mobile Test</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-02-16T14:07:45</lastRun>
+   <lastRun>2018-03-04T15:11:11</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>

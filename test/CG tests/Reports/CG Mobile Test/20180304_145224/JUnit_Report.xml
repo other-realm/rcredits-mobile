@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="CG Mobile Test" time="109" tests="0" failures="1" errors="0">
+   <testsuite name="CG Mobile Test" tests="0" failures="1" errors="0" time="109" timestamp="2018-03-04 14:52:35" hostname="Someone - AaronEJs-Laptop" id="Test Suites/CG Mobile Test">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180304_145224"/>
+         <property name="logFiles" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180304_145224\\execution0.log"/>
+         <property name="attachments" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180304_145224\\1520193254077.png"/>
+         <property name="hostName" value="Someone - AaronEJs-Laptop"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="5.3.1.1"/>
+         <property name="browser" value="Chrome 64.0.3282.186"/>
+         <property name="hostAddress" value="169.254.125.96"/>
+         <property name="sessionId" value="8babf78b681900a647459ff00dcd94a3"/>
+         <property name="seleniumVersion" value="3.7.1"/>
+         <property name="proxyInformation" value="ProxyInformation{proxyOption=NO_PROXY, proxyServerType=HTTP, password=, proxyServerAddress=, proxyServerPort=0}"/>
+         <property name="platform" value="Windows 10"/>
+      </properties>
+      <testcase name="Test Cases/Manager - Customer - Sale" classname="Test Cases/Manager - Customer - Sale" status="FAILED">
+         <failure type="FAILED" message="Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)"/>
+         <system-out><![CDATA[2018-03-04 14:52:35 - [TEST_CASE][FAILED] - Test Cases/Manager - Customer - Sale: Test Cases/Manager - Customer - Sale FAILED because (of) Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)
+
+2018-03-04 14:52:36 - [TEST_STEP][PASSED] - openBrowser: Browser is opened with url: ''
+
+2018-03-04 14:52:54 - [MESSAGE][PASSED] - Browser is opened with url: ''
+
+2018-03-04 14:52:54 - [TEST_STEP][PASSED] - navigateToUrl: Navigate to 'http://127.0.0.1:8100/#/app/login' successfully
+
+2018-03-04 14:53:00 - [MESSAGE][PASSED] - Navigate to 'http://127.0.0.1:8100/#/app/login' successfully
+
+2018-03-04 14:53:00 - [TEST_STEP][PASSED] - click: Object: 'Object Repository/Page_Log In/ion-content_Scan to sign in' is clicked on
+
+2018-03-04 14:53:10 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Log In/ion-content_Scan to sign in' is clicked on
+
+2018-03-04 14:53:10 - [TEST_STEP][PASSED] - click: Object: 'Object Repository/Page_Log In/ion-content_Scan to sign in' is clicked on
+
+2018-03-04 14:53:20 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Log In/ion-content_Scan to sign in' is clicked on
+
+2018-03-04 14:53:20 - [TEST_STEP][PASSED] - click: Object: 'Object Repository/Page_Log In/button_Scan to sign in' is clicked on
+
+2018-03-04 14:53:30 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Log In/button_Scan to sign in' is clicked on
+
+2018-03-04 14:53:30 - [TEST_STEP][PASSED] - click: Object: 'Object Repository/Page_Scan Barcode/img_demoImages' is clicked on
+
+2018-03-04 14:53:40 - [MESSAGE][PASSED] - Object: 'Object Repository/Page_Scan Barcode/img_demoImages' is clicked on
+
+2018-03-04 14:53:40 - [TEST_STEP][FAILED] - click: Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)
+
+2018-03-04 14:54:19 - [MESSAGE][FAILED] - Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)
+[[ATTACHMENT|E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180304_145224\\1520193254077.png]]]]></system-out>
+         <system-err><![CDATA[2018-03-04 14:52:35 - [TEST_CASE][FAILED] - Test Cases/Manager - Customer - Sale: Test Cases/Manager - Customer - Sale FAILED because (of) Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-03-04 14:52:35 - [TEST_SUITE][FAILED] - CG Mobile Test: Test Cases/Manager - Customer - Sale FAILED because (of) Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)]]></system-out>
+      <system-err><![CDATA[2018-03-04 14:52:35 - [TEST_SUITE][FAILED] - CG Mobile Test: Test Cases/Manager - Customer - Sale FAILED because (of) Unable to click on object 'Object Repository/Page_Home/button_Scan CGPay Card' (Root cause: com.kms.katalon.core.webui.exception.WebElementNotFoundException: Web element with id: 'Object Repository/Page_Home/button_Scan CGPay Card' located by 'By.xpath: //button[@id = 'scan' and (text() = '
+				Scan CGPay Card
+			' or . = '
+				Scan CGPay Card
+			')]' not found)]]></system-err>
+   </testsuite>
+</testsuites>
