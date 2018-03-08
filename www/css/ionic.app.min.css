@@ -10039,6 +10039,14 @@ button.primary {
   margin-left: auto;
   width: 90%; }
 
+.bar-light:hover .button:hover {
+  background-color: #ccc;
+  color: #444; }
+
+.bar-light:active .button:active {
+  background-color: #000;
+  color: #fff; }
+
 .message {
   margin: 10px 0;
   height: 60%;
