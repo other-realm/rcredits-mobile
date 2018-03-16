@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>CG Mobile Test</name>
+   <name>testoftestingtests</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-03-10T16:43:42</lastRun>
+   <lastRun>2018-03-15T17:15:42</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
    <pageLoadTimeoutDefault>true</pageLoadTimeoutDefault>
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
-   <testSuiteGuid>9c645389-43da-47ed-87f1-8c525b5877ee</testSuiteGuid>
+   <testSuiteGuid>ab979e26-ed26-46e9-8163-6cc422119708</testSuiteGuid>
    <testCaseLink>
-      <guid>060a005a-c113-4c8a-ac76-87813a1a8f36</guid>
+      <guid>b41af248-207e-4153-9904-8ab398061dae</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Manager - Customer - Sale</testCaseId>
+      <testCaseId>Test Cases/Another test of manger-customer-sale</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

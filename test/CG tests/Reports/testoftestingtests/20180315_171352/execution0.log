@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443383</millis>
+  <sequence>0</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>startSuite</method>
+  <thread>1</thread>
+  <message>Start Test Suite : Test Suites/testoftestingtests</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="name">testoftestingtests</property>
+  <property name="description"></property>
+  <property name="id">Test Suites/testoftestingtests</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443423</millis>
+  <sequence>1</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Logging run data &amp;apos;hostName&amp;apos; with value &amp;apos;Someone - AaronEJs-Laptop&amp;apos;</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostName">Someone - AaronEJs-Laptop</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443448</millis>
+  <sequence>2</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Logging run data &amp;apos;os&amp;apos; with value &amp;apos;Windows 10 64bit&amp;apos;</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="os">Windows 10 64bit</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443476</millis>
+  <sequence>3</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Logging run data &amp;apos;hostAddress&amp;apos; with value &amp;apos;169.254.223.254&amp;apos;</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="hostAddress">169.254.223.254</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443477</millis>
+  <sequence>4</sequence>
+  <level>RUN_DATA</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>logMessage</method>
+  <thread>1</thread>
+  <message>Logging run data &amp;apos;katalonVersion&amp;apos; with value &amp;apos;5.3.1.1&amp;apos;</message>
+  <nestedLevel>0</nestedLevel>
+  <property name="katalonVersion">5.3.1.1</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:03</date>
+  <millis>1521148443977</millis>
+  <sequence>5</sequence>
+  <level>START</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>startTest</method>
+  <thread>1</thread>
+  <message>Start Test Case : Test Cases/testoftestingtests</message>
+  <nestedLevel>1</nestedLevel>
+  <property name="name">Test Cases/testoftestingtests</property>
+  <property name="description"></property>
+  <property name="id">Test Cases/testoftestingtests</property>
+  <property name="source">E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Test Cases\\testoftestingtests.tc</property>
+  <property name="isOptional">false</property>
+</record>
+<record>
+  <date>2018-03-15T17:14:04</date>
+  <millis>1521148444038</millis>
+  <sequence>6</sequence>
+  <level>END</level>
+  <class>com.kms.katalon.core.logging.KeywordLogger</class>
+  <method>endTest</method>
+  <thread>1</thread>
+  <message>End Test Case : Test Cases/testoftestingtests</message>
+  <nestedLevel>0</nestedLevel>
+</record>
+</log>

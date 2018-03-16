@@ -1,0 +1,4 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+testoftestingtests,,,2018-03-15 17:14:03,2018-03-15 17:14:04,0.655s,INCOMPLETE
+,,,,,,
+Test Cases/testoftestingtests,,,2018-03-15 17:14:03,2018-03-15 17:14:04,0.061s,PASSED

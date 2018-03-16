@@ -6,9 +6,11 @@
    <UUID>13802345-adbd-48d6-bab6-d1fc8596c16d</UUID>
    <pageLoadTimeout>0</pageLoadTimeout>
    <recentExpandedTreeEntityIds>Test Cases</recentExpandedTreeEntityIds>
-   <recentExpandedTreeEntityIds>Object Repository</recentExpandedTreeEntityIds>
    <recentExpandedTreeEntityIds>Test Suites</recentExpandedTreeEntityIds>
    <recentExpandedTreeEntityIds>Keywords</recentExpandedTreeEntityIds>
-   <recentOpenedTreeEntityIds>Test Cases/Manager - Customer - Sale</recentOpenedTreeEntityIds>
-   <recentOpenedTreeEntityIds>Test Cases/Another test of manger-customer-sale</recentOpenedTreeEntityIds>
+   <recentExpandedTreeEntityIds>Reports</recentExpandedTreeEntityIds>
+   <recentExpandedTreeEntityIds>Reports/CG Mobile Test</recentExpandedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Test Cases/testoftestingtests</recentOpenedTreeEntityIds>
+   <recentOpenedTreeEntityIds>Test Suites/testoftestingtests</recentOpenedTreeEntityIds>
+   <recentOpenedTreeEntityIds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
 </Project>

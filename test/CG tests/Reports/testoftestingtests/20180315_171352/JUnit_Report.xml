@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="testoftestingtests" time="0" tests="1" failures="0" errors="0">
+   <testsuite name="testoftestingtests" tests="1" failures="0" errors="0" time="0" timestamp="2018-03-15 17:14:03" hostname="Someone - AaronEJs-Laptop" id="Test Suites/testoftestingtests">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\testoftestingtests\\20180315_171352"/>
+         <property name="logFiles" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\testoftestingtests\\20180315_171352\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Someone - AaronEJs-Laptop"/>
+         <property name="hostAddress" value="169.254.223.254"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="5.3.1.1"/>
+      </properties>
+      <testcase name="Test Cases/testoftestingtests" classname="Test Cases/testoftestingtests" status="PASSED">
+         <system-out><![CDATA[2018-03-15 17:14:03 - [TEST_CASE][PASSED] - Test Cases/testoftestingtests: null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-03-15 17:14:03 - [TEST_SUITE][INCOMPLETE] - testoftestingtests: null]]></system-out>
+      <system-err><![CDATA[2018-03-15 17:14:03 - [TEST_SUITE][INCOMPLETE] - testoftestingtests: null]]></system-err>
+   </testsuite>
+</testsuites>

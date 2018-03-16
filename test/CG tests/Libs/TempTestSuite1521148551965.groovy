@@ -15,9 +15,9 @@ import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 Map<String, String> suiteProperties = new HashMap<String, String>();
 
 
-suiteProperties.put('id', 'Test Suites/CG Mobile Test')
+suiteProperties.put('id', 'Test Suites/testoftestingtests')
 
-suiteProperties.put('name', 'CG Mobile Test')
+suiteProperties.put('name', 'testoftestingtests')
 
 suiteProperties.put('description', '')
  
@@ -27,8 +27,8 @@ DriverCleanerCollector.getInstance().addDriverCleaner(new com.kms.katalon.core.m
 
 
 
-RunConfiguration.setExecutionSettingFile("E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180304_144238\\execution.properties")
+RunConfiguration.setExecutionSettingFile("E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\testoftestingtests\\20180315_171542\\execution.properties")
 
 TestCaseMain.beforeStart()
 
-TestCaseMain.startTestSuite('Test Suites/CG Mobile Test', suiteProperties, [new TestCaseBinding('Test Cases/Manager - Customer - Sale', 'Test Cases/Manager - Customer - Sale',  null)])
+TestCaseMain.startTestSuite('Test Suites/testoftestingtests', suiteProperties, [new TestCaseBinding('Test Cases/testoftestingtests', 'Test Cases/testoftestingtests',  null)])

@@ -69,6 +69,13 @@ transaction-description-menu-label{
 }
 #selectCategory:first-child{
 	content: '<span class="downSymbol">&#8227;</span>';
+		text-align: left;
+}
+#selectCategory > option:selected{
+	text-align: left;
+}
+.input-label{
+		text-align: left;
 }
 .permissions{
 	word-wrap: normal;

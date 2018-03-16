@@ -64,12 +64,7 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 	$scope.changeCompany = function () {
 		var seller = UserService.currentUser();
 		console.log(seller);
-		NotificationService.showConfirm({
-			title: 'disassociate_company',
-			subTitle: "haveToSignInAgain",
-			okText: "confirm",
-			cancelText: "cancel"
-		}, {
+		jQuery.when({
 			company: seller.company
 		}).then(function (res) {
 			if (res) {

@@ -9950,7 +9950,14 @@ transaction-description-menu-label {
   font-size: 2em; }
 
 #selectCategory:first-child {
-  content: '<span class="downSymbol">&#8227;</span>'; }
+  content: '<span class="downSymbol">dsfzgxhjm,kjhgfdzsd</span>';
+  text-align: left; }
+
+#selectCategory > option:selected {
+  text-align: left; }
+
+.input-label {
+  text-align: left; }
 
 .permissions {
   word-wrap: normal;
@@ -10047,6 +10054,16 @@ button.primary {
   background-color: #000;
   color: #fff; }
 
+/*label, input, button, select, textarea {
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 1.42857;
+	 text-align: left; 
+	float: left;
+	width: 80%;
+	background: none;
+	z-index: 0;
+}*/
 .message {
   margin: 10px 0;
   height: 60%;
