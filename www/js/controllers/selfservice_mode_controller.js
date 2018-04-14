@@ -18,7 +18,6 @@ app.controller('SelfServiceModeController', function ($scope, $state, $ionicLoad
 			NotificationService.showAlert({title: "error"});
 		}
 		console.log($scope.pin.value, $scope.scanUrl);
-//		$ionicLoading.show();
 		UserService.identifyCustomer($scope.scanUrl, $scope.pin.value)
 			.then(function () {
 				$scope.customer = UserService.currentCustomer();

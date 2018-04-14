@@ -1,0 +1,108 @@
+[Appium] Welcome to Appium v1.7.2
+[Appium] Non-default server args:
+[Appium]   port: 10457
+[Appium]   loglevel: info
+[Appium]   chromeDriverPort: 10458
+[Appium]   tmpDir: C:\Users\Someone\AppData\Local\Temp\\Katalon\Appium\Temp1522439572438
+[Appium] Appium REST http interface listener started on 0.0.0.0:10457
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 52 ms - 72 
+[HTTP] --> POST /wd/hub/session {"desiredCapabilities":{"app":"E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\build\\outputs\\apk\\android-armv7-debug.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F (Android 7.0)","fullReset":true,"newCommandTimeout":1800,"noReset":false,"platform":"ANDROID","platformName":"Android","udid":"98862742575a4c3952"},"capabilities":{"desiredCapabilities":{"app":"E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\build\\outputs\\apk\\android-armv7-debug.apk","autoGrantPermissions":true,"automationName":"uiautomator2","deviceId":"","deviceName":"samsung SM-G930F (Android 7.0)","fullReset":true,"newCommandTimeout":1800,"noReset":false,"platform":"ANDROID","platformName":"Android","udid":"98862742575a4c3952"},"firstMatch":[{"platformName":"android"}]}}
+[Appium] Merged W3C capabilities {"desiredCapabilities":{"app":"E:\\xampp\\htdoc... into desiredCapabilities object {"app":"E:\\xampp\\htdocs\\cgf\\rcredits-mobile...
+[Appium] Creating new AndroidUiautomator2Driver (v0.11.0) session
+[Appium] Capabilities:
+[Appium]   app: E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk
+[Appium]   autoGrantPermissions: true
+[Appium]   automationName: uiautomator2
+[Appium]   deviceId: 
+[Appium]   deviceName: samsung SM-G930F (Android 7.0)
+[Appium]   fullReset: true
+[Appium]   newCommandTimeout: 1800
+[Appium]   noReset: false
+[Appium]   platform: ANDROID
+[Appium]   platformName: android
+[Appium]   udid: 98862742575a4c3952
+[BaseDriver] The following capabilities were provided, but are not recognized by appium: deviceId, platform.
+[BaseDriver] Session created with session id: c74fbc85-95f1-44c0-a617-b661fe4ec33f
+[BaseDriver] Using local app 'E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk'
+[AndroidDriver] Java version is: 1.8.0_102
+[ADB] Checking whether adb is present
+[ADB] Using adb.exe from C:\Users\Someone\.katalon\tools\android_sdk\platform-tools\adb.exe
+[AndroidDriver] Retrieving device list
+[AndroidDriver] Using device: 98862742575a4c3952
+[ADB] Checking whether adb is present
+[ADB] Checking whether aapt is present
+[ADB] Using aapt.exe from C:\Users\Someone\.katalon\tools\android_sdk\build-tools\28.0.0\aapt.exe
+[ADB] Extracting package and launch activity from manifest
+[ADB] Getting device platform version
+[ADB] Checking whether aapt is present
+[AndroidDriver] setDeviceLanguageCountry requires language or country.
+[AndroidDriver] Got language: 'null' and country: 'null'
+[ADB] Checking whether aapt is present
+[ADB] Checking whether aapt is present
+[AndroidDriver] Screen already unlocked, doing nothing
+[ADB] com.ionicframework.CommonGoodmobile621273 was not uninstalled, because it was not present on the device
+[ADB] Using apksigner.bat from C:\Users\Someone\.katalon\tools\android_sdk\build-tools\28.0.0\apksigner.bat
+[AndroidDriver] Remote apk path is /data/local/tmp/e46690a98580313ae1078491564f7f15.apk
+[AndroidDriver] Apk is not yet installed
+[AndroidDriver] installing apk from remote
+[AndroidDriver] Clearing out any existing remote apks with the same hash
+[ADB] com.ionicframework.CommonGoodmobile621273 was not uninstalled, because it was not present on the device
+[ADB] Checking whether aapt is present
+[ADB] Extracting package and launch activity from manifest
+[UiAutomator2] Starting uiautomator2 server v0.3.0
+[UiAutomator2] Running command: 'adb -s 98862742575a4c3952 shell am instrument -w io.appium.uiautomator2.server.test/android.support.test.runner.AndroidJUnitRunner'
+[UiAutomator2] Waiting up to 20000ms for UiAutomator2 to be online...
+[UiAutomator2] UiAutomator2 did not start the activity we were waiting for, 'com.ionicframework.CommonGoodmobile621273/com.ionicframework.CommonGoodmobile621273.MainActivity'. Starting it ourselves
+[Appium] New AndroidUiautomator2Driver session created successfully, session c74fbc85-95f1-44c0-a617-b661fe4ec33f added to master session list
+[HTTP] <-- POST /wd/hub/session 200 42579 ms - 439 
+[HTTP] --> GET /wd/hub/status {}
+[HTTP] <-- GET /wd/hub/status 200 49 ms - 83 
+[HTTP] --> POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/timeouts {"type":"implicit","ms":30000}
+[HTTP] <-- POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/timeouts 200 14 ms - 76 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/window/current/size {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId 93752ebc-40aa-4d26-98e4-a0ecbd5d68a1 with c74fbc85-95f1-44c0-a617-b661fe4ec33f
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/window/current/size 200 31 ms - 100 
+[HTTP] --> POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/elements {"using":"-android uiautomator","value":"new UiSelector().className(\"android.widget.LinearLayout\").instance(0)"}
+[HTTP] <-- POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/elements 200 120 ms - 124 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 2 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 4 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 1 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 2 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/element/b40d3037-5656-453a-bcda-afd6bc94f550/location {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId 93752ebc-40aa-4d26-98e4-a0ecbd5d68a1 with c74fbc85-95f1-44c0-a617-b661fe4ec33f
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/element/b40d3037-5656-453a-bcda-afd6bc94f550/location 200 34 ms - 85 
+[HTTP] --> POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/touch/perform {"actions":[{"action":"tap","options":{"element":"b40d3037-5656-453a-bcda-afd6bc94f550","x":1,"y":1}}]}
+[UiAutomator2] calling get location: b40d3037-5656-453a-bcda-afd6bc94f550
+[HTTP] <-- POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/touch/perform 200 3215 ms - 76 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/window/current/size {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId 93752ebc-40aa-4d26-98e4-a0ecbd5d68a1 with c74fbc85-95f1-44c0-a617-b661fe4ec33f
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/window/current/size 200 16 ms - 100 
+[HTTP] --> POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/elements {"using":"-android uiautomator","value":"new UiSelector().className(\"android.widget.Button\").resourceId(\"scan\").instance(0)"}
+[HTTP] <-- POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/elements 200 1870 ms - 124 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 1 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 1 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 1 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 3 ms - 1208 
+[HTTP] --> GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/element/20d1d359-a6eb-40e5-a207-86a4d971fb26/location {}
+[MJSONWP] Driver proxy active, passing request on via HTTP proxy
+[JSONWP Proxy] Replacing sessionId 93752ebc-40aa-4d26-98e4-a0ecbd5d68a1 with c74fbc85-95f1-44c0-a617-b661fe4ec33f
+[HTTP] <-- GET /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/element/20d1d359-a6eb-40e5-a207-86a4d971fb26/location 200 38 ms - 89 
+[HTTP] --> POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/touch/perform {"actions":[{"action":"tap","options":{"element":"20d1d359-a6eb-40e5-a207-86a4d971fb26","x":1,"y":1}}]}
+[UiAutomator2] calling get location: 20d1d359-a6eb-40e5-a207-86a4d971fb26
+[HTTP] <-- POST /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f/touch/perform 200 1169 ms - 76 
+[HTTP] --> DELETE /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f {}
+[Appium] Removing session c74fbc85-95f1-44c0-a617-b661fe4ec33f from our master session list
+[ADB] com.ionicframework.CommonGoodmobile621273 was successfully uninstalled
+[HTTP] <-- DELETE /wd/hub/session/c74fbc85-95f1-44c0-a617-b661fe4ec33f 200 4087 ms - 76 

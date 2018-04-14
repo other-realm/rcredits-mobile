@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="CG Mobile Test" time="122" tests="1" failures="0" errors="0">
+   <testsuite name="CG Mobile Test" tests="1" failures="0" errors="0" time="122" timestamp="2018-03-30 15:51:47" hostname="Someone - AaronEJs-Laptop" id="Test Suites/CG Mobile Test">
+      <properties>
+         <property name="deviceName" value="samsung SM-G930F (Android 7.0)"/>
+         <property name="devicePlatform" value=""/>
+         <property name="logFolder" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180330_155136"/>
+         <property name="logFiles" value="E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180330_155136\\appium.log, E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\test\\CG tests\\Reports\\CG Mobile Test\\20180330_155136\\execution0.log"/>
+         <property name="attachments" value=""/>
+         <property name="hostName" value="Someone - AaronEJs-Laptop"/>
+         <property name="os" value="Windows 10 64bit"/>
+         <property name="katalonVersion" value="5.3.1.1"/>
+         <property name="deviceOS" value="Android"/>
+         <property name="appiumVersion" value="1.7.2"/>
+         <property name="deviceModel" value="SM-G930F"/>
+         <property name="hostAddress" value="169.254.223.254"/>
+         <property name="deviceManufacturer" value="samsung"/>
+         <property name="deviceId" value="98862742575a4c3952"/>
+         <property name="deviceName" value="samsung SM-G930F (Android 7.0)"/>
+         <property name="deviceOSVersion" value="7.0"/>
+      </properties>
+      <testcase name="Test Cases/mobileTest" classname="Test Cases/mobileTest" status="PASSED">
+         <system-out><![CDATA[2018-03-30 15:51:49 - [TEST_CASE][PASSED] - Test Cases/mobileTest: Test Cases/mobileTest
+
+2018-03-30 15:51:49 - [TEST_STEP][PASSED] - startApplication: Started app at: 'E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk'
+
+2018-03-30 15:52:48 - [MESSAGE][PASSED] - Started app at: 'E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk'
+
+2018-03-30 15:52:48 - [TEST_STEP][PASSED] - closeApplication: Close app successfully
+
+2018-03-30 15:52:52 - [MESSAGE][PASSED] - Close app successfully
+
+2018-03-30 15:52:52 - [TEST_STEP][PASSED] - startApplication: Started app at: 'E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk'
+
+2018-03-30 15:53:39 - [MESSAGE][PASSED] - Started app at: 'E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\build\outputs\apk\android-armv7-debug.apk'
+
+2018-03-30 15:53:39 - [TEST_STEP][PASSED] - tap: Tapped on element 'Object Repository/android.widget.LinearLayout0'
+
+2018-03-30 15:53:39 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2018-03-30 15:53:43 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.LinearLayout0'
+
+2018-03-30 15:53:43 - [TEST_STEP][PASSED] - tap: Tapped on element 'Object Repository/android.widget.Button0'
+
+2018-03-30 15:53:43 - [MESSAGE][WARNING] - Timeout '0' is invalid. Using default page load timeout: '30'
+
+2018-03-30 15:53:46 - [MESSAGE][PASSED] - Tapped on element 'Object Repository/android.widget.Button0'
+
+2018-03-30 15:53:46 - [TEST_STEP][PASSED] - closeApplication: Close app successfully
+
+2018-03-30 15:53:50 - [MESSAGE][PASSED] - Close app successfully]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[2018-03-30 15:51:47 - [TEST_SUITE][PASSED] - CG Mobile Test: Test Cases/mobileTest]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>

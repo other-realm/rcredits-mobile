@@ -1,0 +1,10 @@
+Suite/Test/Step Name,Browser,Description,Start time,End time,Duration,Status
+CG Mobile Test,,,2018-03-30 15:51:47,2018-03-30 15:53:50,2m - 2.979s,PASSED
+,,,,,,
+Test Cases/mobileTest,,,2018-03-30 15:51:49,2018-03-30 15:53:50,2m - 1.784s,PASSED
+startApplication,,,2018-03-30 15:51:49,2018-03-30 15:52:48,58.969s,PASSED
+closeApplication,,,2018-03-30 15:52:48,2018-03-30 15:52:52,4.176s,PASSED
+startApplication,,,2018-03-30 15:52:52,2018-03-30 15:53:39,47.484s,PASSED
+tap,,,2018-03-30 15:53:39,2018-03-30 15:53:43,3.694s,PASSED
+tap,,,2018-03-30 15:53:43,2018-03-30 15:53:46,3.151s,PASSED
+closeApplication,,,2018-03-30 15:53:46,2018-03-30 15:53:50,4.111s,PASSED

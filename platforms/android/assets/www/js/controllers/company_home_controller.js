@@ -24,7 +24,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 //				company: $scope.currentUser.company
 //			})
 //			.then(function () {
-				$scope.currentUser.setFirstLoginNotified();
+		$scope.currentUser.setFirstLoginNotified();
 //			});
 	}
 	/**
@@ -67,19 +67,20 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	 * @returns {undefined}
 	 */
 	$scope.scanCustomer = function () {
-		if ($scope.isSelfServiceEnabled()) {
-			$state.go('app.self_service_mode');
-			return;
-		}
 //		$ionicLoading.show();
 		$ionicPlatform.ready(function () {
 			//is the app running on the pc or on a phone?  If it's the PC, show the demo, if it's the phone, show the barcode scanner
 			var platform = ionic.Platform.platform();
 			if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 				$rootScope.whereWasI = location.hash;
+				$rootScope.selfServ=$scope.isSelfServiceEnabled();
 				$state.go("app.demo");
 				$ionicLoading.hide();
 			} else {
+				if ($scope.isSelfServiceEnabled()) {
+					$state.go('app.self_service_mode');
+					return;
+				}
 				$state.go("app.customer");
 			}
 			;

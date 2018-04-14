@@ -4,7 +4,7 @@
    <name>CG Mobile Test</name>
    <tag></tag>
    <isRerun>false</isRerun>
-   <lastRun>2018-03-10T16:43:42</lastRun>
+   <lastRun>2018-03-30T15:51:36</lastRun>
    <mailRecipient></mailRecipient>
    <numberOfRerun>0</numberOfRerun>
    <pageLoadTimeout>30</pageLoadTimeout>
@@ -12,9 +12,9 @@
    <rerunFailedTestCasesOnly>false</rerunFailedTestCasesOnly>
    <testSuiteGuid>9c645389-43da-47ed-87f1-8c525b5877ee</testSuiteGuid>
    <testCaseLink>
-      <guid>060a005a-c113-4c8a-ac76-87813a1a8f36</guid>
+      <guid>53ea7449-6fd2-430c-ae49-28ce1571a3a7</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Manager - Customer - Sale</testCaseId>
+      <testCaseId>Test Cases/mobileTest</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

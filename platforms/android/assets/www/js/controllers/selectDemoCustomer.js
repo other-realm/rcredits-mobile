@@ -38,6 +38,10 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.format = {
 		type: 2
 	};
+	$scope.selfServ=$rootScope.selfServ;
+	$scope.pin = {
+		value: null
+	};
 	for (var i = 0; i < formats.length; i++) {
 		formats[i].onclick = function () {
 			$scope.format.type = this.value;
@@ -63,7 +67,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.onSelectCustomer = function (person, goToNextPage) {
 		var selected = person;
 		console.log(selected);
-		UserService.identifyCustomer(selected)
+		UserService.identifyCustomer(selected,$scope.pin.value)
 			.then(function () {
 				$scope.customPerson = UserService.currentCustomer();
 				if (goToNextPage) {
