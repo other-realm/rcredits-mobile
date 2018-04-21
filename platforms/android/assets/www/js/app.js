@@ -21,7 +21,7 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 			// This is only for web development to enable proxy
 			$rootScope.whereWasI = location.hash;
 			$rootScope.selfServ=false;
-			$rootScope.amIOnline = NetworkService.isOffline();
+			$rootScope.amIOffline = NetworkService.isOffline();
 			$rootScope.undo = false;
 			$rootScope.isCustomerLoggedIn = false;
 			$rootScope.cashierMode = false;

@@ -243,7 +243,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 *	2. flags - A hash with the following elements:
 	 *			firstPurchase - Whether this is the user's first purchase. If so, the app should notify the seller to request photo ID.
 	 * @param {type} str - the URL that came from the barcode
-	 * @param {type} pin - if offline, the pin of the user (1234 if it is a demo user)
+	 * @param {type} pin - if offline or using self checkout, the pin of the user (1234 if it is a demo user)
 	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then@call;then}
 	 */
 	UserService.prototype.identifyCustomer = function (str, pin) {
@@ -272,6 +272,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				.setSignin(0);
 			if (pin) {
 				params.setPIN(pin);
+			}else if($rootScope.selfServ){
+//				NotificationService.showAlert({title: 'error', template: 'no_pin'});
+				throw 'no_pin';
 			}
 			params = params.getParams();
 			params.counter = accountInfo.counter;
@@ -311,6 +314,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 					return self.customer;
 				});
 		} else {
+			console.log(str);
 			NotificationService.showAlert({title: 'error', template: 'went_wrong'});
 		}
 	};

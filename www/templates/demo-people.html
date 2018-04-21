@@ -34,7 +34,7 @@
 				<span id="unencryptedCode">unencryptedCode:{{customPerson.accountInfo.unencryptedCode}}</span><br>
 			</div>
 		</div>
-		<input ng-if="selfServ" numbers-only placeholder="{{('enter_pin'| translate)}}" type="number" class="input-pin show-as-pwd pin" ng-model="pin.value">
+		<input ng-if="selfServ||offline" numbers-only placeholder="{{('enter_pin'| translate)}}" type="number" class="input-pin show-as-pwd pin" ng-model="pin.value">
 		<div class="aTable">
 			<div ng-class-odd="'rightColumn'" ng-class-even="'leftColumn'" ng-repeat="person in customer">
 				<div ng-switch='whereWasI' class="aRow">

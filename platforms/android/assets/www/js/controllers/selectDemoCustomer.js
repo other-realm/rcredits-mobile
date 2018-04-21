@@ -39,6 +39,8 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 		type: 2
 	};
 	$scope.selfServ=$rootScope.selfServ;
+	$scope.offline=NetworkService.isOffline();
+	console.log($scope.offline,NetworkService.isOffline());
 	$scope.pin = {
 		value: null
 	};
