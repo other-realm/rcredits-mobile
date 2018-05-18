@@ -1,6 +1,6 @@
 <ion-view view-title="{{('home'| translate)}}" class="company-home" cache-view="false">
 		<ion-nav-buttons side="secondary">
-		<button class="button button-stable"  ng-if="!isSelfServiceEnabled() && !isCashierMode() && !isSelfServiceEnabled()" ng-click="showQR()">
+		<button id="qr" class="button button-stable"  ng-if="!isSelfServiceEnabled() && !isCashierMode() && !isSelfServiceEnabled()" ng-click="showQR()">
 			{{ 'qr' | translate }}
 		</button>
 		&nbsp;&nbsp;
