@@ -88,6 +88,8 @@ npm rebuild
 ```
 gulp sass
 ```
+### Test Documentation
+https://github.com/other-realm/rcredits-mobile/raw/Stable/test/CG%20Mobile%20Tests.docx
 
 ### To Run Tests
 Prerequisites:
