@@ -254,13 +254,25 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			this.validateDemoMode(accountInfo);
 			if (accountInfo.accountId === this.seller.accountInfo.accountId) {
 //				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+				}
 				throw 'must_not_be_yourself';
 			}
 			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+				}
 //				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
 				throw 'cant_trade_as_biz_when_cust';
 			}
 			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
+				}
 //				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 				throw 'must_be_customer';
 			}
@@ -272,7 +284,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				.setSignin(0);
 			if (pin) {
 				params.setPIN(pin);
-			}else if($rootScope.selfServ){
+			} else if ($rootScope.selfServ) {
 //				NotificationService.showAlert({title: 'error', template: 'no_pin'});
 				throw 'no_pin';
 			}
@@ -431,7 +443,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
 				self.seller.setBalance(responseData.balance);
-				console.log(self.seller.getBalance(),responseData.balance);
+				console.log(self.seller.getBalance(), responseData.balance);
 				return responseData.balance;
 			});
 	};
