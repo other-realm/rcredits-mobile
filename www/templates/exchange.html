@@ -6,24 +6,24 @@
 				<div class="calc-component">
 					<div class="list">
 						<div class="item exchange-types">
-							<div class="exchangeText operation">
+							<div id="exchange_in" class="exchangeText operation">
 								{{::'exchange_in'| translate}}
 							</div>
-							<div class="type">
+							<div id='type' class="type">
 								{{::exCtrl.exchange.getCurrencyFrom().getSign()}} {{amount| currency: "":2}}
 								{{::exCtrl.exchange.getCurrencyFrom().getName()}}
 							</div>
 						</div>
 						<div class="item exchange-types">
-							<div class="exchangeText operation">
+							<div id="exchange_out" class="exchangeText operation">
 								{{::'exchange_out'| translate}}
 							</div>
-							<div class="exchangeText type">
+							<div id='exchangeTextType' class="exchangeText type">
 								{{::exCtrl.exchange.getCurrencyTo().getSign()}} {{exCtrl.calculateOutAmount() | currency: "":2}}
 								{{::exCtrl.exchange.getCurrencyTo().getName()}}
 							</div>
 						</div>
-						<div class="exchangeText item fee-legend" ng-if="!exCtrl.CommonGoodIsCurrencyFrom">
+						<div id='paymentFeeTitle' class="exchangeText item fee-legend" ng-if="!exCtrl.CommonGoodIsCurrencyFrom">
 							{{::exCtrl.paymentFeeTitle}}
 						</div>
 					</div>

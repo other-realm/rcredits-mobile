@@ -4,7 +4,7 @@
 		{{hide_currency}}
 		<div class="list">
 			<label class="item item-input item-select">
-				<div class="exchangeText2 input-label" ng-bind="pm.selectedPayment.getName()">
+				<div id='selectedPaymentGetName' class="exchangeText2 input-label" ng-bind="pm.selectedPayment.getName()">
 				</div>
 				<select class="exchangeText2 payment-type-select" ng-options="item as item.name for item in ::pm.paymentTypes"
 						ng-model="pm.selectedPayment" ng-change="pm.onPaymentChange()"></select>

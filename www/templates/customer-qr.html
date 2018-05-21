@@ -1,6 +1,6 @@
 <ion-view view-title="{{('qr'| translate)}}" class="user-menu">
 	<ion-nav-buttons side="secondary">
-		<button class="button button-stable" ng-if="isOnline() && !isSelfServiceEnabled()" ng-click="showBalance()">
+		<button id='showBalance' class="button button-stable" ng-if="isOnline() && !isSelfServiceEnabled()" ng-click="showBalance()">
 			{{ 'balance' | translate }}
 		</button>
 	</ion-nav-buttons>
@@ -13,7 +13,7 @@
 			<div class="rc">
 				<img id="ItemPreview" src="../img/nophoto.png" ng-src="{{user.photo}}" class="user-img" sf-load="hideLoading()"/>
 				<div id="qrcode"></div>
-				<div>{{user.url}}</div>
+				<div id="url">{{user.url}}</div>
 			</div>
 		</div>
 	</ion-content>
