@@ -46,10 +46,11 @@ bower install
 ionic setup sass
 ```
 
-## To run the app in your default browser:
+## To run the app in Google Chrome:
 ```
 ionic serve
 ```
+Then open Chrome and go to: http://127.0.0.1:8100/#/app/login
 
 ## To Run on Device
 Android
