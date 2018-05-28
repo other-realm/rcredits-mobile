@@ -37,15 +37,25 @@
 <tbody>
 <tr><td>open</td><td>http://127.0.0.1:8100/#/app/login<datalist><option>http://127.0.0.1:8100/#/app/login</option></datalist></td><td></td>
 </tr>
-<tr><td>assertVisible</td><td>id=scan<datalist><option>//ion-content</option><option>css=ion-content.scroll-content.ionic-scroll</option><option>id=scan</option></datalist></td><td></td>
+<tr><td>assertVisible</td><td>id=scan<datalist><option>id=scan</option><option>//button[@id='scan']</option><option>//div[@id='login']/button</option><option>//div/button</option><option>css=#scan</option></datalist></td><td></td>
+</tr>
+<tr><td>assertVisible</td><td>//img[@alt='Comon Good Logo']<datalist><option>//img[@alt='Comon Good Logo']</option><option>//div[@id='login']/div/img</option><option>//img</option><option>css=img.homeLogo</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>//ion-content<datalist><option>//ion-content</option><option>css=ion-content.scroll-content.ionic-scroll</option></datalist></td><td></td>
 </tr>
 <tr><td>click</td><td>id=scan<datalist><option>id=scan</option><option>//button[@id='scan']</option><option>//div[@id='login']/button</option><option>//div/button</option><option>css=#scan</option></datalist></td><td></td>
 </tr>
-<tr><td>click</td><td>xpath=(//img[@title='Demo User'])[2]<datalist><option>xpath=(//img[@title='Demo User'])[2]</option><option>//button[@id='H6VM010WeHlioM5JZv1O9G']/img</option><option>//div[2]/div/button/img</option><option>css=#H6VM010WeHlioM5JZv1O9G &gt; img.demoImages</option></datalist></td><td></td>
+<tr><td>assertElementPresent</td><td>id=H6VM010WeHlioM5JZv1O9G<datalist><option>xpath=(//img[@title='Demo User'])[2]</option><option>//button[@id='H6VM010WeHlioM5JZv1O9G']/img</option><option>//div[2]/div/button/img</option><option>css=#H6VM010WeHlioM5JZv1O9G &gt; img.demoImages</option><option>id=H6VM010WeHlioM5JZv1O9G</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=H6VM010WeHlioM5JZv1O9G<datalist><option>xpath=(//img[@title='Demo User'])[2]</option><option>//button[@id='H6VM010WeHlioM5JZv1O9G']/img</option><option>//div[2]/div/button/img</option><option>css=#H6VM010WeHlioM5JZv1O9G &gt; img.demoImages</option><option>id=H6VM010WeHlioM5JZv1O9G</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>id=company<datalist><option>//h1</option><option>css=h1.company.ng-binding</option><option>id=company</option></datalist></td><td>Corner Store</td>
+</tr>
+<tr><td>assertText</td><td>xpath=(//html/body/ion-nav-view/ion-side-menus/ion-side-menu-content/ion-nav-view/ion-view/subheader/div/h2/span)<datalist><option>//h1</option><option>css=h1.company.ng-binding</option><option>xpath=(//html/body/ion-nav-view/ion-side-menus/ion-side-menu-content/ion-nav-view/ion-view/subheader/div/h2/span)</option></datalist></td><td>Demo mode</td>
 </tr>
 <tr><td>click</td><td>//div[2]/ion-header-bar/div/span/button<datalist><option>//div[2]/ion-header-bar/div/span/button</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>//h1<datalist><option>//h1</option><option>css=h1.company.ng-binding</option></datalist></td><td>Corner Store</td>
 </tr>
 <tr><td>click</td><td>//ion-side-menu/ion-content/div/ion-list/div/ion-item[5]<datalist><option>//ion-side-menu/ion-content/div/ion-list/div/ion-item[5]</option><option>css=ion-item.menuItems.item.ng-binding.activated</option></datalist></td><td></td>
 </tr>
