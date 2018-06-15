@@ -49,13 +49,14 @@
 			this.db.transaction(function (tx) {
 				console.log(tx);
 				tx.executeSql(query, params, function (tx, res) {
+					console.log(query, params, res);
 					txPromise.resolve(res);
 				}, function (tx, e) {
-					console.error(tx, e);
+					console.log(tx, e);
 					txPromise.reject(e.message);
 				});
 			}, function (error) {
-				console.error('transaction error: ' + error);
+				console.log('transaction error: ', error);
 			}, function () {
 			});
 			return txPromise.promise;

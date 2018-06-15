@@ -1,3 +1,4 @@
+/* global app */
 /**
  * Deals with storing member information locally
  * @param {type} app
@@ -21,6 +22,7 @@
 			var sqlQuery = new SqlQuery();
 			return this.existMember(user.accountInfo.accountId)
 				.then(function (sqlMemeber) {
+					
 					sqlQuery.setQueryString("UPDATE members SET " +
 						"name = '" + user.getName() + "'," +
 						"company = '" + user.getCompany() + "'," +
@@ -32,6 +34,7 @@
 						"photo = '" + user.getBlobImage() + "' " +
 						" WHERE qid = '" + user.getId() + "'"
 						);
+					console.log(sqlQuery);
 					return sqlQuery;
 				})
 				.catch(function (errorMessage) {

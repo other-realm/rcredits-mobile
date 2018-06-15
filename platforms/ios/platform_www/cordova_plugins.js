@@ -277,7 +277,8 @@ module.exports.metadata =
     "phonegap-plugin-barcodescanner": "6.0.8",
     "cordova-plugin-indexeddb-async": "0.0.1",
     "cordova-sqlite-storage": "2.0.4",
-    "cordova-plugin-network-information": "1.3.3"
+    "cordova-plugin-network-information": "1.3.3",
+    "cordova-android-support-gradle-release": "1.4.3"
 };
 // BOTTOM OF METADATA
 });

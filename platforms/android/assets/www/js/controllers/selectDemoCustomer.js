@@ -38,9 +38,11 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.format = {
 		type: 2
 	};
+	$scope.companyName=UserService.getCompanyName();
+//	console.log($scope.companyName);
 	$scope.selfServ=$rootScope.selfServ;
 	$scope.offline=NetworkService.isOffline();
-	console.log($scope.offline,NetworkService.isOffline());
+//	console.log($scope.offline,NetworkService.isOffline());
 	$scope.pin = {
 		value: null
 	};
@@ -68,7 +70,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.customPerson.url = '';// 'G6VM0RZzhWMCq0zcBowqw';//H6VM010WeHlioM5JZv1O9G
 	$scope.onSelectCustomer = function (person, goToNextPage) {
 		var selected = person;
-		console.log(selected);
+//		console.log(selected);
 		UserService.identifyCustomer(selected,$scope.pin.value)
 			.then(function () {
 				$scope.customPerson = UserService.currentCustomer();
@@ -97,7 +99,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				}
 			})
 			.catch(function (errorMsg) {
-				console.log(errorMsg);
+//				console.log(errorMsg);
 				$rootScope.isCustomerLoggedIn = false;
 				if (errorMsg === 'login_your_self') {
 					NotificationService.showAlert({title: "Error", template: "You cannot use yourself as a customer while you are an agent"});
@@ -119,7 +121,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 		UserService.loginWithRCard(selected)
 			.then(function () {
 				$scope.customPerson = UserService.currentUser();
-				console.log($scope.customPerson);
+//				console.log($scope.customPerson);
 				if (goToNextPage) {
 					$ionicHistory.nextViewOptions({
 						disableBack: true
@@ -133,7 +135,7 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				} else if (errorMsg === 'TypeError: this.db is null') {
 					NotificationService.showAlert({title: "Error", template: "You need to have WebSQL enabled"});
 				} else {
-					console.log(errorMsg);
+//					console.log(errorMsg);
 				}
 				$ionicLoading.hide();
 //				console.log($scope.customPerson.accountInfo.isPersonal, $scope.customPerson, goToNextPage);
@@ -166,11 +168,11 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				"cardCode":"ZzhWMCq0zcBowqw",
 				"selling":""
 			}]};
-	console.log($scope.testD);
+//	console.log($scope.testD);
 	$scope.doTest = function (whattotest, testData) {
 		$scope.testResults = TransactionService.testThings(whattotest, testData);
 		var results=$scope.testResults.$$state;
-		console.log(whattotest, testData, results);
+//		console.log(whattotest, testData, results);
 		return results;
 	};
 	$scope.testResults = '';

@@ -30,6 +30,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	UserService.prototype.currentCustomer = function () {
 		return this.customer;
 	};
+	UserService.prototype.getCompanyName = function(){
+		return localStorageService.get('companyName');
+	};
 	/**
 	 * Loads the current manger/cashier/seller from storage if a returning user and information from the company_home_controller sellerLogin event
 	 * @param {type} - sellerId The seller's Id
@@ -151,7 +154,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		return loadSellerPromise.promise;
 	};
 	/**
-	 * Logs cashier user in given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name).  Returns a promise that resolves when login is complete.  If this is the first login, the promise will resolve with {firstLogin: true}.  The app should then give notice to the user that the device is associated with the user.
+	 * Logs the cashier user in, given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name).  Returns a promise that resolves when login is complete.  If this is the first login, the promise will resolve with {firstLogin: true}.  The app should then give notice to the user that the device is associated with the user.
 	 * @param {type} str - the information from the card
 	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then|user_serviceL#5.UserService.prototype@call;loginWithRCardOffline@call;then}
 	 */
@@ -163,6 +166,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		this.validateDemoMode(accountInfo);
 		//these are the parameters that become the 'Customer' object
 		var companyAffiliation = localStorageService.get('company');
+		self.companyName=localStorageService.get('companyName');
 		var params = new RequestParameterBuilder()
 			.setOperationId('identify')
 			.setSecurityCode(accountInfo.securityCode)
@@ -171,7 +175,8 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			.getParams();
 		params.counter = accountInfo.counter;
 		if (companyAffiliation && companyAffiliation !== accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
-			NotificationService.showAlert({title: 'error', template: 'must_be_affiliated'});
+			console.log(self.companyName);
+			NotificationService.showAlert({title: 'error', templateUrl: 'templates/managerName.html'});
 			throw "not_affiliated";
 		}
 		if (NetworkService.isOffline()) {
@@ -181,11 +186,12 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
-				console.log(self);
+				console.log(responseData['company'],self);
 				if (responseData.can === 0 || responseData.can) {
 					console.log(balence, params, accountInfo);
 					if (accountInfo.isCompany) {
 						localStorageService.set('company', accountInfo.accountId.split('-')[0]);
+						localStorageService.set('companyName', responseData['company']);
 					}
 					self.seller = self.createSeller(responseData);
 					self.seller.accountInfo = accountInfo;
@@ -291,8 +297,11 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			params = params.getParams();
 			params.counter = accountInfo.counter;
 			if (NetworkService.isOffline()) {
+				consile.log(accountInfo.accountId);
 				return MemberSqlService.existMember(accountInfo.accountId)
 					.then(function (member) {
+						console.log(member);
+						member=JSON.parse(member);
 						self.customer = Customer.parseFromDb(member);
 						return self.customer;
 					})

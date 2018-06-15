@@ -55,6 +55,7 @@
 				this.saveInSQLite();
 			},
 			saveInStorage: function () {
+				console.log(this);
 				localStorageService.set(SELLER_KEY, JSON.stringify(this));
 			},
 			fillFromStorage: function () {

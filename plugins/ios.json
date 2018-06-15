@@ -1,53 +1,56 @@
 {
-    "prepare_queue": {
-        "installed": [],
-        "uninstalled": []
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     },
-    "config_munge": {
-        "files": {}
+    "cordova-plugin-crosswalk-webview": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     },
-    "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-crosswalk-webview": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-device": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-splashscreen": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-statusbar": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "ionic-plugin-keyboard": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-file": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-whitelist": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "phonegap-plugin-barcodescanner": {
-            "CAMERA_USAGE_DESCRIPTION": " ",
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-indexeddb-async": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-sqlite-storage": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        },
-        "cordova-plugin-network-information": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        }
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     },
-    "dependent_plugins": {
-        "cordova-plugin-compat": {
-            "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-        }
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "phonegap-plugin-barcodescanner": {
+      "CAMERA_USAGE_DESCRIPTION": " ",
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-indexeddb-async": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-android-support-gradle-release": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-compat": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    }
+  }
 }

@@ -28,11 +28,11 @@
     "angular": "1.6.4",
     "bower": "1.8.0",
     "chai": "^3.5.0",
-    "cordova-android": "^6.2.3",
+    "cordova-android-support-gradle-release": "^1.4.3",
     "cordova-ios": "^4.4.0",
     "cordova-plugin-compat": "^1.0.0",
     "cordova-plugin-console": "~1.0.3",
-    "cordova-plugin-crosswalk-webview": "~2.2.0",
+    "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-device": "~1.1.4",
     "cordova-plugin-file": "^4.3.3",
     "cordova-plugin-indexeddb-async": "^2.2.1",
@@ -65,7 +65,7 @@
       "id": "cordova-sqlite-storage"
     },
     "cordova-plugin-network-information@1.2.1",
-    "cordova-plugin-crosswalk-webview@2.2.0"
+    "cordova-plugin-crosswalk-webview@2.4.0"
   ],
   "cordovaPlatforms": [
     "ios",
@@ -90,10 +90,12 @@
       "cordova-plugin-file": {},
       "cordova-plugin-indexeddb-async": {},
       "cordova-sqlite-storage": {},
-      "cordova-plugin-network-information": {}
+      "cordova-plugin-network-information": {},
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "27.+"
+      }
     },
     "platforms": [
-      "android",
       "ios"
     ]
   }

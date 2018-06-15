@@ -25,10 +25,21 @@ def SHARED_ARTIFACT_ID = "xwalk_shared_library:"
 def EMBEDD_ARTIFACT_ID = "xwalk_core_library:"
 def CANARY_ARTIFACT_ID = "xwalk_core_library_canary:"
 def BIT_64 = ":64bit@aar"
+def DEFAULT_MIN_SDK_VERSION = 14
 
 def getConfigPreference(name) {
     name = name.toLowerCase()
-    def xml = file("res/xml/config.xml").getText()
+
+    def xml
+
+    if (file("src/main/res/xml/config.xml").exists()) {
+        // cordova-android >= 7.0.0
+        xml = file("src/main/res/xml/config.xml").getText()
+    } else {
+        // cordova-android < 7.0.0
+        xml = file("res/xml/config.xml").getText()
+    }
+
     // Disable namespace awareness since Cordova doesn't use them properly
     def root = new XmlParser(false, false).parseText(xml)
 
@@ -56,9 +67,11 @@ if (cdvBuildMultipleApks == null) {
     ext.xwalkMultipleApk = cdvBuildMultipleApks.toBoolean();
 }
 
+def minSdk = getConfigPreference("android-minSdkVersion");
 if (cdvMinSdkVersion == null) {
-    def minSdk = getConfigPreference("android-minSdkVersion");
-    ext.cdvMinSdkVersion =  minSdk && minSdk.toInteger() > 14 ? minSdk : 14;
+    ext.cdvMinSdkVersion = minSdk && Integer.parseInt(minSdk) > DEFAULT_MIN_SDK_VERSION ? minSdk : DEFAULT_MIN_SDK_VERSION;
+} else if (Integer.parseInt('' + cdvMinSdkVersion) < Integer.parseInt(minSdk)) {
+    ext.cdvMinSdkVersion = minSdk;
 }
 
 if (!project.hasProperty('xwalkMode')) {

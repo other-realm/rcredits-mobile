@@ -8,24 +8,24 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	});
 	$rootScope.isCustomerLoggedIn = false;
 	$scope.currentUser = UserService.seller;
-	if (!$scope.currentUser) {
-		console.log($scope.currentUser);
-		$state.go("app.login");
-	}
+//	if (!$scope.currentUser) {
+//		console.log($scope.currentUser);
+//		$state.go("app.login");
+//	}
 	/**
 	 * Alerts the user that this is the first time this customer has used the service
 	 */
 	if ($scope.currentUser && $scope.currentUser.isFirstLogin()) {
-//		NotificationService.showAlert({
-//			scope: $scope,
-//			title: 'deviceAssociated'
-//		},
-//			{
-//				company: $scope.currentUser.company
-//			})
-//			.then(function () {
-		$scope.currentUser.setFirstLoginNotified();
-//			});
+		NotificationService.showAlert({
+			scope: $scope,
+			title: 'deviceAssociated'
+		},
+			{
+				company: $scope.currentUser.company
+			})
+			.then(function () {
+				$scope.currentUser.setFirstLoginNotified();
+			});
 	}
 	/**
 	 * Is the app opperating in cashier mode?
@@ -47,6 +47,8 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	$scope.showQR = function () {
 		$state.go('app.qr');
 	};
+	$scope.companyName = UserService.getCompanyName();
+	console.log($scope.companyName);
 	/**
 	 * show the customer's balance in a popup
 	 */
@@ -73,7 +75,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 			var platform = ionic.Platform.platform();
 			if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 				$rootScope.whereWasI = location.hash;
-				$rootScope.selfServ=$scope.isSelfServiceEnabled();
+				$rootScope.selfServ = $scope.isSelfServiceEnabled();
 				$state.go("app.demo");
 				$ionicLoading.hide();
 			} else {
