@@ -74,5 +74,7 @@
     </array>
     <key>NSCameraUsageDescription</key>
     <string/>
+    <key>UILaunchStoryboardName</key>
+    <string>CDVLaunchScreen</string>
   </dict>
 </plist>

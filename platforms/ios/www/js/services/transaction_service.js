@@ -9,6 +9,17 @@ app.service('TransactionService',
 			this.lastTransaction = null;
 		};
 		/**
+		 * Gets ride of messed up html tags
+		 * @param {type} html
+		 * @returns {.document@call;createElement.value|txt.value}
+		 */
+		var decodeHtml = function (html) {
+			var txt = document.createElement("textarea");
+			txt.innerHTML = html;
+			txt.value = txt.value.replace('\'', '');
+			return txt.value;
+		};
+		/**
 		 * Actually sends the transaction request to the server
 		 * @param {array} params - the details about the transaction
 		 * @param {object} account - information about the manager's account
@@ -65,24 +76,33 @@ app.service('TransactionService',
 					var params = new RequestParameterBuilder()
 						.setOperationId('charge')
 						.setSecurityCode(customerAccountInfo.accountInfo.securityCode)
-						.setAgent(sellerAccountInfo.accountId)
+						.setAgent(sellerAccountInfo.accountId.split('-')[0])
 						.setMember(customerAccountInfo.accountInfo.accountId)
-						.setField('amount', parseFloat(parseFloat(amount).toFixed(2)))
-						.setField('description', description)
+						.setField('amount', (amount).toFixed(2))
+						.setField('description', encodeURI(description))
 						.setField('created', moment().unix())
 						.setField('force', force)
 						.setField('goods', goods)
 						.setField('photoid', 0)
 						.getParams();
-					var proof = Sha256.hash((params.agent + params.amount + params.member + customerAccountInfo.accountInfo.unencryptedCode + params.created).toString());
+					var proof = Sha256.hash((params.agent.split('-')[0] + params.amount + params.member + customerAccountInfo.accountInfo.unencryptedCode + params.created));
+					if (UserService.currentUser().accountInfo.isPersonal && !params.device) {
+						params.device = customerAccountInfo.device;
+					} else if (UserService.currentUser().accountInfo.isPersonal) {
+						params['signin'] = 0;
+					}
+					console.log((amount).toFixed(2));
+
 					params['proof'] = proof;
-					params['seller'] = sellerAccountInfo;
+//					params['seller'] = sellerAccountInfo;
+					console.log((params.agent.split('-')[0] + params.amount + params.member + customerAccountInfo.accountInfo.unencryptedCode + params.created), (amount).toFixed(2), params, customerAccountInfo, sellerAccountInfo, params.created);
 				} catch (e) {
 					console.log('catch: ', e);
 					NotificationService.showAlert({title: 'error', template: e});
 				}
 				if (NetworkService.isOnline()) {
 					return this.makeRequest_(params, sellerAccountInfo).then(function (res) {
+						console.log(res);
 						return res;
 					});
 				} else {
@@ -108,33 +128,42 @@ app.service('TransactionService',
 		 * @returns {json} the results of the transaction, or if offline, the intended results of the transaction, if not too much
 		 */
 		TransactionService.prototype.charge = function (amount, description, goods, force) {
-			return this.makeTransactionRequest(amount, description, goods, force)
-				.then(function (transactionResult) {
-					if (transactionResult.data.ok === TRANSACTION_OK) {
-						var transaction = self.parseTransaction_(transactionResult);
-						transaction.configureType(amount);
-						var customer = UserService.currentCustomer();
-						customer.balance = transactionResult.data.balance;
-						customer.rewards = transactionResult.data.rewards;
-						transaction.amount = amount;
-						transaction.description = description;
-						transaction.goods = 1;
-						transaction.data = transactionResult.data;
-						customer.setLastTx(transaction);
-						customer.saveInSQLite().then(function () {
-							self.saveTransaction(transaction);
-						});
-						self.lastTransaction = transaction;
-						return transaction;
-					} else {
-						console.log(transactionResult.data.ok, transactionResult);
-					}
-					self.lastTransaction = transactionResult;
-					return transactionResult;
-				})
-				.finally(function () {
-					$rootScope.$emit("TransactionDone");
-				});
+			if (amount > 100000) {
+				reject = NotificationService.showAlert({title: 'error', template: 'Amounts over 100,000 are not allowed'});
+			} else {
+//				console.log(amount);
+				return this.makeTransactionRequest(amount, description, goods, force)
+					.then(function (transactionResult) {
+						if (transactionResult.data.ok === TRANSACTION_OK) {
+							var transaction = self.parseTransaction_(transactionResult);
+							transaction.configureType(amount);
+							var customer = UserService.currentCustomer();
+							customer.balance = transactionResult.data.balance;
+							customer.rewards = transactionResult.data.rewards;
+							transaction.amount = (amount);
+							transaction.description = description;
+							transaction.goods = 1;
+							transaction.data = transactionResult.data;
+							transaction.data.message = decodeHtml(transaction.data.message);
+							transaction.data.undo = decodeHtml(transaction.data.undo);
+							customer.company = decodeHtml(customer.company);
+							console.log(transaction, customer);
+							customer.setLastTx(transaction);
+							customer.saveInSQLite().then(function () {
+								self.saveTransaction(transaction);
+							});
+							self.lastTransaction = transaction;
+							return transaction;
+						} else {
+							console.log(transactionResult.data.ok, transactionResult);
+						}
+						self.lastTransaction = transactionResult;
+						return transactionResult;
+					})
+					.finally(function () {
+						$rootScope.$emit("TransactionDone");
+					});
+			}
 		};
 		/**
 		 * Negates an amount
@@ -143,7 +172,8 @@ app.service('TransactionService',
 		 * @returns {json|transaction_serviceL#3.TransactionService.prototype@call;makeTransactionRequest@call;then@call;finally} - the negated amount plus the description
 		 */
 		TransactionService.prototype.refund = function (amount, description) {
-			return this.charge(((parseFloat(amount * -1)).toFixed(2)), description);
+			console.log((amount * -1).toFixed(2));
+			return this.charge((amount * -1), description);
 		};
 		/**
 		 * Processes the information required to do an exchange of USD to Common Good Currency or vice versa
@@ -155,12 +185,14 @@ app.service('TransactionService',
 		TransactionService.prototype.exchange = function (amount, currency, paymentMethod) {
 			var exchangeType = 'USD in';
 			var amountToSend = amount;
+			console.log(currency.isUSD(), amount, currency, paymentMethod);
 			if (!currency.isUSD()) {
 				exchangeType = 'USD out';
-			} else {
 				amountToSend = amount * (-1);
+			} else {
 			}
 			var description = exchangeType + '(' + paymentMethod.getId() + ')';
+			console.log(amountToSend, currency, paymentMethod, description);
 			return this.charge(amountToSend, description, 0);
 		};
 		/**
@@ -307,6 +339,22 @@ app.service('TransactionService',
 					NotificationService.showAlert('offline_old_transactions');
 				}
 			});
+		};
+		TransactionService.prototype.testThings = function (whattotest,testData) {
+			var params = {
+				"op": "test", 
+				"function": whattotest, 
+				"testOnly": 0, 
+				"args": testData
+			};
+			return $http({
+				method: 'POST',
+				url: 'https://ws.rcredits.org/pos',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				data: $httpParamSerializer(params)
+			});			
 		};
 		return new TransactionService();
 	});

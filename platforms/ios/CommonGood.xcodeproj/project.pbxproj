@@ -36,12 +36,13 @@
 		3CD9AC38B5564923B95551D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFF9300DAC724470A1D3EECC /* QuartzCore.framework */; };
 		89409DE7EE0C4B89A28C4423 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 635E888CB223431DA41D7A8D /* CoreImage.framework */; };
 		7EC7B3E9FE484A1AA2BBE5F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42BA062FD1A84D8AAD64061C /* AudioToolbox.framework */; };
-		49F7D2F48E7842E29AAFA07C /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CD4420E41F945FAB0729FC1 /* SQLitePlugin.m */; };
-		5BD85D3ED7304FA3822055D9 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = CFFDB890099C459599C193EE /* sqlite3.c */; settings = {COMPILER_FLAGS = "-DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
 		04574169A31C406992424F9B /* CDVConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E584BD8E7134480BD285019 /* CDVConnection.m */; };
 		A20F9524F2C445B2AC5B6236 /* CDVReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 2767DED3B3A9468C8BF35E51 /* CDVReachability.m */; };
 		287143E71E044DC9902DF262 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE00BCA1C9F54843A19736B3 /* SystemConfiguration.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		047E400F000B4E1CA1401A02 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D241329898B4392B96A2059 /* CoreTelephony.framework */; };
+		62148E42452241DFA7735850 /* SQLitePlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C3B6ECFF524BACAEB8D480 /* SQLitePlugin.m */; };
+		E631ED93F792434BA95DCA57 /* PSPDFThreadSafeMutableDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C532730494E4CA285A47A6E /* PSPDFThreadSafeMutableDictionary.m */; settings = {COMPILER_FLAGS = "-w"; }; };
+		E3EF65D8A9844AA1A5366069 /* sqlite3.c in Resources */ = {isa = PBXBuildFile; fileRef = CCDC78E87D46475F8F5BC7D0 /* sqlite3.c */; settings = {COMPILER_FLAGS = "-w -DSQLITE_THREADSAFE=1 -DSQLITE_DEFAULT_SYNCHRONOUS=3 -DSQLITE_DEFAULT_MEMSTATUS=0 -DSQLITE_OMIT_DECLTYPE -DSQLITE_OMIT_DEPRECATED -DSQLITE_OMIT_PROGRESS_CALLBACK -DSQLITE_OMIT_SHARED_CACHE -DSQLITE_TEMP_STORE=2 -DSQLITE_OMIT_LOAD_EXTENSION -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_RTREE -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_DEFAULT_CACHE_SIZE=2000"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,16 +113,18 @@
 		CFF9300DAC724470A1D3EECC /* QuartzCore.framework */ = {isa = PBXFileReference; name = "QuartzCore.framework"; path = "System/Library/Frameworks/QuartzCore.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		635E888CB223431DA41D7A8D /* CoreImage.framework */ = {isa = PBXFileReference; name = "CoreImage.framework"; path = "System/Library/Frameworks/CoreImage.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		42BA062FD1A84D8AAD64061C /* AudioToolbox.framework */ = {isa = PBXFileReference; name = "AudioToolbox.framework"; path = "System/Library/Frameworks/AudioToolbox.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
-		0CD4420E41F945FAB0729FC1 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
-		CFFDB890099C459599C193EE /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		44198A5B239F4FA79ED68E43 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
-		890B6A824E464C57B7884D88 /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		7E584BD8E7134480BD285019 /* CDVConnection.m */ = {isa = PBXFileReference; name = "CDVConnection.m"; path = "cordova-plugin-network-information/CDVConnection.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		2767DED3B3A9468C8BF35E51 /* CDVReachability.m */ = {isa = PBXFileReference; name = "CDVReachability.m"; path = "cordova-plugin-network-information/CDVReachability.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
 		8C04CC21BACE4560BCB17630 /* CDVConnection.h */ = {isa = PBXFileReference; name = "CDVConnection.h"; path = "cordova-plugin-network-information/CDVConnection.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		84FD41D005904BF2B737B78D /* CDVReachability.h */ = {isa = PBXFileReference; name = "CDVReachability.h"; path = "cordova-plugin-network-information/CDVReachability.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 		FE00BCA1C9F54843A19736B3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
 		1D241329898B4392B96A2059 /* CoreTelephony.framework */ = {isa = PBXFileReference; name = "CoreTelephony.framework"; path = "System/Library/Frameworks/CoreTelephony.framework"; sourceTree = SDKROOT; fileEncoding = undefined; lastKnownFileType = wrapper.framework; explicitFileType = undefined; includeInIndex = 0; };
+		46C3B6ECFF524BACAEB8D480 /* SQLitePlugin.m */ = {isa = PBXFileReference; name = "SQLitePlugin.m"; path = "cordova-sqlite-storage/SQLitePlugin.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		8C532730494E4CA285A47A6E /* PSPDFThreadSafeMutableDictionary.m */ = {isa = PBXFileReference; name = "PSPDFThreadSafeMutableDictionary.m"; path = "cordova-sqlite-storage/PSPDFThreadSafeMutableDictionary.m"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; explicitFileType = undefined; includeInIndex = 0; };
+		CCDC78E87D46475F8F5BC7D0 /* sqlite3.c */ = {isa = PBXFileReference; name = "sqlite3.c"; path = "cordova-sqlite-storage/sqlite3.c"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF8CDAE58AB442E6A1B6A7F7 /* SQLitePlugin.h */ = {isa = PBXFileReference; name = "SQLitePlugin.h"; path = "cordova-sqlite-storage/SQLitePlugin.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		1750E588D5C14425BE5DB9F4 /* PSPDFThreadSafeMutableDictionary.h */ = {isa = PBXFileReference; name = "PSPDFThreadSafeMutableDictionary.h"; path = "cordova-sqlite-storage/PSPDFThreadSafeMutableDictionary.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
+		CAD63FCDD6D342DEB280FA77 /* sqlite3.h */ = {isa = PBXFileReference; name = "sqlite3.h"; path = "cordova-sqlite-storage/sqlite3.h"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,14 +269,16 @@
 				F745CE079F4545968DED44B6 /* CDVBarcodeScanner.mm */,
 				51AD85C759174D9AA5ED31C8 /* zxing-all-in-one.cpp */,
 				B972F9FE987B4ED4B5E783DB /* zxing-all-in-one.h */,
-				0CD4420E41F945FAB0729FC1 /* SQLitePlugin.m */,
-				CFFDB890099C459599C193EE /* sqlite3.c */,
-				44198A5B239F4FA79ED68E43 /* SQLitePlugin.h */,
-				890B6A824E464C57B7884D88 /* sqlite3.h */,
 				7E584BD8E7134480BD285019 /* CDVConnection.m */,
 				2767DED3B3A9468C8BF35E51 /* CDVReachability.m */,
 				8C04CC21BACE4560BCB17630 /* CDVConnection.h */,
 				84FD41D005904BF2B737B78D /* CDVReachability.h */,
+				46C3B6ECFF524BACAEB8D480 /* SQLitePlugin.m */,
+				8C532730494E4CA285A47A6E /* PSPDFThreadSafeMutableDictionary.m */,
+				CCDC78E87D46475F8F5BC7D0 /* sqlite3.c */,
+				FF8CDAE58AB442E6A1B6A7F7 /* SQLitePlugin.h */,
+				1750E588D5C14425BE5DB9F4 /* PSPDFThreadSafeMutableDictionary.h */,
+				CAD63FCDD6D342DEB280FA77 /* sqlite3.h */,
 			);
 			name = Plugins;
 			path = "CommonGood/Plugins";
@@ -399,10 +404,11 @@
 				D47065266C4F41C79272591A /* CDVAssetLibraryFilesystem.m in Sources */,
 				FE300D8E9FDB4FB390DC5511 /* CDVBarcodeScanner.mm in Resources */,
 				75ECD28DBE3146E68685A85E /* zxing-all-in-one.cpp in Resources */,
-				49F7D2F48E7842E29AAFA07C /* SQLitePlugin.m in Sources */,
-				5BD85D3ED7304FA3822055D9 /* sqlite3.c in Resources */,
 				04574169A31C406992424F9B /* CDVConnection.m in Sources */,
 				A20F9524F2C445B2AC5B6236 /* CDVReachability.m in Sources */,
+				62148E42452241DFA7735850 /* SQLitePlugin.m in Sources */,
+				E631ED93F792434BA95DCA57 /* PSPDFThreadSafeMutableDictionary.m in Sources */,
+				E3EF65D8A9844AA1A5366069 /* sqlite3.c in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,21 +11,43 @@
       "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     },
     "cordova-plugin-crosswalk-webview": {
-      "XWALK_VERSION": "22+",
+      "XWALK_VERSION": "23+",
       "XWALK_LITEVERSION": "xwalk_core_library_canary:17+",
       "XWALK_COMMANDLINE": "--disable-pull-to-refresh-effect",
       "XWALK_MODE": "embedded",
       "XWALK_MULTIPLEAPK": "true",
       "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     },
-    "cordova-android-support-gradle-release": {
-      "ANDROID_SUPPORT_VERSION": "27.+",
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-indexeddb-async": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "ionic-plugin-keyboard": {
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-compat": {
-      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
-    }
-  }
+  "dependent_plugins": {}
 }

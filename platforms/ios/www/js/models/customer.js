@@ -3,7 +3,9 @@
  * This is the model that gets populated with customer data where it is stored on the phone and synchronized with the server if there is a network connection 
  */
 (function (window, app) {
-	app.service('Customer', function (User) {
+	app.service('Customer', function (User,localStorageService) {
+		var DEVICE_ID_KEY = 'deviceID';
+		var INDIVIDUAL_KEY= 'Individual';
 		var Customer = Class.create(User, {
 			balance: 0,
 			rewards: null,
@@ -12,10 +14,41 @@
 			setRewards: function (rewards) {
 				this.rewards = parseFloat(rewards);
 			},
+			isValidDeviceId: function (device) {
+				return !_.isEmpty(device);
+			},
+			initialize: function ($super, name) {
+				$super(name);
+				this.configureDeviceId_();
+			},
+			configureDeviceId_: function () {
+				this.device = '';
+				var localDeviceId = localStorageService.get(DEVICE_ID_KEY);
+				if (this.isValidDeviceId(localDeviceId)) {
+					this.device = localDeviceId;
+				}
+			},
 			setBalance: function (balance) {
 				this.balance = balance;
 				console.log(balance);
 				return this;
+			},
+			setDeviceId: function (device) {
+				if (!this.isValidDeviceId(device)) {
+					throw new Error('Invalid deviceID: ' + device);
+				}
+				this.device = device;
+				localStorageService.set(DEVICE_ID_KEY, device);
+			},
+			isFirstLogin: function () {
+				return this.firstLogin;
+			},
+			setFirstLoginNotified: function () {
+				this.firstLogin = false;
+				this.save();
+			},
+			getDevice:function (){
+				return this.device;
 			},
 			getPlace: function () {
 				return this.place;
@@ -32,11 +65,19 @@
 			},
 			getLastTx: function () {
 				return this.lastTx.getId();
+			},
+			save: function () {
+				this.saveInStorage();
+				this.saveInSQLite();
+			},
+			saveInStorage: function () {
+				localStorageService.set(INDIVIDUAL_KEY, JSON.stringify(this));
 			}
 		});
 		Customer.parseFromDb = function (customerJson) {
 			var customer = new Customer(customerJson.name);
-			var proof = JSON.parse(customerJson.data);
+			console.log(customerJson);
+			var proof = JSON.parse(customerJson);
 			customer.setBalance(customerJson.balance);
 			customer.setRewards((customerJson.rewards));
 			customer.setLastTx(customerJson.lastTx);

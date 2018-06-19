@@ -1,4 +1,4 @@
-<ion-view hide-nav-bar="true" ng-controller="SelectDemoCust as demo">
+<ion-view view-title="{{('barcode'| translate)}}" hide-nav-bar="true" ng-controller="SelectDemoCust as demo">
 	<ion-content>
 		<label class="thirds"><input name="formattype" id="oldURL" type="radio" ng-model="format.type" value="0">Old</label>
 		<label class="thirds"><input name="formattype" id="newURL" type="radio" ng-model="format.type" value="1">New</label>
@@ -7,7 +7,7 @@
 			<input type="text" id="customQR" style="width:100%" value="HTTPS://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw"  text="HTTPS://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw" ng-model="customPerson.url">
 			<a class='button' ng-switch-when="#/app/login" href="javascript:void(0)" ng-click="onSelectManager(customPerson.url, false)" ng-model="customPerson.url" id="accountInfoButton">Load Company Info</a>
 			<a class='button' ng-switch-when="#/app/home" href="javascript:void(0)" ng-click="onSelectCustomer(customPerson.url, false)" ng-model="customPerson.url" id="accountInfoButton">Load Customer Info</a>
-			 - 
+			- 
 			<a class='button' ng-switch-when="#/app/login" href="javascript:void(0)" ng-click="onSelectManager(customPerson.url, true)" ng-model="customPerson.url" id="demoAccountLogin">Load Company </a>
 			<a class='button' ng-switch-when="#/app/home" href="javascript:void(0)" ng-click="onSelectCustomer(customPerson.url, true)" ng-model="customPerson.url" id="demoAccountLogin">Load Customer </a>
 			<a ng-switch-default href="#/app/home" >Please click here<br> to go back and try again,<br> somehow you got here <br>from nowhere<br></a>
@@ -34,6 +34,7 @@
 				<span id="unencryptedCode">unencryptedCode:{{customPerson.accountInfo.unencryptedCode}}</span><br>
 			</div>
 		</div>
+		<input ng-if="selfServ||offline" numbers-only placeholder="{{('enter_pin'| translate)}}" type="number" class="input-pin show-as-pwd pin" ng-model="pin.value">
 		<div class="aTable">
 			<div ng-class-odd="'rightColumn'" ng-class-even="'leftColumn'" ng-repeat="person in customer">
 				<div ng-switch='whereWasI' class="aRow">
@@ -42,6 +43,34 @@
 					<a ng-switch-default href="#/app/home" >Please click here<br> to go back and try again,<br> somehow you got here <br>from nowhere<br></a>
 				</div>
 			</div>
+		</div>
+		Transact Test:
+		<div ng-repeat="t in testD.transactions">
+			<a class='button' href="javascript:void(0)" ng-click="doTest('transactions', t)" ng-model="testD.transactions" id="doTest1">Do Test</a>
+			<div>
+				ID:<input type="text" id="whattotest" style="width:100%" ng-model="t.id"><br>
+				Full Name:<input type="text" id="testData" style="width:100%" ng-model="t.fullName">
+				City:<input type="text" id="testData" style="width:100%" ng-model="t.city">
+				State:<input type="text" id="testData" style="width:100%" ng-model="t.state">
+				Balence:<input type="text" id="testData" style="width:100%" ng-model="t.balence">
+				Flags:<input type="text" id="testData" style="width:100%" ng-model="t.flags">
+				cardCode:<input type="text" id="testData" style="width:100%" ng-model="t.cardCode">
+				selling:<input type="text" id="testData" style="width:100%" ng-model="t.selling">
+			</div>
+			<textarea ng-bind="{{testResults}}" ng-model="testResults">Results</textarea>
+		</div>
+		Members Test:
+		<div ng-repeat="m in testD.members">
+			<a class='button' href="javascript:void(0)" ng-click="doTest('members', m)" ng-model="testD.members" id="doTest2">Do Test</a>
+			<div>
+				ID:<input type="text" id="whattotest" style="width:100%" ng-model="m.id"><br>
+				Full Name:<input type="text" id="testData" style="width:100%" ng-model="m.fullName">
+				City:<input type="text" id="testData" style="width:100%" ng-model="m.city">
+				State:<input type="text" id="testData" style="width:100%" ng-model="m.state">
+				Balence:<input type="text" id="testData" style="width:100%" ng-model="m.balence">
+				Flags:<input type="text" id="testData" style="width:100%" ng-model="m.flags">
+			</div>
+			<textarea ng-bind="{{testResults}}" ng-model="testResults">Results</textarea>
 		</div>
 	</ion-content>
 </ion-view>

@@ -1,2 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\app\src\main\jniLibs"/></dataSet><dataSet config="arm64"><source path="E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\app\src\arm64\jniLibs"/></dataSet><dataSet config="debug"><source path="E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\app\src\debug\jniLibs"/></dataSet><dataSet config="arm64Debug"><source path="E:\xampp\htdocs\cgf\rcredits-mobile\platforms\android\app\src\arm64Debug\jniLibs"/></dataSet></merger>

@@ -15,3 +15,5 @@ platforms/android/build/outputs/apk/androidAPKs.zip
 /platforms/android/assets/
 www/img/Thumbs.db
 !platforms/android/build/outputs/apk/
+/platforms/android/CordovaLib/build/
+/platforms/android/.nb-gradle/

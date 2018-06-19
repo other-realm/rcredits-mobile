@@ -41,9 +41,10 @@ var mytests = function() {
       it(suiteName + 'Simple REGEXP test',
         function(done) {
           // TBD Test for Android Web SQL ONLY in this version branch:
-          if (isWP8) pending('NOT IMPLEMENTED for WP8');
-          if (isWindows) pending('NOT IMPLEMENTED for Windows');
+          if (isWP8) pending('NOT IMPLEMENTED for WP8 (plugin)');
+          if (isWindows) pending('NOT IMPLEMENTED for Windows (plugin)');
           if (!isWebSql && !isWindows && isAndroid) pending('SKIP for Android plugin'); // TBD SKIP for Android plugin (for now)
+          if (isWebSql && /Android 4.[1-3]/.test(navigator.userAgent)) pending('SKIP for Android 4.1-4.3 (WebKit) Web SQL');
           if (isWebSql && !isAndroid && !isWindows && !isWP8) pending('SKIP for iOS (WebKit) Web SQL');
           // TBD REMOVE from version branches such as cordova-sqlite-ext:
           if (!isWebSql && !isAndroid && !isWindows && !isWP8) pending('NOT IMPLEMENTED for iOS/macOS plugin');

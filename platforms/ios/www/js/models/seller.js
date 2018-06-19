@@ -4,6 +4,7 @@
 		var DEVICE_ID_KEY = 'deviceID';
 		var SELLER_KEY = 'seller';
 		var Seller = Class.create(User, {
+			balance: 0,
 			descriptions: [],
 			device: '',
 			firstLogin: false,
@@ -13,6 +14,13 @@
 			},
 			isValidDeviceId: function (device) {
 				return !_.isEmpty(device);
+			},
+			setBalance:function (b){
+				console.log(b);
+				this.balance=b;
+			},
+			getBalance:function (){
+				return this.balance;
 			},
 			configureDeviceId_: function () {
 				this.device = '';
@@ -47,6 +55,7 @@
 				this.saveInSQLite();
 			},
 			saveInStorage: function () {
+				console.log(this);
 				localStorageService.set(SELLER_KEY, JSON.stringify(this));
 			},
 			fillFromStorage: function () {
@@ -56,6 +65,7 @@
 					this.accountInfo = _.extendOwn(new AccountInfo(), this.accountInfo);
 					this.configureDeviceId_();
 					PreferenceService.parsePreferencesNumber(this.getCan());
+					console.log(this);
 					return this;
 				}
 				throw new Error("Unable to load user from Storage");

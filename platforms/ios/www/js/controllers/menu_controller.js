@@ -1,7 +1,7 @@
-app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeService, UserService, $ionicHistory,
+app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeService, UserService, $ionicHistory, $rootScope,
 	NotificationService, CashierModeService, PreferenceService, NetworkService,
 	SelfServiceMode, $ionicSideMenuDelegate, $timeout) {
-		var backCount=0;
+	var backCount = 0;
 	/**
 	 * Change store and erase user data stored on phone
 	 * @returns {undefined}
@@ -19,12 +19,16 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 				$ionicLoading.hide();
 			});
 	};
+	/**
+	 * For debugging...
+	 */
 	$scope.trackGoBack = 'Back';
 	/**
 	 * Logout of cashier or self-service mode
 	 * @returns {A logout object}
 	 */
 	$scope.softLogout = function () {
+		$rootScope.cashierMode='loggingOut';
 		return UserService.softLogout();
 	};
 	/**
@@ -45,7 +49,7 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 			disableAnimate: true
 		});
 		$ionicHistory.clearCache().then(function () {
-			$state.go("app.home");
+							$state.go("app.home");
 		});
 	};
 	$scope.redirectPreferences = function () {
@@ -59,16 +63,14 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 	};
 	$scope.changeCompany = function () {
 		var seller = UserService.currentUser();
-		NotificationService.showConfirm({
-			title: 'disassociate_company',
-			subTitle: "haveToSignInAgain",
-			okText: "confirm",
-			cancelText: "cancel"
-		}, {
+		console.log(seller);
+		jQuery.when({
 			company: seller.company
 		}).then(function (res) {
 			if (res) {
-				seller.removeDevice();
+				if ((seller.accountInfo.isCompany!==undefined && seller.accountInfo.isCompany!==null)||seller.accountInfo.isCompany) {
+					seller.removeDevice();
+				}
 				$scope.logout();
 			}
 		});

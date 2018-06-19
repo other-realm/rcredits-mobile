@@ -1,5 +1,92 @@
 # Changes
 
+### cordova-sqlite-storage 2.3.2
+
+- Mark some Android errors as internal plugin errors (quick fix)
+- remove trailing whitespace from Android implementation
+- test coverage updates
+- quick doc updates
+
+### cordova-sqlite-storage 2.3.1
+
+- Mark some iOS/macOS plugin error messages as internal plugin errors (quick fix)
+- Quick documentation updates
+
+### cordova-sqlite-storage 2.3.0
+
+- Use SQLite 3.22.0 with SQLITE_DEFAULT_SYNCHRONOUS=3 (EXTRA DURABLE) compile-time setting on all platforms (Android/iOS/macOS/Windows) ref: litehelpers/Cordova-sqlite-storage#736
+
+### cordova-sqlite-storage 2.2.1
+
+- SQLITE_THREADSAFE=1 compile-time setting for iOS/macOS
+- Fix Android/iOS src copyright, perpetually
+
+## cordova-sqlite-storage 2.2.0
+
+- Android-sqlite-native-driver NDK objects in JAR to resolve issue on cordova-android@7
+- Fix SQLiteAndroidDatabase implementation for Turkish and other foreign locales
+
+## cordova-sqlite-storage 2.1.5
+
+##### cordova-sqlite-legacy-core 1.0.7
+
+- Add error info text in case of close error on Windows
+- Signal INTERNAL ERROR in case of attempt to reuse db on Windows (should never happen due to workaround solution to BUG 666)
+- SQLITE_DEFAULT_CACHE_SIZE build flag fix for macOS ("osx") and Windows
+
+###### cordova-sqlite-legacy-express-core 1.0.5
+
+- iOS/macOS @synchronized guard for sqlite3_open operation
+- Signal INTERNAL ERROR in case of attempt to reuse db (Android/iOS) (should never happen due to workaround solution to BUG 666)
+
+## cordova-sqlite-storage 2.1.4
+
+##### cordova-sqlite-legacy-core 1.0.6
+
+###### cordova-sqlite-legacy-express-core 1.0.4
+
+- Cleaned up workaround solution to BUG 666: close db before opening (ignore close error)
+- android.database end transaction if active before closing (needed for new BUG 666 workaround solution to pass selfTest in case of builtin android.database implementation)
+
+## cordova-sqlite-storage 2.1.3
+
+##### cordova-sqlite-legacy-core 1.0.5
+
+###### cordova-sqlite-legacy-express-core 1.0.3
+
+- Resolve Java 6/7/8 concurrent map compatibility issue reported in litehelpers/Cordova-sqlite-storage#726, THANKS to pointer by @NeoLSN (Jason Yang/楊朝傑) in litehelpers/Cordova-sqlite-storage#727.
+- selfTest database cleanup do not ignore close or delete error on any platforms
+
+## cordova-sqlite-storage 2.1.2
+
+##### cordova-sqlite-legacy-core 1.0.4
+
+- New workaround solution to BUG 666: close db before opening (ignore close error)
+
+## cordova-sqlite-storage 2.1.1
+
+##### cordova-sqlite-legacy-core 1.0.3
+
+- Suppress warnings when building sqlite3.c & PSPDFThreadSafeMutableDictionary.m on iOS/macOS
+
+##### cordova-sqlite-legacy-core 1.0.2
+
+- Fix log in case of transaction waiting for open to finish; doc fixes
+- SQLite 3.15.2 build with SQLITE_THREADSAFE=2 on iOS/macOS (SQLITE_THREADSAFE=1 on Android/Windows) and other flag fixes in this version branch to avoid possible malformed database due to multithreaded access ref: litehelpers/Cordova-sqlite-storage#703
+- Windows 10 (UWP) build with /SAFESEH flag on Win32 (x86) target
+
+###### cordova-sqlite-legacy-express-core 1.0.2
+
+- Use PSPDFThreadSafeMutableDictionary for iOS/macOS to avoid threading issue ref: litehelpers/Cordova-sqlite-storage#716
+
+###### cordova-sqlite-legacy-express-core 1.0.1
+
+- Fix bug 666 workaround to trigger ROLLBACK in the next event tick (needed to support version with pre-populated database on Windows)
+
+## cordova-sqlite-storage 2.1.0
+
+- Visual Studio 2017 updates for Windows UWP build
+
 ## cordova-sqlite-storage 2.0.4
 
 ###### cordova-sqlite-legacy-express-core 1.0.0

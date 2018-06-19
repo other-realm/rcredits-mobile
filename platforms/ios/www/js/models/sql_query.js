@@ -13,6 +13,7 @@
 			if (!_.isArray(data)) {
 				sqlData = [data];
 			}
+			console.log(sqlData);
 			this.queryData = sqlData;
 		};
 		SqlQuery.prototype.getQueryString = function () {

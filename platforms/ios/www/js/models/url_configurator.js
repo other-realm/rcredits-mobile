@@ -6,7 +6,6 @@
 	UrlConfigurator.prototype.getServerUrl = function (account) {
 		if (account.isDemo()) {
 			var x = this.demoUrl.replace('xxx', account.getMemberId());
-//      debugger
 			console.log(x);
 			return x;
 		} else {

@@ -1,21 +1,22 @@
-<ion-view view-title="">
+<ion-view view-title="{{('transaction'| translate)}}" view-title="">
 	<ion-content>
 		<div class="tabulator" sf-resize  ng-controller="KeyPadCtrl">
 			<section class="section-1">
 				<div class="calc-component">
 					<div id="category" class="list">
 						<label ng-if="moreThan1Category()" class="item item-input item-select">
-							<div class="input-label">
-								{{ 'selectCategory' | translate }}
-							</div>
-							<select ng-change="onSelectCategory()" ng-model="selectedCategory.selected" ng-options="c |  translate for c in categories">
+							<div class="input-label ">
+								{{ 'selectCategory' | translate }} 
+							</div><span class="downSymbol">&#8227;</span>
+							<select id="selectCategory" class="transaction-description-menu" style="padding: .33em .15em .33em .1em;width:60%;" ng-change="onSelectCategory()" ng-model="selectedCategory.selected" ng-options="c |  translate for c in categories">
 							</select>
 						</label>
-						<label ng-if="!moreThan1Category()" class="item item-input">
+						<label ng-if="!moreThan1Category()" class="item item-input transaction-description-menu-label">
 							<div class="input-label">
 								{{ 'selectCategory' | translate }}
 							</div>
-							<div class="transaction-description-menu">{{categories[0]}}</div>
+							<div ng-if="sellOrCust" class="transaction-description-menu" style="padding: .33em .15em .33em .1em">{{categories[0]}}</div>
+							<div ng-if="!sellOrCust" class="transaction-description-menu" style="padding: .33em .15em .33em .1em">{{categories}}</div>
 						</label>
 					</div>
 				</div>
@@ -27,7 +28,12 @@
 				<button class="primary button button-full button-positive chargeBtn"
 						ng-click='initiateTransaction()'
 						ng-disabled='disableTransaction()'>
+					<span ng-if="sellOrCust">
 					{{ transactionType | translate }}
+					</span>
+					<span ng-if="!sellOrCust">
+					{{ 'pay' | translate }}
+					</span>
 				</button>
 			</section>
 		</div>

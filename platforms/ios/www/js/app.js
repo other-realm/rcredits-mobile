@@ -4,6 +4,7 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 	.config(['$translateProvider', 'localStorageServiceProvider', '$ionicConfigProvider',
 		function ($translateProvider, localStorageServiceProvider, $ionicConfigProvider) {
 			$ionicConfigProvider.views.maxCache(0);
+			var log = console.log;
 			$translateProvider
 				.useStaticFilesLoader({
 					prefix: 'js/languages/definitions/',
@@ -19,8 +20,12 @@ var app = angular.module('CommonGood', ['ionic', 'routes', 'pascalprecht.transla
 		$ionicPlatform.ready(function () {
 			// This is only for web development to enable proxy
 			$rootScope.whereWasI = location.hash;
-			$rootScope.amIOnline = NetworkService.isOffline();
+			$rootScope.selfServ=false;
+			$rootScope.amIOffline = NetworkService.isOffline();
 			$rootScope.undo = false;
+			$rootScope.isCustomerLoggedIn = false;
+			$rootScope.cashierMode = false;
+			$rootScope.user = UserService.currentUser();
 			if (!ionic.Platform.isWebView()) {
 				CommonGoodConfig.serverUrl = CommonGoodConfig.serverproxyUrl;
 			}

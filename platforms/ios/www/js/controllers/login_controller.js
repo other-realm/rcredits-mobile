@@ -12,7 +12,13 @@ app.controller('LoginCtrl', function ($scope, $ionicLoading, $state, $ionicPlatf
 	$scope.openScanner = function () {
 		var platform = ionic.Platform.platform();
 		if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
-			$rootScope.whereWasI = location.hash;
+				console.log($rootScope.cashierMode);
+			if ($rootScope.cashierMode === true) {
+				$rootScope.cashierMode = false;
+				$rootScope.whereWasI = '#/app/login';
+			} else {
+				$rootScope.whereWasI = location.hash;
+			}
 			$state.go("app.demo");
 			$ionicLoading.hide();
 		} else {
@@ -20,13 +26,18 @@ app.controller('LoginCtrl', function ($scope, $ionicLoading, $state, $ionicPlatf
 			$ionicPlatform.ready(function () {
 				BarcodeService.scan('app.login')
 					.then(function (str) {
-						console.log(str);
 						UserService.loginWithRCard(str)
 							.then(function () {
 								$ionicHistory.nextViewOptions({
 									disableBack: true
 								});
-								$state.go("app.home");
+								var cUser = UserService.currentUser();
+								if (cUser.accountInfo.isPersonal) {
+									$rootScope.isCustomerLoggedIn = true;
+									$state.go("app.home");
+								} else if (cUser.accountInfo.isCompany) {
+									$state.go("app.home");
+								}
 							})
 							.catch(function (errorMsg) {
 								NotificationService.showAlert({title: "error", template: errorMsg});

@@ -12,28 +12,39 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.populateDemoCustomers = [
 		[
 			{name: 'Susan Shopper', url: 'HTTPS://NEW.RC4.ME/ABB.ZzhWMCq0zcBowqw', signin: '0', img: 'img/SusanShopper.jpg'},
-			{name: 'Maria Manager', url: 'HTTPS://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G', signin: '1', img: 'img/MariaManager.jpg'}
+			{name: 'Maria Manager', url: 'HTTPS://NEW.RC4.ME/AAB-WeHlioM5JZv1O9G', signin: '1', img: 'img/MariaManager.jpg'},
 //			{name: 'Cathy Cashier', url: 'HTTPS://NEW.RC4.ME/ABJ-ME04nW44DHzxVDg', signin: '1', img: 'img/CathyCashier.jpg'},
-//			{name: 'Curt Customer', url: 'HTTPS://NEW.RC4.ME/AAK.NyCBBlUF1qWNZ2k', signin: '0', img: 'img/CurtCustomerMember.jpg'},
-//			{name: "Curt-Helga's Hardware", url: 'HTTPS://NEW.RC4.ME/AAD-utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerAgent.jpg'}
+			{name: 'Curt Customer', url: 'HTTPS://NEW.RC4.ME/AAK.NyCBBlUF1qWNZ2k', signin: '0', img: 'img/CurtCustomerPersonal.jpg'},
+			{name: "Curt-Helga's Hardware", url: 'HTTPS://NEW.RC4.ME/AAD-utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerHelgasHardware.jpg'}
 		], [
 			{name: 'Susan', url: 'HTTPS://6VM.RC4.ME/G0RZzhWMCq0zcBowqw', signin: '0', img: 'img/SusanShopper.jpg'},
-			{name: 'Maria', url: 'HTTPS://6VM.RC4.ME/H010WeHlioM5JZv1O9G:somethingForBob', signin: '1', img: 'img/MariaManager.jpg'}
+			{name: 'Maria', url: 'HTTPS://6VM.RC4.ME/H010WeHlioM5JZv1O9G:somethingForBob', signin: '1', img: 'img/MariaManager.jpg'},
 //			{name: 'Cathy', url: 'HTTPS://6VM.RC4.ME/H021ME04nW44DHzxVDg', signin: '1', img: 'img/CathyCashier.jpg'},
-//			{name: 'Curt', url: 'HTTPS://6VM.RC4.ME/G0ANyCBBlUF1qWNZ2k.something', signin: '0', img: 'img/CurtCustomerMember.jpg'},
-//			{name: "Curt's Hardware", url: 'HTTPS://6VM.RC4.ME/H0G0utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerAgent.jpg'}
+			{name: 'Curt', url: 'HTTPS://6VM.RC4.ME/G0ANyCBBlUF1qWNZ2k.something', signin: '0', img: 'img/CurtCustomerPersonal.jpg'},
+			{name: "Curt's Hardware", url: 'HTTPS://6VM.RC4.ME/H0G0utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerHelgasHardware.jpg'}
 		], [
 			{name: 'Susan', url: 'G6VM0RZzhWMCq0zcBowqw', signin: '0', img: 'img/SusanShopper.jpg'},
-			{name: 'Maria', url: 'H6VM010WeHlioM5JZv1O9G', signin: '1', img: 'img/MariaManager.jpg'}
+			{name: 'Maria', url: 'H6VM010WeHlioM5JZv1O9G', signin: '1', img: 'img/MariaManager.jpg'},
 //			{name: 'Cathy', url: 'H6VM021ME04nW44DHzxVDg', signin: '1', img: 'img/CathyCashier.jpg'},
-//			{name: 'Curt', url: 'G6VM0ANyCBBlUF1qWNZ2k.something', signin: '0', img: 'img/CurtCustomerMember.jpg'},
-//			{name: "Curt's Hardware", url: 'H6VM0G0utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerAgent.jpg'}
+			{name: 'Curt', url: 'G6VM0ANyCBBlUF1qWNZ2k.something', signin: '0', img: 'img/CurtCustomerPersonal.jpg'},
+			{name: "Curt's Hardware", url: 'H6VM0G0utbYceW3KLLCcaw', signin: '1', img: 'img/CurtCustomerHelgasHardware.jpg'}
 		]
 	];
+	/*
+	 
+	 */
 	var formats = document.getElementsByName('formattype');
 	$scope.iswebview = ionic.Platform.platform();
 	$scope.format = {
 		type: 2
+	};
+	$scope.companyName=UserService.getCompanyName();
+//	console.log($scope.companyName);
+	$scope.selfServ=$rootScope.selfServ;
+	$scope.offline=NetworkService.isOffline();
+//	console.log($scope.offline,NetworkService.isOffline());
+	$scope.pin = {
+		value: null
 	};
 	for (var i = 0; i < formats.length; i++) {
 		formats[i].onclick = function () {
@@ -59,7 +70,8 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 	$scope.customPerson.url = '';// 'G6VM0RZzhWMCq0zcBowqw';//H6VM010WeHlioM5JZv1O9G
 	$scope.onSelectCustomer = function (person, goToNextPage) {
 		var selected = person;
-		UserService.identifyCustomer(selected)
+//		console.log(selected);
+		UserService.identifyCustomer(selected,$scope.pin.value)
 			.then(function () {
 				$scope.customPerson = UserService.currentCustomer();
 				if (goToNextPage) {
@@ -74,18 +86,21 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 							.then(function (confirmed) {
 								if (confirmed) {
 									$ionicLoading.show();
+									$rootScope.isCustomerLoggedIn = true;
 									$state.go("app.customer");
 								}
 							});
 						$ionicLoading.hide();
 					} else {
 						$ionicLoading.hide();
+						$rootScope.isCustomerLoggedIn = true;
 						$state.go("app.customer");
 					}
 				}
 			})
 			.catch(function (errorMsg) {
-				console.log(errorMsg);
+//				console.log(errorMsg);
+				$rootScope.isCustomerLoggedIn = false;
 				if (errorMsg === 'login_your_self') {
 					NotificationService.showAlert({title: "Error", template: "You cannot use yourself as a customer while you are an agent"});
 				} else if (errorMsg === 'login_your_self') {
@@ -101,9 +116,12 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 		if (!selected) {
 			selected = person;
 		}
+		$rootScope.isCustomerLoggedIn = false;
+		person.signin = 1;
 		UserService.loginWithRCard(selected)
 			.then(function () {
 				$scope.customPerson = UserService.currentUser();
+//				console.log($scope.customPerson);
 				if (goToNextPage) {
 					$ionicHistory.nextViewOptions({
 						disableBack: true
@@ -115,17 +133,49 @@ app.controller('SelectDemoCust', function ($scope, $state, $stateParams, $ionicL
 				if (errorMsg === 'login_your_self') {
 					NotificationService.showAlert({title: "Error", template: "You are already signed in as: " + person.name});
 				} else if (errorMsg === 'TypeError: this.db is null') {
+					NotificationService.showAlert({title: "Error", template: "You need to have WebSQL enabled"});
 				} else {
-					console.log(errorMsg);
-					NotificationService.showAlert({title: "Error", template: errorMsg});
+//					console.log(errorMsg);
 				}
 				$ionicLoading.hide();
-				$state.go("app.home");
+//				console.log($scope.customPerson.accountInfo.isPersonal, $scope.customPerson, goToNextPage);
+				if ($scope.customPerson.accountInfo) {
+					$state.go("app.home");
+				} else {
+					$state.go('app.login');
+				}
 			})
 			.finally(function () {
 				$ionicLoading.hide();
 			});
 	};
+	$scope.testD = {"transactions":[{
+				"id":"C",
+				"fullName":"Corner Store",
+				"city":"Ashfield",
+				"state":"MA",
+				"balance":0,
+				"flags":"ok,co",
+				"cardCode":"WeHlioM5JZv1O9G",
+				"selling":"groceries"
+			},{
+				"id":"S",
+				"fullName":"Susan Shopper",
+				"city":"Montague",
+				"state":"MA",
+				"balance":100,
+				"flags":"ok",
+				"cardCode":"ZzhWMCq0zcBowqw",
+				"selling":""
+			}]};
+//	console.log($scope.testD);
+	$scope.doTest = function (whattotest, testData) {
+		$scope.testResults = TransactionService.testThings(whattotest, testData);
+		var results=$scope.testResults.$$state;
+//		console.log(whattotest, testData, results);
+		return results;
+	};
+	$scope.testResults = '';
 	$scope.wifi = {checked: !NetworkService.isOnline()};
 	$scope.toggleWiFi = function () {
 		if (!$scope.wifi.checked) {

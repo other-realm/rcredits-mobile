@@ -1,6 +1,11 @@
 /* global app */
 (function (app) {
 	app.service('SQLiteService', function ($q, $timeout, NotificationService) {
+		var decodeHtml = function (html) {
+			var txt = document.createElement("textarea");
+			txt.innerHTML = html;
+			return txt.value;
+		};
 		var self;
 		var SQLiteService = function () {
 			self = this;
@@ -42,14 +47,16 @@
 		SQLiteService.prototype.executeQuery_ = function (query, params) {
 			var txPromise = $q.defer();
 			this.db.transaction(function (tx) {
+				console.log(tx);
 				tx.executeSql(query, params, function (tx, res) {
+					console.log(query, params, res);
 					txPromise.resolve(res);
 				}, function (tx, e) {
-					console.error(tx, e);
+					console.log(tx, e);
 					txPromise.reject(e.message);
 				});
 			}, function (error) {
-				console.error('transaction error: ' + error.message);
+				console.log('transaction error: ', error);
 			}, function () {
 			});
 			return txPromise.promise;

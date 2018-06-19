@@ -93,6 +93,15 @@ angular.module('routes', [])
 					}
 				}
 			})
+			.state('app.transaction_payment-method', {
+				url: '/transaction/payment-method',
+				views: {
+					'menuContent': {
+						templateUrl: 'templates/payment-method.html',
+						controller: 'PaymentMethodCtrl as pm'
+					}
+				}
+			})
 			.state('app.transaction', {
 				url: '/transaction/{transactionType}',
 				views: {
@@ -137,7 +146,25 @@ angular.module('routes', [])
 						controller: 'QRCtrl'
 					}
 				}
-			});;
+			})
+			.state('app.company-qr', {
+				url: '/company-qr',
+				views: {
+					'menuContent': {
+						templateUrl: 'templates/company-qr.html',
+						controller: 'QRCtrl'
+					}
+				}
+			})
+			.state('app.barcode', {
+				url: '/barcodescan',
+				views: {
+					'menuContent': {
+						templateUrl: 'templates/barcode-scan.html',
+						controller: 'BarcodeScan'
+					}
+				}
+			});
 		// if none of the above states are matched, use this as the fallback
 		$urlRouterProvider.otherwise('/app/login');
 	});

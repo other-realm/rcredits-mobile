@@ -47,7 +47,7 @@
 	 * Parses the encoded url and uses the decoded information to populate the AccountInfo object
 	 * @returns {AccountInfo}
 	 */
-	QRCodeParser.prototype.parse = function () {
+	QRCodeParser.prototype.parse = function (signin) {
 		this.accountInfo = new AccountInfo();
 		this.accountInfo.url = this.plainUrl;
 		this.parts = this.accountInfo.url.split(/[/\\.-]/);
@@ -96,7 +96,7 @@
 			this.accountInfo.isCompany = (agentLen > 0);
 			this.accountInfo.isPersonal = !this.accountInfo.isCompany;
 			region = r36ToR26(region, regionLen);
-			if (this.accountInfo.isCompany) {
+			if (this.accountInfo.isCompany||signin===1) {
 				this.accountInfo.signin = 1;
 				this.accountInfo.accountId = region + account + '-' + r36ToR26(tail.substring(1 + acctLen, 1 + acctLen + agentLen), agentLen, true);
 			} else {
@@ -111,6 +111,7 @@
 			this.parseSecurityCode_();
 		}
 		this.parseServerType_();
+		console.log(this.accountInfo);
 		return this.accountInfo;
 	};
 	QRCodeParser.prototype.getAccountInfo = function () {

@@ -1,4 +1,4 @@
-/* global app */
+/* global app, Class */
 (function (window, app) {
 	var _ = window._;
 	app.service('Exchange', function () {

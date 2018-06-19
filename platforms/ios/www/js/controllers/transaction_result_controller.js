@@ -1,3 +1,8 @@
+var decodeHtml = function (html) {
+	var txt = document.createElement("textarea");
+	txt.innerHTML = html;
+	return txt.value;
+};
 app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService,
 	$stateParams, $ionicLoading, $filter, NotificationService, UserService, $rootScope,
 	TransactionService, BackButtonService, $timeout, $interval, SelfServiceMode) {
@@ -29,6 +34,7 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 	$scope.setMessages = function (transactionResult) {
 		if (NetworkService.isOnline()) {
 			$scope.note = transactionResult.data.message;
+			console.log($scope.note);
 			if (transactionResult.data.txid) {
 				if ($scope.note.indexOf("ransaction has been canceled") > -1) {
 					$scope.heading = 'Canceled';
@@ -57,11 +63,17 @@ app.controller('TransactionResultCtrl', function ($scope, $state, NetworkService
 			}
 		}
 	};
+//	console.log(TransactionService.lastTransaction);
+//	var message=TransactionService.lastTransaction.data;
+//	if(typeof(message)===undefined){
+//		TransactionService.lastTransaction.data.message=decodeHtml(TransactionService.lastTransaction.data.message);
+//	}
+//	TransactionService.lastTransaction.data.message=decodeHtml(TransactionService.lastTransaction.data.message);
 	$scope.customer = UserService.currentCustomer();
 	$scope.user = UserService.currentUser();
 	if ($scope.transactionStatus === 'failure') {
 		console.log(TransactionService);
-		$scope.setMessages(TransactionService);
+		$scope.setMessages(decodeHtml(TransactionService));
 	} else {
 		$scope.setMessages(TransactionService.lastTransaction);
 		$scope.transactionInfo = {

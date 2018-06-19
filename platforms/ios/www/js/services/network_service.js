@@ -11,8 +11,8 @@
 		var NetworkService = function () {
 			self = this;
 			this.connectionOnline = true;
-			this.connectionStateChange=false;
-			this.fakeIt=false;
+			this.connectionStateChange = false;
+			this.fakeIt = false;
 			this.init_();
 		};
 		NetworkService.prototype.init_ = function () {
@@ -22,45 +22,47 @@
 				this.connectionOnline = navigator.connection.type !== 'none';
 			}
 			$timeout(function () {
-				if (self.isOnline()&&!self.fakeIt) {
+				if (self.isOnline() && !self.fakeIt) {
 					self.onOnline();
-				} else if(!self.fakeIt){
+				} else if (self.isOffline()) {
+					self.onOffline();
+				} else  {
 					self.onOffline();
 				}
 			}, 1000);
 		};
 		NetworkService.prototype.onOffline = function () {
 			$rootScope.$apply();
-			$rootScope.$emit('onOffline');
-			this.connectionStateChange=false;
+			$rootScope.$emit('onOffline');			
+			this.connectionStateChange = false;
 			this.connectionOnline = false;
 		};
 		NetworkService.prototype.onOnline = function () {
-			this.connectionStateChange=true;
+			this.connectionStateChange = true;
 			$rootScope.$apply();
 			$rootScope.$emit('onOnline');
 			this.connectionOnline = true;
 		};
 		NetworkService.prototype.isOffline = function () {
-			this.connectionStateChange=false;
+			this.connectionStateChange = false;
 			return !this.connectionOnline;
 		};
 		NetworkService.prototype.isOnline = function () {
-			this.connectionStateChange=true;
+			this.connectionStateChange = true;
 			return this.connectionOnline;
 		};
 		/**
-		 * Fake their not being internet access for demo customers
+		 * Fake there not being internet access for demo customers
 		 * @param {type} areYou
 		 * @returns {Boolean}
 		 */
 		NetworkService.prototype.fakingIt = function (areYou) {
-			this.connectionStateChange=false;
-			 this.fakeIt=areYou;
-			 return this.connectionOnline=!areYou;
+			this.connectionStateChange = false;
+			this.fakeIt = areYou;
+			return this.connectionOnline = !areYou;
 		};
 		NetworkService.prototype.areYouFakingIt = function () {
-			this.connectionStateChange=false;
+			this.connectionStateChange = false;
 			return this.fakeIt;
 		};
 		return new NetworkService();

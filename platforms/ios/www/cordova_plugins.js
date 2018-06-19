@@ -237,14 +237,6 @@ module.exports = [
         "runs": true
     },
     {
-        "id": "cordova-sqlite-storage.SQLitePlugin",
-        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
-        "pluginId": "cordova-sqlite-storage",
-        "clobbers": [
-            "SQLitePlugin"
-        ]
-    },
-    {
         "id": "cordova-plugin-network-information.network",
         "file": "plugins/cordova-plugin-network-information/www/network.js",
         "pluginId": "cordova-plugin-network-information",
@@ -260,6 +252,14 @@ module.exports = [
         "clobbers": [
             "Connection"
         ]
+    },
+    {
+        "id": "cordova-sqlite-storage.SQLitePlugin",
+        "file": "plugins/cordova-sqlite-storage/www/SQLitePlugin.js",
+        "pluginId": "cordova-sqlite-storage",
+        "clobbers": [
+            "SQLitePlugin"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -270,15 +270,13 @@ module.exports.metadata =
     "cordova-plugin-device": "1.1.6",
     "cordova-plugin-splashscreen": "4.0.3",
     "cordova-plugin-statusbar": "2.1.3",
-    "ionic-plugin-keyboard": "2.1.0",
-    "cordova-plugin-compat": "1.0.0",
+    "ionic-plugin-keyboard": "2.2.0",
     "cordova-plugin-file": "4.3.3",
     "cordova-plugin-whitelist": "1.2.2",
     "phonegap-plugin-barcodescanner": "6.0.8",
     "cordova-plugin-indexeddb-async": "0.0.1",
-    "cordova-sqlite-storage": "2.0.4",
     "cordova-plugin-network-information": "1.3.3",
-    "cordova-android-support-gradle-release": "1.4.3"
+    "cordova-sqlite-storage": "2.3.2"
 };
 // BOTTOM OF METADATA
 });

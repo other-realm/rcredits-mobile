@@ -3,7 +3,7 @@
  * This function handles all actual transactions from the server related to getting user information, both for cashiers and customers.
  */
 app.service('UserService', function ($q, $http, $httpParamSerializer, RequestParameterBuilder, User, Seller, Customer, $rootScope, $timeout,
-	PreferenceService, CashierModeService, $state, NetworkService, MemberSqlService, NotificationService, SelfServiceMode) {
+	PreferenceService, CashierModeService, $state, NetworkService, MemberSqlService, NotificationService, SelfServiceMode, localStorageService) {
 	'use strict';
 	var LOGIN_FAILED = '0';
 	var LOGIN_BY_AGENT = '1';
@@ -20,6 +20,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 * @returns {user_serviceL#5.seller} the user object,or null if there is no current user.
 	 */
 	UserService.prototype.currentUser = function () {
+		$rootScope.user = this.seller;
 		return this.seller;
 	};
 	/**
@@ -29,30 +30,35 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	UserService.prototype.currentCustomer = function () {
 		return this.customer;
 	};
+	UserService.prototype.getCompanyName = function(){
+		return localStorageService.get('companyName');
+	};
 	/**
 	 * Loads the current manger/cashier/seller from storage if a returning user and information from the company_home_controller sellerLogin event
 	 * @param {type} - sellerId The seller's Id
 	 * @returns {seller object|null}
 	 */
 	UserService.prototype.loadSeller = function (sellerId) {
-		try {
-			var seller = new Seller();
-			seller.fillFromStorage();
-			if (sellerId && sellerId !== seller.getId()) {
-				throw "Seller not found";
+		if (sellerId) {
+			try {
+				var seller = new Seller();
+				seller.fillFromStorage();
+				if (sellerId && sellerId !== seller.getId()) {
+					throw "Seller not found";
+				}
+				if (!seller.hasDevice()) {
+					throw "Seller does not have deviceID";
+				}
+				this.seller = seller;
+				CashierModeService.init();
+				$timeout(function () {
+					$rootScope.$emit('sellerLogin');
+				});
+				return seller;
+			} catch (e) {
+				console.error(e.message);
+				return null;
 			}
-			if (!seller.hasDevice()) {
-				throw "Seller does not have deviceID";
-			}
-			this.seller = seller;
-			CashierModeService.init();
-			$timeout(function () {
-				$rootScope.$emit('sellerLogin');
-			});
-			return seller;
-		} catch (e) {
-			console.error(e.message);
-			return null;
 		}
 	};
 	/**
@@ -63,6 +69,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 */
 	UserService.prototype.makeRequest_ = function (params, accountInfo) {
 		var urlConf = new UrlConfigurator();
+//		accountInfo.accountId=accountInfo.accountId.split('-')[0];
 		return $http({
 			method: 'POST',
 			url: urlConf.getServerUrl(accountInfo),
@@ -99,7 +106,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		return this.makeRequest_(params, accountInfo).then(function (res) {
 			console.log(res);
 			var responseData = res.data;
-			if (params.agent && params.agent.substr(-3) === accountInfo.accountId.substr(-3)) {
+			if (params.agent && params.agent.substr(-3) === accountInfo.accountId.substr(-3) && accountInfo.isCompany) {
 				throw 'You cannot use yourself as a customer while you are an agent';
 			}
 			if (responseData.ok === LOGIN_FAILED) {
@@ -110,6 +117,9 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}).catch(function (err) {
 			if (_.isString(err) && err !== '') {
 				console.error(err);
+				if ('That Common Good Card is for a different company.') {
+
+				}
 				throw err;
 			} else if (err.statusText === '') {
 				err.statusText = 'not_valid_card';
@@ -144,7 +154,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		return loadSellerPromise.promise;
 	};
 	/**
-	 * Logs cashier user in given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name).  Returns a promise that resolves when login is complete.  If this is the first login, the promise will resolve with {firstLogin: true}.  The app should then give notice to the user that the device is associated with the user.
+	 * Logs the cashier user in, given the scanned info from a Common Good Card (previously referred to as a rCard, hence the name).  Returns a promise that resolves when login is complete.  If this is the first login, the promise will resolve with {firstLogin: true}.  The app should then give notice to the user that the device is associated with the user.
 	 * @param {type} str - the information from the card
 	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then|user_serviceL#5.UserService.prototype@call;loginWithRCardOffline@call;then}
 	 */
@@ -155,13 +165,20 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		var accountInfo = qrcodeParser.parse();
 		this.validateDemoMode(accountInfo);
 		//these are the parameters that become the 'Customer' object
+		var companyAffiliation = localStorageService.get('company');
+		self.companyName=localStorageService.get('companyName');
 		var params = new RequestParameterBuilder()
 			.setOperationId('identify')
 			.setSecurityCode(accountInfo.securityCode)
 			.setMember(accountInfo.accountId)
-			.setSignin(accountInfo.signin)
+			.setSignin(1)
 			.getParams();
 		params.counter = accountInfo.counter;
+		if (companyAffiliation && companyAffiliation !== accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
+			console.log(self.companyName);
+			NotificationService.showAlert({title: 'error', templateUrl: 'templates/managerName.html'});
+			throw "not_affiliated";
+		}
 		if (NetworkService.isOffline()) {
 			return this.loginWithRCardOffline(accountInfo).then(function () {
 				PreferenceService.parsePreferencesNumber(self.currentUser().getCan());
@@ -169,18 +186,42 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		}
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
-				if (responseData.can) {
+				console.log(responseData['company'],self);
+				if (responseData.can === 0 || responseData.can) {
+					console.log(balence, params, accountInfo);
+					if (accountInfo.isCompany) {
+						localStorageService.set('company', accountInfo.accountId.split('-')[0]);
+						localStorageService.set('companyName', responseData['company']);
+					}
 					self.seller = self.createSeller(responseData);
 					self.seller.accountInfo = accountInfo;
 					self.seller.save();
+					params.signin = 0;
+					params.device = self.seller.device;
+					params.agent = accountInfo.accountId.split('-')[0];
+
+					var balence = self.getAccountBalance(params, accountInfo);
 					return self.seller;
 				} else if (responseData.ok === 1) {
 					throw self.LOGIN_SELLER_ERROR_MESSAGE;
 				}
 			})
-			.then(function () {
+			.then(function (seller) {
+				var balence = self.getAccountBalance(params, accountInfo);
+				return balence;
+			}).then(function (balence) {
+			self.currentUser().setBalance(balence.balance);
+			console.log(balence, self.currentUser().balence);
+		}).then(function () {
+			return self.getProfilePicture(accountInfo);
+		}).then(function () {
+			if (accountInfo.isCompany) {
 				PreferenceService.parsePreferencesNumber(self.currentUser().getCan());
-			});
+			}
+		});
+	};
+	UserService.prototype.getAccountBalance = function (params, accountInfo) {
+		return self.loginWithRCard_(params, accountInfo);
 	};
 	/**
 	 * Creates a seller object that has the relevant information that the seller may need and verifies whether there is a valid device that is getting used and sends this back to loginWithRCard
@@ -208,7 +249,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 *	2. flags - A hash with the following elements:
 	 *			firstPurchase - Whether this is the user's first purchase. If so, the app should notify the seller to request photo ID.
 	 * @param {type} str - the URL that came from the barcode
-	 * @param {type} pin - if offline, the pin of the user (1234 if it is a demo user)
+	 * @param {type} pin - if offline or using self checkout, the pin of the user (1234 if it is a demo user)
 	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then@call;then@call;then}
 	 */
 	UserService.prototype.identifyCustomer = function (str, pin) {
@@ -217,8 +258,28 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			qrcodeParser.setUrl(str);
 			var accountInfo = qrcodeParser.parse();
 			this.validateDemoMode(accountInfo);
-			if (accountInfo.isPersonal === false) {
-				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
+			if (accountInfo.accountId === this.seller.accountInfo.accountId) {
+//				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
+				}
+				throw 'must_not_be_yourself';
+			}
+			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+				}
+//				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+				throw 'cant_trade_as_biz_when_cust';
+			}
+			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
+				var platform = ionic.Platform.platform();
+				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+					NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
+				}
+//				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 				throw 'must_be_customer';
 			}
 			var params = new RequestParameterBuilder()
@@ -226,15 +287,21 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				.setAgent(this.seller.default)
 				.setMember(accountInfo.accountId)
 				.setSecurityCode(accountInfo.securityCode)
-				.setSignin(accountInfo.signin);
+				.setSignin(0);
 			if (pin) {
 				params.setPIN(pin);
+			} else if ($rootScope.selfServ) {
+//				NotificationService.showAlert({title: 'error', template: 'no_pin'});
+				throw 'no_pin';
 			}
 			params = params.getParams();
 			params.counter = accountInfo.counter;
 			if (NetworkService.isOffline()) {
+				consile.log(accountInfo.accountId);
 				return MemberSqlService.existMember(accountInfo.accountId)
 					.then(function (member) {
+						console.log(member);
+						member=JSON.parse(member);
 						self.customer = Customer.parseFromDb(member);
 						return self.customer;
 					})
@@ -252,6 +319,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			//is Online
 			return this.loginWithRCard_(params, accountInfo)
 				.then(function (responseData) {
+					console.log(responseData);
 					self.customer = self.createCustomer(responseData);
 					if (responseData.logon === FIRST_PURCHASE) {
 						self.customer.firstPurchase = true;
@@ -267,6 +335,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 					return self.customer;
 				});
 		} else {
+			console.log(str);
 			NotificationService.showAlert({title: 'error', template: 'went_wrong'});
 		}
 	};
@@ -344,20 +413,47 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			data: $httpParamSerializer(params),
 			responseType: "arraybuffer"
 		}).then(function (res) {
+			console.log(res);
 			var arrayBufferView = new Uint8Array(res.data);
 			var blob = new Blob([arrayBufferView], {type: "image/jpeg"});
 			var urlCreator = window.URL || window.webkitURL;
 			var imgUrl = urlCreator.createObjectURL(blob);
 			var imageConvert = $q.defer();
 			convertImgToDataURLviaCanvas(imgUrl, function (base64Img) {
-				self.customer.photo = base64Img;
-				imageConvert.resolve(self.customer.photo);
+				if (self.customer) {
+					self.customer.photo = base64Img;
+					imageConvert.resolve(self.customer.photo);
+				} else {
+					self.currentUser().photo = base64Img;
+					imageConvert.resolve(self.currentUser().photo);
+				}
 			});
 			return imageConvert.promise;
 		})
 			.catch(function (err) {
 				console.log(err);
 				throw err;
+			});
+	};
+	/**
+	 * Update the current users' balance
+	 * @param {type} accountInfo
+	 * @returns {user_serviceL#5.UserService.prototype@call;loginWithRCard_@call;then}
+	 */
+	UserService.prototype.balance = function (accountInfo) {
+		var params = new RequestParameterBuilder()
+			.setOperationId('identify')
+			.setAgent(this.seller.default)
+			.setMember(accountInfo.accountId)
+			.setSecurityCode(accountInfo.securityCode)
+			.setSignin(0);
+		params = params.getParams();
+		params.counter = accountInfo.counter;
+		return this.loginWithRCard_(params, accountInfo)
+			.then(function (responseData) {
+				self.seller.setBalance(responseData.balance);
+				console.log(self.seller.getBalance(), responseData.balance);
+				return responseData.balance;
 			});
 	};
 	/**
@@ -369,7 +465,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		$state.go('app.home');
 	};
 	/**
-	 * Logs the user out on the remote server.
+	 * Logs the user out and un-affiliates the company.
 	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
 	 */
 	UserService.prototype.logout = function () {
@@ -379,29 +475,40 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			self.customer = null;
 			self.seller.removeFromStorage();
 			self.seller = null;
+			$rootScope.user = '';
+			localStorageService.remove('company');
 			CashierModeService.disable();
 			resolve();
 		});
 	};
+	/**
+	 * Logs the user out but keeps the company logged in.
+	 * @returns {a logout promise}Returns a promise that resolves when logout is complete, or rejects with error of fail.
+	 */
 	UserService.prototype.softLogout = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();
 			CashierModeService.disable();
-			$rootScope.$emit('sellerLogout');
 			self.customer = null;
-			self.seller.removeFromStorage();
 			self.seller = null;
-			$state.go('app.login', {disableLoadSeller: true, openScanner: false});
+			$rootScope.user = 1;
+			$rootScope.whereWasI = '#/app/login';
+			$state.go('app.login', {disableLoadSeller: true, openScanner: true});
 			$rootScope.$emit('sellerLogout');
 			resolve();
 		});
 	};
+	/**
+	 * Called when there is not enough storage
+	 * @returns {unresolved}
+	 */
 	UserService.prototype.storageOverQuota = function () {
 		return $q(function (resolve, reject) {
 			SelfServiceMode.disable();
 			$rootScope.$emit('sellerLogout');
 			self.customer = null;
 			self.seller = null;
+			$rootScope.user = '';
 			CashierModeService.disable();
 			resolve();
 		});
