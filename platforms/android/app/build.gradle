@@ -93,6 +93,7 @@ ext {
 // PLUGIN GRADLE EXTENSIONS START
 apply from: "../cordova-plugin-crosswalk-webview/CommonGoodmobile621273-xwalk.gradle"
 apply from: "../phonegap-plugin-barcodescanner/CommonGoodmobile621273-barcodescanner.gradle"
+apply from: "../cordova-android-support-gradle-release/CommonGoodmobile621273-cordova-android-support-gradle-release.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()

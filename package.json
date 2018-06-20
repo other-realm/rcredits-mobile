@@ -28,6 +28,8 @@
     "angular": "1.6.4",
     "bower": "1.8.0",
     "chai": "^3.5.0",
+    "cordova-android": "latest",
+    "cordova-android-support-gradle-release": "^1.4.4",
     "cordova-ios": "^4.4.0",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-console": "~1.0.3",
@@ -49,8 +51,7 @@
     "ionic-plugin-keyboard": "~2.2.0",
     "phonegap-plugin-barcodescanner": "~8.0.0",
     "shelljs": "0.7.7",
-    "should": "^11.2.1",
-    "cordova-android": "latest"
+    "should": "^11.2.1"
   },
   "cordovaPlugins": [
     "cordova-plugin-device",
@@ -90,7 +91,10 @@
       "cordova-plugin-file": {},
       "cordova-plugin-indexeddb-async": {},
       "cordova-plugin-network-information": {},
-      "cordova-sqlite-storage": {}
+      "cordova-sqlite-storage": {},
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "27.+"
+      }
     },
     "platforms": [
       "ios",

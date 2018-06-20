@@ -164,6 +164,10 @@
     },
     "phonegap-plugin-barcodescanner": {
       "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
+    },
+    "cordova-android-support-gradle-release": {
+      "ANDROID_SUPPORT_VERSION": "27.+",
+      "PACKAGE_NAME": "com.ionicframework.CommonGoodmobile621273"
     }
   },
   "dependent_plugins": {},
@@ -426,6 +430,7 @@
     "cordova-plugin-whitelist": "1.2.2",
     "cordova-sqlite-storage": "2.3.2",
     "ionic-plugin-keyboard": "2.1.0",
-    "phonegap-plugin-barcodescanner": "6.0.8"
+    "phonegap-plugin-barcodescanner": "6.0.8",
+    "cordova-android-support-gradle-release": "1.4.4"
   }
 }
