@@ -457,8 +457,9 @@ console.log(seller);
 		return this.loginWithRCard_(params, accountInfo)
 			.then(function (responseData) {
 				self.seller.setBalance(responseData.balance);
-				console.log(self.seller.getBalance(), responseData.balance);
-				return responseData.balance;
+				self.seller.setRewards(responseData.rewards);
+				console.log(self.seller.getBalance(),self.seller.getRewards(), responseData.rewards);
+				return {balance:responseData.balance,rewards:self.seller.getRewards()};
 			});
 	};
 	/**
