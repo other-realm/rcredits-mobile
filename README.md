@@ -1,6 +1,6 @@
 # Common Good App
 
-If you have an Android phone and you just want to test it out there, download one of these two files, depending on your CPU, and then copy them into your phone via USB. If you're not sure which CPU you have, just download one of them (start with #app-armv7-debug.apk#), and only one will work. Or go to Settings > About Phone > CPU to find out. Open the file on your phone and it should install itself.
+If you have an Android phone and you just want to test it out there, download one of these two files, depending on your CPU, and then copy them into your phone via USB. If you're not sure which CPU you have, just download one of them (start with `app-armv7-debug.apk`), and only one will work. Or go to Settings > About Phone > CPU to find out. Open the file on your phone and it should install itself.
 
 - https://github.com/other-realm/rcredits-mobile/raw/Stable/platforms/android/app/build/outputs/apk/arm64/debug/app-arm64-debug.apk
 - https://github.com/other-realm/rcredits-mobile/raw/Stable/platforms/android/app/build/outputs/apk/armeabi/debug/app-armeabi-debug.apk
