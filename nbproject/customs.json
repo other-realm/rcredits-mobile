@@ -1,6 +1,10 @@
 {
 	"elements": {
-		"ion-side-menus": {},
+		"ion-side-menus": {
+			"attributes": {
+				"enable-menu-with-back-views": {}
+			}
+		},
 		"ion-side-menu": {
 			"attributes": {
 				"side": {}
@@ -9,7 +13,8 @@
 		"subheader": {},
 		"ion-nav-view": {
 			"attributes": {
-				"name": {}
+				"name": {},
+				"id": {}
 			}
 		},
 		"ion-list": {},
@@ -28,10 +33,13 @@
 		},
 		"ion-item": {
 			"attributes": {
+				"ng-show": {},
 				"ng-model": {},
+				"menu-close": {},
 				"ng-click": {},
 				"ng-class": {},
 				"ng-repeat": {},
+				"id": {},
 				"class": {}
 			}
 		},

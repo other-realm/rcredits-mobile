@@ -15,7 +15,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	/**
 	 * Alerts the user that this is the first time this customer has used the service
 	 */
-	if ($scope.currentUser && $scope.currentUser.isFirstLogin()) {
+	if ($scope.currentUser && $scope.currentUser.isFirstLogin() && $scope.currentUser.isCompany) {
 		NotificationService.showAlert({
 			scope: $scope,
 			title: 'deviceAssociated'
@@ -54,6 +54,7 @@ app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserS
 	 */
 	$scope.showBalance = function () {
 		UserService.balance($scope.currentUser.accountInfo);
+		console.log($scope.currentUser);
 		if ($scope.currentUser.balanceSecret) {
 			NotificationService.showAlert('balanceIsSecret');
 		} else {

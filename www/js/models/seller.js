@@ -49,6 +49,7 @@
 			removeDevice: function () {
 				this.device = '';
 				localStorageService.remove(DEVICE_ID_KEY);
+				localStorageService.remove('companyName');
 			},
 			isFirstLogin: function () {
 				return this.firstLogin;

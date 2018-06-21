@@ -28,7 +28,7 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 	 * @returns {A logout object}
 	 */
 	$scope.softLogout = function () {
-		$rootScope.cashierMode='loggingOut';
+		$rootScope.cashierMode = 'loggingOut';
 		return UserService.softLogout();
 	};
 	/**
@@ -49,7 +49,7 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 			disableAnimate: true
 		});
 		$ionicHistory.clearCache().then(function () {
-							$state.go("app.home");
+			$state.go("app.home");
 		});
 	};
 	$scope.redirectPreferences = function () {
@@ -61,14 +61,23 @@ app.controller('MenuCtrl', function ($scope, $state, $ionicLoading, BarcodeServi
 	$scope.isCashierModeAvailable = function () {
 		return PreferenceService.getCashierModePref().isEnabled();
 	};
+	$scope.isIndividual = function () {
+		var currentUser = UserService.currentUser();
+		return currentUser.accountInfo.isPersonal;
+	};
 	$scope.changeCompany = function () {
 		var seller = UserService.currentUser();
 		console.log(seller);
-		jQuery.when({
+		NotificationService.showConfirm({
+			title: 'disassociate_company',
+			subTitle: "haveToSignInAgain",
+			okText: "confirm",
+			cancelText: "cancel"
+		}, {
 			company: seller.company
 		}).then(function (res) {
 			if (res) {
-				if ((seller.accountInfo.isCompany!==undefined && seller.accountInfo.isCompany!==null)||seller.accountInfo.isCompany) {
+				if ((seller.accountInfo.isCompany !== undefined && seller.accountInfo.isCompany !== null) || seller.accountInfo.isCompany) {
 					seller.removeDevice();
 				}
 				$scope.logout();

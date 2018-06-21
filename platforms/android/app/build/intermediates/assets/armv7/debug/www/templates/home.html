@@ -19,7 +19,7 @@
 				{{currentUser.accountInfo.unencryptedCode}}
 			</span>
 			<div ng-if="!isSelfServiceEnabled()">
-				<p id='signInAs' class="user" ng-if="!isCashierMode()">
+				<p id='signInAs' class="user" ng-if="!isCashierMode() && !currentUser.accountInfo.isPersonal">
 					{{ 'signInAs' | translate }}<br><br>
 					<strong>{{currentUser.name}}</strong>
 				</p>

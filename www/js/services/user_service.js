@@ -271,14 +271,14 @@ console.log(seller);
 //				}
 				throw 'must_not_be_yourself';
 			}
-			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
-				var platform = ionic.Platform.platform();
-//				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
-					NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
-//				}
-//				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
-				throw 'cant_trade_as_biz_when_cust';
-			}
+//			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
+//				var platform = ionic.Platform.platform();
+////				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+//					NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+////				}
+////				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
+//				throw 'cant_trade_as_biz_when_cust';
+//			}
 			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
 				var platform = ionic.Platform.platform();
 //				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {

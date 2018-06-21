@@ -22,11 +22,11 @@ Handle's the side bar menu
 					{{ 'home' | translate }}
 				</ion-item>
 				<ion-item id='enter_cashier_mode' menu-close ng-click="enterCashierMode()"
-						  ng-show="isCashierModeAvailable() && !isCashierModeEnabled() && !isSelfServiceActive()" class='menuItems'>
+						  ng-show="isCashierModeAvailable() && !isCashierModeEnabled() && !isSelfServiceActive() && !isIndividual()" class='menuItems'>
 					{{ 'enter_cashier_mode' | translate }}
 				</ion-item>
 				<ion-item id='selfServiceMode' menu-close ng-click="changeToSelfServiceMode()"
-						  ng-show="isSelfServiceEnabled() && !isSelfServiceActive() && !isCashierModeEnabled()" class='menuItems'>
+						  ng-show="isSelfServiceEnabled() && !isSelfServiceActive() && !isCashierModeEnabled() && !isIndividual()" class='menuItems'>
 					{{ 'selfServiceMode' | translate }}
 				</ion-item>
 				<!-- Cashier Mode-->

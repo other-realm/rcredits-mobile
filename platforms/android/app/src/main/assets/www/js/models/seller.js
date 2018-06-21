@@ -15,6 +15,13 @@
 			isValidDeviceId: function (device) {
 				return !_.isEmpty(device);
 			},
+			setRewards:function (r){
+				console.log(r);
+				this.rewards=r;
+			},
+			getRewards:function (){
+				return this.rewards;
+			},
 			setBalance:function (b){
 				console.log(b);
 				this.balance=b;
@@ -42,6 +49,7 @@
 			removeDevice: function () {
 				this.device = '';
 				localStorageService.remove(DEVICE_ID_KEY);
+				localStorageService.remove('companyName');
 			},
 			isFirstLogin: function () {
 				return this.firstLogin;

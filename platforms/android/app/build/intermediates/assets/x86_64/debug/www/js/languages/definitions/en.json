@@ -36,7 +36,7 @@
 	"scan": "Scan",
 	"scanCancelled": "Scan was Cancelled",
 	"scanQRCode": "Scan must be a QR CODE",
-	"scanRCard": "Scan CGPay Card",
+	"scanRCard": "Scan Customer Card",
 	"scanToSignIn": "Scan to sign in",
 	"selectCategory": "For: ",
 	"selfServiceMode": "Self Service Mode",
