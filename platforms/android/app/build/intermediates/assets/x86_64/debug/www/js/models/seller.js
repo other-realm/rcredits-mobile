@@ -2,7 +2,7 @@
 (function (window, app) {
 	app.service('Seller', function (localStorageService, User, PreferenceService) {
 		var DEVICE_ID_KEY = 'deviceID';
-		var SELLER_KEY = 'seller';
+		var SELLER_KEY = 'Seller';
 		var Seller = Class.create(User, {
 			balance: 0,
 			descriptions: [],
@@ -60,6 +60,7 @@
 			},
 			fillFromStorage: function () {
 				var sellerData = localStorageService.get(SELLER_KEY);
+				console.log(sellerData,SELLER_KEY);
 				if (sellerData) {
 					_.extendOwn(this, JSON.parse(sellerData));
 					this.accountInfo = _.extendOwn(new AccountInfo(), this.accountInfo);

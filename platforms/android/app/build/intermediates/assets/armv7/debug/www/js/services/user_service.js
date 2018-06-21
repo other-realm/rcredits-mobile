@@ -31,6 +31,7 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 		return this.customer;
 	};
 	UserService.prototype.getCompanyName = function(){
+		console.log(localStorageService.get('companyName'));
 		return localStorageService.get('companyName');
 	};
 	/**
@@ -39,10 +40,14 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 	 * @returns {seller object|null}
 	 */
 	UserService.prototype.loadSeller = function (sellerId) {
-		if (sellerId) {
+//		if (sellerId) {
 			try {
 				var seller = new Seller();
-				seller.fillFromStorage();
+				if(null===sellerId){
+					sellerId=seller;
+				}seller.fillFromStorage();
+console.log(seller);
+				
 				if (sellerId && sellerId !== seller.getId()) {
 					throw "Seller not found";
 				}
@@ -56,10 +61,10 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 				});
 				return seller;
 			} catch (e) {
-				console.error(e.message);
+				console.error(sellerId,e);
 				return null;
 			}
-		}
+//		}
 	};
 	/**
 	 * This is the function that actually sends and recives the requests from the server for login info 
@@ -260,25 +265,25 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			this.validateDemoMode(accountInfo);
 			if (accountInfo.accountId === this.seller.accountInfo.accountId) {
 //				NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
-				var platform = ionic.Platform.platform();
-				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+//				var platform = ionic.Platform.platform();
+//				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 					NotificationService.showAlert({title: 'error', template: 'must_not_be_yourself'});
-				}
+//				}
 				throw 'must_not_be_yourself';
 			}
 			if (accountInfo.isCompany && this.seller.accountInfo.isPersonal) {
 				var platform = ionic.Platform.platform();
-				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+//				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 					NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
-				}
+//				}
 //				NotificationService.showAlert({title: 'error', template: 'cant_trade_as_biz_when_cust'});
 				throw 'cant_trade_as_biz_when_cust';
 			}
 			if (accountInfo.accountId.split('-')[0] === this.seller.accountInfo.accountId.split('-')[0] && accountInfo.isCompany) {
 				var platform = ionic.Platform.platform();
-				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
+//				if (platform === 'linux' | platform === 'win64' || platform === 'win32' || platform === 'macintel') {
 					NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
-				}
+//				}
 //				NotificationService.showAlert({title: 'error', template: 'must_be_customer'});
 				throw 'must_be_customer';
 			}
@@ -291,17 +296,17 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			if (pin) {
 				params.setPIN(pin);
 			} else if ($rootScope.selfServ) {
-//				NotificationService.showAlert({title: 'error', template: 'no_pin'});
+				NotificationService.showAlert({title: 'error', template: 'no_pin'});
 				throw 'no_pin';
 			}
 			params = params.getParams();
 			params.counter = accountInfo.counter;
 			if (NetworkService.isOffline()) {
-				consile.log(accountInfo.accountId);
+				console.log(accountInfo.accountId);
 				return MemberSqlService.existMember(accountInfo.accountId)
 					.then(function (member) {
+//						member=JSON.parse(member);
 						console.log(member);
-						member=JSON.parse(member);
 						self.customer = Customer.parseFromDb(member);
 						return self.customer;
 					})
@@ -319,8 +324,8 @@ app.service('UserService', function ($q, $http, $httpParamSerializer, RequestPar
 			//is Online
 			return this.loginWithRCard_(params, accountInfo)
 				.then(function (responseData) {
-					console.log(responseData);
 					self.customer = self.createCustomer(responseData);
+					console.log(accountInfo,self.customer,responseData);
 					if (responseData.logon === FIRST_PURCHASE) {
 						self.customer.firstPurchase = true;
 					}

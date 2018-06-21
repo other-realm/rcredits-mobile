@@ -80,7 +80,7 @@ app.controller('CustomerMenuCtrl', function ($scope, $state, $ionicLoading, User
 			}
 		};
 		var areYouAnIndividual=UserService.currentUser();
-		console.log(areYouAnIndividual.accountInfo.isPersonal);
+		console.log($scope.customer);
 		$scope.isIndividual=function () {
 			return areYouAnIndividual.accountInfo.isPersonal;
 		};

@@ -75,9 +75,9 @@
 			}
 		});
 		Customer.parseFromDb = function (customerJson) {
-			var customer = new Customer(customerJson.name);
+			var customer = new Customer(customerJson);
+			var proof = customerJson.qid;
 			console.log(customerJson);
-			var proof = JSON.parse(customerJson);
 			customer.setBalance(customerJson.balance);
 			customer.setRewards((customerJson.rewards));
 			customer.setLastTx(customerJson.lastTx);

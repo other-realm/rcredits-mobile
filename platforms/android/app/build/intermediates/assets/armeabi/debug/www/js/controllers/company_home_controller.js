@@ -4,14 +4,14 @@
  */
 app.controller('CompanyHomeCtrl', function ($scope, $state, $ionicLoading, UserService, $ionicHistory, NotificationService, $rootScope, CashierModeService, SelfServiceMode, $translate, $ionicPlatform, $location) {
 	var onSellerLoginEvent = $rootScope.$on('sellerLogin', function () {
-		$scope.currentUser = UserService.seller;
+		$scope.currentUser = UserService.currentUser();
 	});
 	$rootScope.isCustomerLoggedIn = false;
-	$scope.currentUser = UserService.seller;
-//	if (!$scope.currentUser) {
-//		console.log($scope.currentUser);
-//		$state.go("app.login");
-//	}
+	$scope.currentUser = UserService.currentUser();
+	console.log($scope.currentUser);
+	if (!$scope.currentUser) {
+		$state.go("app.login");
+	}
 	/**
 	 * Alerts the user that this is the first time this customer has used the service
 	 */
