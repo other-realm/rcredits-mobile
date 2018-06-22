@@ -277,7 +277,8 @@ module.exports.metadata =
     "cordova-plugin-indexeddb-async": "0.0.1",
     "cordova-plugin-network-information": "1.3.3",
     "cordova-sqlite-storage": "2.3.2",
-    "cordova-android-support-gradle-release": "1.4.4"
+    "cordova-android-support-gradle-release": "1.4.4",
+    "cordova-plugin-compat": "1.2.0"
 };
 // BOTTOM OF METADATA
 });

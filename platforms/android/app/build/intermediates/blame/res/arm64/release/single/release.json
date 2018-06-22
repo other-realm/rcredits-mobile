@@ -1,0 +1,594 @@
+[
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_color_button_background.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\color_button_background.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-hdpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_beep.ogg.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\raw\\beep.ogg"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_part_time.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout\\notification_template_part_time.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_ondemand_overlay.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\ondemand_overlay.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-hdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_two_field_date_picker.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\two_field_date_picker.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\menu_encode.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\menu\\encode.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_verify_checkmark.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\verify_checkmark.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\ic_search.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\menu_history.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\menu\\history.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_bubble.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\bubble.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_color_picker_advanced_component.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\color_picker_advanced_component.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_empty.wav.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\empty.wav"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_button_compat_shape.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\button_compat_shape.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_capture.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\capture.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_media_cancel_action.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_action.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_media.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_media.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-xxhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxxhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxxhdpi\\ic_search.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_ondemand_overlay.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\ondemand_overlay.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\xml_config.xml.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_notification_bg_low.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable\\notification_bg_low.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_notification_bg.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable\\notification_bg.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_dropdown_popup_background_up.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\dropdown_popup_background_up.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_dropdown_label_color.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\dropdown_label_color.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-mdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_verify_checkmark.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-hdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_toggle_torch.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable\\toggle_torch.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_flip_camera.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable\\flip_camera.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxhdpi\\ic_search.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable-hdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_ic_search.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\ic_search.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_color_picker_dialog_content.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\color_picker_dialog_content.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_autofill_keyboard_accessory_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\autofill_keyboard_accessory_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-hdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v16_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout-v16\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-hdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-hdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_bubble.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\bubble.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_verify_checkmark.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_big_media_narrow.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-v21_button_borderless_compat.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-v21\\button_borderless_compat.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxhdpi_ic_menu_share_holo_light.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxhdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-ldpi_capture.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout-ldpi\\capture.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_icudtl.dat.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\icudtl.dat"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_share_via_barcode.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable\\share_via_barcode.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_ic_menu_share_holo_light.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_autofill_chip_inset.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\autofill_chip_inset.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxxhdpi_ic_warning.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxxhdpi\\ic_warning.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v21_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_share.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\share.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_date_time_picker_dialog.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout\\date_time_picker_dialog.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_color_picker_advanced_select_handle.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\color_picker_advanced_select_handle.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v21_notification_template_custom_big.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxhdpi_verify_checkmark.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxhdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-xhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_dropdown_popup_background_down.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\dropdown_popup_background_down.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_dropdown_popup_background_up.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\dropdown_popup_background_up.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable-xhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_ic_warning.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\ic_warning.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v21_notification_template_icon_group.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_action_tombstone.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_color_picker_advanced_select_handle.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\color_picker_advanced_select_handle.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_help.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\help.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_color_picker_dialog_title.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\color_picker_dialog_title.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-xhdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxhdpi_launcher_icon.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable-xxhdpi\\launcher_icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_search_book_contents_list_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\search_book_contents_list_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_encode.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\encode.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_bubble.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\bubble.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-xhdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-xhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-xhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_dropdown_popup_background_up.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\dropdown_popup_background_up.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-mdpi-v4\\notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_color_picker_border.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\color_picker_border.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_dropdown_popup_background_down.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\dropdown_popup_background_down.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_ic_menu_share_holo_light.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v21_notification_action.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout-v21\\notification_action.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_app_picker_list_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\app_picker_list_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_media_action.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_media_action.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_color_picker_advanced_select_handle.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\color_picker_advanced_select_handle.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxxhdpi_ic_menu_share_holo_light.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxxhdpi\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_notification_icon_background.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable\\notification_icon_background.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-xxxhdpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-hdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-mdpi-v4\\notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-xxhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-ldpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-ldpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_xwalk_100_percent.pak.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\xwalk_100_percent.pak"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-ldpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-ldpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-mdpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-mdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_part_chronometer.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\layout\\notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\menu_capture.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\menu\\capture.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_autofill_keyboard_accessory_icon.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout\\autofill_keyboard_accessory_icon.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-ldpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-ldpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_ic_warning.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\ic_warning.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-mdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-mdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_ondemand_overlay.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\ondemand_overlay.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-hdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-xxxhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-xxxhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-xxhdpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_lines_media.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_lines_media.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-v21_notification_action_background.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_big_media_custom.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_wifidirect_api.js.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\wifidirect_api.js"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-land_share.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout-land\\share.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_xwalk.pak.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\xwalk.pak"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_date_time_suggestion.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\date_time_suggestion.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_big_media.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-hdpi_bubble_arrow_up.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-hdpi\\bubble_arrow_up.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxxhdpi_verify_checkmark.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxxhdpi\\verify_checkmark.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_dropdown_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\dropdown_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_search_book_contents_header.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\search_book_contents_header.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\raw_launch_screen_api.js.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\raw\\launch_screen_api.js"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_dropdown_popup_background_down.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\dropdown_popup_background_down.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\menu_select_action_menu.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\menu\\select_action_menu.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-land_date_time_picker_dialog.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-land\\date_time_picker_dialog.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_bubble_arrow_up.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\bubble_arrow_up.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_dropdown_popup_background.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\dropdown_popup_background.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable-xhdpi-v4\\notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_multi_field_time_picker_dialog.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\multi_field_time_picker_dialog.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-v17_validation_message_bubble.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\layout-v17\\validation_message_bubble.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_notification_template_media_custom.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-27.1.1.aar\\3cf0b5d6fede86d35f988ae2e3d08921\\res\\layout\\notification_template_media_custom.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout-land_encode.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout-land\\encode.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\xml_preferences.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\xml\\preferences.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xxhdpi_ic_warning.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xxhdpi\\ic_warning.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\mipmap-xhdpi_icon.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\mipmap-xhdpi\\icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_bubble_arrow_up.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\bubble_arrow_up.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_ic_menu_share_holo_light.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\ic_menu_share_holo_light.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_history_list_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\history_list_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-xhdpi_ic_warning.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-xhdpi\\ic_warning.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_search_book_contents.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\search_book_contents.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\layout_bookmark_picker_list_item.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\layout\\bookmark_picker_list_item.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_ic_search.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable\\ic_search.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-land-xxxhdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-land-xxxhdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_launcher_icon.png.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\barcodescanner.aar\\97356f483ca624452b4e81963c2653a8\\res\\drawable\\launcher_icon.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-port-mdpi_screen.png.flat",
+        "source": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\src\\main\\res\\drawable-port-mdpi\\screen.png"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable-v21_button_compat.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\xwalk_core_library-23.53.589.4.aar\\4195daa287fe77ec969209fb206ecb4e\\res\\drawable-v21\\button_compat.xml"
+    },
+    {
+        "merged": "E:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\res\\merged\\arm64\\release\\drawable_notification_tile_bg.xml.flat",
+        "source": "C:\\Users\\Someone\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-27.1.1.aar\\5c06a7ba39590524220e5f9e2c3c5281\\res\\drawable\\notification_tile_bg.xml"
+    }
+]

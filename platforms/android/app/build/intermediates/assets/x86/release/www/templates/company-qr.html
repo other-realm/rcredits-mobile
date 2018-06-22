@@ -1,0 +1,19 @@
+<ion-view class="user-menu">
+	<ion-nav-buttons side="secondary">
+		<button class="button button-stable" ng-if="isOnline() && !isSelfServiceEnabled()" ng-click="showBalance()">
+			{{ 'balance' | translate }}
+		</button>
+	</ion-nav-buttons>
+	<subheader></subheader>
+	<ion-content class="has-subheader">
+		<div class="rc">
+			<p class="user-name">{{user.company}}</p>
+			<div class="rc">
+				<!--<img id="ItemPreview" src="../img/nophoto.png" ng-src="{{user.photo}}" class="user-img" sf-load="hideLoading()"/>-->
+				<p>{{user.place}}</p>
+				<div id="qrcode"></div>
+				<div>{{user.url}}</div>
+			</div>
+		</div>
+	</ion-content>
+</ion-view>

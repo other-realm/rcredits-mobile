@@ -42,6 +42,9 @@
     <feature name="NetworkStatus">
         <param name="ios-package" value="CDVConnection" />
     </feature>
+    <feature name="SQLitePlugin">
+        <param name="ios-package" value="SQLitePlugin" />
+    </feature>
     <name>CommonGood</name>
     <description>Community-Created Credits for the Common Good</description>
     <author email="info@CommonGood.earth" href="http://commongood.earth/">Common Good Team</author>
@@ -117,7 +120,4 @@
     <preference name="orientation" value="portrait" />
     <preference name="AndroidPersistentFileLocation" value="Compatibility" />
     <preference name="SplashShowOnlyFirstTime" value="false" />
-    <feature name="SQLitePlugin">
-        <param name="ios-package" value="SQLitePlugin" />
-    </feature>
 </widget>
