@@ -1,4 +1,4 @@
-#Thu Jun 21 14:59:45 EDT 2018
+#Fri Jun 29 23:05:14 EDT 2018
 base.0=E\:\\xampp\\htdocs\\cgf\\rcredits-mobile\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\arm64\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex
