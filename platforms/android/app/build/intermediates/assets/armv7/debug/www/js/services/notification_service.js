@@ -15,7 +15,7 @@
 				if (!_.isObject(options)) {
 					options = {
 						template: options
-					};
+					}; 
 				}
 				return $translate([options.title, options.subTitle, options.template], params).then(function (translations) {
 					if (options.title === 'error' || options.title === 'Error') {
